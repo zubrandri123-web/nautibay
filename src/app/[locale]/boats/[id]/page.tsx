@@ -1,0 +1,104 @@
+import { getTranslations } from "next-intl/server";
+import { notFound } from "next/navigation";
+import { getBoatListing } from "@/lib/boats/queries";
+
+type Props = {
+  params: Promise<{ locale: string; id: string }>;
+};
+
+const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL;
+
+function photoUrl(path: string) {
+  return `${SUPABASE_URL}/storage/v1/object/public/boat-photos/${path}`;
+}
+
+export default async function BoatDetailPage({ params }: Props) {
+  const { id } = await params;
+  const listing = await getBoatListing(id);
+
+  const t = await getTranslations("BoatDetail");
+  const tType = await getTranslations("BoatType");
+  const tHull = await getTranslations("HullMaterial");
+  const tFuel = await getTranslations("FuelType");
+  const tCondition = await getTranslations("Condition");
+
+  if (!listing) {
+    notFound();
+  }
+
+  const photos = [...(listing.boat_listing_photos ?? [])].sort(
+    (a, b) => a.sort_order - b.sort_order,
+  );
+  const title =
+    [listing.brand, listing.model].filter(Boolean).join(" ") ||
+    tType(listing.boat_type);
+  const location = [listing.city, listing.region, listing.country]
+    .filter(Boolean)
+    .join(", ");
+
+  return (
+    <div className="mx-auto max-w-4xl px-4 py-10">
+      {photos.length > 0 ? (
+        <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
+          {photos.map((photo) => (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              key={photo.storage_path}
+              src={photoUrl(photo.storage_path)}
+              alt={title}
+              className="aspect-[4/3] w-full rounded-md object-cover"
+            />
+          ))}
+        </div>
+      ) : null}
+
+      <h1 className="mt-6 text-2xl font-semibold text-slate-900">{title}</h1>
+      <p className="text-slate-500">{location}</p>
+      <p className="mt-2 text-3xl font-semibold text-slate-900">
+        {listing.currency} {Number(listing.price).toLocaleString()}
+      </p>
+
+      <dl className="mt-8 grid grid-cols-2 gap-x-6 gap-y-4 sm:grid-cols-3">
+        {listing.condition ? (
+          <Detail label={t("condition")} value={tCondition(listing.condition)} />
+        ) : null}
+        <Detail label={t("year")} value={listing.year_built} />
+        {listing.refit_year ? (
+          <Detail label={t("refitYear")} value={listing.refit_year} />
+        ) : null}
+        <Detail label={t("length")} value={`${listing.length_ft} ft`} />
+        {listing.beam_ft ? (
+          <Detail label={t("beam")} value={`${listing.beam_ft} ft`} />
+        ) : null}
+        {listing.draft_ft ? (
+          <Detail label={t("draft")} value={`${listing.draft_ft} ft`} />
+        ) : null}
+        {listing.hull_material ? (
+          <Detail label={t("hull")} value={tHull(listing.hull_material)} />
+        ) : null}
+        {listing.fuel_type ? (
+          <Detail label={t("fuel")} value={tFuel(listing.fuel_type)} />
+        ) : null}
+        {listing.engine_power_hp ? (
+          <Detail label={t("engine")} value={`${listing.engine_power_hp} hp`} />
+        ) : null}
+        {listing.cabins ? <Detail label={t("cabins")} value={listing.cabins} /> : null}
+        {listing.berths ? <Detail label={t("berths")} value={listing.berths} /> : null}
+        {listing.sail_area_m2 ? (
+          <Detail label={t("sailArea")} value={`${listing.sail_area_m2} m²`} />
+        ) : null}
+      </dl>
+    </div>
+  );
+}
+
+function Detail({ label, value }: { label: string; value: string | number }) {
+  return (
+    <div>
+      <dt className="text-xs uppercase tracking-wide text-slate-400">
+        {label}
+      </dt>
+      <dd className="text-sm text-slate-900">{value}</dd>
+    </div>
+  );
+}

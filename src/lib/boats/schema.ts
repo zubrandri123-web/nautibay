@@ -1,0 +1,84 @@
+import { z } from "zod";
+import {
+  BOAT_TYPES,
+  CONDITIONS,
+  COUNTRIES,
+  DRIVE_TYPES,
+  FUEL_TYPES,
+  HEATING_TYPES,
+  HULL_MATERIALS,
+  MAST_MATERIALS,
+  STEERING_TYPES,
+} from "./constants";
+
+// Single source of truth for the listing form: drives client-side
+// validation (react-hook-form) and is re-run on the server before writing
+// to Supabase, so a tampered client request can't skip validation.
+export const boatListingSchema = z.object({
+  // Required — also the primary search filters.
+  boatType: z.enum(BOAT_TYPES),
+  price: z.coerce.number().positive(),
+  currency: z.string().default("EUR"),
+  yearBuilt: z.coerce
+    .number()
+    .int()
+    .min(1900)
+    .max(new Date().getFullYear() + 1),
+  lengthFt: z.coerce.number().positive(),
+  condition: z.enum(CONDITIONS).optional(),
+  country: z.enum(COUNTRIES),
+  region: z.string().trim().max(120).optional().or(z.literal("")),
+  city: z.string().trim().max(120).optional().or(z.literal("")),
+
+  // Important but optional.
+  brand: z.string().trim().max(120).optional().or(z.literal("")),
+  model: z.string().trim().max(120).optional().or(z.literal("")),
+  beamFt: z.coerce.number().positive().optional(),
+  draftFt: z.coerce.number().positive().optional(),
+  fuelType: z.enum(FUEL_TYPES).optional(),
+  enginePowerHp: z.coerce.number().positive().optional(),
+  hullMaterial: z.enum(HULL_MATERIALS).optional(),
+  cabins: z.coerce.number().int().min(0).optional(),
+  berths: z.coerce.number().int().min(0).optional(),
+
+  // Secondary — detail page only.
+  refitYear: z.coerce.number().int().min(1900).optional(),
+  sailAreaM2: z.coerce.number().positive().optional(),
+  videoUrl: z.string().trim().url().optional().or(z.literal("")),
+  description: z.string().trim().max(4000).optional().or(z.literal("")),
+
+  // Advanced — optional, quick-pick fields for sellers who want to add more.
+  flagCountry: z.enum(COUNTRIES).optional(),
+  heads: z.coerce.number().int().min(0).optional(),
+  waterTankL: z.coerce.number().positive().optional(),
+  heating: z.enum(HEATING_TYPES).optional(),
+  mastMaterial: z.enum(MAST_MATERIALS).optional(),
+  steeringType: z.enum(STEERING_TYPES).optional(),
+  driveType: z.enum(DRIVE_TYPES).optional(),
+  isBroker: z.coerce.boolean().optional(),
+  brokerCompanyName: z.string().trim().max(160).optional().or(z.literal("")),
+
+  photoPaths: z.array(z.string()).min(1, "At least one photo is required"),
+});
+
+// Raw form values (numbers still strings, as HTML inputs produce them).
+export type BoatListingFormValues = z.input<typeof boatListingSchema>;
+// Parsed values after zod's coercion — what actually gets sent to the server.
+export type BoatListingInput = z.output<typeof boatListingSchema>;
+
+export const searchFiltersSchema = z.object({
+  type: z.enum(BOAT_TYPES).optional(),
+  priceMin: z.coerce.number().nonnegative().optional(),
+  priceMax: z.coerce.number().nonnegative().optional(),
+  yearMin: z.coerce.number().int().optional(),
+  yearMax: z.coerce.number().int().optional(),
+  lengthMin: z.coerce.number().nonnegative().optional(),
+  lengthMax: z.coerce.number().nonnegative().optional(),
+  country: z.array(z.enum(COUNTRIES)).optional(),
+  hullMaterial: z.enum(HULL_MATERIALS).optional(),
+  fuelType: z.enum(FUEL_TYPES).optional(),
+  condition: z.enum(CONDITIONS).optional(),
+  q: z.string().trim().max(200).optional(),
+});
+
+export type SearchFilters = z.infer<typeof searchFiltersSchema>;

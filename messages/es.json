@@ -45,7 +45,13 @@
     "needAccount": "¿No tienes cuenta?",
     "checkEmailTitle": "Revisa tu correo",
     "checkEmailBody": "Enviamos un enlace de confirmación a {email}. Confirma tu correo para empezar a publicar anuncios.",
-    "errorGeneric": "Algo salió mal. Inténtalo de nuevo."
+    "errorGeneric": "Algo salió mal. Inténtalo de nuevo.",
+    "showPassword": "Mostrar contraseña",
+    "hidePassword": "Ocultar contraseña",
+    "pwHint": "Al menos 8 caracteres",
+    "pwWeak": "Débil",
+    "pwMedium": "Media",
+    "pwStrong": "Fuerte"
   },
   "BoatType": {
     "sailboat": "Velero",

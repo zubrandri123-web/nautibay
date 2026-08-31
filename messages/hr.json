@@ -45,7 +45,13 @@
     "needAccount": "Nemate račun?",
     "checkEmailTitle": "Provjerite email",
     "checkEmailBody": "Poslali smo poveznicu za potvrdu na {email}. Potvrdite email kako biste mogli objavljivati oglase.",
-    "errorGeneric": "Nešto je pošlo po zlu. Pokušajte ponovno."
+    "errorGeneric": "Nešto je pošlo po zlu. Pokušajte ponovno.",
+    "showPassword": "Prikaži lozinku",
+    "hidePassword": "Sakrij lozinku",
+    "pwHint": "Najmanje 8 znakova",
+    "pwWeak": "Slaba",
+    "pwMedium": "Srednja",
+    "pwStrong": "Jaka"
   },
   "BoatType": {
     "sailboat": "Jedrilica",

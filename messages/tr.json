@@ -45,7 +45,13 @@
     "needAccount": "Hesabınız yok mu?",
     "checkEmailTitle": "E-postanızı kontrol edin",
     "checkEmailBody": "{email} adresine bir onay bağlantısı gönderdik. İlan yayınlamaya başlamak için e-postanızı onaylayın.",
-    "errorGeneric": "Bir şeyler ters gitti. Lütfen tekrar deneyin."
+    "errorGeneric": "Bir şeyler ters gitti. Lütfen tekrar deneyin.",
+    "showPassword": "Parolayı göster",
+    "hidePassword": "Parolayı gizle",
+    "pwHint": "En az 8 karakter",
+    "pwWeak": "Zayıf",
+    "pwMedium": "Orta",
+    "pwStrong": "Güçlü"
   },
   "BoatType": {
     "sailboat": "Yelkenli",

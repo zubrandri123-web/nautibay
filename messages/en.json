@@ -45,7 +45,13 @@
     "needAccount": "Don't have an account?",
     "checkEmailTitle": "Check your email",
     "checkEmailBody": "We sent a confirmation link to {email}. Confirm your email to start selling boats.",
-    "errorGeneric": "Something went wrong. Please try again."
+    "errorGeneric": "Something went wrong. Please try again.",
+    "showPassword": "Show password",
+    "hidePassword": "Hide password",
+    "pwHint": "At least 8 characters",
+    "pwWeak": "Weak",
+    "pwMedium": "Medium",
+    "pwStrong": "Strong"
   },
   "BoatType": {
     "sailboat": "Sailboat",

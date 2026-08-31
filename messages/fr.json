@@ -45,7 +45,13 @@
     "needAccount": "Pas encore de compte ?",
     "checkEmailTitle": "Consultez votre email",
     "checkEmailBody": "Nous avons envoyé un lien de confirmation à {email}. Confirmez votre email pour commencer à publier des annonces.",
-    "errorGeneric": "Une erreur est survenue. Veuillez réessayer."
+    "errorGeneric": "Une erreur est survenue. Veuillez réessayer.",
+    "showPassword": "Afficher le mot de passe",
+    "hidePassword": "Masquer le mot de passe",
+    "pwHint": "Au moins 8 caractères",
+    "pwWeak": "Faible",
+    "pwMedium": "Moyen",
+    "pwStrong": "Fort"
   },
   "BoatType": {
     "sailboat": "Voilier",

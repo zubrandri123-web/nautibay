@@ -45,7 +45,13 @@
     "needAccount": "Noch kein Konto?",
     "checkEmailTitle": "E-Mail-Postfach prüfen",
     "checkEmailBody": "Wir haben einen Bestätigungslink an {email} gesendet. Bestätige deine E-Mail, um Inserate zu veröffentlichen.",
-    "errorGeneric": "Etwas ist schiefgelaufen. Bitte versuche es erneut."
+    "errorGeneric": "Etwas ist schiefgelaufen. Bitte versuche es erneut.",
+    "showPassword": "Passwort anzeigen",
+    "hidePassword": "Passwort verbergen",
+    "pwHint": "Mindestens 8 Zeichen",
+    "pwWeak": "Schwach",
+    "pwMedium": "Mittel",
+    "pwStrong": "Stark"
   },
   "BoatType": {
     "sailboat": "Segelboot",

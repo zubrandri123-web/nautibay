@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
+import { PasswordField } from "@/components/password-field";
 import { signInAction } from "../actions";
 
 type Props = {
@@ -45,11 +46,12 @@ export default async function SignInPage({ params, searchParams }: Props) {
           <label className="block text-sm font-medium text-slate-700">
             {t("password")}
           </label>
-          <input
+          <PasswordField
             name="password"
-            type="password"
             required
-            className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2 focus:border-slate-500 focus:outline-none"
+            autoComplete="current-password"
+            showLabel={t("showPassword")}
+            hideLabel={t("hidePassword")}
           />
         </div>
 

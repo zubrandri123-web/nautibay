@@ -13,7 +13,7 @@ export async function NavBar({ locale }: { locale: string }) {
 
   return (
     <header className="bg-navy">
-      <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-3">
+      <div className="mx-auto flex max-w-5xl flex-col items-center gap-3 px-4 py-3 sm:flex-row sm:justify-between sm:gap-4">
         <Link
           href="/"
           className="whitespace-nowrap text-lg font-semibold text-white"
@@ -21,7 +21,7 @@ export async function NavBar({ locale }: { locale: string }) {
           ⚓ NautiBay<span className="text-gold">.com</span>
         </Link>
 
-        <nav className="flex items-center gap-4 text-sm">
+        <nav className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm">
           <Link href="/boats" className="text-slate-200 hover:text-white">
             {t("browseBoats")}
           </Link>

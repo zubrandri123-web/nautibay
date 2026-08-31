@@ -2,10 +2,9 @@ import { defineRouting } from "next-intl/routing";
 
 export const routing = defineRouting({
   locales: ["en", "ru", "fr", "it", "es", "de", "el", "hr", "tr"],
+  // Visitors get their browser language if it is one of the nine above;
+  // anything else falls back to English. Manual choice from the switcher wins.
   defaultLocale: "en",
-  // Always open in English; visitors pick their own language from the switcher
-  // (their choice is then remembered). No auto-switch from browser language.
-  localeDetection: false,
 });
 
 export type AppLocale = (typeof routing.locales)[number];

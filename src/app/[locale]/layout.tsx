@@ -12,7 +12,7 @@ export function generateStaticParams() {
 }
 
 export const metadata: Metadata = {
-  title: "Yacht Marketplace",
+  title: "NautiBay.com — Yacht Marketplace",
   description: "The international marketplace for the yachting community",
 };
 
@@ -36,8 +36,14 @@ export default async function LocaleLayout({ children, params }: Props) {
         <NextIntlClientProvider>
           <NavBar locale={locale} />
           <main className="flex-1">{children}</main>
-          <footer className="border-t border-slate-200 py-6 text-center text-xs text-slate-400">
-            <Link href="/privacy" className="hover:text-slate-600">
+          <footer className="bg-navy-dark py-6 text-center text-xs text-slate-400">
+            <p>
+              © {new Date().getFullYear()} NautiBay.com — Yacht Marketplace
+            </p>
+            <Link
+              href="/privacy"
+              className="mt-1 inline-block hover:text-white"
+            >
               Privacy policy
             </Link>
           </footer>

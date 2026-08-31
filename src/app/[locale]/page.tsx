@@ -1,84 +1,114 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 
+function CompassRose() {
+  const ink = "#16171a";
+  const lite = "#f7f3e8";
+  const disc = "#e7ddc6";
+  const rad = (d: number) => ((d - 90) * Math.PI) / 180;
+  const X = (d: number, r: number) => (60 + Math.cos(rad(d)) * r).toFixed(2);
+  const Y = (d: number, r: number) => (60 + Math.sin(rad(d)) * r).toFixed(2);
+  const P = (d: number, r: number) => `${X(d, r)},${Y(d, r)}`;
+  const spike = (a: number, tip: number, base: number, k: string) => [
+    <polygon key={`${k}-a`} points={`${P(a, tip)} ${P(a + 90, base)} 60,60`} fill={ink} />,
+    <polygon key={`${k}-b`} points={`${P(a, tip)} ${P(a - 90, base)} 60,60`} fill={lite} />,
+  ];
+  return (
+    <svg
+      viewBox="0 0 120 120"
+      className="mx-auto mb-3 h-20 w-20"
+      aria-hidden="true"
+    >
+      {/* medallion */}
+      <circle cx="60" cy="60" r="53" fill={disc} />
+      <circle cx="60" cy="60" r="53" fill="none" stroke={ink} strokeWidth="2" />
+      <circle cx="60" cy="60" r="45" fill="none" stroke={ink} strokeOpacity="0.3" strokeWidth="1" />
+
+      {/* graduated ticks (skipped at the 4 cardinals to leave room for letters) */}
+      <g stroke={ink}>
+        {Array.from({ length: 16 }, (_, i) => i)
+          .filter((i) => i % 4 !== 0)
+          .map((i) => {
+            const a = i * 22.5;
+            return (
+              <line
+                key={i}
+                x1={X(a, 52)}
+                y1={Y(a, 52)}
+                x2={X(a, 47)}
+                y2={Y(a, 47)}
+                strokeWidth={0.9}
+              />
+            );
+          })}
+      </g>
+
+      {/* faceted 8-point star */}
+      {[45, 135, 225, 315].flatMap((a) => spike(a, 22, 5, `ic${a}`))}
+      {[0, 90, 180, 270].flatMap((a) => spike(a, 37, 6, `c${a}`))}
+
+      {/* hub */}
+      <circle cx="60" cy="60" r="5.5" fill={ink} />
+      <circle cx="58" cy="58" r="1.5" fill={lite} opacity="0.85" />
+
+      {/* direction letters */}
+      <g
+        fill={ink}
+        fontSize="12"
+        fontWeight="700"
+        textAnchor="middle"
+        fontFamily="Georgia, 'Times New Roman', serif"
+      >
+        <text x="60" y="13" dominantBaseline="middle">N</text>
+        <text x="107" y="61" dominantBaseline="middle">E</text>
+        <text x="60" y="109" dominantBaseline="middle">S</text>
+        <text x="13" y="61" dominantBaseline="middle">W</text>
+      </g>
+    </svg>
+  );
+}
+
 export default async function HomePage() {
   const t = await getTranslations("Home");
   const tCommon = await getTranslations("Common");
 
-  return (
-    <div className="relative overflow-hidden bg-slate-50 py-20">
-      {/* Scattered background photos — decorative, hidden from screen readers */}
-      <div aria-hidden="true" className="pointer-events-none absolute inset-0">
-        <Photo
-          src="/hero/chart-compass.jpg"
-          className="left-[2%] top-[4%] w-40 -rotate-6 sm:w-56"
-        />
-        <Photo
-          src="/hero/harbor-boats-1.jpg"
-          className="right-[3%] top-[3%] hidden w-48 rotate-6 sm:block"
-        />
-        <Photo
-          src="/hero/marina-masts.jpg"
-          className="left-[1%] top-[42%] hidden w-52 -rotate-3 lg:block"
-        />
-        <Photo
-          src="/hero/tall-ship.jpg"
-          className="right-[2%] top-[38%] hidden w-44 rotate-12 lg:block"
-        />
-        <Photo
-          src="/hero/texture-patina.jpg"
-          className="bottom-[5%] left-[4%] hidden w-48 rotate-12 sm:block"
-        />
-        <Photo
-          src="/hero/harbor-boats-2.jpg"
-          className="bottom-[3%] right-[2%] w-44 -rotate-12 sm:w-56"
-        />
-      </div>
-
-      <div className="relative z-10 mx-auto max-w-3xl px-4 text-center">
-        <div className="rounded-2xl bg-white/90 px-6 py-10 shadow-sm backdrop-blur-sm sm:px-10">
-          <h1 className="text-3xl font-semibold text-slate-900 sm:text-4xl">
-            {tCommon("appName")}
-          </h1>
-          <p className="mt-3 text-lg text-slate-600">{t("tagline")}</p>
-
-          <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2">
-            <Link
-              href="/boats"
-              className="rounded-lg border border-slate-200 bg-white px-6 py-8 text-lg font-medium text-slate-900 shadow-sm transition hover:border-slate-400 hover:shadow-md"
-            >
-              {t("findBoat")}
-            </Link>
-            <Link
-              href="/boats/new"
-              className="rounded-lg border border-slate-200 bg-white px-6 py-8 text-lg font-medium text-slate-900 shadow-sm transition hover:border-slate-400 hover:shadow-md"
-            >
-              {t("sellBoat")}
-            </Link>
-            <div className="cursor-not-allowed rounded-lg border border-dashed border-slate-300 bg-slate-100 px-6 py-8 text-lg font-medium text-slate-400">
-              {t("findCrew")}
-              <div className="mt-1 text-xs uppercase tracking-wide">
-                {t("comingSoon")}
-              </div>
-            </div>
-            <div className="cursor-not-allowed rounded-lg border border-dashed border-slate-300 bg-slate-100 px-6 py-8 text-lg font-medium text-slate-400">
-              {t("services")}
-              <div className="mt-1 text-xs uppercase tracking-wide">
-                {t("comingSoon")}
-              </div>
-            </div>
-          </div>
-        </div>
+  const soon = (label: string) => (
+    <div className="cursor-not-allowed rounded-lg border border-dashed border-slate-400 bg-navy-dark/60 px-4 py-3 text-sm font-medium text-slate-400">
+      {label}
+      <div className="mt-0.5 text-[10px] uppercase tracking-wide">
+        {t("comingSoon")}
       </div>
     </div>
   );
-}
 
-function Photo({ src, className }: { src: string; className: string }) {
   return (
-    <div className={`absolute rounded-sm bg-white p-1.5 shadow-md ${className}`}>
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={src} alt="" className="aspect-[4/3] w-full object-cover" />
+    <div
+      className="flex min-h-[calc(100vh-56px)] items-center justify-center bg-cover bg-center bg-fixed px-4 py-10"
+      style={{ backgroundImage: "url(/hero/marina-wide.jpg)" }}
+    >
+      <div className="w-full max-w-sm rounded-xl bg-navy/70 px-5 py-7 text-center shadow-lg backdrop-blur-sm">
+        <CompassRose />
+        <h1 className="text-xl font-semibold text-white">
+          {tCommon("appName")}
+        </h1>
+        <p className="mt-1.5 text-sm text-slate-200">{t("tagline")}</p>
+
+        <div className="mt-6 grid grid-cols-1 gap-2.5">
+          <Link href="/boats" className="btn-3d btn-3d-blue px-4 py-3 text-sm">
+            {t("findBoat")}
+          </Link>
+          <Link
+            href="/boats/new"
+            className="btn-3d btn-3d-blue px-4 py-3 text-sm"
+          >
+            {t("sellBoat")}
+          </Link>
+          {soon(t("charterBoat"))}
+          {soon(t("fishing"))}
+          {soon(t("findCrew"))}
+          {soon(t("services"))}
+        </div>
+      </div>
     </div>
   );
 }

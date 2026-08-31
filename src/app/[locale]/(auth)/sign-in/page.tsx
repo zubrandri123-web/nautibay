@@ -53,10 +53,7 @@ export default async function SignInPage({ params, searchParams }: Props) {
           />
         </div>
 
-        <button
-          type="submit"
-          className="w-full rounded-md bg-slate-900 px-4 py-2 font-medium text-white hover:bg-slate-800"
-        >
+        <button type="submit" className="btn-3d btn-3d-green w-full px-4 py-2">
           {t("signInButton")}
         </button>
       </form>

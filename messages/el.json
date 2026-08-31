@@ -1,6 +1,6 @@
 {
   "Common": {
-    "appName": "Yacht Marketplace",
+    "appName": "NautiBay.com — Yacht Marketplace",
     "loading": "Φόρτωση…",
     "save": "Αποθήκευση",
     "cancel": "Ακύρωση",
@@ -27,6 +27,8 @@
     "tagline": "Η διεθνής αγορά της κοινότητας ιστιοπλοΐας και θαλάσσιου τουρισμού",
     "findBoat": "Βρες σκάφος",
     "sellBoat": "Πούλησε σκάφος",
+    "charterBoat": "Ναύλωση σκάφους",
+    "fishing": "Ψάρεμα στη θάλασσα με καπετάνιο",
     "findCrew": "Βρες καπετάνιο/πλήρωμα",
     "services": "Υπηρεσίες & καταστήματα",
     "comingSoon": "Σύντομα διαθέσιμο"

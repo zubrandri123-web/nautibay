@@ -408,7 +408,7 @@ export function BoatForm({ locale, userId }: { locale: string; userId: string })
       <button
         type="submit"
         disabled={submitting}
-        className="w-full rounded-md bg-slate-900 px-4 py-3 font-medium text-white hover:bg-slate-800 disabled:opacity-50"
+        className="btn-3d btn-3d-green w-full px-4 py-3 disabled:opacity-50"
       >
         {submitting ? tCommon("loading") : t("submit")}
       </button>

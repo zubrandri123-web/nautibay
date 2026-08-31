@@ -3,11 +3,33 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --navy: #0f2a4a;
+  --navy-dark: #0a1f38;
+  --gold: #d9a441;
+  --gold-hover: #e2b158;
+  --gold-dark: #b8842f;
+  --btn-blue: #2874a6;
+  --btn-blue-hover: #3486bb;
+  --btn-green: #2e8b4f;
+  --btn-green-hover: #379c5a;
+  --btn-red: #c0392b;
+  --btn-red-hover: #d0473a;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-navy: var(--navy);
+  --color-navy-dark: var(--navy-dark);
+  --color-gold: var(--gold);
+  --color-gold-hover: var(--gold-hover);
+  --color-gold-dark: var(--gold-dark);
+  --color-btn-blue: var(--btn-blue);
+  --color-btn-blue-hover: var(--btn-blue-hover);
+  --color-btn-green: var(--btn-green);
+  --color-btn-green-hover: var(--btn-green-hover);
+  --color-btn-red: var(--btn-red);
+  --color-btn-red-hover: var(--btn-red-hover);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -23,4 +45,50 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/*
+  Shared 3D button look: black border + hard-edged bottom shadow that
+  shrinks on press, so a button always reads as physically clickable.
+  Color carries meaning: blue = go/view, green = confirm, red = cancel/decline.
+*/
+.btn-3d {
+  border-radius: 0.5rem;
+  border: 2px solid #000000;
+  color: #000000;
+  font-weight: 600;
+  transition: all 100ms;
+}
+.btn-3d:active {
+  transform: translateY(3px);
+}
+.btn-3d-blue {
+  background: var(--btn-blue);
+  box-shadow: 0 5px 0 0 #000000;
+}
+.btn-3d-blue:hover {
+  background: var(--btn-blue-hover);
+}
+.btn-3d-blue:active {
+  box-shadow: 0 2px 0 0 #000000;
+}
+.btn-3d-green {
+  background: var(--btn-green);
+  box-shadow: 0 5px 0 0 #000000;
+}
+.btn-3d-green:hover {
+  background: var(--btn-green-hover);
+}
+.btn-3d-green:active {
+  box-shadow: 0 2px 0 0 #000000;
+}
+.btn-3d-red {
+  background: var(--btn-red);
+  box-shadow: 0 5px 0 0 #000000;
+}
+.btn-3d-red:hover {
+  background: var(--btn-red-hover);
+}
+.btn-3d-red:active {
+  box-shadow: 0 2px 0 0 #000000;
 }

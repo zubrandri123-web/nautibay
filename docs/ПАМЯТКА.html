@@ -1,0 +1,477 @@
+<title>Памятка владельца NautiBay</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+
+<style>
+  :root {
+    --paper: #eef2f5;
+    --surface: #ffffff;
+    --sunk: #e5ebef;
+    --ink: #182430;
+    --ink-soft: #4a5966;
+    --ink-faint: #7a8996;
+    --rule: #d2dbe1;
+    --sea: #2a6a88;
+    --brass: #9c6a1c;
+    --good: #2c7a4c;
+    --warn: #a9560f;
+    --stop: #a93a32;
+    --shadow: 24px 24px 60px -30px rgba(20, 45, 70, .28);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #0c151d;
+      --surface: #131f2a;
+      --sunk: #1b2937;
+      --ink: #e5edf3;
+      --ink-soft: #a6b5c2;
+      --ink-faint: #6d8291;
+      --rule: #283845;
+      --sea: #77b4ce;
+      --brass: #e0a94a;
+      --good: #5bba88;
+      --warn: #e0964f;
+      --stop: #e2776e;
+      --shadow: 24px 24px 70px -30px rgba(0, 0, 0, .6);
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #0c151d;
+    --surface: #131f2a;
+    --sunk: #1b2937;
+    --ink: #e5edf3;
+    --ink-soft: #a6b5c2;
+    --ink-faint: #6d8291;
+    --rule: #283845;
+    --sea: #77b4ce;
+    --brass: #e0a94a;
+    --good: #5bba88;
+    --warn: #e0964f;
+    --stop: #e2776e;
+    --shadow: 24px 24px 70px -30px rgba(0, 0, 0, .6);
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 17px;
+    line-height: 1.62;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap {
+    max-width: 43rem;
+    margin: 0 auto;
+    padding: clamp(1.5rem, 4vw, 4rem) clamp(1.1rem, 4vw, 2rem) 5rem;
+  }
+
+  /* ---- header ---- */
+  .masthead {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 1.6rem;
+    border-bottom: 2px solid var(--ink);
+  }
+  .masthead svg { flex: none; width: 58px; height: 58px; }
+  .masthead h1 {
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 600;
+    font-size: clamp(1.7rem, 5vw, 2.3rem);
+    line-height: 1.1;
+    margin: 0;
+    text-wrap: balance;
+  }
+  .masthead p {
+    margin: .3rem 0 0;
+    font-size: .95rem;
+    color: var(--ink-soft);
+  }
+  .updated {
+    margin-top: 1rem;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: .78rem;
+    letter-spacing: .02em;
+    color: var(--ink-faint);
+    text-transform: uppercase;
+  }
+
+  /* ---- sections ---- */
+  section { margin-top: 2.8rem; }
+  section > h2 {
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 600;
+    font-size: 1.4rem;
+    margin: 0 0 .3rem;
+    padding-top: 1.3rem;
+    border-top: 1px solid var(--rule);
+    text-wrap: balance;
+  }
+  section > h2 .n {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: .8rem;
+    font-weight: 500;
+    color: var(--brass);
+    margin-right: .6rem;
+    vertical-align: .18em;
+  }
+  section > p { margin: .8rem 0; }
+  section > p:first-of-type { margin-top: .9rem; }
+  strong { font-weight: 600; }
+  a { color: var(--sea); text-underline-offset: 2px; }
+
+  .lead { color: var(--ink-soft); }
+
+  /* ---- key/value table ---- */
+  .scroll { overflow-x: auto; margin: 1.2rem 0; }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: .92rem;
+    min-width: 30rem;
+  }
+  th, td {
+    text-align: left;
+    padding: .62rem .8rem;
+    border-bottom: 1px solid var(--rule);
+    vertical-align: top;
+  }
+  th {
+    font-size: .74rem;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    color: var(--ink-faint);
+    font-weight: 600;
+  }
+  td:first-child { font-weight: 600; white-space: nowrap; }
+  .mono, code {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: .86em;
+  }
+  td .mono { color: var(--ink-soft); word-break: break-all; }
+
+  /* ---- callout panel ---- */
+  .panel {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 12px;
+    padding: 1.3rem 1.4rem;
+    margin: 1.4rem 0;
+  }
+  .panel.flag {
+    background:
+      linear-gradient(0deg, color-mix(in srgb, var(--brass) 8%, var(--surface)), color-mix(in srgb, var(--brass) 8%, var(--surface)));
+    border-color: color-mix(in srgb, var(--brass) 35%, var(--rule));
+  }
+  .panel .tag {
+    display: inline-block;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: .7rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--brass);
+    margin-bottom: .5rem;
+  }
+  .panel h3 {
+    margin: 0 0 .5rem;
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+  .panel ol { margin: .6rem 0 0; padding-left: 1.3rem; }
+  .panel ol li { margin: .5rem 0; }
+  .panel ol li::marker { color: var(--brass); font-family: "IBM Plex Mono", monospace; font-size: .85em; }
+
+  /* ---- status list ---- */
+  .status { list-style: none; margin: 1.1rem 0; padding: 0; }
+  .status li {
+    display: flex;
+    gap: .7rem;
+    padding: .5rem 0;
+    border-bottom: 1px solid var(--rule);
+    font-size: .95rem;
+  }
+  .status li:last-child { border-bottom: 0; }
+  .dot {
+    flex: none;
+    width: .7rem; height: .7rem;
+    border-radius: 50%;
+    margin-top: .45rem;
+  }
+  .dot.ok { background: var(--good); }
+  .dot.no { background: var(--stop); }
+  .dot.wait { background: var(--warn); }
+
+  /* ---- glossary ---- */
+  dl { margin: 1.1rem 0 0; }
+  dl div {
+    padding: .7rem 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  dl div:last-child { border-bottom: 0; }
+  dt {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: .88rem;
+    font-weight: 500;
+    color: var(--ink);
+  }
+  dd { margin: .25rem 0 0; font-size: .93rem; color: var(--ink-soft); }
+
+  /* ---- checklist ---- */
+  .todo { list-style: none; margin: 1.1rem 0 0; padding: 0; }
+  .todo li {
+    position: relative;
+    padding: .5rem 0 .5rem 1.9rem;
+    border-bottom: 1px solid var(--rule);
+    font-size: .95rem;
+  }
+  .todo li:last-child { border-bottom: 0; }
+  .todo li::before {
+    content: "";
+    position: absolute;
+    left: 0; top: .62rem;
+    width: 1.05rem; height: 1.05rem;
+    border: 1.5px solid var(--ink-faint);
+    border-radius: 4px;
+  }
+  .todo li.done { color: var(--ink-faint); }
+  .todo li.done::before {
+    border-color: var(--good);
+    background: var(--good);
+  }
+  .todo li.done::after {
+    content: "";
+    position: absolute;
+    left: .32rem; top: .74rem;
+    width: .32rem; height: .6rem;
+    border: solid var(--surface);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+
+  .note {
+    font-size: .86rem;
+    color: var(--ink-faint);
+    margin-top: 3rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--rule);
+  }
+
+  @media (max-width: 34rem) {
+    .masthead { flex-direction: column; align-items: flex-start; gap: .7rem; }
+    body { font-size: 16px; }
+  }
+</style>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <svg viewBox="0 0 100 100" aria-hidden="true">
+      <circle cx="50" cy="50" r="46" fill="none" stroke="var(--rule)" stroke-width="1.5"/>
+      <circle cx="50" cy="50" r="30" fill="none" stroke="var(--rule)" stroke-width="1.5"/>
+      <g stroke="var(--ink-faint)" stroke-width="1.5">
+        <line x1="29" y1="29" x2="40" y2="40"/>
+        <line x1="71" y1="29" x2="60" y2="40"/>
+        <line x1="29" y1="71" x2="40" y2="60"/>
+        <line x1="71" y1="71" x2="60" y2="60"/>
+      </g>
+      <polygon points="50,4 50,50 45,50" fill="var(--ink)"/>
+      <polygon points="50,4 50,50 55,50" fill="var(--brass)"/>
+      <polygon points="50,96 50,50 45,50" fill="var(--brass)"/>
+      <polygon points="50,96 50,50 55,50" fill="var(--ink)"/>
+      <polygon points="96,50 50,50 50,45" fill="var(--ink)"/>
+      <polygon points="96,50 50,50 50,55" fill="var(--brass)"/>
+      <polygon points="4,50 50,50 50,45" fill="var(--brass)"/>
+      <polygon points="4,50 50,50 50,55" fill="var(--ink)"/>
+      <circle cx="50" cy="50" r="3.2" fill="var(--brass)"/>
+    </svg>
+    <div>
+      <h1>Памятка владельца NautiBay</h1>
+      <p>Где живёт проект, что уже сделано, что мешает запуску и как передавать доработки.</p>
+    </div>
+  </header>
+  <div class="updated">Обновлено 31 августа 2026</div>
+
+  <section>
+    <h2><span class="n">01</span>Что такое NautiBay</h2>
+    <p><strong>NautiBay.com — Yacht Marketplace.</strong> Международный маркетплейс яхтенного
+    сообщества: продажа лодок, позже — аренда, поиск капитана и экипажа, каталог услуг и
+    магазинов. Сайт на 9 языках.</p>
+    <p class="lead">Сейчас проект в разработке. Главная страница готова и опубликована.
+    Каталог, продажа лодки и вход в аккаунт временно не работают — почему, смотри
+    в разделе 04.</p>
+  </section>
+
+  <section>
+    <h2><span class="n">02</span>Где всё лежит</h2>
+    <p>У проекта несколько частей в разных местах. Это нормально для любого сайта —
+    важно понимать, что за что отвечает.</p>
+    <div class="scroll">
+      <table>
+        <thead>
+          <tr><th>Часть</th><th>Адрес</th><th>За что отвечает</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Код на компьютере</td>
+            <td><span class="mono">C:\Users\Lenovo\yacht-marketplace</span></td>
+            <td>Рабочая копия. Здесь вносятся все правки и проверяются до публикации.</td>
+          </tr>
+          <tr>
+            <td>Хранилище кода</td>
+            <td><span class="mono">github.com/zubrandri123-web/nautibay</span></td>
+            <td>«Сейф» кода онлайн. Сюда загружаются готовые правки.</td>
+          </tr>
+          <tr>
+            <td>Боевой сайт</td>
+            <td><span class="mono">nautibay.vercel.app</span></td>
+            <td>То, что видят люди. Хостинг Vercel. Обновляется сам, когда код попадает в хранилище.</td>
+          </tr>
+          <tr>
+            <td>Домен</td>
+            <td><span class="mono">nautibay.com</span></td>
+            <td>Куплен, но пока не подключён к сайту. Подключается на стороне Vercel.</td>
+          </tr>
+          <tr>
+            <td>База данных</td>
+            <td>Supabase (проект нужно создать заново)</td>
+            <td>Объявления, фотографии, аккаунты пользователей. Отдельный сервис.</td>
+          </tr>
+          <tr>
+            <td>Тексты сайта</td>
+            <td><span class="mono">messages/*.json</span> — 9 файлов</td>
+            <td>Все надписи на сайте, по одному файлу на язык (ru, en, de, es, fr, it, hr, el, tr).</td>
+          </tr>
+          <tr>
+            <td>Настройки базы</td>
+            <td><span class="mono">.env.local</span></td>
+            <td>Адрес и ключ базы данных. Без него каталог не работает.</td>
+          </tr>
+          <tr>
+            <td>Эта переписка</td>
+            <td>Claude Code → сессия «NautiBay — доработка сайта…»</td>
+            <td>В боковой панели, в папке <span class="mono">yacht-marketplace</span>. Ранняя сессия — «Проверка связи».</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="n">03</span>Как сайт обновляется</h2>
+    <p>Есть <strong>две копии</strong> одного сайта:</p>
+    <ul>
+      <li><strong>Рабочая</strong> — на твоём компьютере, открывается по адресу
+      <span class="mono">localhost</span>. Видишь только ты. Тут проверяют правки.</li>
+      <li><strong>Боевая</strong> — <span class="mono">nautibay.vercel.app</span>. Видят все.</li>
+    </ul>
+    <p>Правка доходит до боевого сайта по цепочке:</p>
+    <p class="mono" style="font-size:.85rem;line-height:1.9">
+      правка в коде&nbsp;→&nbsp;снимок версии (commit)&nbsp;→&nbsp;загрузка в хранилище
+      (push)&nbsp;→&nbsp;Vercel сам собирает и публикует (deploy)&nbsp;→&nbsp;через ~1 минуту
+      сайт обновлён
+    </p>
+    <p>Пока не сделан <strong>push</strong> — на боевом сайте ничего не меняется. Именно
+    поэтому финальный дизайн, который делали раньше, не попал на сайт: правки сохранили
+    в файлах, но снимок и загрузку не сделали.</p>
+  </section>
+
+  <section>
+    <h2><span class="n">04</span>Что работает, что нет</h2>
+    <ul class="status">
+      <li><span class="dot ok"></span><span><strong>Главная страница</strong> — работает, опубликована.</span></li>
+      <li><span class="dot no"></span><span><strong>Каталог «Найти лодку»</strong> — ошибка. Нужна база данных.</span></li>
+      <li><span class="dot no"></span><span><strong>«Продать лодку»</strong> — ошибка. Нужна база данных.</span></li>
+      <li><span class="dot no"></span><span><strong>Вход и регистрация</strong> — ошибка. Нужна база данных.</span></li>
+      <li><span class="dot wait"></span><span><strong>Аренда, капитан/экипаж, услуги</strong> — заглушки «СКОРО», так и задумано.</span></li>
+    </ul>
+    <p class="lead">Причина у первых трёх одна: сайт хранит данные не в себе, а во внешнем
+    сервисе Supabase. Старый проект Supabase был удалён автоматически за長 простой (так
+    происходит с бесплатными проектами). Сам код цел — пропала только база.</p>
+  </section>
+
+  <section>
+    <h2><span class="n">05</span>Что нужно, чтобы запустить полностью</h2>
+    <div class="panel flag">
+      <span class="tag">Главное · нужно твоё действие</span>
+      <h3>Подключить новую базу данных Supabase</h3>
+      <p style="margin:.2rem 0 0;font-size:.93rem">Создать аккаунт и проект может только
+      владелец — я не могу. Дальше всё остальное делаю я.</p>
+      <ol>
+        <li>Открыть <span class="mono">supabase.com</span>, войти или зарегистрироваться (бесплатно, по email или через GitHub).</li>
+        <li>Проверить список проектов. Если есть старый <span class="mono">xmgdzmbzrlhxjnpkhxdp</span> — нажать <strong>Restore</strong> (вернутся и старые данные). Если нет — <strong>New project</strong>, любое имя, регион ближе к тебе, придумать пароль базы.</li>
+        <li>Зайти в <span class="mono">Project Settings → API</span>, скопировать <strong>Project URL</strong> и <strong>anon / publishable key</strong>.</li>
+        <li>Прислать эти два значения мне в переписку.</li>
+        <li>Я пропишу их в <span class="mono">.env.local</span>, запущу 3 готовых скрипта (создадут таблицы и хранилище фото), проверю и опубликую.</li>
+      </ol>
+    </div>
+    <p>После этого каталог, продажа лодки и аккаунты заработают. Останется подключить
+    домен <span class="mono">nautibay.com</span> — это делается в панели Vercel, могу
+    подсказать пошагово.</p>
+  </section>
+
+  <section>
+    <h2><span class="n">06</span>Что изменено в этой работе</h2>
+    <p>Всё перечисленное готово в рабочей копии. На боевой сайт попадёт по твоей команде
+    «загружай».</p>
+    <ul class="status">
+      <li><span class="dot ok"></span><span><strong>Тёмно-синяя тема</strong> и объёмные 3D-кнопки. Цвет = смысл: синяя — начать/перейти, зелёная — подтвердить, красная — отмена.</span></li>
+      <li><span class="dot ok"></span><span><strong>Фон главной</strong> — фотография марины (много яхт, синяя вода), файл <span class="mono">public/hero/marina-wide.jpg</span>.</span></li>
+      <li><span class="dot ok"></span><span><strong>Карточка по центру</strong> — уже и выше, полупрозрачная, с розой ветров сверху; шрифты уменьшены.</span></li>
+      <li><span class="dot ok"></span><span><strong>Новая плитка «Арендовать лодку»</strong> с пометкой «СКОРО».</span></li>
+      <li><span class="dot ok"></span><span><strong>Кнопка «Регистрация»</strong> — была золотая, стала синяя.</span></li>
+      <li><span class="dot ok"></span><span><strong>Бренд везде</strong> — «NautiBay.com — Yacht Marketplace»: заголовок, вкладка браузера, подвал (© 2026). В меню — короткое «NautiBay.com».</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="n">07</span>Как передавать доработки</h2>
+    <p>Чтобы продолжить работу со мной — в любой новой сессии:</p>
+    <ul>
+      <li>Открыть проект <span class="mono">C:\Users\Lenovo\yacht-marketplace</span> в Claude Code (или попросить меня переключиться в эту папку).</li>
+      <li>Описать правку обычными словами: «сделай кнопку крупнее», «поменяй текст на главной», «добавь раздел про страхование». Технические названия знать не нужно.</li>
+      <li><strong>Картинка-образец:</strong> сохранить её в галерею или «Загрузки» и назвать мне имя файла — я заберу сам. Вставленную прямо в чат картинку я в файл вытащить не могу.</li>
+      <li>Я показываю результат на <span class="mono">localhost</span> до публикации. На боевой сайт ничего не уходит, пока не скажешь «загружай».</li>
+    </ul>
+    <p class="lead">Если работу будет продолжать другой человек или другой инструмент — этой
+    памятки и раздела 02 достаточно, чтобы понять устройство проекта.</p>
+  </section>
+
+  <section>
+    <h2><span class="n">08</span>Слова, которые будут встречаться</h2>
+    <dl>
+      <div><dt>localhost</dt><dd>Сайт на твоём компьютере, только для проверки правок. Не виден в интернете.</dd></div>
+      <div><dt>боевой сайт</dt><dd>Публичная версия — nautibay.vercel.app.</dd></div>
+      <div><dt>GitHub</dt><dd>Онлайн-хранилище кода. «Сейф», куда складываются готовые версии.</dd></div>
+      <div><dt>Vercel</dt><dd>Хостинг. Показывает боевой сайт и сам его пересобирает, когда код попадает на GitHub.</dd></div>
+      <div><dt>Supabase</dt><dd>База данных: объявления, фото, аккаунты. Отдельный внешний сервис.</dd></div>
+      <div><dt>commit (коммит)</dt><dd>Снимок версии кода — фиксируется на компьютере.</dd></div>
+      <div><dt>push (пуш)</dt><dd>Загрузка снимка на GitHub. Запускает обновление боевого сайта.</dd></div>
+      <div><dt>deploy (деплой)</dt><dd>Сборка и публикация боевого сайта. Vercel делает сам.</dd></div>
+      <div><dt>migration (миграция)</dt><dd>Готовый скрипт, который создаёт таблицы в новой базе данных.</dd></div>
+      <div><dt>.env.local</dt><dd>Файл с адресом и ключом базы. Без него каталог не работает.</dd></div>
+    </dl>
+  </section>
+
+  <section>
+    <h2><span class="n">09</span>Что ещё впереди</h2>
+    <ul class="todo">
+      <li>Подключить новую базу Supabase — каталог, продажа, аккаунты <em>(нужно твоё действие)</em></li>
+      <li>Загрузить накопленные правки на боевой сайт</li>
+      <li>Привязать домен nautibay.com к Vercel</li>
+      <li>Сделать «Аренду лодки» рабочей (сейчас заглушка)</li>
+      <li>Разделы «Капитан / экипаж» и «Услуги и магазины» — из заглушек в рабочие</li>
+      <li>Заменить фоновое фото на версию в высоком качестве <em>(по желанию)</em></li>
+      <li>Зарегистрировать торговую марку NautiBay <em>(вопрос к юристу)</em></li>
+    </ul>
+  </section>
+
+  <p class="note">Эта памятка — снимок состояния на 31 августа 2026. По мере работы над
+  проектом её можно обновлять.</p>
+
+</div>

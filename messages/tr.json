@@ -1,6 +1,6 @@
 {
   "Common": {
-    "appName": "Yacht Marketplace",
+    "appName": "NautiBay.com — Yacht Marketplace",
     "loading": "Yükleniyor…",
     "save": "Kaydet",
     "cancel": "İptal",
@@ -27,6 +27,8 @@
     "tagline": "Yatçılık topluluğu için uluslararası pazar yeri",
     "findBoat": "Tekne bul",
     "sellBoat": "Tekne sat",
+    "charterBoat": "Tekne kirala",
+    "fishing": "Kaptanlı deniz balıkçılığı",
     "findCrew": "Kaptan/mürettebat bul",
     "services": "Hizmetler ve mağazalar",
     "comingSoon": "Yakında"

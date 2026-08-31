@@ -1,6 +1,6 @@
 {
   "Common": {
-    "appName": "Yacht Marketplace",
+    "appName": "NautiBay.com — Yacht Marketplace",
     "loading": "Cargando…",
     "save": "Guardar",
     "cancel": "Cancelar",
@@ -27,6 +27,8 @@
     "tagline": "El mercado internacional de la comunidad náutica",
     "findBoat": "Buscar un barco",
     "sellBoat": "Vender un barco",
+    "charterBoat": "Alquilar un barco",
+    "fishing": "Pesca en el mar con patrón",
     "findCrew": "Buscar patrón/tripulación",
     "services": "Servicios y tiendas",
     "comingSoon": "Próximamente"

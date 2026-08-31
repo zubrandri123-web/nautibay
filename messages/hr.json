@@ -1,6 +1,6 @@
 {
   "Common": {
-    "appName": "Yacht Marketplace",
+    "appName": "NautiBay.com — Yacht Marketplace",
     "loading": "Učitavanje…",
     "save": "Spremi",
     "cancel": "Odustani",
@@ -27,6 +27,8 @@
     "tagline": "Međunarodno tržište za nautičku zajednicu",
     "findBoat": "Pronađi brod",
     "sellBoat": "Prodaj brod",
+    "charterBoat": "Unajmi brod",
+    "fishing": "Ribolov na moru sa skiperom",
     "findCrew": "Pronađi skipera/posadu",
     "services": "Usluge i trgovine",
     "comingSoon": "Uskoro"

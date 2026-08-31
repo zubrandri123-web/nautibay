@@ -102,7 +102,14 @@
     "city": "Ciudad",
     "photos": "Fotos",
     "photosHint": "Se requiere al menos 1 foto",
+    "description": "Descripción",
+    "descriptionHint": "Todo lo que el comprador deba saber — reparaciones recientes, equipo nuevo, estado.",
     "videoUrl": "Enlace de vídeo (YouTube / Vimeo)",
+    "sectionAdvanced": "Más detalles (opcional)",
+    "sectionAdvancedHint": "Añade tanto como quieras — el comprador siempre puede preguntar el resto.",
+    "flagCountry": "Bandera",
+    "isBroker": "Anuncio de un bróker / distribuidor",
+    "brokerCompanyName": "Nombre de la empresa",
     "submit": "Publicar anuncio",
     "publishSuccess": "Tu anuncio ya está publicado.",
     "signInRequired": "Inicia sesión para crear un anuncio."
@@ -150,8 +157,11 @@
     "cabins": "Camarotes",
     "berths": "Literas",
     "sailArea": "Superficie vélica",
+    "flag": "Bandera",
+    "description": "Descripción",
     "location": "Ubicación",
     "seller": "Vendedor",
+    "listedByBroker": "Anuncio de un bróker",
     "notFound": "No se encontró este anuncio."
   }
 }

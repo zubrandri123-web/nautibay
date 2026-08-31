@@ -15,13 +15,10 @@ import {
   BOAT_TYPES,
   CONDITIONS,
   COUNTRIES,
-  DRIVE_TYPES,
   FUEL_TYPES,
-  HEATING_TYPES,
   HULL_MATERIALS,
-  MAST_MATERIALS,
-  STEERING_TYPES,
 } from "@/lib/boats/constants";
+import { compressImage } from "@/lib/boats/compress-image";
 
 type Photo = { path: string; previewUrl: string; uploading: boolean; error?: string };
 
@@ -31,10 +28,6 @@ export function BoatForm({ locale, userId }: { locale: string; userId: string })
   const tHull = useTranslations("HullMaterial");
   const tFuel = useTranslations("FuelType");
   const tCondition = useTranslations("Condition");
-  const tHeating = useTranslations("HeatingType");
-  const tMast = useTranslations("MastMaterial");
-  const tSteering = useTranslations("SteeringType");
-  const tDrive = useTranslations("DriveType");
   const tCommon = useTranslations("Common");
 
   const [photos, setPhotos] = useState<Photo[]>([]);
@@ -70,10 +63,11 @@ export function BoatForm({ locale, userId }: { locale: string; userId: string })
 
     await Promise.all(
       Array.from(files).map(async (file, i) => {
-        const path = `${userId}/${crypto.randomUUID()}-${file.name}`;
+        const compressed = await compressImage(file);
+        const path = `${userId}/${crypto.randomUUID()}-${compressed.name}`;
         const { error } = await supabase.storage
           .from("boat-photos")
-          .upload(path, file);
+          .upload(path, compressed);
 
         setPhotos((prev) => {
           const next = [...prev];
@@ -343,74 +337,6 @@ export function BoatForm({ locale, userId }: { locale: string; userId: string })
               {COUNTRIES.map((code) => (
                 <option key={code} value={code}>
                   {code}
-                </option>
-              ))}
-            </select>
-          </Field>
-          <Field label={t("heads")} optional>
-            <input
-              type="number"
-              {...register("heads")}
-              className="w-full rounded-md border border-slate-300 px-3 py-2"
-            />
-          </Field>
-          <Field label={t("waterTankL")} optional>
-            <input
-              type="number"
-              {...register("waterTankL")}
-              className="w-full rounded-md border border-slate-300 px-3 py-2"
-            />
-          </Field>
-          <Field label={t("heating")} optional>
-            <select
-              {...register("heating")}
-              className="w-full rounded-md border border-slate-300 px-3 py-2"
-            >
-              <option value="">—</option>
-              {HEATING_TYPES.map((heating) => (
-                <option key={heating} value={heating}>
-                  {tHeating(heating)}
-                </option>
-              ))}
-            </select>
-          </Field>
-          {boatType === "sailboat" ? (
-            <Field label={t("mastMaterial")} optional>
-              <select
-                {...register("mastMaterial")}
-                className="w-full rounded-md border border-slate-300 px-3 py-2"
-              >
-                <option value="">—</option>
-                {MAST_MATERIALS.map((material) => (
-                  <option key={material} value={material}>
-                    {tMast(material)}
-                  </option>
-                ))}
-              </select>
-            </Field>
-          ) : null}
-          <Field label={t("steeringType")} optional>
-            <select
-              {...register("steeringType")}
-              className="w-full rounded-md border border-slate-300 px-3 py-2"
-            >
-              <option value="">—</option>
-              {STEERING_TYPES.map((steering) => (
-                <option key={steering} value={steering}>
-                  {tSteering(steering)}
-                </option>
-              ))}
-            </select>
-          </Field>
-          <Field label={t("driveType")} optional>
-            <select
-              {...register("driveType")}
-              className="w-full rounded-md border border-slate-300 px-3 py-2"
-            >
-              <option value="">—</option>
-              {DRIVE_TYPES.map((drive) => (
-                <option key={drive} value={drive}>
-                  {tDrive(drive)}
                 </option>
               ))}
             </select>

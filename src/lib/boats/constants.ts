@@ -21,24 +21,6 @@ export const FUEL_TYPES = ["diesel", "gasoline", "electric", "none"] as const;
 
 export const CONDITIONS = ["new", "used"] as const;
 
-export const HEATING_TYPES = ["none", "diesel", "electric", "gas"] as const;
-
-export const MAST_MATERIALS = [
-  "aluminum",
-  "carbon",
-  "wood",
-  "steel",
-] as const;
-
-export const STEERING_TYPES = ["wheel", "tiller"] as const;
-
-export const DRIVE_TYPES = [
-  "shaft",
-  "saildrive",
-  "outboard",
-  "jet",
-] as const;
-
 // ISO 3166-1 alpha-2 codes for the yachting markets covered by the current
 // interface languages. Extend freely — search filters read this list, so
 // adding a country here does not require touching any component.
@@ -63,7 +45,3 @@ export type HullMaterial = (typeof HULL_MATERIALS)[number];
 export type FuelType = (typeof FUEL_TYPES)[number];
 export type Condition = (typeof CONDITIONS)[number];
 export type CountryCode = (typeof COUNTRIES)[number];
-export type HeatingType = (typeof HEATING_TYPES)[number];
-export type MastMaterial = (typeof MAST_MATERIALS)[number];
-export type SteeringType = (typeof STEERING_TYPES)[number];
-export type DriveType = (typeof DRIVE_TYPES)[number];

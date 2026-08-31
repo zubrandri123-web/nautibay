@@ -102,7 +102,14 @@
     "city": "Stadt",
     "photos": "Fotos",
     "photosHint": "Mindestens 1 Foto ist erforderlich",
+    "description": "Beschreibung",
+    "descriptionHint": "Alles, was Käufer wissen sollten — kürzliche Reparaturen, neue Ausrüstung, Zustand.",
     "videoUrl": "Video-Link (YouTube / Vimeo)",
+    "sectionAdvanced": "Weitere Details (optional)",
+    "sectionAdvancedHint": "Füge so viel hinzu, wie du möchtest — den Rest kann der Käufer erfragen.",
+    "flagCountry": "Flagge",
+    "isBroker": "Inserat eines Maklers / Händlers",
+    "brokerCompanyName": "Firmenname",
     "submit": "Inserat veröffentlichen",
     "publishSuccess": "Dein Inserat ist online.",
     "signInRequired": "Melde dich an, um ein Inserat zu erstellen."
@@ -150,8 +157,11 @@
     "cabins": "Kabinen",
     "berths": "Schlafplätze",
     "sailArea": "Segelfläche",
+    "flag": "Flagge",
+    "description": "Beschreibung",
     "location": "Standort",
     "seller": "Verkäufer",
+    "listedByBroker": "Inserat eines Maklers",
     "notFound": "Dieses Inserat wurde nicht gefunden."
   }
 }

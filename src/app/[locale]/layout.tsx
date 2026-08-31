@@ -4,6 +4,7 @@ import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { NavBar } from "@/components/nav-bar";
+import { Link } from "@/i18n/navigation";
 import "../globals.css";
 
 export function generateStaticParams() {
@@ -35,6 +36,11 @@ export default async function LocaleLayout({ children, params }: Props) {
         <NextIntlClientProvider>
           <NavBar locale={locale} />
           <main className="flex-1">{children}</main>
+          <footer className="border-t border-slate-200 py-6 text-center text-xs text-slate-400">
+            <Link href="/privacy" className="hover:text-slate-600">
+              Privacy policy
+            </Link>
+          </footer>
         </NextIntlClientProvider>
       </body>
     </html>

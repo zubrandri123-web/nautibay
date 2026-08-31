@@ -3,12 +3,8 @@ import {
   BOAT_TYPES,
   CONDITIONS,
   COUNTRIES,
-  DRIVE_TYPES,
   FUEL_TYPES,
-  HEATING_TYPES,
   HULL_MATERIALS,
-  MAST_MATERIALS,
-  STEERING_TYPES,
 } from "./constants";
 
 // Single source of truth for the listing form: drives client-side
@@ -49,12 +45,6 @@ export const boatListingSchema = z.object({
 
   // Advanced — optional, quick-pick fields for sellers who want to add more.
   flagCountry: z.enum(COUNTRIES).optional(),
-  heads: z.coerce.number().int().min(0).optional(),
-  waterTankL: z.coerce.number().positive().optional(),
-  heating: z.enum(HEATING_TYPES).optional(),
-  mastMaterial: z.enum(MAST_MATERIALS).optional(),
-  steeringType: z.enum(STEERING_TYPES).optional(),
-  driveType: z.enum(DRIVE_TYPES).optional(),
   isBroker: z.coerce.boolean().optional(),
   brokerCompanyName: z.string().trim().max(160).optional().or(z.literal("")),
 

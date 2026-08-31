@@ -102,7 +102,14 @@
     "city": "Şehir",
     "photos": "Fotoğraflar",
     "photosHint": "En az 1 fotoğraf gereklidir",
+    "description": "Açıklama",
+    "descriptionHint": "Alıcının bilmesi gereken her şey — son onarımlar, yeni ekipman, durum notları.",
     "videoUrl": "Video bağlantısı (YouTube / Vimeo)",
+    "sectionAdvanced": "Daha fazla detay (isteğe bağlı)",
+    "sectionAdvancedHint": "İstediğiniz kadar ekleyin — kalanını alıcı her zaman sorabilir.",
+    "flagCountry": "Bayrak",
+    "isBroker": "Broker / bayi ilanı",
+    "brokerCompanyName": "Şirket adı",
     "submit": "İlanı yayınla",
     "publishSuccess": "İlanınız yayında.",
     "signInRequired": "İlan oluşturmak için giriş yapın."
@@ -150,8 +157,11 @@
     "cabins": "Kabin sayısı",
     "berths": "Yatak sayısı",
     "sailArea": "Yelken alanı",
+    "flag": "Bayrak",
+    "description": "Açıklama",
     "location": "Konum",
     "seller": "Satıcı",
+    "listedByBroker": "Broker ilanı",
     "notFound": "Bu ilan bulunamadı."
   }
 }

@@ -50,13 +50,6 @@ export async function createListingAction(locale: string, input: unknown) {
       video_url: data.videoUrl || null,
       description: data.description || null,
       flag_country: data.flagCountry ?? null,
-      heads: data.heads ?? null,
-      water_tank_l: data.waterTankL ?? null,
-      heating: data.heating ?? null,
-      mast_material:
-        data.boatType === "sailboat" ? (data.mastMaterial ?? null) : null,
-      steering_type: data.steeringType ?? null,
-      drive_type: data.driveType ?? null,
       is_broker: data.isBroker ?? false,
       broker_company_name: data.isBroker ? data.brokerCompanyName || null : null,
     })

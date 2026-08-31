@@ -87,7 +87,28 @@ export default async function BoatDetailPage({ params }: Props) {
         {listing.sail_area_m2 ? (
           <Detail label={t("sailArea")} value={`${listing.sail_area_m2} m²`} />
         ) : null}
+        {listing.flag_country ? (
+          <Detail label={t("flag")} value={listing.flag_country} />
+        ) : null}
       </dl>
+
+      {listing.is_broker ? (
+        <p className="mt-4 text-sm text-slate-500">
+          {t("listedByBroker")}
+          {listing.broker_company_name ? ` — ${listing.broker_company_name}` : ""}
+        </p>
+      ) : null}
+
+      {listing.description ? (
+        <div className="mt-8">
+          <h2 className="text-xs uppercase tracking-wide text-slate-400">
+            {t("description")}
+          </h2>
+          <p className="mt-2 whitespace-pre-line text-sm text-slate-700">
+            {listing.description}
+          </p>
+        </div>
+      ) : null}
     </div>
   );
 }

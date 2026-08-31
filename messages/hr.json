@@ -102,7 +102,14 @@
     "city": "Grad",
     "photos": "Fotografije",
     "photosHint": "Potrebna je najmanje 1 fotografija",
+    "description": "Opis",
+    "descriptionHint": "Sve što bi kupac trebao znati — nedavni popravci, nova oprema, stanje.",
     "videoUrl": "Video poveznica (YouTube / Vimeo)",
+    "sectionAdvanced": "Više detalja (neobavezno)",
+    "sectionAdvancedHint": "Dodajte koliko želite — kupac uvijek može pitati za ostalo.",
+    "flagCountry": "Zastava",
+    "isBroker": "Oglas posrednika / trgovca",
+    "brokerCompanyName": "Naziv tvrtke",
     "submit": "Objavi oglas",
     "publishSuccess": "Vaš oglas je objavljen.",
     "signInRequired": "Prijavite se za kreiranje oglasa."
@@ -150,8 +157,11 @@
     "cabins": "Kabine",
     "berths": "Ležajevi",
     "sailArea": "Površina jedara",
+    "flag": "Zastava",
+    "description": "Opis",
     "location": "Lokacija",
     "seller": "Prodavatelj",
+    "listedByBroker": "Oglas posrednika",
     "notFound": "Oglas nije pronađen."
   }
 }

@@ -72,28 +72,6 @@
     "new": "New",
     "used": "Used"
   },
-  "HeatingType": {
-    "none": "None",
-    "diesel": "Diesel",
-    "electric": "Electric",
-    "gas": "Gas"
-  },
-  "MastMaterial": {
-    "aluminum": "Aluminum",
-    "carbon": "Carbon",
-    "wood": "Wood",
-    "steel": "Steel"
-  },
-  "SteeringType": {
-    "wheel": "Wheel",
-    "tiller": "Tiller"
-  },
-  "DriveType": {
-    "shaft": "Shaft drive",
-    "saildrive": "Saildrive",
-    "outboard": "Outboard",
-    "jet": "Jet drive"
-  },
   "BoatForm": {
     "title": "Create a listing",
     "sectionBasic": "Basics",
@@ -130,12 +108,6 @@
     "sectionAdvanced": "More details (optional)",
     "sectionAdvancedHint": "Add as much or as little as you like — buyers can always ask for the rest.",
     "flagCountry": "Flag",
-    "heads": "Heads (toilets)",
-    "waterTankL": "Fresh water tank (L)",
-    "heating": "Heating",
-    "mastMaterial": "Mast material",
-    "steeringType": "Steering",
-    "driveType": "Drive type",
     "isBroker": "Listing as a broker / dealer",
     "brokerCompanyName": "Company name",
     "submit": "Publish listing",
@@ -186,12 +158,7 @@
     "berths": "Berths",
     "sailArea": "Sail area",
     "flag": "Flag",
-    "heads": "Heads",
-    "waterTank": "Water tank",
-    "heating": "Heating",
-    "mast": "Mast",
-    "steering": "Steering",
-    "drive": "Drive",
+    "description": "Description",
     "location": "Location",
     "seller": "Seller",
     "listedByBroker": "Listed by a broker",

@@ -72,28 +72,6 @@
     "new": "Neuf",
     "used": "Occasion"
   },
-  "HeatingType": {
-    "none": "Aucun",
-    "diesel": "Diesel",
-    "electric": "Électrique",
-    "gas": "Gaz"
-  },
-  "MastMaterial": {
-    "aluminum": "Aluminium",
-    "carbon": "Carbone",
-    "wood": "Bois",
-    "steel": "Acier"
-  },
-  "SteeringType": {
-    "wheel": "Barre à roue",
-    "tiller": "Barre franche"
-  },
-  "DriveType": {
-    "shaft": "Ligne d'arbre",
-    "saildrive": "Saildrive",
-    "outboard": "Hors-bord",
-    "jet": "Hydrojet"
-  },
   "BoatForm": {
     "title": "Créer une annonce",
     "sectionBasic": "Informations de base",
@@ -124,16 +102,12 @@
     "city": "Ville",
     "photos": "Photos",
     "photosHint": "Au moins 1 photo est requise",
+    "description": "Description",
+    "descriptionHint": "Tout ce que l'acheteur devrait savoir — réparations récentes, nouvel équipement, état.",
     "videoUrl": "Lien vidéo (YouTube / Vimeo)",
     "sectionAdvanced": "Plus de détails (facultatif)",
     "sectionAdvancedHint": "Ajoutez autant que vous voulez — l'acheteur peut toujours demander le reste.",
     "flagCountry": "Pavillon",
-    "heads": "Sanitaires",
-    "waterTankL": "Réservoir d'eau douce (L)",
-    "heating": "Chauffage",
-    "mastMaterial": "Matériau du mât",
-    "steeringType": "Barre",
-    "driveType": "Type de transmission",
     "isBroker": "Annonce déposée par un courtier / professionnel",
     "brokerCompanyName": "Nom de l'entreprise",
     "submit": "Publier l'annonce",
@@ -184,12 +158,7 @@
     "berths": "Couchages",
     "sailArea": "Surface de voilure",
     "flag": "Pavillon",
-    "heads": "Sanitaires",
-    "waterTank": "Réservoir d'eau",
-    "heating": "Chauffage",
-    "mast": "Mât",
-    "steering": "Barre",
-    "drive": "Transmission",
+    "description": "Description",
     "location": "Localisation",
     "seller": "Vendeur",
     "listedByBroker": "Annonce d'un courtier",

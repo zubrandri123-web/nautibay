@@ -72,28 +72,6 @@
     "new": "Новая",
     "used": "Б/у"
   },
-  "HeatingType": {
-    "none": "Нет",
-    "diesel": "Дизель",
-    "electric": "Электро",
-    "gas": "Газ"
-  },
-  "MastMaterial": {
-    "aluminum": "Алюминий",
-    "carbon": "Карбон",
-    "wood": "Дерево",
-    "steel": "Сталь"
-  },
-  "SteeringType": {
-    "wheel": "Штурвал",
-    "tiller": "Румпель"
-  },
-  "DriveType": {
-    "shaft": "Валовой привод",
-    "saildrive": "Сайлдрайв",
-    "outboard": "Подвесной мотор",
-    "jet": "Водомёт"
-  },
   "BoatForm": {
     "title": "Создать объявление",
     "sectionBasic": "Основное",
@@ -124,16 +102,12 @@
     "city": "Город",
     "photos": "Фотографии",
     "photosHint": "Минимум 1 фото обязательно",
+    "description": "Описание",
+    "descriptionHint": "Всё, что важно знать покупателю — недавний ремонт, новое оборудование, состояние.",
     "videoUrl": "Ссылка на видео (YouTube / Vimeo)",
     "sectionAdvanced": "Подробнее (необязательно)",
     "sectionAdvancedHint": "Заполните столько, сколько хотите — об остальном покупатель может спросить сам.",
     "flagCountry": "Флаг",
-    "heads": "Санузлы",
-    "waterTankL": "Бак для пресной воды (л)",
-    "heating": "Отопление",
-    "mastMaterial": "Материал мачты",
-    "steeringType": "Управление",
-    "driveType": "Тип привода",
     "isBroker": "Продаю как брокер/дилер",
     "brokerCompanyName": "Название компании",
     "submit": "Опубликовать объявление",
@@ -184,12 +158,7 @@
     "berths": "Спальные места",
     "sailArea": "Площадь парусов",
     "flag": "Флаг",
-    "heads": "Санузлы",
-    "waterTank": "Бак для воды",
-    "heating": "Отопление",
-    "mast": "Мачта",
-    "steering": "Управление",
-    "drive": "Привод",
+    "description": "Описание",
     "location": "Локация",
     "seller": "Продавец",
     "listedByBroker": "Продаётся через брокера",

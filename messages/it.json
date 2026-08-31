@@ -72,28 +72,6 @@
     "new": "Nuova",
     "used": "Usata"
   },
-  "HeatingType": {
-    "none": "Nessuno",
-    "diesel": "Diesel",
-    "electric": "Elettrico",
-    "gas": "Gas"
-  },
-  "MastMaterial": {
-    "aluminum": "Alluminio",
-    "carbon": "Carbonio",
-    "wood": "Legno",
-    "steel": "Acciaio"
-  },
-  "SteeringType": {
-    "wheel": "Ruota del timone",
-    "tiller": "Barra del timone"
-  },
-  "DriveType": {
-    "shaft": "Asse portaelica",
-    "saildrive": "Saildrive",
-    "outboard": "Fuoribordo",
-    "jet": "Idrogetto"
-  },
   "BoatForm": {
     "title": "Crea un annuncio",
     "sectionBasic": "Informazioni di base",
@@ -124,16 +102,12 @@
     "city": "Città",
     "photos": "Foto",
     "photosHint": "È richiesta almeno 1 foto",
+    "description": "Descrizione",
+    "descriptionHint": "Tutto ciò che l'acquirente dovrebbe sapere — riparazioni recenti, nuove attrezzature, condizioni.",
     "videoUrl": "Link video (YouTube / Vimeo)",
     "sectionAdvanced": "Altri dettagli (facoltativo)",
     "sectionAdvancedHint": "Aggiungi quanto vuoi — l'acquirente può sempre chiedere il resto.",
     "flagCountry": "Bandiera",
-    "heads": "Servizi igienici",
-    "waterTankL": "Serbatoio acqua dolce (L)",
-    "heating": "Riscaldamento",
-    "mastMaterial": "Materiale dell'albero",
-    "steeringType": "Timoneria",
-    "driveType": "Tipo di trasmissione",
     "isBroker": "Annuncio di un broker / rivenditore",
     "brokerCompanyName": "Nome dell'azienda",
     "submit": "Pubblica annuncio",
@@ -183,8 +157,11 @@
     "cabins": "Cabine",
     "berths": "Posti letto",
     "sailArea": "Superficie velica",
+    "flag": "Bandiera",
+    "description": "Descrizione",
     "location": "Località",
     "seller": "Venditore",
+    "listedByBroker": "Annuncio di un broker",
     "notFound": "Annuncio non trovato."
   }
 }

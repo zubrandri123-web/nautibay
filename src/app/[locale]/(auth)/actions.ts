@@ -10,7 +10,7 @@ export async function signUpAction(formData: FormData) {
   const fullName = String(formData.get("fullName") ?? "");
 
   const supabase = await createClient();
-  const { error } = await supabase.auth.signUp({
+  const { data, error } = await supabase.auth.signUp({
     email,
     password,
     options: { data: { full_name: fullName } },
@@ -18,6 +18,12 @@ export async function signUpAction(formData: FormData) {
 
   if (error) {
     redirect(`/${locale}/sign-up?error=${encodeURIComponent(error.message)}`);
+  }
+
+  // When email confirmation is disabled, sign-up returns a live session —
+  // send the user straight in instead of the "check your email" screen.
+  if (data.session) {
+    redirect(`/${locale}/boats`);
   }
 
   redirect(`/${locale}/sign-up?checkEmail=${encodeURIComponent(email)}`);

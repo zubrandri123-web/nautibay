@@ -134,7 +134,7 @@ export function BoatForm({ locale, userId }: { locale: string; userId: string })
           </select>
         </Field>
 
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           <Field label={t("brand")} optional>
             <input
               {...register("brand")}
@@ -150,7 +150,7 @@ export function BoatForm({ locale, userId }: { locale: string; userId: string })
           </Field>
         </div>
 
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           <Field label={t("price")} error={errors.price?.message}>
             <input
               type="number"
@@ -168,7 +168,11 @@ export function BoatForm({ locale, userId }: { locale: string; userId: string })
           </Field>
         </div>
 
-        <Field label={t("refitYear")} optional>
+        <Field
+          label={t("refitYear")}
+          optional
+          error={errors.refitYear?.message}
+        >
           <input
             type="number"
             {...register("refitYear")}
@@ -176,7 +180,7 @@ export function BoatForm({ locale, userId }: { locale: string; userId: string })
           />
         </Field>
 
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
           <Field label={t("country")} error={errors.country?.message}>
             <select
               {...register("country")}
@@ -209,7 +213,7 @@ export function BoatForm({ locale, userId }: { locale: string; userId: string })
         <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-500">
           {t("sectionDimensions")}
         </h2>
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
           <Field label={t("lengthFt")} error={errors.lengthFt?.message}>
             <input
               type="number"
@@ -217,14 +221,14 @@ export function BoatForm({ locale, userId }: { locale: string; userId: string })
               className="w-full rounded-md border border-slate-300 px-3 py-2"
             />
           </Field>
-          <Field label={t("beamFt")} optional>
+          <Field label={t("beamFt")} optional error={errors.beamFt?.message}>
             <input
               type="number"
               {...register("beamFt")}
               className="w-full rounded-md border border-slate-300 px-3 py-2"
             />
           </Field>
-          <Field label={t("draftFt")} optional>
+          <Field label={t("draftFt")} optional error={errors.draftFt?.message}>
             <input
               type="number"
               {...register("draftFt")}
@@ -234,7 +238,12 @@ export function BoatForm({ locale, userId }: { locale: string; userId: string })
         </div>
 
         {boatType === "sailboat" ? (
-          <Field label={t("sailAreaM2")} hint={t("sailAreaHint")} optional>
+          <Field
+            label={t("sailAreaM2")}
+            hint={t("sailAreaHint")}
+            optional
+            error={errors.sailAreaM2?.message}
+          >
             <input
               type="number"
               {...register("sailAreaM2")}
@@ -248,7 +257,7 @@ export function BoatForm({ locale, userId }: { locale: string; userId: string })
         <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-500">
           {t("sectionEngine")}
         </h2>
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           <Field label={t("fuelType")} optional>
             <select
               {...register("fuelType")}
@@ -262,7 +271,11 @@ export function BoatForm({ locale, userId }: { locale: string; userId: string })
               ))}
             </select>
           </Field>
-          <Field label={t("enginePowerHp")} optional>
+          <Field
+            label={t("enginePowerHp")}
+            optional
+            error={errors.enginePowerHp?.message}
+          >
             <input
               type="number"
               {...register("enginePowerHp")}
@@ -276,7 +289,7 @@ export function BoatForm({ locale, userId }: { locale: string; userId: string })
         <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-500">
           {t("sectionDetails")}
         </h2>
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
           <Field label={t("hullMaterial")} optional>
             <select
               {...register("hullMaterial")}
@@ -290,14 +303,14 @@ export function BoatForm({ locale, userId }: { locale: string; userId: string })
               ))}
             </select>
           </Field>
-          <Field label={t("cabins")} optional>
+          <Field label={t("cabins")} optional error={errors.cabins?.message}>
             <input
               type="number"
               {...register("cabins")}
               className="w-full rounded-md border border-slate-300 px-3 py-2"
             />
           </Field>
-          <Field label={t("berths")} optional>
+          <Field label={t("berths")} optional error={errors.berths?.message}>
             <input
               type="number"
               {...register("berths")}
@@ -327,7 +340,7 @@ export function BoatForm({ locale, userId }: { locale: string; userId: string })
         </summary>
         <p className="mt-2 text-xs text-slate-400">{t("sectionAdvancedHint")}</p>
 
-        <div className="mt-4 grid grid-cols-2 gap-4">
+        <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
           <Field label={t("flagCountry")} optional>
             <select
               {...register("flagCountry")}
@@ -377,7 +390,7 @@ export function BoatForm({ locale, userId }: { locale: string; userId: string })
         </Field>
 
         {photos.length > 0 ? (
-          <div className="grid grid-cols-4 gap-3">
+          <div className="grid grid-cols-3 gap-3 sm:grid-cols-4">
             {photos.map((photo, i) => (
               <div
                 key={i}
@@ -432,7 +445,12 @@ function Field({
   return (
     <label className="block">
       <span className="block text-sm font-medium text-slate-700">
-        {label} {optional ? <span className="text-slate-400">(opt.)</span> : null}
+        {label}
+        {optional ? (
+          <span className="ml-1 text-xs font-normal text-slate-400">
+            (opt.)
+          </span>
+        ) : null}
       </span>
       {hint ? <span className="block text-xs text-slate-400">{hint}</span> : null}
       <div className="mt-1">{children}</div>

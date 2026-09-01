@@ -7,6 +7,15 @@ import {
   HULL_MATERIALS,
 } from "./constants";
 
+// HTML number inputs hand back "" when left blank, and z.coerce.number()
+// turns "" into 0 — which then fails .positive()/.min(). Treat blank as
+// "not provided" so an untouched optional field validates cleanly.
+const optionalNumber = <T extends z.ZodType>(schema: T) =>
+  z.preprocess(
+    (v) => (v === "" || v === null || v === undefined ? undefined : v),
+    schema.optional(),
+  );
+
 // Single source of truth for the listing form: drives client-side
 // validation (react-hook-form) and is re-run on the server before writing
 // to Supabase, so a tampered client request can't skip validation.
@@ -29,17 +38,17 @@ export const boatListingSchema = z.object({
   // Important but optional.
   brand: z.string().trim().max(120).optional().or(z.literal("")),
   model: z.string().trim().max(120).optional().or(z.literal("")),
-  beamFt: z.coerce.number().positive().optional(),
-  draftFt: z.coerce.number().positive().optional(),
+  beamFt: optionalNumber(z.coerce.number().positive()),
+  draftFt: optionalNumber(z.coerce.number().positive()),
   fuelType: z.enum(FUEL_TYPES).optional(),
-  enginePowerHp: z.coerce.number().positive().optional(),
+  enginePowerHp: optionalNumber(z.coerce.number().positive()),
   hullMaterial: z.enum(HULL_MATERIALS).optional(),
-  cabins: z.coerce.number().int().min(0).optional(),
-  berths: z.coerce.number().int().min(0).optional(),
+  cabins: optionalNumber(z.coerce.number().int().min(0)),
+  berths: optionalNumber(z.coerce.number().int().min(0)),
 
   // Secondary — detail page only.
-  refitYear: z.coerce.number().int().min(1900).optional(),
-  sailAreaM2: z.coerce.number().positive().optional(),
+  refitYear: optionalNumber(z.coerce.number().int().min(1900)),
+  sailAreaM2: optionalNumber(z.coerce.number().positive()),
   videoUrl: z.string().trim().url().optional().or(z.literal("")),
   description: z.string().trim().max(4000).optional().or(z.literal("")),
 

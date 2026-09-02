@@ -110,6 +110,7 @@
     "sailAreaM2": "Superficie vélica (m²)",
     "sailAreaHint": "Solo se muestra para veleros",
     "country": "País",
+    "countryHint": "Ninguna encaja: déjalo vacío e indica la ubicación en Región / Ciudad y en la descripción.",
     "region": "Región",
     "city": "Ciudad",
     "photos": "Fotos",

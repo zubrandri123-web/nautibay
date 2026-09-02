@@ -41,7 +41,7 @@ export const boatListingSchema = z.object({
     .max(new Date().getFullYear() + 1),
   lengthFt: z.coerce.number().positive(),
   condition: optionalEnum(CONDITIONS),
-  country: z.enum(COUNTRIES),
+  country: optionalEnum(COUNTRIES),
   region: z.string().trim().max(120).optional().or(z.literal("")),
   city: z.string().trim().max(120).optional().or(z.literal("")),
 

@@ -110,6 +110,7 @@
     "sailAreaM2": "Yelken alanı (m²)",
     "sailAreaHint": "Sadece yelkenliler için gösterilir",
     "country": "Ülke",
+    "countryHint": "Uygun yok — boş bırakın ve konumu Bölge / Şehir ve açıklamada belirtin.",
     "region": "Bölge",
     "city": "Şehir",
     "photos": "Fotoğraflar",

@@ -110,6 +110,7 @@
     "sailAreaM2": "Surface de voilure (m²)",
     "sailAreaHint": "Affiché uniquement pour les voiliers",
     "country": "Pays",
+    "countryHint": "Aucune ne convient — laissez vide et indiquez le lieu dans Région / Ville et la description.",
     "region": "Région",
     "city": "Ville",
     "photos": "Photos",

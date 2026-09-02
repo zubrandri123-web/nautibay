@@ -110,6 +110,7 @@
     "sailAreaM2": "Površina jedara (m²)",
     "sailAreaHint": "Prikazuje se samo za jedrilice",
     "country": "Država",
+    "countryHint": "Nema odgovarajuće — ostavite prazno i navedite lokaciju u „Regija“ / „Grad“ i opisu.",
     "region": "Regija",
     "city": "Grad",
     "photos": "Fotografije",

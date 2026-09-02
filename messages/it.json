@@ -110,6 +110,7 @@
     "sailAreaM2": "Superficie velica (m²)",
     "sailAreaHint": "Mostrato solo per le barche a vela",
     "country": "Paese",
+    "countryHint": "Nessuna adatta — lascia vuoto e indica la posizione in Regione / Città e nella descrizione.",
     "region": "Regione",
     "city": "Città",
     "photos": "Foto",

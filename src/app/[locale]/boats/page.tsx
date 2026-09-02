@@ -1,12 +1,13 @@
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { BoatCard } from "@/components/boat-card";
 import { NearMeButton } from "@/components/near-me-button";
 import {
   BOAT_TYPES,
   CONDITIONS,
-  COUNTRIES,
+  countryName,
   FUEL_TYPES,
   HULL_MATERIALS,
+  MAIN_MARKETS,
 } from "@/lib/boats/constants";
 import {
   searchBoatListings,
@@ -59,6 +60,7 @@ function parseFilters(sp: RawSearchParams): SearchFilters {
 export default async function BoatsSearchPage({ searchParams }: Props) {
   const sp = await searchParams;
   const filters = parseFilters(sp);
+  const locale = await getLocale();
   const t = await getTranslations("Search");
   const tType = await getTranslations("BoatType");
   const tHull = await getTranslations("HullMaterial");
@@ -234,7 +236,7 @@ export default async function BoatsSearchPage({ searchParams }: Props) {
             {t("country")}
           </legend>
           <div className="mt-1 flex flex-wrap gap-x-4 gap-y-1">
-            {COUNTRIES.map((code) => (
+            {MAIN_MARKETS.map((code) => (
               <label
                 key={code}
                 className="flex items-center gap-1 text-sm text-slate-700"
@@ -245,7 +247,7 @@ export default async function BoatsSearchPage({ searchParams }: Props) {
                   value={code}
                   defaultChecked={filters.country?.includes(code)}
                 />
-                {code}
+                {countryName(code, locale)}
               </label>
             ))}
           </div>

@@ -15,6 +15,7 @@ import {
   BOAT_TYPES,
   CONDITIONS,
   COUNTRIES,
+  countryName,
   CURRENCIES,
   FUEL_TYPES,
   HULL_MATERIALS,
@@ -60,6 +61,10 @@ export function BoatForm({
 
   const boatType = watch("boatType");
   const isBroker = watch("isBroker");
+
+  const countryOptions = [...COUNTRIES]
+    .map((code) => ({ code, name: countryName(code, locale) }))
+    .sort((a, b) => a.name.localeCompare(b.name, locale));
 
   async function handleFilesSelected(files: FileList | null) {
     if (!files || files.length === 0) return;
@@ -211,15 +216,20 @@ export function BoatForm({
         </Field>
 
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
-          <Field label={t("country")} error={errors.country?.message}>
+          <Field
+            label={t("country")}
+            hint={t("countryHint")}
+            optional
+            error={errors.country?.message}
+          >
             <select
               {...register("country")}
               className="w-full rounded-md border border-slate-300 px-3 py-2"
             >
               <option value="">—</option>
-              {COUNTRIES.map((code) => (
+              {countryOptions.map(({ code, name }) => (
                 <option key={code} value={code}>
-                  {code}
+                  {name}
                 </option>
               ))}
             </select>
@@ -377,9 +387,9 @@ export function BoatForm({
               className="w-full rounded-md border border-slate-300 px-3 py-2"
             >
               <option value="">—</option>
-              {COUNTRIES.map((code) => (
+              {countryOptions.map(({ code, name }) => (
                 <option key={code} value={code}>
-                  {code}
+                  {name}
                 </option>
               ))}
             </select>

@@ -32,7 +32,7 @@ export async function createListingAction(locale: string, input: unknown) {
       year_built: data.yearBuilt,
       length_ft: data.lengthFt,
       condition: data.condition ?? null,
-      country: data.country,
+      country: data.country || null,
       region: data.region || null,
       city: data.city || null,
       brand: data.brand || null,

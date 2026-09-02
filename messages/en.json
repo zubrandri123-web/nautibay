@@ -110,6 +110,7 @@
     "sailAreaM2": "Sail area (m²)",
     "sailAreaHint": "Shown for sailboats only",
     "country": "Country",
+    "countryHint": "None fits — leave blank and give the location in Region / City and the description.",
     "region": "Region",
     "city": "City",
     "photos": "Photos",

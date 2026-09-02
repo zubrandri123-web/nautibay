@@ -2,6 +2,7 @@ import { getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Link } from "@/i18n/navigation";
 import { createClient } from "@/lib/supabase/server";
+import { countryName } from "@/lib/boats/constants";
 import { getBoatListing } from "@/lib/boats/queries";
 
 type Props = {
@@ -15,7 +16,7 @@ function photoUrl(path: string) {
 }
 
 export default async function BoatDetailPage({ params }: Props) {
-  const { id } = await params;
+  const { id, locale } = await params;
   const listing = await getBoatListing(id);
 
   const t = await getTranslations("BoatDetail");
@@ -44,7 +45,11 @@ export default async function BoatDetailPage({ params }: Props) {
   const title =
     [listing.brand, listing.model].filter(Boolean).join(" ") ||
     tType(listing.boat_type);
-  const location = [listing.city, listing.region, listing.country]
+  const location = [
+    listing.city,
+    listing.region,
+    listing.country ? countryName(listing.country, locale) : null,
+  ]
     .filter(Boolean)
     .join(", ");
 
@@ -162,7 +167,10 @@ export default async function BoatDetailPage({ params }: Props) {
           <Detail label={t("sailArea")} value={`${listing.sail_area_m2} m²`} />
         ) : null}
         {listing.flag_country ? (
-          <Detail label={t("flag")} value={listing.flag_country} />
+          <Detail
+            label={t("flag")}
+            value={countryName(listing.flag_country, locale)}
+          />
         ) : null}
       </dl>
 

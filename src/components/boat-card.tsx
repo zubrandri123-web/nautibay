@@ -1,5 +1,6 @@
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
+import { countryName } from "@/lib/boats/constants";
 import type { BoatListingSummary } from "@/lib/boats/queries";
 
 type Photo = { storage_path: string; sort_order: number };
@@ -15,10 +16,15 @@ function coverPhotoUrl(photos: Photo[] | null) {
 export async function BoatCard({ listing }: { listing: BoatListingSummary }) {
   const t = await getTranslations("BoatType");
   const tCard = await getTranslations("BoatCard");
+  const locale = await getLocale();
   const photoUrl = coverPhotoUrl(listing.boat_listing_photos);
   const title =
     [listing.brand, listing.model].filter(Boolean).join(" ") || t(listing.boat_type as never);
-  const location = [listing.city, listing.region, listing.country]
+  const location = [
+    listing.city,
+    listing.region,
+    listing.country ? countryName(listing.country, locale) : null,
+  ]
     .filter(Boolean)
     .join(", ");
 

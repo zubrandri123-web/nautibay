@@ -110,6 +110,7 @@
     "sailAreaM2": "Segelfläche (m²)",
     "sailAreaHint": "Wird nur für Segelboote angezeigt",
     "country": "Land",
+    "countryHint": "Keine passende — leer lassen und den Ort in „Region“ / „Stadt“ und der Beschreibung angeben.",
     "region": "Region",
     "city": "Stadt",
     "photos": "Fotos",

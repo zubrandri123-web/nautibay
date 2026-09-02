@@ -96,6 +96,7 @@
     "price": "Prix",
     "currency": "Devise",
     "yearBuilt": "Année de construction",
+    "yearBuiltHint": "Vous n’êtes pas sûr — indiquez une année approximative.",
     "refitYear": "Année de refonte",
     "lengthFt": "Longueur (pieds)",
     "beamFt": "Largeur (pieds)",

@@ -96,6 +96,7 @@
     "price": "Price",
     "currency": "Currency",
     "yearBuilt": "Year built",
+    "yearBuiltHint": "Not sure — put an approximate year.",
     "refitYear": "Refit year",
     "lengthFt": "Length (ft)",
     "beamFt": "Beam (ft)",

@@ -96,6 +96,7 @@
     "price": "Precio",
     "currency": "Moneda",
     "yearBuilt": "Año de construcción",
+    "yearBuiltHint": "¿No estás seguro? Indica un año aproximado.",
     "refitYear": "Año de reforma",
     "lengthFt": "Eslora (pies)",
     "beamFt": "Manga (pies)",

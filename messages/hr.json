@@ -96,6 +96,7 @@
     "price": "Cijena",
     "currency": "Valuta",
     "yearBuilt": "Godina izgradnje",
+    "yearBuiltHint": "Niste sigurni — upišite približnu godinu.",
     "refitYear": "Godina obnove",
     "lengthFt": "Duljina (stope)",
     "beamFt": "Širina (stope)",

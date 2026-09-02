@@ -96,6 +96,7 @@
     "price": "Fiyat",
     "currency": "Para birimi",
     "yearBuilt": "Yapım yılı",
+    "yearBuiltHint": "Emin değilseniz yaklaşık bir yıl girin.",
     "refitYear": "Yenileme yılı",
     "lengthFt": "Boy (fit)",
     "beamFt": "Genişlik (fit)",

@@ -96,6 +96,7 @@
     "price": "Prezzo",
     "currency": "Valuta",
     "yearBuilt": "Anno di costruzione",
+    "yearBuiltHint": "Non sei sicuro — indica un anno approssimativo.",
     "refitYear": "Anno di refit",
     "lengthFt": "Lunghezza (piedi)",
     "beamFt": "Larghezza (piedi)",

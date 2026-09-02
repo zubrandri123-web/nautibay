@@ -173,7 +173,11 @@ export function BoatForm({ locale, userId }: { locale: string; userId: string })
               </select>
             </div>
           </Field>
-          <Field label={t("yearBuilt")} error={errors.yearBuilt?.message}>
+          <Field
+            label={t("yearBuilt")}
+            hint={t("yearBuiltHint")}
+            error={errors.yearBuilt?.message}
+          >
             <input
               type="number"
               {...register("yearBuilt")}

@@ -75,8 +75,8 @@ export default async function BoatDetailPage({ params }: Props) {
         {listing.currency} {Number(listing.price).toLocaleString()}
       </p>
 
-      <div className="mt-6 rounded-lg border border-slate-200 bg-slate-50 p-4">
-        <h2 className="text-xs uppercase tracking-wide text-slate-400">
+      <div className="mt-6 rounded-lg border-2 border-sky-500 bg-sky-50 p-4">
+        <h2 className="text-sm font-semibold uppercase tracking-wide text-sky-800">
           {t("contactSeller")}
         </h2>
         {user ? (

@@ -28,7 +28,25 @@ export const FUEL_TYPES = [
 export const CONDITIONS = ["new", "used"] as const;
 
 // Listing prices are shown as entered — no conversion. Kept short on purpose.
-export const CURRENCIES = ["EUR", "USD", "GBP"] as const;
+export const CURRENCIES = ["EUR", "USD", "GBP", "CHF"] as const;
+
+// Boat dimensions are stored in metres. Show both units to buyers.
+const M_TO_FT = 3.28084;
+
+export function metresToFeet(m: number): number {
+  return Math.round(m * M_TO_FT);
+}
+
+// "12.5 m (41 ft)" — the "m" / "ft" abbreviations come from the caller so
+// they can be localized.
+export function formatLength(
+  metres: number | null | undefined,
+  unitM: string,
+  unitFt: string,
+): string {
+  if (metres == null) return "";
+  return `${metres} ${unitM} (${metresToFeet(metres)} ${unitFt})`;
+}
 
 // Short list of the main yachting markets — used only for the quick country
 // checkboxes in the catalog filter panel.

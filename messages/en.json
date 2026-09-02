@@ -12,7 +12,9 @@
     "search": "Search",
     "filters": "Filters",
     "clearFilters": "Clear filters",
-    "currency": "EUR"
+    "currency": "EUR",
+    "unitM": "m",
+    "unitFt": "ft"
   },
   "Nav": {
     "signIn": "Sign in",
@@ -99,9 +101,6 @@
     "yearBuilt": "Year built",
     "yearBuiltHint": "Not sure — put an approximate year.",
     "refitYear": "Refit year",
-    "lengthFt": "Length (ft)",
-    "beamFt": "Beam (ft)",
-    "draftFt": "Draft (ft)",
     "hullMaterial": "Hull material",
     "fuelType": "Fuel type",
     "enginePowerHp": "Engine power (hp)",
@@ -135,7 +134,13 @@
     "contactTelegram": "This number is on Telegram",
     "contactEmail": "Email",
     "contactNote": "Note for buyers",
-    "contactNoteHint": "e.g.: “call 9–18”, “Telegram @ivan”, “ask for Ivan”"
+    "contactNoteHint": "e.g.: “call 9–18”, “Telegram @ivan”, “ask for Ivan”",
+    "lengthM": "Length",
+    "beamM": "Beam",
+    "draftM": "Draft",
+    "dimUnits": "Units",
+    "unitMeters": "metres",
+    "unitFeet": "feet"
   },
   "Search": {
     "title": "Find a boat",
@@ -143,8 +148,8 @@
     "priceMax": "Price to",
     "yearMin": "Year from",
     "yearMax": "Year to",
-    "lengthMin": "Length from (ft)",
-    "lengthMax": "Length to (ft)",
+    "lengthMin": "Length from (m)",
+    "lengthMax": "Length to (m)",
     "type": "Type",
     "anyType": "Any type",
     "condition": "Condition",

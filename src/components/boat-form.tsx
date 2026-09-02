@@ -54,6 +54,7 @@ export function BoatForm({
     resolver: zodResolver(boatListingSchema),
     defaultValues: {
       currency: "EUR",
+      dimUnit: "m",
       photoPaths: [],
       contactEmail: sellerEmail,
     },
@@ -104,7 +105,20 @@ export function BoatForm({
   async function onSubmit(values: BoatListingInput) {
     setServerError(null);
     setSubmitting(true);
-    const result = await createListingAction(locale, values);
+    // Store dimensions in metres regardless of what unit the seller typed.
+    const toM = (v: number | undefined) =>
+      v == null
+        ? v
+        : values.dimUnit === "ft"
+          ? Math.round((v / 3.28084) * 100) / 100
+          : v;
+    const payload = {
+      ...values,
+      lengthM: toM(values.lengthM) as number,
+      beamM: toM(values.beamM),
+      draftM: toM(values.draftM),
+    };
+    const result = await createListingAction(locale, payload);
     setSubmitting(false);
     if (result?.error) {
       setServerError(result.error);
@@ -250,28 +264,46 @@ export function BoatForm({
       </section>
 
       <section className="space-y-4">
-        <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-500">
-          {t("sectionDimensions")}
-        </h2>
+        <div className="flex flex-wrap items-center justify-between gap-2">
+          <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-500">
+            {t("sectionDimensions")}
+          </h2>
+          <label className="flex items-center gap-2 text-sm text-slate-600">
+            {t("dimUnits")}
+            <select
+              {...register("dimUnit")}
+              className="rounded-md border border-slate-300 px-2 py-1"
+            >
+              <option value="m">{t("unitMeters")}</option>
+              <option value="ft">{t("unitFeet")}</option>
+            </select>
+          </label>
+        </div>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
-          <Field label={t("lengthFt")} error={errors.lengthFt?.message}>
+          <Field label={t("lengthM")} error={errors.lengthM?.message}>
             <input
               type="number"
-              {...register("lengthFt")}
+              step="any"
+              inputMode="decimal"
+              {...register("lengthM")}
               className="w-full rounded-md border border-slate-300 px-3 py-2"
             />
           </Field>
-          <Field label={t("beamFt")} optional error={errors.beamFt?.message}>
+          <Field label={t("beamM")} optional error={errors.beamM?.message}>
             <input
               type="number"
-              {...register("beamFt")}
+              step="any"
+              inputMode="decimal"
+              {...register("beamM")}
               className="w-full rounded-md border border-slate-300 px-3 py-2"
             />
           </Field>
-          <Field label={t("draftFt")} optional error={errors.draftFt?.message}>
+          <Field label={t("draftM")} optional error={errors.draftM?.message}>
             <input
               type="number"
-              {...register("draftFt")}
+              step="any"
+              inputMode="decimal"
+              {...register("draftM")}
               className="w-full rounded-md border border-slate-300 px-3 py-2"
             />
           </Field>

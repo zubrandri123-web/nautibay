@@ -12,7 +12,9 @@
     "search": "Pretraga",
     "filters": "Filtri",
     "clearFilters": "Poništi filtre",
-    "currency": "EUR"
+    "currency": "EUR",
+    "unitM": "m",
+    "unitFt": "ft"
   },
   "Nav": {
     "signIn": "Prijava",
@@ -99,9 +101,6 @@
     "yearBuilt": "Godina izgradnje",
     "yearBuiltHint": "Niste sigurni — upišite približnu godinu.",
     "refitYear": "Godina obnove",
-    "lengthFt": "Duljina (stope)",
-    "beamFt": "Širina (stope)",
-    "draftFt": "Gaz (stope)",
     "hullMaterial": "Materijal trupa",
     "fuelType": "Vrsta goriva",
     "enginePowerHp": "Snaga motora (KS)",
@@ -135,7 +134,13 @@
     "contactTelegram": "Ovaj broj je na Telegramu",
     "contactEmail": "E-pošta",
     "contactNote": "Napomena za kupce",
-    "contactNoteHint": "npr.: „zvati 9–18”, „Telegram @ivan”, „pitati za Ivana”"
+    "contactNoteHint": "npr.: „zvati 9–18”, „Telegram @ivan”, „pitati za Ivana”",
+    "lengthM": "Duljina",
+    "beamM": "Širina",
+    "draftM": "Gaz",
+    "dimUnits": "Jedinice",
+    "unitMeters": "metri",
+    "unitFeet": "stope"
   },
   "Search": {
     "title": "Pronađi brod",
@@ -143,8 +148,8 @@
     "priceMax": "Cijena do",
     "yearMin": "Godina od",
     "yearMax": "Godina do",
-    "lengthMin": "Duljina od (stope)",
-    "lengthMax": "Duljina do (stope)",
+    "lengthMin": "Duljina od (m)",
+    "lengthMax": "Duljina do (m)",
     "type": "Tip",
     "anyType": "Svi tipovi",
     "condition": "Stanje",

@@ -2,7 +2,7 @@ import { createClient } from "@/lib/supabase/server";
 import type { SearchFilters } from "./schema";
 
 const LISTING_SUMMARY_COLUMNS =
-  "id, boat_type, price, currency, year_built, length_ft, country, region, city, brand, model, boat_listing_photos(storage_path, sort_order)";
+  "id, boat_type, price, currency, year_built, length_m, country, region, city, brand, model, boat_listing_photos(storage_path, sort_order)";
 
 // Supabase's query builder can't infer real column types from a plain
 // string select list without generated Database types (that requires a
@@ -14,7 +14,7 @@ export type BoatListingSummary = {
   price: number;
   currency: string;
   year_built: number;
-  length_ft: number;
+  length_m: number;
   country: string;
   region: string | null;
   city: string | null;
@@ -39,8 +39,8 @@ export async function searchBoatListings(
   if (filters.priceMax != null) query = query.lte("price", filters.priceMax);
   if (filters.yearMin != null) query = query.gte("year_built", filters.yearMin);
   if (filters.yearMax != null) query = query.lte("year_built", filters.yearMax);
-  if (filters.lengthMin != null) query = query.gte("length_ft", filters.lengthMin);
-  if (filters.lengthMax != null) query = query.lte("length_ft", filters.lengthMax);
+  if (filters.lengthMin != null) query = query.gte("length_m", filters.lengthMin);
+  if (filters.lengthMax != null) query = query.lte("length_m", filters.lengthMax);
   if (filters.country && filters.country.length > 0) {
     query = query.in("country", filters.country);
   }

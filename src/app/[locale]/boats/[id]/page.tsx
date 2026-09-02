@@ -2,7 +2,7 @@ import { getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Link } from "@/i18n/navigation";
 import { createClient } from "@/lib/supabase/server";
-import { countryName } from "@/lib/boats/constants";
+import { countryName, formatLength } from "@/lib/boats/constants";
 import { getBoatListing } from "@/lib/boats/queries";
 
 type Props = {
@@ -25,6 +25,9 @@ export default async function BoatDetailPage({ params }: Props) {
   const tFuel = await getTranslations("FuelType");
   const tCondition = await getTranslations("Condition");
   const tAuth = await getTranslations("Auth");
+  const tCommon = await getTranslations("Common");
+  const fmtLen = (m: number) =>
+    formatLength(m, tCommon("unitM"), tCommon("unitFt"));
 
   if (!listing) {
     notFound();
@@ -145,12 +148,12 @@ export default async function BoatDetailPage({ params }: Props) {
         {listing.refit_year ? (
           <Detail label={t("refitYear")} value={listing.refit_year} />
         ) : null}
-        <Detail label={t("length")} value={`${listing.length_ft} ft`} />
-        {listing.beam_ft ? (
-          <Detail label={t("beam")} value={`${listing.beam_ft} ft`} />
+        <Detail label={t("length")} value={fmtLen(listing.length_m)} />
+        {listing.beam_m ? (
+          <Detail label={t("beam")} value={fmtLen(listing.beam_m)} />
         ) : null}
-        {listing.draft_ft ? (
-          <Detail label={t("draft")} value={`${listing.draft_ft} ft`} />
+        {listing.draft_m ? (
+          <Detail label={t("draft")} value={fmtLen(listing.draft_m)} />
         ) : null}
         {listing.hull_material ? (
           <Detail label={t("hull")} value={tHull(listing.hull_material)} />

@@ -12,7 +12,9 @@
     "search": "Αναζήτηση",
     "filters": "Φίλτρα",
     "clearFilters": "Καθαρισμός φίλτρων",
-    "currency": "EUR"
+    "currency": "EUR",
+    "unitM": "μ",
+    "unitFt": "πόδ."
   },
   "Nav": {
     "signIn": "Σύνδεση",
@@ -99,9 +101,6 @@
     "yearBuilt": "Έτος κατασκευής",
     "yearBuiltHint": "Δεν είστε σίγουροι — βάλτε ένα κατά προσέγγιση έτος.",
     "refitYear": "Έτος ανακαίνισης",
-    "lengthFt": "Μήκος (πόδια)",
-    "beamFt": "Πλάτος (πόδια)",
-    "draftFt": "Βύθισμα (πόδια)",
     "hullMaterial": "Υλικό γάστρας",
     "fuelType": "Τύπος καυσίμου",
     "enginePowerHp": "Ισχύς μηχανής (hp)",
@@ -135,7 +134,13 @@
     "contactTelegram": "Αυτός ο αριθμός είναι στο Telegram",
     "contactEmail": "Email",
     "contactNote": "Σημείωση για αγοραστές",
-    "contactNoteHint": "π.χ.: «κλήση 9–18», «Telegram @ivan», «ζητήστε τον Ιβάν»"
+    "contactNoteHint": "π.χ.: «κλήση 9–18», «Telegram @ivan», «ζητήστε τον Ιβάν»",
+    "lengthM": "Μήκος",
+    "beamM": "Πλάτος",
+    "draftM": "Βύθισμα",
+    "dimUnits": "Μονάδες",
+    "unitMeters": "μέτρα",
+    "unitFeet": "πόδια"
   },
   "Search": {
     "title": "Βρες σκάφος",
@@ -143,8 +148,8 @@
     "priceMax": "Τιμή έως",
     "yearMin": "Έτος από",
     "yearMax": "Έτος έως",
-    "lengthMin": "Μήκος από (πόδια)",
-    "lengthMax": "Μήκος έως (πόδια)",
+    "lengthMin": "Μήκος από (m)",
+    "lengthMax": "Μήκος έως (m)",
     "type": "Τύπος",
     "anyType": "Όλοι οι τύποι",
     "condition": "Κατάσταση",

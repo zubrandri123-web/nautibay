@@ -12,7 +12,9 @@
     "search": "Поиск",
     "filters": "Фильтры",
     "clearFilters": "Сбросить фильтры",
-    "currency": "EUR"
+    "currency": "EUR",
+    "unitM": "м",
+    "unitFt": "фт"
   },
   "Nav": {
     "signIn": "Войти",
@@ -99,9 +101,6 @@
     "yearBuilt": "Год постройки",
     "yearBuiltHint": "Не знаете точно — укажите приблизительный год.",
     "refitYear": "Год рефита",
-    "lengthFt": "Длина (футы)",
-    "beamFt": "Ширина (футы)",
-    "draftFt": "Осадка (футы)",
     "hullMaterial": "Материал корпуса",
     "fuelType": "Тип топлива",
     "enginePowerHp": "Мощность двигателя (л.с.)",
@@ -135,7 +134,13 @@
     "contactTelegram": "Этот номер есть в Telegram",
     "contactEmail": "Email",
     "contactNote": "Заметка для покупателей",
-    "contactNoteHint": "Например: «звонить 9–18», «Telegram @ivan», «спросить Ивана»"
+    "contactNoteHint": "Например: «звонить 9–18», «Telegram @ivan», «спросить Ивана»",
+    "lengthM": "Длина",
+    "beamM": "Ширина",
+    "draftM": "Осадка",
+    "dimUnits": "Единицы",
+    "unitMeters": "метры",
+    "unitFeet": "футы"
   },
   "Search": {
     "title": "Найти лодку",
@@ -143,8 +148,8 @@
     "priceMax": "Цена до",
     "yearMin": "Год от",
     "yearMax": "Год до",
-    "lengthMin": "Длина от (футы)",
-    "lengthMax": "Длина до (футы)",
+    "lengthMin": "Длина от (м)",
+    "lengthMax": "Длина до (м)",
     "type": "Тип",
     "anyType": "Любой тип",
     "condition": "Состояние",

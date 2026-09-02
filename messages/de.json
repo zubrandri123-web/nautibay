@@ -12,7 +12,9 @@
     "search": "Suche",
     "filters": "Filter",
     "clearFilters": "Filter zurücksetzen",
-    "currency": "EUR"
+    "currency": "EUR",
+    "unitM": "m",
+    "unitFt": "ft"
   },
   "Nav": {
     "signIn": "Anmelden",
@@ -99,9 +101,6 @@
     "yearBuilt": "Baujahr",
     "yearBuiltHint": "Nicht sicher — geben Sie ein ungefähres Jahr an.",
     "refitYear": "Refit-Jahr",
-    "lengthFt": "Länge (Fuß)",
-    "beamFt": "Breite (Fuß)",
-    "draftFt": "Tiefgang (Fuß)",
     "hullMaterial": "Rumpfmaterial",
     "fuelType": "Kraftstoffart",
     "enginePowerHp": "Motorleistung (PS)",
@@ -135,7 +134,13 @@
     "contactTelegram": "Diese Nummer ist bei Telegram",
     "contactEmail": "E-Mail",
     "contactNote": "Hinweis für Käufer",
-    "contactNoteHint": "z. B.: „9–18 Uhr anrufen“, „Telegram @ivan“, „nach Ivan fragen“"
+    "contactNoteHint": "z. B.: „9–18 Uhr anrufen“, „Telegram @ivan“, „nach Ivan fragen“",
+    "lengthM": "Länge",
+    "beamM": "Breite",
+    "draftM": "Tiefgang",
+    "dimUnits": "Einheiten",
+    "unitMeters": "Meter",
+    "unitFeet": "Fuß"
   },
   "Search": {
     "title": "Boot finden",
@@ -143,8 +148,8 @@
     "priceMax": "Preis bis",
     "yearMin": "Baujahr von",
     "yearMax": "Baujahr bis",
-    "lengthMin": "Länge von (Fuß)",
-    "lengthMax": "Länge bis (Fuß)",
+    "lengthMin": "Länge ab (m)",
+    "lengthMax": "Länge bis (m)",
     "type": "Typ",
     "anyType": "Alle Typen",
     "condition": "Zustand",

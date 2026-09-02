@@ -12,7 +12,9 @@
     "search": "Ara",
     "filters": "Filtreler",
     "clearFilters": "Filtreleri temizle",
-    "currency": "EUR"
+    "currency": "EUR",
+    "unitM": "m",
+    "unitFt": "ft"
   },
   "Nav": {
     "signIn": "Giriş yap",
@@ -99,9 +101,6 @@
     "yearBuilt": "Yapım yılı",
     "yearBuiltHint": "Emin değilseniz yaklaşık bir yıl girin.",
     "refitYear": "Yenileme yılı",
-    "lengthFt": "Boy (fit)",
-    "beamFt": "Genişlik (fit)",
-    "draftFt": "Su çekimi (fit)",
     "hullMaterial": "Gövde malzemesi",
     "fuelType": "Yakıt türü",
     "enginePowerHp": "Motor gücü (hp)",
@@ -135,7 +134,13 @@
     "contactTelegram": "Bu numara Telegram’da",
     "contactEmail": "E-posta",
     "contactNote": "Alıcılar için not",
-    "contactNoteHint": "örn.: “9–18 arası ara”, “Telegram @ivan”, “Ivan’ı sor”"
+    "contactNoteHint": "örn.: “9–18 arası ara”, “Telegram @ivan”, “Ivan’ı sor”",
+    "lengthM": "Boy",
+    "beamM": "En",
+    "draftM": "Su çekimi",
+    "dimUnits": "Birimler",
+    "unitMeters": "metre",
+    "unitFeet": "fit"
   },
   "Search": {
     "title": "Tekne bul",
@@ -143,8 +148,8 @@
     "priceMax": "Fiyat (maks)",
     "yearMin": "Yıl (min)",
     "yearMax": "Yıl (maks)",
-    "lengthMin": "Boy (min, fit)",
-    "lengthMax": "Boy (maks, fit)",
+    "lengthMin": "Boy (min, m)",
+    "lengthMax": "Boy (maks, m)",
     "type": "Tip",
     "anyType": "Tüm tipler",
     "condition": "Durum",

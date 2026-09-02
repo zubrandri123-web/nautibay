@@ -12,7 +12,9 @@
     "search": "Cerca",
     "filters": "Filtri",
     "clearFilters": "Cancella filtri",
-    "currency": "EUR"
+    "currency": "EUR",
+    "unitM": "m",
+    "unitFt": "ft"
   },
   "Nav": {
     "signIn": "Accedi",
@@ -99,9 +101,6 @@
     "yearBuilt": "Anno di costruzione",
     "yearBuiltHint": "Non sei sicuro — indica un anno approssimativo.",
     "refitYear": "Anno di refit",
-    "lengthFt": "Lunghezza (piedi)",
-    "beamFt": "Larghezza (piedi)",
-    "draftFt": "Pescaggio (piedi)",
     "hullMaterial": "Materiale dello scafo",
     "fuelType": "Tipo di carburante",
     "enginePowerHp": "Potenza motore (cv)",
@@ -135,7 +134,13 @@
     "contactTelegram": "Questo numero è su Telegram",
     "contactEmail": "Email",
     "contactNote": "Nota per gli acquirenti",
-    "contactNoteHint": "es.: «chiamare 9–18», «Telegram @ivan», «chiedere di Ivan»"
+    "contactNoteHint": "es.: «chiamare 9–18», «Telegram @ivan», «chiedere di Ivan»",
+    "lengthM": "Lunghezza",
+    "beamM": "Larghezza",
+    "draftM": "Pescaggio",
+    "dimUnits": "Unità",
+    "unitMeters": "metri",
+    "unitFeet": "piedi"
   },
   "Search": {
     "title": "Trova una barca",
@@ -143,8 +148,8 @@
     "priceMax": "Prezzo a",
     "yearMin": "Anno da",
     "yearMax": "Anno a",
-    "lengthMin": "Lunghezza da (piedi)",
-    "lengthMax": "Lunghezza a (piedi)",
+    "lengthMin": "Lunghezza da (m)",
+    "lengthMax": "Lunghezza a (m)",
     "type": "Tipo",
     "anyType": "Qualsiasi tipo",
     "condition": "Condizione",

@@ -12,7 +12,9 @@
     "search": "Buscar",
     "filters": "Filtros",
     "clearFilters": "Borrar filtros",
-    "currency": "EUR"
+    "currency": "EUR",
+    "unitM": "m",
+    "unitFt": "ft"
   },
   "Nav": {
     "signIn": "Iniciar sesión",
@@ -99,9 +101,6 @@
     "yearBuilt": "Año de construcción",
     "yearBuiltHint": "¿No estás seguro? Indica un año aproximado.",
     "refitYear": "Año de reforma",
-    "lengthFt": "Eslora (pies)",
-    "beamFt": "Manga (pies)",
-    "draftFt": "Calado (pies)",
     "hullMaterial": "Material del casco",
     "fuelType": "Tipo de combustible",
     "enginePowerHp": "Potencia del motor (cv)",
@@ -135,7 +134,13 @@
     "contactTelegram": "Este número está en Telegram",
     "contactEmail": "Correo electrónico",
     "contactNote": "Nota para compradores",
-    "contactNoteHint": "p. ej.: «llamar 9–18», «Telegram @ivan», «preguntar por Ivan»"
+    "contactNoteHint": "p. ej.: «llamar 9–18», «Telegram @ivan», «preguntar por Ivan»",
+    "lengthM": "Eslora",
+    "beamM": "Manga",
+    "draftM": "Calado",
+    "dimUnits": "Unidades",
+    "unitMeters": "metros",
+    "unitFeet": "pies"
   },
   "Search": {
     "title": "Buscar un barco",
@@ -143,8 +148,8 @@
     "priceMax": "Precio hasta",
     "yearMin": "Año desde",
     "yearMax": "Año hasta",
-    "lengthMin": "Eslora desde (pies)",
-    "lengthMax": "Eslora hasta (pies)",
+    "lengthMin": "Eslora desde (m)",
+    "lengthMax": "Eslora hasta (m)",
     "type": "Tipo",
     "anyType": "Cualquier tipo",
     "condition": "Estado",

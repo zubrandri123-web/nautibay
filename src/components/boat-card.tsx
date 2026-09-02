@@ -1,6 +1,6 @@
 import { getLocale, getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import { countryName } from "@/lib/boats/constants";
+import { countryName, formatLength } from "@/lib/boats/constants";
 import type { BoatListingSummary } from "@/lib/boats/queries";
 
 type Photo = { storage_path: string; sort_order: number };
@@ -16,6 +16,7 @@ function coverPhotoUrl(photos: Photo[] | null) {
 export async function BoatCard({ listing }: { listing: BoatListingSummary }) {
   const t = await getTranslations("BoatType");
   const tCard = await getTranslations("BoatCard");
+  const tCommon = await getTranslations("Common");
   const locale = await getLocale();
   const photoUrl = coverPhotoUrl(listing.boat_listing_photos);
   const title =
@@ -51,7 +52,11 @@ export async function BoatCard({ listing }: { listing: BoatListingSummary }) {
         <p className="font-medium text-slate-900">{title}</p>
         <p className="mt-1 text-sm text-slate-500">
           {tCard("yearBuilt", { year: listing.year_built })} ·{" "}
-          {tCard("lengthFt", { length: listing.length_ft })}
+          {formatLength(
+            listing.length_m,
+            tCommon("unitM"),
+            tCommon("unitFt"),
+          )}
         </p>
         <p className="mt-1 text-sm text-slate-500">{location}</p>
         <p className="mt-2 text-lg font-semibold text-slate-900">

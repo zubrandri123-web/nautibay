@@ -12,7 +12,9 @@
     "search": "Rechercher",
     "filters": "Filtres",
     "clearFilters": "Réinitialiser les filtres",
-    "currency": "EUR"
+    "currency": "EUR",
+    "unitM": "m",
+    "unitFt": "ft"
   },
   "Nav": {
     "signIn": "Connexion",
@@ -99,9 +101,6 @@
     "yearBuilt": "Année de construction",
     "yearBuiltHint": "Vous n’êtes pas sûr — indiquez une année approximative.",
     "refitYear": "Année de refonte",
-    "lengthFt": "Longueur (pieds)",
-    "beamFt": "Largeur (pieds)",
-    "draftFt": "Tirant d'eau (pieds)",
     "hullMaterial": "Matériau de la coque",
     "fuelType": "Type de carburant",
     "enginePowerHp": "Puissance moteur (ch)",
@@ -135,7 +134,13 @@
     "contactTelegram": "Ce numéro est sur Telegram",
     "contactEmail": "E-mail",
     "contactNote": "Note pour les acheteurs",
-    "contactNoteHint": "ex. : « appeler 9–18 h », « Telegram @ivan », « demander Ivan »"
+    "contactNoteHint": "ex. : « appeler 9–18 h », « Telegram @ivan », « demander Ivan »",
+    "lengthM": "Longueur",
+    "beamM": "Largeur",
+    "draftM": "Tirant d’eau",
+    "dimUnits": "Unités",
+    "unitMeters": "mètres",
+    "unitFeet": "pieds"
   },
   "Search": {
     "title": "Trouver un bateau",
@@ -143,8 +148,8 @@
     "priceMax": "Prix max",
     "yearMin": "Année min",
     "yearMax": "Année max",
-    "lengthMin": "Longueur min (pieds)",
-    "lengthMax": "Longueur max (pieds)",
+    "lengthMin": "Longueur min (m)",
+    "lengthMax": "Longueur max (m)",
     "type": "Type",
     "anyType": "Tous types",
     "condition": "État",

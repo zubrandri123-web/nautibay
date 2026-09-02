@@ -39,7 +39,10 @@ export const boatListingSchema = z.object({
     .int()
     .min(1900)
     .max(new Date().getFullYear() + 1),
-  lengthFt: z.coerce.number().positive(),
+  lengthM: z.coerce.number().positive(),
+  // Form-only: the unit the seller typed length/beam/draft in. The action
+  // converts to metres before saving, so the DB is always metric.
+  dimUnit: z.enum(["m", "ft"]).default("m"),
   condition: optionalEnum(CONDITIONS),
   country: optionalEnum(COUNTRIES),
   region: z.string().trim().max(120).optional().or(z.literal("")),
@@ -48,8 +51,8 @@ export const boatListingSchema = z.object({
   // Important but optional.
   brand: z.string().trim().max(120).optional().or(z.literal("")),
   model: z.string().trim().max(120).optional().or(z.literal("")),
-  beamFt: optionalNumber(z.coerce.number().positive()),
-  draftFt: optionalNumber(z.coerce.number().positive()),
+  beamM: optionalNumber(z.coerce.number().positive()),
+  draftM: optionalNumber(z.coerce.number().positive()),
   fuelType: optionalEnum(FUEL_TYPES),
   enginePowerHp: optionalNumber(z.coerce.number().positive()),
   hullMaterial: optionalEnum(HULL_MATERIALS),

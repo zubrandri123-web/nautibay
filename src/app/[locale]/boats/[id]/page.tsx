@@ -2,6 +2,7 @@ import { getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Link } from "@/i18n/navigation";
 import { createClient } from "@/lib/supabase/server";
+import { PhotoGallery } from "@/components/photo-gallery";
 import { countryName, formatLength } from "@/lib/boats/constants";
 import { getBoatListing } from "@/lib/boats/queries";
 
@@ -58,19 +59,15 @@ export default async function BoatDetailPage({ params }: Props) {
 
   return (
     <div className="mx-auto max-w-4xl px-4 py-10">
-      {photos.length > 0 ? (
-        <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
-          {photos.map((photo) => (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img
-              key={photo.storage_path}
-              src={photoUrl(photo.storage_path)}
-              alt={title}
-              className="aspect-[4/3] w-full rounded-md object-cover"
-            />
-          ))}
-        </div>
-      ) : null}
+      <PhotoGallery
+        photos={photos.map((p) => photoUrl(p.storage_path))}
+        alt={title}
+        labels={{
+          close: tCommon("close"),
+          previous: tCommon("previous"),
+          next: tCommon("next"),
+        }}
+      />
 
       <h1 className="mt-6 text-2xl font-semibold text-slate-900">{title}</h1>
       <p className="text-slate-500">{location}</p>

@@ -14,7 +14,10 @@
     "clearFilters": "Poništi filtre",
     "currency": "EUR",
     "unitM": "m",
-    "unitFt": "ft"
+    "unitFt": "ft",
+    "close": "Zatvori",
+    "previous": "Prethodno",
+    "next": "Sljedeće"
   },
   "Nav": {
     "signIn": "Prijava",

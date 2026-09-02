@@ -14,7 +14,10 @@
     "clearFilters": "Καθαρισμός φίλτρων",
     "currency": "EUR",
     "unitM": "μ",
-    "unitFt": "πόδ."
+    "unitFt": "πόδ.",
+    "close": "Κλείσιμο",
+    "previous": "Προηγούμενο",
+    "next": "Επόμενο"
   },
   "Nav": {
     "signIn": "Σύνδεση",

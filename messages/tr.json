@@ -14,7 +14,10 @@
     "clearFilters": "Filtreleri temizle",
     "currency": "EUR",
     "unitM": "m",
-    "unitFt": "ft"
+    "unitFt": "ft",
+    "close": "Kapat",
+    "previous": "Önceki",
+    "next": "Sonraki"
   },
   "Nav": {
     "signIn": "Giriş yap",

@@ -14,7 +14,10 @@
     "clearFilters": "Сбросить фильтры",
     "currency": "EUR",
     "unitM": "м",
-    "unitFt": "фт"
+    "unitFt": "фт",
+    "close": "Закрыть",
+    "previous": "Назад",
+    "next": "Вперёд"
   },
   "Nav": {
     "signIn": "Войти",

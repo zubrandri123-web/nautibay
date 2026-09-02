@@ -14,7 +14,10 @@
     "clearFilters": "Clear filters",
     "currency": "EUR",
     "unitM": "m",
-    "unitFt": "ft"
+    "unitFt": "ft",
+    "close": "Close",
+    "previous": "Previous",
+    "next": "Next"
   },
   "Nav": {
     "signIn": "Sign in",

@@ -3,6 +3,7 @@ import {
   BOAT_TYPES,
   CONDITIONS,
   COUNTRIES,
+  CURRENCIES,
   FUEL_TYPES,
   HULL_MATERIALS,
 } from "./constants";
@@ -23,7 +24,7 @@ export const boatListingSchema = z.object({
   // Required — also the primary search filters.
   boatType: z.enum(BOAT_TYPES),
   price: z.coerce.number().positive(),
-  currency: z.string().default("EUR"),
+  currency: z.enum(CURRENCIES).default("EUR"),
   yearBuilt: z.coerce
     .number()
     .int()

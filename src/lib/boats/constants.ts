@@ -21,6 +21,9 @@ export const FUEL_TYPES = ["diesel", "gasoline", "electric", "none"] as const;
 
 export const CONDITIONS = ["new", "used"] as const;
 
+// Listing prices are shown as entered — no conversion. Kept short on purpose.
+export const CURRENCIES = ["EUR", "USD", "GBP"] as const;
+
 // ISO 3166-1 alpha-2 codes for the yachting markets covered by the current
 // interface languages. Extend freely — search filters read this list, so
 // adding a country here does not require touching any component.

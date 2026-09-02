@@ -8,12 +8,12 @@
   --gold: #d9a441;
   --gold-hover: #e2b158;
   --gold-dark: #b8842f;
-  --btn-blue: #2874a6;
-  --btn-blue-hover: #3486bb;
+  --btn-blue: #159fdf;
+  --btn-blue-hover: #33b1e8;
   --btn-green: #2e8b4f;
   --btn-green-hover: #379c5a;
-  --btn-red: #c0392b;
-  --btn-red-hover: #d0473a;
+  --btn-red: #e12d1f;
+  --btn-red-hover: #f23a2b;
 }
 
 @theme inline {

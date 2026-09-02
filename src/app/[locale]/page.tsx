@@ -103,6 +103,7 @@ export default async function HomePage() {
           >
             {t("sellBoat")}
           </Link>
+          {soon(t("berths"))}
           {soon(t("charterBoat"))}
           {soon(t("fishing"))}
           {soon(t("findCrew"))}

@@ -15,6 +15,7 @@ import {
   BOAT_TYPES,
   CONDITIONS,
   COUNTRIES,
+  CURRENCIES,
   FUEL_TYPES,
   HULL_MATERIALS,
 } from "@/lib/boats/constants";
@@ -152,12 +153,25 @@ export function BoatForm({ locale, userId }: { locale: string; userId: string })
 
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           <Field label={t("price")} error={errors.price?.message}>
-            <input
-              type="number"
-              step="1"
-              {...register("price")}
-              className="w-full rounded-md border border-slate-300 px-3 py-2"
-            />
+            <div className="flex gap-2">
+              <input
+                type="number"
+                step="1"
+                {...register("price")}
+                className="w-full rounded-md border border-slate-300 px-3 py-2"
+              />
+              <select
+                aria-label={t("currency")}
+                {...register("currency")}
+                className="rounded-md border border-slate-300 px-2 py-2"
+              >
+                {CURRENCIES.map((code) => (
+                  <option key={code} value={code}>
+                    {code}
+                  </option>
+                ))}
+              </select>
+            </div>
           </Field>
           <Field label={t("yearBuilt")} error={errors.yearBuilt?.message}>
             <input

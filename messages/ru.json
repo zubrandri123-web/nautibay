@@ -127,7 +127,14 @@
     "submit": "Опубликовать объявление",
     "publishSuccess": "Объявление опубликовано.",
     "signInRequired": "Войдите, чтобы создать объявление.",
-    "hasErrors": "Проверьте отмеченные поля — форма не отправлена."
+    "hasErrors": "Проверьте отмеченные поля — форма не отправлена.",
+    "sectionContact": "Контакты для покупателей",
+    "contactPhone": "Телефон",
+    "contactWhatsapp": "Этот номер есть в WhatsApp",
+    "contactTelegram": "Этот номер есть в Telegram",
+    "contactEmail": "Email",
+    "contactNote": "Заметка для покупателей",
+    "contactNoteHint": "Например: «звонить 9–18», «Telegram @ivan», «спросить Ивана»"
   },
   "Search": {
     "title": "Найти лодку",
@@ -177,6 +184,10 @@
     "location": "Локация",
     "seller": "Продавец",
     "listedByBroker": "Продаётся через брокера",
-    "notFound": "Объявление не найдено."
+    "notFound": "Объявление не найдено.",
+    "contactSeller": "Связаться с продавцом",
+    "signInToContact": "Войдите, чтобы увидеть контакты и связаться с продавцом.",
+    "whatsapp": "WhatsApp",
+    "telegram": "Telegram"
   }
 }

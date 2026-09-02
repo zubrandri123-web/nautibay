@@ -127,7 +127,14 @@
     "submit": "Publicar anuncio",
     "publishSuccess": "Tu anuncio ya está publicado.",
     "signInRequired": "Inicia sesión para crear un anuncio.",
-    "hasErrors": "Revisa los campos marcados — el formulario no se envió."
+    "hasErrors": "Revisa los campos marcados — el formulario no se envió.",
+    "sectionContact": "Contacto para compradores",
+    "contactPhone": "Teléfono",
+    "contactWhatsapp": "Este número está en WhatsApp",
+    "contactTelegram": "Este número está en Telegram",
+    "contactEmail": "Correo electrónico",
+    "contactNote": "Nota para compradores",
+    "contactNoteHint": "p. ej.: «llamar 9–18», «Telegram @ivan», «preguntar por Ivan»"
   },
   "Search": {
     "title": "Buscar un barco",
@@ -177,6 +184,10 @@
     "location": "Ubicación",
     "seller": "Vendedor",
     "listedByBroker": "Anuncio de un bróker",
-    "notFound": "No se encontró este anuncio."
+    "notFound": "No se encontró este anuncio.",
+    "contactSeller": "Contactar con el vendedor",
+    "signInToContact": "Inicia sesión para ver los datos de contacto y comunicarte con el vendedor.",
+    "whatsapp": "WhatsApp",
+    "telegram": "Telegram"
   }
 }

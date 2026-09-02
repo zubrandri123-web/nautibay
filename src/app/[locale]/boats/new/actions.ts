@@ -53,6 +53,11 @@ export async function createListingAction(locale: string, input: unknown) {
       is_broker: data.isBroker ?? false,
       broker_company_name: data.isBroker ? data.brokerCompanyName || null : null,
       promote_social: data.promoteSocial ?? false,
+      contact_phone: data.contactPhone || null,
+      contact_phone_whatsapp: data.contactPhoneWhatsapp ?? false,
+      contact_phone_telegram: data.contactPhoneTelegram ?? false,
+      contact_email: data.contactEmail || null,
+      contact_note: data.contactNote || null,
     })
     .select("id")
     .single();

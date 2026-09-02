@@ -127,7 +127,14 @@
     "submit": "İlanı yayınla",
     "publishSuccess": "İlanınız yayında.",
     "signInRequired": "İlan oluşturmak için giriş yapın.",
-    "hasErrors": "İşaretli alanları kontrol edin — form gönderilmedi."
+    "hasErrors": "İşaretli alanları kontrol edin — form gönderilmedi.",
+    "sectionContact": "Alıcılar için iletişim",
+    "contactPhone": "Telefon",
+    "contactWhatsapp": "Bu numara WhatsApp’ta",
+    "contactTelegram": "Bu numara Telegram’da",
+    "contactEmail": "E-posta",
+    "contactNote": "Alıcılar için not",
+    "contactNoteHint": "örn.: “9–18 arası ara”, “Telegram @ivan”, “Ivan’ı sor”"
   },
   "Search": {
     "title": "Tekne bul",
@@ -177,6 +184,10 @@
     "location": "Konum",
     "seller": "Satıcı",
     "listedByBroker": "Broker ilanı",
-    "notFound": "Bu ilan bulunamadı."
+    "notFound": "Bu ilan bulunamadı.",
+    "contactSeller": "Satıcıyla iletişime geç",
+    "signInToContact": "İletişim bilgilerini görmek ve satıcıya ulaşmak için giriş yapın.",
+    "whatsapp": "WhatsApp",
+    "telegram": "Telegram"
   }
 }

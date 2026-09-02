@@ -127,7 +127,14 @@
     "submit": "Publier l'annonce",
     "publishSuccess": "Votre annonce est en ligne.",
     "signInRequired": "Connectez-vous pour créer une annonce.",
-    "hasErrors": "Vérifiez les champs signalés — le formulaire n’a pas été envoyé."
+    "hasErrors": "Vérifiez les champs signalés — le formulaire n’a pas été envoyé.",
+    "sectionContact": "Contact pour les acheteurs",
+    "contactPhone": "Téléphone",
+    "contactWhatsapp": "Ce numéro est sur WhatsApp",
+    "contactTelegram": "Ce numéro est sur Telegram",
+    "contactEmail": "E-mail",
+    "contactNote": "Note pour les acheteurs",
+    "contactNoteHint": "ex. : « appeler 9–18 h », « Telegram @ivan », « demander Ivan »"
   },
   "Search": {
     "title": "Trouver un bateau",
@@ -177,6 +184,10 @@
     "location": "Localisation",
     "seller": "Vendeur",
     "listedByBroker": "Annonce d'un courtier",
-    "notFound": "Cette annonce est introuvable."
+    "notFound": "Cette annonce est introuvable.",
+    "contactSeller": "Contacter le vendeur",
+    "signInToContact": "Connectez-vous pour voir les coordonnées et contacter le vendeur.",
+    "whatsapp": "WhatsApp",
+    "telegram": "Telegram"
   }
 }

@@ -127,7 +127,14 @@
     "submit": "Publish listing",
     "publishSuccess": "Your listing is live.",
     "signInRequired": "Sign in to create a listing.",
-    "hasErrors": "Check the highlighted fields — the form was not submitted."
+    "hasErrors": "Check the highlighted fields — the form was not submitted.",
+    "sectionContact": "Contact for buyers",
+    "contactPhone": "Phone",
+    "contactWhatsapp": "This number is on WhatsApp",
+    "contactTelegram": "This number is on Telegram",
+    "contactEmail": "Email",
+    "contactNote": "Note for buyers",
+    "contactNoteHint": "e.g.: “call 9–18”, “Telegram @ivan”, “ask for Ivan”"
   },
   "Search": {
     "title": "Find a boat",
@@ -177,6 +184,10 @@
     "location": "Location",
     "seller": "Seller",
     "listedByBroker": "Listed by a broker",
-    "notFound": "This listing could not be found."
+    "notFound": "This listing could not be found.",
+    "contactSeller": "Contact the seller",
+    "signInToContact": "Sign in to see the contact details and reach the seller.",
+    "whatsapp": "WhatsApp",
+    "telegram": "Telegram"
   }
 }

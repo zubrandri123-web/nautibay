@@ -127,7 +127,14 @@
     "submit": "Δημοσίευση αγγελίας",
     "publishSuccess": "Η αγγελία σας είναι ενεργή.",
     "signInRequired": "Συνδεθείτε για να δημιουργήσετε αγγελία.",
-    "hasErrors": "Ελέγξτε τα επισημασμένα πεδία — η φόρμα δεν υποβλήθηκε."
+    "hasErrors": "Ελέγξτε τα επισημασμένα πεδία — η φόρμα δεν υποβλήθηκε.",
+    "sectionContact": "Επικοινωνία για αγοραστές",
+    "contactPhone": "Τηλέφωνο",
+    "contactWhatsapp": "Αυτός ο αριθμός είναι στο WhatsApp",
+    "contactTelegram": "Αυτός ο αριθμός είναι στο Telegram",
+    "contactEmail": "Email",
+    "contactNote": "Σημείωση για αγοραστές",
+    "contactNoteHint": "π.χ.: «κλήση 9–18», «Telegram @ivan», «ζητήστε τον Ιβάν»"
   },
   "Search": {
     "title": "Βρες σκάφος",
@@ -177,6 +184,10 @@
     "location": "Τοποθεσία",
     "seller": "Πωλητής",
     "listedByBroker": "Καταχώρηση από μεσίτη",
-    "notFound": "Η αγγελία δεν βρέθηκε."
+    "notFound": "Η αγγελία δεν βρέθηκε.",
+    "contactSeller": "Επικοινωνία με τον πωλητή",
+    "signInToContact": "Συνδεθείτε για να δείτε τα στοιχεία επικοινωνίας και να επικοινωνήσετε με τον πωλητή.",
+    "whatsapp": "WhatsApp",
+    "telegram": "Telegram"
   }
 }

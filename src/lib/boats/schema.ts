@@ -70,8 +70,18 @@ export const boatListingSchema = z.object({
   // Opt-in: owner lets NautiBay re-post the listing on outside platforms.
   promoteSocial: z.coerce.boolean().optional(),
 
+  // How buyers reach the seller — shown only to signed-in visitors.
+  contactPhone: z.string().trim().max(40).optional().or(z.literal("")),
+  contactPhoneWhatsapp: z.coerce.boolean().optional(),
+  contactPhoneTelegram: z.coerce.boolean().optional(),
+  contactEmail: z.string().trim().email().optional().or(z.literal("")),
+  contactNote: z.string().trim().max(500).optional().or(z.literal("")),
+
   photoPaths: z.array(z.string()).min(1, "At least one photo is required"),
-});
+}).refine(
+  (d) => Boolean(d.contactPhone?.trim() || d.contactEmail?.trim()),
+  { path: ["contactPhone"], message: "Add at least a phone number or an email" },
+);
 
 // Raw form values (numbers still strings, as HTML inputs produce them).
 export type BoatListingFormValues = z.input<typeof boatListingSchema>;

@@ -127,7 +127,14 @@
     "submit": "Objavi oglas",
     "publishSuccess": "Vaš oglas je objavljen.",
     "signInRequired": "Prijavite se za kreiranje oglasa.",
-    "hasErrors": "Provjerite označena polja — obrazac nije poslan."
+    "hasErrors": "Provjerite označena polja — obrazac nije poslan.",
+    "sectionContact": "Kontakt za kupce",
+    "contactPhone": "Telefon",
+    "contactWhatsapp": "Ovaj broj je na WhatsAppu",
+    "contactTelegram": "Ovaj broj je na Telegramu",
+    "contactEmail": "E-pošta",
+    "contactNote": "Napomena za kupce",
+    "contactNoteHint": "npr.: „zvati 9–18”, „Telegram @ivan”, „pitati za Ivana”"
   },
   "Search": {
     "title": "Pronađi brod",
@@ -177,6 +184,10 @@
     "location": "Lokacija",
     "seller": "Prodavatelj",
     "listedByBroker": "Oglas posrednika",
-    "notFound": "Oglas nije pronađen."
+    "notFound": "Oglas nije pronađen.",
+    "contactSeller": "Kontaktirajte prodavatelja",
+    "signInToContact": "Prijavite se da vidite kontakt podatke i javite se prodavatelju.",
+    "whatsapp": "WhatsApp",
+    "telegram": "Telegram"
   }
 }

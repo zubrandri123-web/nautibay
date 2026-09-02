@@ -127,7 +127,14 @@
     "submit": "Pubblica annuncio",
     "publishSuccess": "Il tuo annuncio è online.",
     "signInRequired": "Accedi per creare un annuncio.",
-    "hasErrors": "Controlla i campi evidenziati — il modulo non è stato inviato."
+    "hasErrors": "Controlla i campi evidenziati — il modulo non è stato inviato.",
+    "sectionContact": "Contatto per gli acquirenti",
+    "contactPhone": "Telefono",
+    "contactWhatsapp": "Questo numero è su WhatsApp",
+    "contactTelegram": "Questo numero è su Telegram",
+    "contactEmail": "Email",
+    "contactNote": "Nota per gli acquirenti",
+    "contactNoteHint": "es.: «chiamare 9–18», «Telegram @ivan», «chiedere di Ivan»"
   },
   "Search": {
     "title": "Trova una barca",
@@ -177,6 +184,10 @@
     "location": "Località",
     "seller": "Venditore",
     "listedByBroker": "Annuncio di un broker",
-    "notFound": "Annuncio non trovato."
+    "notFound": "Annuncio non trovato.",
+    "contactSeller": "Contatta il venditore",
+    "signInToContact": "Accedi per vedere i contatti e metterti in contatto con il venditore.",
+    "whatsapp": "WhatsApp",
+    "telegram": "Telegram"
   }
 }

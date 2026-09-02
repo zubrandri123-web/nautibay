@@ -127,7 +127,14 @@
     "submit": "Inserat veröffentlichen",
     "publishSuccess": "Dein Inserat ist online.",
     "signInRequired": "Melde dich an, um ein Inserat zu erstellen.",
-    "hasErrors": "Bitte prüfen Sie die markierten Felder — das Formular wurde nicht gesendet."
+    "hasErrors": "Bitte prüfen Sie die markierten Felder — das Formular wurde nicht gesendet.",
+    "sectionContact": "Kontakt für Käufer",
+    "contactPhone": "Telefon",
+    "contactWhatsapp": "Diese Nummer ist bei WhatsApp",
+    "contactTelegram": "Diese Nummer ist bei Telegram",
+    "contactEmail": "E-Mail",
+    "contactNote": "Hinweis für Käufer",
+    "contactNoteHint": "z. B.: „9–18 Uhr anrufen“, „Telegram @ivan“, „nach Ivan fragen“"
   },
   "Search": {
     "title": "Boot finden",
@@ -177,6 +184,10 @@
     "location": "Standort",
     "seller": "Verkäufer",
     "listedByBroker": "Inserat eines Maklers",
-    "notFound": "Dieses Inserat wurde nicht gefunden."
+    "notFound": "Dieses Inserat wurde nicht gefunden.",
+    "contactSeller": "Verkäufer kontaktieren",
+    "signInToContact": "Melden Sie sich an, um die Kontaktdaten zu sehen und den Verkäufer zu kontaktieren.",
+    "whatsapp": "WhatsApp",
+    "telegram": "Telegram"
   }
 }

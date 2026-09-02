@@ -1,5 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
+import { Link } from "@/i18n/navigation";
+import { createClient } from "@/lib/supabase/server";
 import { getBoatListing } from "@/lib/boats/queries";
 
 type Props = {
@@ -21,10 +23,20 @@ export default async function BoatDetailPage({ params }: Props) {
   const tHull = await getTranslations("HullMaterial");
   const tFuel = await getTranslations("FuelType");
   const tCondition = await getTranslations("Condition");
+  const tAuth = await getTranslations("Auth");
 
   if (!listing) {
     notFound();
   }
+
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  const phoneDigits: string =
+    (user && listing.contact_phone
+      ? String(listing.contact_phone).replace(/[^\d]/g, "")
+      : "") ?? "";
 
   const photos = [...(listing.boat_listing_photos ?? [])].sort(
     (a, b) => a.sort_order - b.sort_order,
@@ -57,6 +69,68 @@ export default async function BoatDetailPage({ params }: Props) {
       <p className="mt-2 text-3xl font-semibold text-slate-900">
         {listing.currency} {Number(listing.price).toLocaleString()}
       </p>
+
+      <div className="mt-6 rounded-lg border border-slate-200 bg-slate-50 p-4">
+        <h2 className="text-xs uppercase tracking-wide text-slate-400">
+          {t("contactSeller")}
+        </h2>
+        {user ? (
+          <div className="mt-2 space-y-1 text-sm text-slate-800">
+            {listing.profiles?.full_name ? (
+              <p className="font-medium">{listing.profiles.full_name}</p>
+            ) : null}
+            {listing.contact_phone ? (
+              <p>
+                <a
+                  href={`tel:${listing.contact_phone}`}
+                  className="font-medium text-slate-900 underline"
+                >
+                  {listing.contact_phone}
+                </a>
+                {listing.contact_phone_whatsapp && phoneDigits ? (
+                  <>
+                    {" · "}
+                    <a
+                      href={`https://wa.me/${phoneDigits}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline"
+                    >
+                      {t("whatsapp")}
+                    </a>
+                  </>
+                ) : null}
+                {listing.contact_phone_telegram ? ` · ${t("telegram")}` : null}
+              </p>
+            ) : null}
+            {listing.contact_email ? (
+              <p>
+                <a
+                  href={`mailto:${listing.contact_email}`}
+                  className="text-slate-900 underline"
+                >
+                  {listing.contact_email}
+                </a>
+              </p>
+            ) : null}
+            {listing.contact_note ? (
+              <p className="whitespace-pre-line text-slate-600">
+                {listing.contact_note}
+              </p>
+            ) : null}
+          </div>
+        ) : (
+          <div className="mt-2">
+            <p className="text-sm text-slate-600">{t("signInToContact")}</p>
+            <Link
+              href="/sign-in"
+              className="btn-3d btn-3d-blue mt-3 inline-block px-4 py-2 text-sm"
+            >
+              {tAuth("signInButton")}
+            </Link>
+          </div>
+        )}
+      </div>
 
       <dl className="mt-8 grid grid-cols-2 gap-x-6 gap-y-4 sm:grid-cols-3">
         {listing.condition ? (

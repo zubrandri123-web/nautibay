@@ -23,7 +23,15 @@ import { compressImage } from "@/lib/boats/compress-image";
 
 type Photo = { path: string; previewUrl: string; uploading: boolean; error?: string };
 
-export function BoatForm({ locale, userId }: { locale: string; userId: string }) {
+export function BoatForm({
+  locale,
+  userId,
+  sellerEmail,
+}: {
+  locale: string;
+  userId: string;
+  sellerEmail: string;
+}) {
   const t = useTranslations("BoatForm");
   const tType = useTranslations("BoatType");
   const tHull = useTranslations("HullMaterial");
@@ -43,7 +51,11 @@ export function BoatForm({ locale, userId }: { locale: string; userId: string })
     formState: { errors },
   } = useForm<BoatListingFormValues, unknown, BoatListingInput>({
     resolver: zodResolver(boatListingSchema),
-    defaultValues: { currency: "EUR", photoPaths: [] },
+    defaultValues: {
+      currency: "EUR",
+      photoPaths: [],
+      contactEmail: sellerEmail,
+    },
   });
 
   const boatType = watch("boatType");
@@ -389,6 +401,44 @@ export function BoatForm({ locale, userId }: { locale: string; userId: string })
           </div>
         ) : null}
       </details>
+
+      <section className="space-y-4">
+        <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-500">
+          {t("sectionContact")}
+        </h2>
+
+        <Field label={t("contactPhone")} error={errors.contactPhone?.message}>
+          <input
+            type="tel"
+            {...register("contactPhone")}
+            className="w-full rounded-md border border-slate-300 px-3 py-2"
+          />
+        </Field>
+        <label className="flex items-center gap-2 text-sm text-slate-700">
+          <input type="checkbox" {...register("contactPhoneWhatsapp")} />
+          {t("contactWhatsapp")}
+        </label>
+        <label className="flex items-center gap-2 text-sm text-slate-700">
+          <input type="checkbox" {...register("contactPhoneTelegram")} />
+          {t("contactTelegram")}
+        </label>
+
+        <Field label={t("contactEmail")} error={errors.contactEmail?.message}>
+          <input
+            type="email"
+            {...register("contactEmail")}
+            className="w-full rounded-md border border-slate-300 px-3 py-2"
+          />
+        </Field>
+
+        <Field label={t("contactNote")} hint={t("contactNoteHint")} optional>
+          <textarea
+            rows={2}
+            {...register("contactNote")}
+            className="w-full rounded-md border border-slate-300 px-3 py-2"
+          />
+        </Field>
+      </section>
 
       <section className="space-y-4">
         <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-500">

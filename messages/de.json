@@ -120,6 +120,8 @@
     "flagCountry": "Flagge",
     "isBroker": "Inserat eines Maklers / Händlers",
     "brokerCompanyName": "Firmenname",
+    "promoteSocial": "NautiBay darf dieses Inserat auf externen Plattformen bewerben (Facebook, Instagram, YouTube, TikTok)",
+    "promoteSocialHint": "Für die Bewerbung werden Ihre Fotos, Daten und die Region des Boots genutzt; Video, falls vorhanden. Die Einwilligung kann jederzeit in den Inserat-Einstellungen widerrufen werden.",
     "submit": "Inserat veröffentlichen",
     "publishSuccess": "Dein Inserat ist online.",
     "signInRequired": "Melde dich an, um ein Inserat zu erstellen."

@@ -58,6 +58,9 @@ export const boatListingSchema = z.object({
   isBroker: z.coerce.boolean().optional(),
   brokerCompanyName: z.string().trim().max(160).optional().or(z.literal("")),
 
+  // Opt-in: owner lets NautiBay re-post the listing on outside platforms.
+  promoteSocial: z.coerce.boolean().optional(),
+
   photoPaths: z.array(z.string()).min(1, "At least one photo is required"),
 });
 

@@ -120,6 +120,8 @@
     "flagCountry": "Bandera",
     "isBroker": "Anuncio de un bróker / distribuidor",
     "brokerCompanyName": "Nombre de la empresa",
+    "promoteSocial": "Permito que NautiBay promocione este anuncio en plataformas externas (Facebook, Instagram, YouTube, TikTok)",
+    "promoteSocialHint": "La promoción usa tus fotos, características y la región del barco; también el vídeo, si lo añadiste. Puedes retirar el consentimiento cuando quieras en los ajustes del anuncio.",
     "submit": "Publicar anuncio",
     "publishSuccess": "Tu anuncio ya está publicado.",
     "signInRequired": "Inicia sesión para crear un anuncio."

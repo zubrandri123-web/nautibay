@@ -120,6 +120,8 @@
     "flagCountry": "Zastava",
     "isBroker": "Oglas posrednika / trgovca",
     "brokerCompanyName": "Naziv tvrtke",
+    "promoteSocial": "Dopuštam da NautiBay promovira ovaj oglas na vanjskim platformama (Facebook, Instagram, YouTube, TikTok)",
+    "promoteSocialHint": "Za promociju se koriste vaše fotografije, specifikacije i regija plovila; i videozapis, ako ste ga dodali. Privolu možete povući u bilo kojem trenutku u postavkama oglasa.",
     "submit": "Objavi oglas",
     "publishSuccess": "Vaš oglas je objavljen.",
     "signInRequired": "Prijavite se za kreiranje oglasa."

@@ -52,6 +52,7 @@ export async function createListingAction(locale: string, input: unknown) {
       flag_country: data.flagCountry ?? null,
       is_broker: data.isBroker ?? false,
       broker_company_name: data.isBroker ? data.brokerCompanyName || null : null,
+      promote_social: data.promoteSocial ?? false,
     })
     .select("id")
     .single();

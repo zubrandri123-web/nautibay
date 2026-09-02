@@ -120,6 +120,8 @@
     "flagCountry": "Flag",
     "isBroker": "Listing as a broker / dealer",
     "brokerCompanyName": "Company name",
+    "promoteSocial": "Let NautiBay promote this listing on outside platforms (Facebook, Instagram, YouTube, TikTok)",
+    "promoteSocialHint": "Promotion uses your photos, specs and the boat’s region; video too, if you added one. You can withdraw consent anytime in the listing settings.",
     "submit": "Publish listing",
     "publishSuccess": "Your listing is live.",
     "signInRequired": "Sign in to create a listing."

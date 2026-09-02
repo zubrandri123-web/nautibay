@@ -432,6 +432,20 @@ export function BoatForm({ locale, userId }: { locale: string; userId: string })
         ) : null}
       </section>
 
+      <div className="rounded-md border border-slate-300 bg-slate-50 p-4">
+        <label className="flex items-start gap-2 text-sm text-slate-700">
+          <input
+            type="checkbox"
+            {...register("promoteSocial")}
+            className="mt-0.5"
+          />
+          <span>{t("promoteSocial")}</span>
+        </label>
+        <p className="mt-1 pl-6 text-xs text-slate-500">
+          {t("promoteSocialHint")}
+        </p>
+      </div>
+
       <button
         type="submit"
         disabled={submitting}

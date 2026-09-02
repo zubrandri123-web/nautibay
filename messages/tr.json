@@ -120,6 +120,8 @@
     "flagCountry": "Bayrak",
     "isBroker": "Broker / bayi ilanı",
     "brokerCompanyName": "Şirket adı",
+    "promoteSocial": "NautiBay’in bu ilanı harici platformlarda tanıtmasına izin veriyorum (Facebook, Instagram, YouTube, TikTok)",
+    "promoteSocialHint": "Tanıtımda fotoğraflarınız, teknik özellikler ve teknenin bölgesi kullanılır; eklediyseniz video da. Onayı istediğiniz zaman ilan ayarlarından geri çekebilirsiniz.",
     "submit": "İlanı yayınla",
     "publishSuccess": "İlanınız yayında.",
     "signInRequired": "İlan oluşturmak için giriş yapın."

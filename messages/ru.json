@@ -217,6 +217,62 @@
     "status_sold": "Продано",
     "status_archived": "Снято",
     "status_draft": "Черновик",
-    "status_pending_review": "На проверке"
+    "status_pending_review": "На проверке",
+    "myBerthsLink": "Мои причалы →"
+  },
+  "PlaceType": {
+    "wet_berth": "Причал (в воде)",
+    "dry_storage": "Сухое место",
+    "locker": "Бокс / кладовка"
+  },
+  "Deal": {
+    "sale": "Продажа",
+    "rent": "Аренда"
+  },
+  "RentPeriod": {
+    "month": "месяц",
+    "season": "сезон",
+    "year": "год"
+  },
+  "BerthForm": {
+    "sectionMain": "Основное",
+    "sectionLocation": "Локация",
+    "sectionSize": "Размеры места",
+    "sectionAmenities": "Удобства",
+    "sectionPhotos": "Фото",
+    "placeType": "Тип места",
+    "deal": "Сделка",
+    "price": "Цена",
+    "rentPeriod": "Период аренды",
+    "marina": "Марина",
+    "sizeHint": "Максимальные размеры лодки, которую вмещает место.",
+    "water": "Вода",
+    "electricity": "Электричество",
+    "security": "Охрана",
+    "liveaboard": "Можно жить на борту",
+    "lengthM": "Длина",
+    "beamM": "Ширина",
+    "draftM": "Осадка",
+    "submit": "Опубликовать объявление"
+  },
+  "Berths": {
+    "title": "Причалы и хранение",
+    "myTitle": "Мои причалы",
+    "newTitle": "Разместить место",
+    "editTitle": "Редактировать место",
+    "newListing": "Разместить место",
+    "signInRequired": "Войдите, чтобы разместить место.",
+    "empty": "Пока нет объявлений.",
+    "placeType": "Тип места",
+    "deal": "Сделка",
+    "price": "Цена",
+    "rentPeriod": "Период",
+    "marina": "Марина",
+    "anyPlace": "Любой тип",
+    "anyDeal": "Продажа или аренда",
+    "priceMin": "Цена от",
+    "priceMax": "Цена до",
+    "markTaken": "Отметить занятым",
+    "status_rented": "Сдано"
   }
 }

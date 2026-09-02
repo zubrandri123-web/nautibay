@@ -217,6 +217,62 @@
     "status_sold": "Vendu",
     "status_archived": "Retiré",
     "status_draft": "Brouillon",
-    "status_pending_review": "En révision"
+    "status_pending_review": "En révision",
+    "myBerthsLink": "Mes places →"
+  },
+  "PlaceType": {
+    "wet_berth": "Place à flot",
+    "dry_storage": "Stockage à sec",
+    "locker": "Box / casier"
+  },
+  "Deal": {
+    "sale": "Vente",
+    "rent": "Location"
+  },
+  "RentPeriod": {
+    "month": "mois",
+    "season": "saison",
+    "year": "an"
+  },
+  "BerthForm": {
+    "sectionMain": "Informations",
+    "sectionLocation": "Emplacement",
+    "sectionSize": "Dimensions de la place",
+    "sectionAmenities": "Équipements",
+    "sectionPhotos": "Photos",
+    "placeType": "Type de place",
+    "deal": "Type d’offre",
+    "price": "Prix",
+    "rentPeriod": "Période de location",
+    "marina": "Port / marina",
+    "sizeHint": "Taille maximale de bateau que la place accepte.",
+    "water": "Eau",
+    "electricity": "Électricité",
+    "security": "Gardiennage",
+    "liveaboard": "Vie à bord autorisée",
+    "lengthM": "Longueur",
+    "beamM": "Largeur",
+    "draftM": "Tirant d’eau",
+    "submit": "Publier l’annonce"
+  },
+  "Berths": {
+    "title": "Places de port et stockage",
+    "myTitle": "Mes places",
+    "newTitle": "Publier une place",
+    "editTitle": "Modifier la place",
+    "newListing": "Publier une place",
+    "signInRequired": "Connectez-vous pour publier une place.",
+    "empty": "Pas encore de places.",
+    "placeType": "Type",
+    "deal": "Offre",
+    "price": "Prix",
+    "rentPeriod": "Période",
+    "marina": "Marina",
+    "anyPlace": "Tout type",
+    "anyDeal": "Vente ou location",
+    "priceMin": "Prix min",
+    "priceMax": "Prix max",
+    "markTaken": "Marquer comme pris",
+    "status_rented": "Loué"
   }
 }

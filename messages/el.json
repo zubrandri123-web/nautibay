@@ -217,6 +217,62 @@
     "status_sold": "Πουλήθηκε",
     "status_archived": "Αποσύρθηκε",
     "status_draft": "Πρόχειρο",
-    "status_pending_review": "Σε έλεγχο"
+    "status_pending_review": "Σε έλεγχο",
+    "myBerthsLink": "Οι θέσεις μου →"
+  },
+  "PlaceType": {
+    "wet_berth": "Θέση στη θάλασσα",
+    "dry_storage": "Στεγνή αποθήκευση",
+    "locker": "Ντουλάπα / αποθήκη"
+  },
+  "Deal": {
+    "sale": "Πώληση",
+    "rent": "Ενοικίαση"
+  },
+  "RentPeriod": {
+    "month": "μήνα",
+    "season": "σεζόν",
+    "year": "έτος"
+  },
+  "BerthForm": {
+    "sectionMain": "Βασικά",
+    "sectionLocation": "Τοποθεσία",
+    "sectionSize": "Διαστάσεις θέσης",
+    "sectionAmenities": "Παροχές",
+    "sectionPhotos": "Φωτογραφίες",
+    "placeType": "Τύπος θέσης",
+    "deal": "Συναλλαγή",
+    "price": "Τιμή",
+    "rentPeriod": "Περίοδος ενοικίασης",
+    "marina": "Μαρίνα",
+    "sizeHint": "Μέγιστες διαστάσεις σκάφους που δέχεται η θέση.",
+    "water": "Νερό",
+    "electricity": "Ρεύμα",
+    "security": "Φύλαξη",
+    "liveaboard": "Επιτρέπεται η διαμονή στο σκάφος",
+    "lengthM": "Μήκος",
+    "beamM": "Πλάτος",
+    "draftM": "Βύθισμα",
+    "submit": "Δημοσίευση αγγελίας"
+  },
+  "Berths": {
+    "title": "Θέσεις & αποθήκευση",
+    "myTitle": "Οι θέσεις μου",
+    "newTitle": "Καταχώριση θέσης",
+    "editTitle": "Επεξεργασία θέσης",
+    "newListing": "Καταχώριση θέσης",
+    "signInRequired": "Συνδεθείτε για να καταχωρίσετε θέση.",
+    "empty": "Δεν υπάρχουν θέσεις ακόμη.",
+    "placeType": "Τύπος",
+    "deal": "Συναλλαγή",
+    "price": "Τιμή",
+    "rentPeriod": "Περίοδος",
+    "marina": "Μαρίνα",
+    "anyPlace": "Οποιοσδήποτε τύπος",
+    "anyDeal": "Πώληση ή ενοικίαση",
+    "priceMin": "Τιμή από",
+    "priceMax": "Τιμή έως",
+    "markTaken": "Σήμανση ως μη διαθέσιμο",
+    "status_rented": "Ενοικιάστηκε"
   }
 }

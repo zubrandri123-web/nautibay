@@ -217,6 +217,62 @@
     "status_sold": "Prodano",
     "status_archived": "Povučeno",
     "status_draft": "Skica",
-    "status_pending_review": "U pregledu"
+    "status_pending_review": "U pregledu",
+    "myBerthsLink": "Moja mjesta →"
+  },
+  "PlaceType": {
+    "wet_berth": "Vez u vodi",
+    "dry_storage": "Suho skladištenje",
+    "locker": "Ormarić / boks"
+  },
+  "Deal": {
+    "sale": "Prodaja",
+    "rent": "Najam"
+  },
+  "RentPeriod": {
+    "month": "mjesec",
+    "season": "sezona",
+    "year": "godina"
+  },
+  "BerthForm": {
+    "sectionMain": "Osnovno",
+    "sectionLocation": "Lokacija",
+    "sectionSize": "Dimenzije mjesta",
+    "sectionAmenities": "Sadržaji",
+    "sectionPhotos": "Fotografije",
+    "placeType": "Vrsta mjesta",
+    "deal": "Ponuda",
+    "price": "Cijena",
+    "rentPeriod": "Razdoblje najma",
+    "marina": "Marina",
+    "sizeHint": "Najveće dimenzije plovila koje mjesto prima.",
+    "water": "Voda",
+    "electricity": "Struja",
+    "security": "Čuvanje",
+    "liveaboard": "Dozvoljeno stanovanje na plovilu",
+    "lengthM": "Duljina",
+    "beamM": "Širina",
+    "draftM": "Gaz",
+    "submit": "Objavi oglas"
+  },
+  "Berths": {
+    "title": "Vezovi i skladištenje",
+    "myTitle": "Moja mjesta",
+    "newTitle": "Objavi mjesto",
+    "editTitle": "Uredi mjesto",
+    "newListing": "Objavi mjesto",
+    "signInRequired": "Prijavite se da objavite mjesto.",
+    "empty": "Još nema mjesta.",
+    "placeType": "Vrsta",
+    "deal": "Ponuda",
+    "price": "Cijena",
+    "rentPeriod": "Razdoblje",
+    "marina": "Marina",
+    "anyPlace": "Bilo koja vrsta",
+    "anyDeal": "Prodaja ili najam",
+    "priceMin": "Cijena od",
+    "priceMax": "Cijena do",
+    "markTaken": "Označi kao zauzeto",
+    "status_rented": "Iznajmljeno"
   }
 }

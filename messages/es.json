@@ -217,6 +217,62 @@
     "status_sold": "Vendido",
     "status_archived": "Retirado",
     "status_draft": "Borrador",
-    "status_pending_review": "En revisión"
+    "status_pending_review": "En revisión",
+    "myBerthsLink": "Mis sitios →"
+  },
+  "PlaceType": {
+    "wet_berth": "Amarre en agua",
+    "dry_storage": "Almacenaje en seco",
+    "locker": "Trastero / taquilla"
+  },
+  "Deal": {
+    "sale": "Venta",
+    "rent": "Alquiler"
+  },
+  "RentPeriod": {
+    "month": "mes",
+    "season": "temporada",
+    "year": "año"
+  },
+  "BerthForm": {
+    "sectionMain": "Datos básicos",
+    "sectionLocation": "Ubicación",
+    "sectionSize": "Dimensiones del sitio",
+    "sectionAmenities": "Servicios",
+    "sectionPhotos": "Fotos",
+    "placeType": "Tipo de sitio",
+    "deal": "Operación",
+    "price": "Precio",
+    "rentPeriod": "Periodo de alquiler",
+    "marina": "Puerto / marina",
+    "sizeHint": "Tamaño máximo de barco que admite el sitio.",
+    "water": "Agua",
+    "electricity": "Electricidad",
+    "security": "Seguridad",
+    "liveaboard": "Se permite vivir a bordo",
+    "lengthM": "Eslora",
+    "beamM": "Manga",
+    "draftM": "Calado",
+    "submit": "Publicar anuncio"
+  },
+  "Berths": {
+    "title": "Amarres y almacenaje",
+    "myTitle": "Mis sitios",
+    "newTitle": "Publicar un sitio",
+    "editTitle": "Editar sitio",
+    "newListing": "Publicar un sitio",
+    "signInRequired": "Inicia sesión para publicar un sitio.",
+    "empty": "Aún no hay sitios.",
+    "placeType": "Tipo",
+    "deal": "Operación",
+    "price": "Precio",
+    "rentPeriod": "Periodo",
+    "marina": "Marina",
+    "anyPlace": "Cualquier tipo",
+    "anyDeal": "Venta o alquiler",
+    "priceMin": "Precio desde",
+    "priceMax": "Precio hasta",
+    "markTaken": "Marcar como ocupado",
+    "status_rented": "Alquilado"
   }
 }

@@ -217,6 +217,62 @@
     "status_sold": "Satıldı",
     "status_archived": "Kaldırıldı",
     "status_draft": "Taslak",
-    "status_pending_review": "İncelemede"
+    "status_pending_review": "İncelemede",
+    "myBerthsLink": "Yerlerim →"
+  },
+  "PlaceType": {
+    "wet_berth": "Suda bağlama yeri",
+    "dry_storage": "Kuru depolama",
+    "locker": "Dolap / depo"
+  },
+  "Deal": {
+    "sale": "Satış",
+    "rent": "Kiralık"
+  },
+  "RentPeriod": {
+    "month": "ay",
+    "season": "sezon",
+    "year": "yıl"
+  },
+  "BerthForm": {
+    "sectionMain": "Temel",
+    "sectionLocation": "Konum",
+    "sectionSize": "Yer ölçüleri",
+    "sectionAmenities": "Olanaklar",
+    "sectionPhotos": "Fotoğraflar",
+    "placeType": "Yer türü",
+    "deal": "İşlem",
+    "price": "Fiyat",
+    "rentPeriod": "Kira dönemi",
+    "marina": "Marina",
+    "sizeHint": "Yerin aldığı azami tekne ölçüsü.",
+    "water": "Su",
+    "electricity": "Elektrik",
+    "security": "Güvenlik",
+    "liveaboard": "Teknede yaşamaya izin var",
+    "lengthM": "Boy",
+    "beamM": "En",
+    "draftM": "Su çekimi",
+    "submit": "İlanı yayınla"
+  },
+  "Berths": {
+    "title": "Bağlama yerleri ve depolama",
+    "myTitle": "Yerlerim",
+    "newTitle": "Yer ekle",
+    "editTitle": "Yeri düzenle",
+    "newListing": "Yer ekle",
+    "signInRequired": "Yer eklemek için giriş yapın.",
+    "empty": "Henüz yer yok.",
+    "placeType": "Tür",
+    "deal": "İşlem",
+    "price": "Fiyat",
+    "rentPeriod": "Dönem",
+    "marina": "Marina",
+    "anyPlace": "Herhangi",
+    "anyDeal": "Satış veya kira",
+    "priceMin": "Fiyat (min)",
+    "priceMax": "Fiyat (maks)",
+    "markTaken": "Dolu olarak işaretle",
+    "status_rented": "Kiralandı"
   }
 }

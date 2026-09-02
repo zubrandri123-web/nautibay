@@ -217,6 +217,62 @@
     "status_sold": "Verkauft",
     "status_archived": "Zurückgezogen",
     "status_draft": "Entwurf",
-    "status_pending_review": "In Prüfung"
+    "status_pending_review": "In Prüfung",
+    "myBerthsLink": "Meine Plätze →"
+  },
+  "PlaceType": {
+    "wet_berth": "Liegeplatz (Wasser)",
+    "dry_storage": "Trockenlager",
+    "locker": "Box / Lager"
+  },
+  "Deal": {
+    "sale": "Verkauf",
+    "rent": "Miete"
+  },
+  "RentPeriod": {
+    "month": "Monat",
+    "season": "Saison",
+    "year": "Jahr"
+  },
+  "BerthForm": {
+    "sectionMain": "Grunddaten",
+    "sectionLocation": "Standort",
+    "sectionSize": "Maße des Platzes",
+    "sectionAmenities": "Ausstattung",
+    "sectionPhotos": "Fotos",
+    "placeType": "Art des Platzes",
+    "deal": "Angebot",
+    "price": "Preis",
+    "rentPeriod": "Mietzeitraum",
+    "marina": "Marina",
+    "sizeHint": "Maximale Bootsmaße, die der Platz aufnimmt.",
+    "water": "Wasser",
+    "electricity": "Strom",
+    "security": "Bewachung",
+    "liveaboard": "Wohnen an Bord erlaubt",
+    "lengthM": "Länge",
+    "beamM": "Breite",
+    "draftM": "Tiefgang",
+    "submit": "Inserat veröffentlichen"
+  },
+  "Berths": {
+    "title": "Liegeplätze & Lagerung",
+    "myTitle": "Meine Plätze",
+    "newTitle": "Platz inserieren",
+    "editTitle": "Platz bearbeiten",
+    "newListing": "Platz inserieren",
+    "signInRequired": "Melden Sie sich an, um einen Platz zu inserieren.",
+    "empty": "Noch keine Plätze.",
+    "placeType": "Art",
+    "deal": "Angebot",
+    "price": "Preis",
+    "rentPeriod": "Zeitraum",
+    "marina": "Marina",
+    "anyPlace": "Beliebige Art",
+    "anyDeal": "Kauf oder Miete",
+    "priceMin": "Preis ab",
+    "priceMax": "Preis bis",
+    "markTaken": "Als vergeben markieren",
+    "status_rented": "Vermietet"
   }
 }

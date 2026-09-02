@@ -217,6 +217,62 @@
     "status_sold": "Venduto",
     "status_archived": "Ritirato",
     "status_draft": "Bozza",
-    "status_pending_review": "In revisione"
+    "status_pending_review": "In revisione",
+    "myBerthsLink": "I miei posti →"
+  },
+  "PlaceType": {
+    "wet_berth": "Posto barca in acqua",
+    "dry_storage": "Rimessaggio a secco",
+    "locker": "Deposito / box"
+  },
+  "Deal": {
+    "sale": "Vendita",
+    "rent": "Affitto"
+  },
+  "RentPeriod": {
+    "month": "mese",
+    "season": "stagione",
+    "year": "anno"
+  },
+  "BerthForm": {
+    "sectionMain": "Dati principali",
+    "sectionLocation": "Posizione",
+    "sectionSize": "Dimensioni del posto",
+    "sectionAmenities": "Servizi",
+    "sectionPhotos": "Foto",
+    "placeType": "Tipo di posto",
+    "deal": "Tipo",
+    "price": "Prezzo",
+    "rentPeriod": "Periodo di affitto",
+    "marina": "Marina",
+    "sizeHint": "Dimensioni massime della barca che il posto ospita.",
+    "water": "Acqua",
+    "electricity": "Elettricità",
+    "security": "Sicurezza",
+    "liveaboard": "Consentito vivere a bordo",
+    "lengthM": "Lunghezza",
+    "beamM": "Larghezza",
+    "draftM": "Pescaggio",
+    "submit": "Pubblica annuncio"
+  },
+  "Berths": {
+    "title": "Posti barca e rimessaggio",
+    "myTitle": "I miei posti",
+    "newTitle": "Pubblica un posto",
+    "editTitle": "Modifica posto",
+    "newListing": "Pubblica un posto",
+    "signInRequired": "Accedi per pubblicare un posto.",
+    "empty": "Ancora nessun posto.",
+    "placeType": "Tipo",
+    "deal": "Tipo",
+    "price": "Prezzo",
+    "rentPeriod": "Periodo",
+    "marina": "Marina",
+    "anyPlace": "Qualsiasi tipo",
+    "anyDeal": "Vendita o affitto",
+    "priceMin": "Prezzo da",
+    "priceMax": "Prezzo a",
+    "markTaken": "Segna come occupato",
+    "status_rented": "Affittato"
   }
 }

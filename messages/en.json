@@ -217,6 +217,62 @@
     "status_sold": "Sold",
     "status_archived": "Off sale",
     "status_draft": "Draft",
-    "status_pending_review": "In review"
+    "status_pending_review": "In review",
+    "myBerthsLink": "My berths →"
+  },
+  "PlaceType": {
+    "wet_berth": "Wet berth",
+    "dry_storage": "Dry storage",
+    "locker": "Locker / box"
+  },
+  "Deal": {
+    "sale": "Sale",
+    "rent": "Rent"
+  },
+  "RentPeriod": {
+    "month": "month",
+    "season": "season",
+    "year": "year"
+  },
+  "BerthForm": {
+    "sectionMain": "Basics",
+    "sectionLocation": "Location",
+    "sectionSize": "Berth size",
+    "sectionAmenities": "Amenities",
+    "sectionPhotos": "Photos",
+    "placeType": "Type of place",
+    "deal": "Deal",
+    "price": "Price",
+    "rentPeriod": "Rent period",
+    "marina": "Marina",
+    "sizeHint": "Maximum boat size the place takes.",
+    "water": "Water",
+    "electricity": "Electricity",
+    "security": "Security",
+    "liveaboard": "Liveaboard allowed",
+    "lengthM": "Length",
+    "beamM": "Beam",
+    "draftM": "Draft",
+    "submit": "Publish listing"
+  },
+  "Berths": {
+    "title": "Berths & storage",
+    "myTitle": "My berths",
+    "newTitle": "List a place",
+    "editTitle": "Edit place",
+    "newListing": "List a place",
+    "signInRequired": "Sign in to list a place.",
+    "empty": "No places yet.",
+    "placeType": "Type",
+    "deal": "Deal",
+    "price": "Price",
+    "rentPeriod": "Period",
+    "marina": "Marina",
+    "anyPlace": "Any type",
+    "anyDeal": "Sale or rent",
+    "priceMin": "Price from",
+    "priceMax": "Price to",
+    "markTaken": "Mark as taken",
+    "status_rented": "Rented"
   }
 }

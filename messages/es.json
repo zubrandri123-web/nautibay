@@ -26,7 +26,8 @@
     "home": "Inicio",
     "browseBoats": "Buscar barco",
     "sellBoat": "Vender un barco",
-    "language": "Idioma"
+    "language": "Idioma",
+    "myListings": "Mis anuncios"
   },
   "Home": {
     "tagline": "El mercado internacional de la comunidad náutica",
@@ -143,7 +144,8 @@
     "draftM": "Calado",
     "dimUnits": "Unidades",
     "unitMeters": "metros",
-    "unitFeet": "pies"
+    "unitFeet": "pies",
+    "saveChanges": "Guardar cambios"
   },
   "Search": {
     "title": "Buscar un barco",
@@ -198,5 +200,23 @@
     "signInToContact": "Inicia sesión para ver los datos de contacto y comunicarte con el vendedor.",
     "whatsapp": "WhatsApp",
     "telegram": "Telegram"
+  },
+  "MyListings": {
+    "title": "Mis anuncios",
+    "editTitle": "Editar anuncio",
+    "newListing": "Publicar un barco",
+    "empty": "Aún no tienes anuncios.",
+    "signInRequired": "Inicia sesión para ver tus anuncios.",
+    "edit": "Editar",
+    "markSold": "Marcar como vendido",
+    "archive": "Retirar de la venta",
+    "reactivate": "Volver a poner en venta",
+    "delete": "Eliminar",
+    "confirmDelete": "¿Eliminar este anuncio definitivamente?",
+    "status_active": "Activo",
+    "status_sold": "Vendido",
+    "status_archived": "Retirado",
+    "status_draft": "Borrador",
+    "status_pending_review": "En revisión"
   }
 }

@@ -90,3 +90,44 @@ export async function getBoatListing(id: string) {
   if (error) return null;
   return data;
 }
+
+// The signed-in seller's own listings, any status — for the "My listings" page.
+export async function getMyListings() {
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) return [];
+
+  const { data, error } = await supabase
+    .from("boat_listings")
+    .select(
+      "id, boat_type, brand, model, price, currency, status, length_m," +
+        " country, region, city," +
+        " boat_listing_photos(storage_path, sort_order)",
+    )
+    .eq("seller_id", user.id)
+    .order("created_at", { ascending: false });
+
+  if (error) return [];
+  return data ?? [];
+}
+
+// One own listing regardless of status — for the edit form.
+export async function getOwnListing(id: string) {
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) return null;
+
+  const { data, error } = await supabase
+    .from("boat_listings")
+    .select("*, boat_listing_photos(storage_path, sort_order)")
+    .eq("id", id)
+    .eq("seller_id", user.id)
+    .single();
+
+  if (error) return null;
+  return data;
+}

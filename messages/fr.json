@@ -26,7 +26,8 @@
     "home": "Accueil",
     "browseBoats": "Trouver un bateau",
     "sellBoat": "Vendre un bateau",
-    "language": "Langue"
+    "language": "Langue",
+    "myListings": "Mes annonces"
   },
   "Home": {
     "tagline": "La place de marché internationale de la communauté de la voile et du yachting",
@@ -143,7 +144,8 @@
     "draftM": "Tirant d’eau",
     "dimUnits": "Unités",
     "unitMeters": "mètres",
-    "unitFeet": "pieds"
+    "unitFeet": "pieds",
+    "saveChanges": "Enregistrer"
   },
   "Search": {
     "title": "Trouver un bateau",
@@ -198,5 +200,23 @@
     "signInToContact": "Connectez-vous pour voir les coordonnées et contacter le vendeur.",
     "whatsapp": "WhatsApp",
     "telegram": "Telegram"
+  },
+  "MyListings": {
+    "title": "Mes annonces",
+    "editTitle": "Modifier l’annonce",
+    "newListing": "Publier un bateau",
+    "empty": "Vous n’avez pas encore d’annonces.",
+    "signInRequired": "Connectez-vous pour voir vos annonces.",
+    "edit": "Modifier",
+    "markSold": "Marquer comme vendu",
+    "archive": "Retirer de la vente",
+    "reactivate": "Remettre en vente",
+    "delete": "Supprimer",
+    "confirmDelete": "Supprimer définitivement cette annonce ?",
+    "status_active": "En vente",
+    "status_sold": "Vendu",
+    "status_archived": "Retiré",
+    "status_draft": "Brouillon",
+    "status_pending_review": "En révision"
   }
 }

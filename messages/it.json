@@ -26,7 +26,8 @@
     "home": "Home",
     "browseBoats": "Trova una barca",
     "sellBoat": "Vendi una barca",
-    "language": "Lingua"
+    "language": "Lingua",
+    "myListings": "I miei annunci"
   },
   "Home": {
     "tagline": "Il marketplace internazionale della comunità della vela e del diporto",
@@ -143,7 +144,8 @@
     "draftM": "Pescaggio",
     "dimUnits": "Unità",
     "unitMeters": "metri",
-    "unitFeet": "piedi"
+    "unitFeet": "piedi",
+    "saveChanges": "Salva modifiche"
   },
   "Search": {
     "title": "Trova una barca",
@@ -198,5 +200,23 @@
     "signInToContact": "Accedi per vedere i contatti e metterti in contatto con il venditore.",
     "whatsapp": "WhatsApp",
     "telegram": "Telegram"
+  },
+  "MyListings": {
+    "title": "I miei annunci",
+    "editTitle": "Modifica annuncio",
+    "newListing": "Pubblica una barca",
+    "empty": "Non hai ancora annunci.",
+    "signInRequired": "Accedi per vedere i tuoi annunci.",
+    "edit": "Modifica",
+    "markSold": "Segna come venduto",
+    "archive": "Ritira dalla vendita",
+    "reactivate": "Rimetti in vendita",
+    "delete": "Elimina",
+    "confirmDelete": "Eliminare definitivamente questo annuncio?",
+    "status_active": "Attivo",
+    "status_sold": "Venduto",
+    "status_archived": "Ritirato",
+    "status_draft": "Bozza",
+    "status_pending_review": "In revisione"
   }
 }

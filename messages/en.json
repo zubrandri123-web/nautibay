@@ -26,7 +26,8 @@
     "home": "Home",
     "browseBoats": "Browse boats",
     "sellBoat": "Sell a boat",
-    "language": "Language"
+    "language": "Language",
+    "myListings": "My listings"
   },
   "Home": {
     "tagline": "The international marketplace for the yachting community",
@@ -143,7 +144,8 @@
     "draftM": "Draft",
     "dimUnits": "Units",
     "unitMeters": "metres",
-    "unitFeet": "feet"
+    "unitFeet": "feet",
+    "saveChanges": "Save changes"
   },
   "Search": {
     "title": "Find a boat",
@@ -198,5 +200,23 @@
     "signInToContact": "Sign in to see the contact details and reach the seller.",
     "whatsapp": "WhatsApp",
     "telegram": "Telegram"
+  },
+  "MyListings": {
+    "title": "My listings",
+    "editTitle": "Edit listing",
+    "newListing": "List a boat",
+    "empty": "You have no listings yet.",
+    "signInRequired": "Sign in to see your listings.",
+    "edit": "Edit",
+    "markSold": "Mark as sold",
+    "archive": "Take off sale",
+    "reactivate": "Put back on sale",
+    "delete": "Delete",
+    "confirmDelete": "Delete this listing for good?",
+    "status_active": "Active",
+    "status_sold": "Sold",
+    "status_archived": "Off sale",
+    "status_draft": "Draft",
+    "status_pending_review": "In review"
   }
 }

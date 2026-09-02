@@ -6,6 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useTranslations } from "next-intl";
 import { createClient } from "@/lib/supabase/client";
 import { createListingAction } from "@/app/[locale]/boats/new/actions";
+import { updateListingAction } from "@/app/[locale]/boats/[id]/edit/actions";
 import {
   boatListingSchema,
   type BoatListingFormValues,
@@ -24,14 +25,24 @@ import { compressImage } from "@/lib/boats/compress-image";
 
 type Photo = { path: string; previewUrl: string; uploading: boolean; error?: string };
 
+type EditInitial = Partial<BoatListingFormValues> & { photoPaths?: string[] };
+
+const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const publicPhotoUrl = (path: string) =>
+  `${SUPABASE_URL}/storage/v1/object/public/boat-photos/${path}`;
+
 export function BoatForm({
   locale,
   userId,
   sellerEmail,
+  listingId,
+  initial,
 }: {
   locale: string;
   userId: string;
   sellerEmail: string;
+  listingId?: string;
+  initial?: EditInitial;
 }) {
   const t = useTranslations("BoatForm");
   const tType = useTranslations("BoatType");
@@ -40,7 +51,13 @@ export function BoatForm({
   const tCondition = useTranslations("Condition");
   const tCommon = useTranslations("Common");
 
-  const [photos, setPhotos] = useState<Photo[]>([]);
+  const [photos, setPhotos] = useState<Photo[]>(
+    (initial?.photoPaths ?? []).map((path) => ({
+      path,
+      previewUrl: publicPhotoUrl(path),
+      uploading: false,
+    })),
+  );
   const [serverError, setServerError] = useState<string | null>(null);
   const [submitting, setSubmitting] = useState(false);
 
@@ -55,8 +72,9 @@ export function BoatForm({
     defaultValues: {
       currency: "EUR",
       dimUnit: "m",
-      photoPaths: [],
+      photoPaths: initial?.photoPaths ?? [],
       contactEmail: sellerEmail,
+      ...initial,
     },
   });
 
@@ -118,7 +136,9 @@ export function BoatForm({
       beamM: toM(values.beamM),
       draftM: toM(values.draftM),
     };
-    const result = await createListingAction(locale, payload);
+    const result = listingId
+      ? await updateListingAction(listingId, locale, payload)
+      : await createListingAction(locale, payload);
     setSubmitting(false);
     if (result?.error) {
       setServerError(result.error);
@@ -553,7 +573,11 @@ export function BoatForm({
         disabled={submitting}
         className="btn-3d btn-3d-green w-full px-4 py-3 disabled:opacity-50"
       >
-        {submitting ? tCommon("loading") : t("submit")}
+        {submitting
+          ? tCommon("loading")
+          : listingId
+            ? t("saveChanges")
+            : t("submit")}
       </button>
     </form>
   );

@@ -3,6 +3,7 @@
 import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { boatListingSchema } from "@/lib/boats/schema";
+import { listingToRow } from "@/lib/boats/to-row";
 
 export async function createListingAction(locale: string, input: unknown) {
   const supabase = await createClient();
@@ -26,38 +27,7 @@ export async function createListingAction(locale: string, input: unknown) {
     .insert({
       seller_id: user.id,
       status: "active",
-      boat_type: data.boatType,
-      price: data.price,
-      currency: data.currency,
-      year_built: data.yearBuilt,
-      length_m: data.lengthM,
-      condition: data.condition ?? null,
-      country: data.country || null,
-      region: data.region || null,
-      city: data.city || null,
-      brand: data.brand || null,
-      model: data.model || null,
-      beam_m: data.beamM ?? null,
-      draft_m: data.draftM ?? null,
-      fuel_type: data.fuelType ?? null,
-      engine_power_hp: data.enginePowerHp ?? null,
-      hull_material: data.hullMaterial ?? null,
-      cabins: data.cabins ?? null,
-      berths: data.berths ?? null,
-      refit_year: data.refitYear ?? null,
-      sail_area_m2:
-        data.boatType === "sailboat" ? (data.sailAreaM2 ?? null) : null,
-      video_url: data.videoUrl || null,
-      description: data.description || null,
-      flag_country: data.flagCountry ?? null,
-      is_broker: data.isBroker ?? false,
-      broker_company_name: data.isBroker ? data.brokerCompanyName || null : null,
-      promote_social: data.promoteSocial ?? false,
-      contact_phone: data.contactPhone || null,
-      contact_phone_whatsapp: data.contactPhoneWhatsapp ?? false,
-      contact_phone_telegram: data.contactPhoneTelegram ?? false,
-      contact_email: data.contactEmail || null,
-      contact_note: data.contactNote || null,
+      ...listingToRow(data),
     })
     .select("id")
     .single();

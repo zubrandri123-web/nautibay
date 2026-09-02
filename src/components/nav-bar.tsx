@@ -30,15 +30,23 @@ export async function NavBar({ locale }: { locale: string }) {
           </Link>
 
           {user ? (
-            <form action={signOutAction}>
-              <input type="hidden" name="locale" value={locale} />
-              <button
-                type="submit"
+            <>
+              <Link
+                href="/boats/mine"
                 className="text-slate-200 hover:text-white"
               >
-                {t("signOut")}
-              </button>
-            </form>
+                {t("myListings")}
+              </Link>
+              <form action={signOutAction}>
+                <input type="hidden" name="locale" value={locale} />
+                <button
+                  type="submit"
+                  className="text-slate-200 hover:text-white"
+                >
+                  {t("signOut")}
+                </button>
+              </form>
+            </>
           ) : (
             <>
               <Link href="/sign-in" className="text-slate-200 hover:text-white">

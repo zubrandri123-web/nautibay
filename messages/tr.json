@@ -26,7 +26,8 @@
     "home": "Ana sayfa",
     "browseBoats": "Tekne bul",
     "sellBoat": "Tekne sat",
-    "language": "Dil"
+    "language": "Dil",
+    "myListings": "İlanlarım"
   },
   "Home": {
     "tagline": "Yatçılık topluluğu için uluslararası pazar yeri",
@@ -143,7 +144,8 @@
     "draftM": "Su çekimi",
     "dimUnits": "Birimler",
     "unitMeters": "metre",
-    "unitFeet": "fit"
+    "unitFeet": "fit",
+    "saveChanges": "Değişiklikleri kaydet"
   },
   "Search": {
     "title": "Tekne bul",
@@ -198,5 +200,23 @@
     "signInToContact": "İletişim bilgilerini görmek ve satıcıya ulaşmak için giriş yapın.",
     "whatsapp": "WhatsApp",
     "telegram": "Telegram"
+  },
+  "MyListings": {
+    "title": "İlanlarım",
+    "editTitle": "İlanı düzenle",
+    "newListing": "Tekne ekle",
+    "empty": "Henüz ilanınız yok.",
+    "signInRequired": "İlanlarınızı görmek için giriş yapın.",
+    "edit": "Düzenle",
+    "markSold": "Satıldı olarak işaretle",
+    "archive": "Satıştan kaldır",
+    "reactivate": "Yeniden satışa çıkar",
+    "delete": "Sil",
+    "confirmDelete": "Bu ilan kalıcı olarak silinsin mi?",
+    "status_active": "Yayında",
+    "status_sold": "Satıldı",
+    "status_archived": "Kaldırıldı",
+    "status_draft": "Taslak",
+    "status_pending_review": "İncelemede"
   }
 }

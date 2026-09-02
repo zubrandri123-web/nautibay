@@ -26,7 +26,8 @@
     "home": "Početna",
     "browseBoats": "Pronađi brod",
     "sellBoat": "Prodaj brod",
-    "language": "Jezik"
+    "language": "Jezik",
+    "myListings": "Moji oglasi"
   },
   "Home": {
     "tagline": "Međunarodno tržište za nautičku zajednicu",
@@ -143,7 +144,8 @@
     "draftM": "Gaz",
     "dimUnits": "Jedinice",
     "unitMeters": "metri",
-    "unitFeet": "stope"
+    "unitFeet": "stope",
+    "saveChanges": "Spremi promjene"
   },
   "Search": {
     "title": "Pronađi brod",
@@ -198,5 +200,23 @@
     "signInToContact": "Prijavite se da vidite kontakt podatke i javite se prodavatelju.",
     "whatsapp": "WhatsApp",
     "telegram": "Telegram"
+  },
+  "MyListings": {
+    "title": "Moji oglasi",
+    "editTitle": "Uredi oglas",
+    "newListing": "Objavi brod",
+    "empty": "Još nemate oglasa.",
+    "signInRequired": "Prijavite se da vidite svoje oglase.",
+    "edit": "Uredi",
+    "markSold": "Označi kao prodano",
+    "archive": "Ukloni iz prodaje",
+    "reactivate": "Vrati u prodaju",
+    "delete": "Izbriši",
+    "confirmDelete": "Trajno izbrisati ovaj oglas?",
+    "status_active": "Aktivno",
+    "status_sold": "Prodano",
+    "status_archived": "Povučeno",
+    "status_draft": "Skica",
+    "status_pending_review": "U pregledu"
   }
 }

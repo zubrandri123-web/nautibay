@@ -26,7 +26,8 @@
     "home": "Start",
     "browseBoats": "Boot finden",
     "sellBoat": "Boot verkaufen",
-    "language": "Sprache"
+    "language": "Sprache",
+    "myListings": "Meine Inserate"
   },
   "Home": {
     "tagline": "Der internationale Marktplatz für die Yachting-Community",
@@ -143,7 +144,8 @@
     "draftM": "Tiefgang",
     "dimUnits": "Einheiten",
     "unitMeters": "Meter",
-    "unitFeet": "Fuß"
+    "unitFeet": "Fuß",
+    "saveChanges": "Änderungen speichern"
   },
   "Search": {
     "title": "Boot finden",
@@ -198,5 +200,23 @@
     "signInToContact": "Melden Sie sich an, um die Kontaktdaten zu sehen und den Verkäufer zu kontaktieren.",
     "whatsapp": "WhatsApp",
     "telegram": "Telegram"
+  },
+  "MyListings": {
+    "title": "Meine Inserate",
+    "editTitle": "Inserat bearbeiten",
+    "newListing": "Boot inserieren",
+    "empty": "Sie haben noch keine Inserate.",
+    "signInRequired": "Melden Sie sich an, um Ihre Inserate zu sehen.",
+    "edit": "Bearbeiten",
+    "markSold": "Als verkauft markieren",
+    "archive": "Vom Verkauf nehmen",
+    "reactivate": "Wieder anbieten",
+    "delete": "Löschen",
+    "confirmDelete": "Dieses Inserat endgültig löschen?",
+    "status_active": "Aktiv",
+    "status_sold": "Verkauft",
+    "status_archived": "Zurückgezogen",
+    "status_draft": "Entwurf",
+    "status_pending_review": "In Prüfung"
   }
 }

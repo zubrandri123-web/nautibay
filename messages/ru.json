@@ -26,7 +26,8 @@
     "home": "Главная",
     "browseBoats": "Найти лодку",
     "sellBoat": "Продать лодку",
-    "language": "Язык"
+    "language": "Язык",
+    "myListings": "Мои объявления"
   },
   "Home": {
     "tagline": "Международный маркетплейс яхтенного сообщества",
@@ -143,7 +144,8 @@
     "draftM": "Осадка",
     "dimUnits": "Единицы",
     "unitMeters": "метры",
-    "unitFeet": "футы"
+    "unitFeet": "футы",
+    "saveChanges": "Сохранить изменения"
   },
   "Search": {
     "title": "Найти лодку",
@@ -198,5 +200,23 @@
     "signInToContact": "Войдите, чтобы увидеть контакты и связаться с продавцом.",
     "whatsapp": "WhatsApp",
     "telegram": "Telegram"
+  },
+  "MyListings": {
+    "title": "Мои объявления",
+    "editTitle": "Редактировать объявление",
+    "newListing": "Разместить лодку",
+    "empty": "У вас пока нет объявлений.",
+    "signInRequired": "Войдите, чтобы увидеть свои объявления.",
+    "edit": "Редактировать",
+    "markSold": "Отметить проданной",
+    "archive": "Снять с продажи",
+    "reactivate": "Вернуть в продажу",
+    "delete": "Удалить",
+    "confirmDelete": "Удалить это объявление навсегда?",
+    "status_active": "В продаже",
+    "status_sold": "Продано",
+    "status_archived": "Снято",
+    "status_draft": "Черновик",
+    "status_pending_review": "На проверке"
   }
 }

@@ -124,7 +124,8 @@
     "promoteSocialHint": "Za promociju se koriste vaše fotografije, specifikacije i regija plovila; i videozapis, ako ste ga dodali. Privolu možete povući u bilo kojem trenutku u postavkama oglasa.",
     "submit": "Objavi oglas",
     "publishSuccess": "Vaš oglas je objavljen.",
-    "signInRequired": "Prijavite se za kreiranje oglasa."
+    "signInRequired": "Prijavite se za kreiranje oglasa.",
+    "hasErrors": "Provjerite označena polja — obrazac nije poslan."
   },
   "Search": {
     "title": "Pronađi brod",

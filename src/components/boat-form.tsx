@@ -121,7 +121,7 @@ export function BoatForm({ locale, userId }: { locale: string; userId: string })
           </select>
         </Field>
 
-        <Field label={t("condition")} optional>
+        <Field label={t("condition")} optional error={errors.condition?.message}>
           <select
             {...register("condition")}
             className="w-full rounded-md border border-slate-300 px-3 py-2"
@@ -272,7 +272,7 @@ export function BoatForm({ locale, userId }: { locale: string; userId: string })
           {t("sectionEngine")}
         </h2>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-          <Field label={t("fuelType")} optional>
+          <Field label={t("fuelType")} optional error={errors.fuelType?.message}>
             <select
               {...register("fuelType")}
               className="w-full rounded-md border border-slate-300 px-3 py-2"
@@ -304,7 +304,7 @@ export function BoatForm({ locale, userId }: { locale: string; userId: string })
           {t("sectionDetails")}
         </h2>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
-          <Field label={t("hullMaterial")} optional>
+          <Field label={t("hullMaterial")} optional error={errors.hullMaterial?.message}>
             <select
               {...register("hullMaterial")}
               className="w-full rounded-md border border-slate-300 px-3 py-2"
@@ -445,6 +445,12 @@ export function BoatForm({ locale, userId }: { locale: string; userId: string })
           {t("promoteSocialHint")}
         </p>
       </div>
+
+      {Object.keys(errors).length > 0 ? (
+        <p className="rounded-md bg-red-50 px-3 py-2 text-sm text-red-700">
+          {t("hasErrors")}
+        </p>
+      ) : null}
 
       <button
         type="submit"

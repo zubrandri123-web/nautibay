@@ -124,7 +124,8 @@
     "promoteSocialHint": "Promotion uses your photos, specs and the boat’s region; video too, if you added one. You can withdraw consent anytime in the listing settings.",
     "submit": "Publish listing",
     "publishSuccess": "Your listing is live.",
-    "signInRequired": "Sign in to create a listing."
+    "signInRequired": "Sign in to create a listing.",
+    "hasErrors": "Check the highlighted fields — the form was not submitted."
   },
   "Search": {
     "title": "Find a boat",

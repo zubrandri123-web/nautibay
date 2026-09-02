@@ -17,6 +17,15 @@ const optionalNumber = <T extends z.ZodType>(schema: T) =>
     schema.optional(),
   );
 
+// Optional <select> fields submit "" when left on the placeholder ("—").
+// z.enum(...).optional() rejects "" (not a member, not undefined), which
+// silently blocks the whole form. Treat blank as "not provided".
+const optionalEnum = <T extends readonly [string, ...string[]]>(values: T) =>
+  z.preprocess(
+    (v) => (v === "" || v === null || v === undefined ? undefined : v),
+    z.enum(values).optional(),
+  );
+
 // Single source of truth for the listing form: drives client-side
 // validation (react-hook-form) and is re-run on the server before writing
 // to Supabase, so a tampered client request can't skip validation.
@@ -31,7 +40,7 @@ export const boatListingSchema = z.object({
     .min(1900)
     .max(new Date().getFullYear() + 1),
   lengthFt: z.coerce.number().positive(),
-  condition: z.enum(CONDITIONS).optional(),
+  condition: optionalEnum(CONDITIONS),
   country: z.enum(COUNTRIES),
   region: z.string().trim().max(120).optional().or(z.literal("")),
   city: z.string().trim().max(120).optional().or(z.literal("")),
@@ -41,9 +50,9 @@ export const boatListingSchema = z.object({
   model: z.string().trim().max(120).optional().or(z.literal("")),
   beamFt: optionalNumber(z.coerce.number().positive()),
   draftFt: optionalNumber(z.coerce.number().positive()),
-  fuelType: z.enum(FUEL_TYPES).optional(),
+  fuelType: optionalEnum(FUEL_TYPES),
   enginePowerHp: optionalNumber(z.coerce.number().positive()),
-  hullMaterial: z.enum(HULL_MATERIALS).optional(),
+  hullMaterial: optionalEnum(HULL_MATERIALS),
   cabins: optionalNumber(z.coerce.number().int().min(0)),
   berths: optionalNumber(z.coerce.number().int().min(0)),
 
@@ -54,7 +63,7 @@ export const boatListingSchema = z.object({
   description: z.string().trim().max(4000).optional().or(z.literal("")),
 
   // Advanced — optional, quick-pick fields for sellers who want to add more.
-  flagCountry: z.enum(COUNTRIES).optional(),
+  flagCountry: optionalEnum(COUNTRIES),
   isBroker: z.coerce.boolean().optional(),
   brokerCompanyName: z.string().trim().max(160).optional().or(z.literal("")),
 

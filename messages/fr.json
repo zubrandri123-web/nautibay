@@ -124,7 +124,8 @@
     "promoteSocialHint": "La promotion utilise vos photos, les caractéristiques et la région du bateau ; la vidéo aussi, si vous en avez ajouté une. Vous pouvez retirer votre consentement à tout moment dans les paramètres de l’annonce.",
     "submit": "Publier l'annonce",
     "publishSuccess": "Votre annonce est en ligne.",
-    "signInRequired": "Connectez-vous pour créer une annonce."
+    "signInRequired": "Connectez-vous pour créer une annonce.",
+    "hasErrors": "Vérifiez les champs signalés — le formulaire n’a pas été envoyé."
   },
   "Search": {
     "title": "Trouver un bateau",

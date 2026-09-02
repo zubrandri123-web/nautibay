@@ -124,7 +124,8 @@
     "promoteSocialHint": "Für die Bewerbung werden Ihre Fotos, Daten und die Region des Boots genutzt; Video, falls vorhanden. Die Einwilligung kann jederzeit in den Inserat-Einstellungen widerrufen werden.",
     "submit": "Inserat veröffentlichen",
     "publishSuccess": "Dein Inserat ist online.",
-    "signInRequired": "Melde dich an, um ein Inserat zu erstellen."
+    "signInRequired": "Melde dich an, um ein Inserat zu erstellen.",
+    "hasErrors": "Bitte prüfen Sie die markierten Felder — das Formular wurde nicht gesendet."
   },
   "Search": {
     "title": "Boot finden",

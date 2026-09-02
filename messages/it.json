@@ -124,7 +124,8 @@
     "promoteSocialHint": "La promozione usa le tue foto, le caratteristiche e la regione della barca; anche il video, se lo hai aggiunto. Puoi revocare il consenso in qualsiasi momento nelle impostazioni dell’annuncio.",
     "submit": "Pubblica annuncio",
     "publishSuccess": "Il tuo annuncio è online.",
-    "signInRequired": "Accedi per creare un annuncio."
+    "signInRequired": "Accedi per creare un annuncio.",
+    "hasErrors": "Controlla i campi evidenziati — il modulo non è stato inviato."
   },
   "Search": {
     "title": "Trova una barca",

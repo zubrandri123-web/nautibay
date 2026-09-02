@@ -124,7 +124,8 @@
     "promoteSocialHint": "La promoción usa tus fotos, características y la región del barco; también el vídeo, si lo añadiste. Puedes retirar el consentimiento cuando quieras en los ajustes del anuncio.",
     "submit": "Publicar anuncio",
     "publishSuccess": "Tu anuncio ya está publicado.",
-    "signInRequired": "Inicia sesión para crear un anuncio."
+    "signInRequired": "Inicia sesión para crear un anuncio.",
+    "hasErrors": "Revisa los campos marcados — el formulario no se envió."
   },
   "Search": {
     "title": "Buscar un barco",

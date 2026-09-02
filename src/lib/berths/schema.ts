@@ -52,9 +52,9 @@ export type BerthListingFormValues = z.input<typeof berthListingSchema>;
 export type BerthListingInput = z.output<typeof berthListingSchema>;
 
 export const berthFiltersSchema = z.object({
-  placeType: z.enum(PLACE_TYPES).optional(),
-  deal: z.enum(DEALS).optional(),
-  country: z.array(z.enum(COUNTRIES)).optional(),
+  placeType: optionalEnum(PLACE_TYPES),
+  deal: optionalEnum(DEALS),
+  country: optionalEnum(COUNTRIES),
   priceMin: z.coerce.number().nonnegative().optional(),
   priceMax: z.coerce.number().nonnegative().optional(),
 });

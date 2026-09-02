@@ -4,10 +4,10 @@ import { NearMeButton } from "@/components/near-me-button";
 import {
   BOAT_TYPES,
   CONDITIONS,
+  COUNTRIES,
   countryName,
   FUEL_TYPES,
   HULL_MATERIALS,
-  MAIN_MARKETS,
 } from "@/lib/boats/constants";
 import {
   searchBoatListings,
@@ -21,11 +21,6 @@ type Props = {
   params: Promise<{ locale: string }>;
   searchParams: Promise<RawSearchParams>;
 };
-
-function toArray(value: string | string[] | undefined): string[] {
-  if (value === undefined) return [];
-  return Array.isArray(value) ? value : [value];
-}
 
 function toNumber(value: string | string[] | undefined): number | undefined {
   const raw = Array.isArray(value) ? value[0] : value;
@@ -43,7 +38,9 @@ function parseFilters(sp: RawSearchParams): SearchFilters {
     yearMax: toNumber(sp.yearMax),
     lengthMin: toNumber(sp.lengthMin),
     lengthMax: toNumber(sp.lengthMax),
-    country: toArray(sp.country) as SearchFilters["country"],
+    country: (Array.isArray(sp.country)
+      ? sp.country[0]
+      : sp.country) as SearchFilters["country"],
     hullMaterial: (Array.isArray(sp.hullMaterial)
       ? sp.hullMaterial[0]
       : sp.hullMaterial) as SearchFilters["hullMaterial"],
@@ -77,9 +74,13 @@ export default async function BoatsSearchPage({ searchParams }: Props) {
     ? await searchNearbyListings(lat, lng, radiusKm)
     : await searchBoatListings(filters);
 
+  const countryOptions = [...COUNTRIES]
+    .map((code) => ({ code, name: countryName(code, locale) }))
+    .sort((a, b) => a.name.localeCompare(b.name, locale));
+
   const hasActiveFilters =
     Boolean(filters.type) ||
-    (filters.country && filters.country.length > 0) ||
+    Boolean(filters.country) ||
     filters.priceMin !== undefined ||
     filters.priceMax !== undefined ||
     filters.yearMin !== undefined ||
@@ -231,27 +232,21 @@ export default async function BoatsSearchPage({ searchParams }: Props) {
           </select>
         </div>
 
-        <fieldset className="col-span-2 sm:col-span-4">
-          <legend className="block text-xs font-medium text-slate-600">
-            {t("country")}
-          </legend>
-          <div className="mt-1 flex flex-wrap gap-x-4 gap-y-1">
-            {MAIN_MARKETS.map((code) => (
-              <label
-                key={code}
-                className="flex items-center gap-1 text-sm text-slate-700"
-              >
-                <input
-                  type="checkbox"
-                  name="country"
-                  value={code}
-                  defaultChecked={filters.country?.includes(code)}
-                />
-                {countryName(code, locale)}
-              </label>
+        <label className="block text-xs font-medium text-slate-600">
+          {t("country")}
+          <select
+            name="country"
+            defaultValue={filters.country ?? ""}
+            className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-sm"
+          >
+            <option value="">{t("anyCountry")}</option>
+            {countryOptions.map(({ code, name }) => (
+              <option key={code} value={code}>
+                {name}
+              </option>
             ))}
-          </div>
-        </fieldset>
+          </select>
+        </label>
 
         <div className="col-span-2 flex items-end gap-2 sm:col-span-4">
           <button type="submit" className="btn-3d btn-3d-blue px-4 py-2 text-sm">

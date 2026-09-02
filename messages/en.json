@@ -168,7 +168,8 @@
     "resultsCount": "{count, plural, =0 {No listings} one {# listing} other {# listings}}",
     "noResults": "No listings match these filters yet.",
     "expandRegionHint": "Try removing a filter or adding nearby countries to see more results.",
-    "nearMe": "Near me"
+    "nearMe": "Near me",
+    "anyCountry": "Any country"
   },
   "BoatCard": {
     "askingPrice": "Asking price",
@@ -273,6 +274,8 @@
     "priceMin": "Price from",
     "priceMax": "Price to",
     "markTaken": "Mark as taken",
-    "status_rented": "Rented"
+    "status_rented": "Rented",
+    "country": "Country",
+    "anyCountry": "Any country"
   }
 }

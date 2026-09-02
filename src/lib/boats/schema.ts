@@ -83,7 +83,7 @@ export const searchFiltersSchema = z.object({
   yearMax: z.coerce.number().int().optional(),
   lengthMin: z.coerce.number().nonnegative().optional(),
   lengthMax: z.coerce.number().nonnegative().optional(),
-  country: z.array(z.enum(COUNTRIES)).optional(),
+  country: optionalEnum(COUNTRIES),
   hullMaterial: z.enum(HULL_MATERIALS).optional(),
   fuelType: z.enum(FUEL_TYPES).optional(),
   condition: z.enum(CONDITIONS).optional(),

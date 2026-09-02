@@ -34,9 +34,7 @@ export async function searchBerths(filters: BerthFilters): Promise<BerthSummary[
   if (filters.deal) query = query.eq("deal", filters.deal);
   if (filters.priceMin != null) query = query.gte("price", filters.priceMin);
   if (filters.priceMax != null) query = query.lte("price", filters.priceMax);
-  if (filters.country && filters.country.length > 0) {
-    query = query.in("country", filters.country);
-  }
+  if (filters.country) query = query.eq("country", filters.country);
 
   const { data, error } = await query.limit(60);
   if (error) throw error;

@@ -1,6 +1,6 @@
 import { getLocale, getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import { countryName, formatLength, MAIN_MARKETS } from "@/lib/boats/constants";
+import { COUNTRIES, countryName, formatLength } from "@/lib/boats/constants";
 import { DEALS, PLACE_TYPES } from "@/lib/berths/constants";
 import { berthFiltersSchema, type BerthFilters } from "@/lib/berths/schema";
 import { searchBerths, type BerthSummary } from "@/lib/berths/queries";
@@ -18,11 +18,6 @@ const cover = (
   return `${SUPABASE_URL}/storage/v1/object/public/boat-photos/${p.storage_path}`;
 };
 
-function toArr(v: string | string[] | undefined) {
-  if (v == null) return undefined;
-  return Array.isArray(v) ? v : [v];
-}
-
 export default async function BerthsPage({ searchParams }: Props) {
   const sp = await searchParams;
   const locale = await getLocale();
@@ -32,14 +27,20 @@ export default async function BerthsPage({ searchParams }: Props) {
   const tPeriod = await getTranslations("RentPeriod");
   const tCommon = await getTranslations("Common");
 
+  const one = (v: string | string[] | undefined) =>
+    Array.isArray(v) ? v[0] : v;
   const parsed = berthFiltersSchema.safeParse({
-    placeType: sp.placeType,
-    deal: sp.deal,
-    country: toArr(sp.country),
+    placeType: one(sp.placeType),
+    deal: one(sp.deal),
+    country: one(sp.country),
     priceMin: sp.priceMin,
     priceMax: sp.priceMax,
   });
   const filters: BerthFilters = parsed.success ? parsed.data : {};
+
+  const countryOptions = [...COUNTRIES]
+    .map((code) => ({ code, name: countryName(code, locale) }))
+    .sort((a, b) => a.name.localeCompare(b.name, locale));
 
   let listings: BerthSummary[] = [];
   try {
@@ -92,24 +93,21 @@ export default async function BerthsPage({ searchParams }: Props) {
           <input name="priceMax" type="number" defaultValue={sp.priceMax as string} className={inputCls} />
         </label>
 
-        <fieldset className="col-span-2 sm:col-span-4">
-          <legend className="text-xs font-medium text-slate-600">
-            {tCommon("filters")}
-          </legend>
-          <div className="mt-1 flex flex-wrap gap-x-4 gap-y-1">
-            {MAIN_MARKETS.map((code) => (
-              <label key={code} className="flex items-center gap-1 text-sm text-slate-700">
-                <input
-                  type="checkbox"
-                  name="country"
-                  value={code}
-                  defaultChecked={filters.country?.includes(code)}
-                />
-                {countryName(code, locale)}
-              </label>
+        <label className="col-span-2 text-xs font-medium text-slate-600 sm:col-span-4">
+          {t("country")}
+          <select
+            name="country"
+            defaultValue={filters.country ?? ""}
+            className={inputCls}
+          >
+            <option value="">{t("anyCountry")}</option>
+            {countryOptions.map(({ code, name }) => (
+              <option key={code} value={code}>
+                {name}
+              </option>
             ))}
-          </div>
-        </fieldset>
+          </select>
+        </label>
 
         <div className="col-span-2 sm:col-span-4">
           <button type="submit" className="btn-3d btn-3d-blue px-4 py-2 text-sm">

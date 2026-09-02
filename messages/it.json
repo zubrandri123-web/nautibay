@@ -168,7 +168,8 @@
     "resultsCount": "{count, plural, =0 {Nessun annuncio} one {# annuncio} other {# annunci}}",
     "noResults": "Nessun annuncio corrisponde a questi filtri al momento.",
     "expandRegionHint": "Prova a rimuovere un filtro o ad aggiungere paesi vicini per vedere più risultati.",
-    "nearMe": "Vicino a me"
+    "nearMe": "Vicino a me",
+    "anyCountry": "Qualsiasi paese"
   },
   "BoatCard": {
     "askingPrice": "Prezzo richiesto",
@@ -273,6 +274,8 @@
     "priceMin": "Prezzo da",
     "priceMax": "Prezzo a",
     "markTaken": "Segna come occupato",
-    "status_rented": "Affittato"
+    "status_rented": "Affittato",
+    "country": "Paese",
+    "anyCountry": "Qualsiasi paese"
   }
 }

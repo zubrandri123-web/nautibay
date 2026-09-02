@@ -168,7 +168,8 @@
     "resultsCount": "{count, plural, =0 {Nema oglasa} one {# oglas} few {# oglasa} other {# oglasa}}",
     "noResults": "Trenutno nema oglasa koji odgovaraju ovim filtrima.",
     "expandRegionHint": "Pokušajte ukloniti filtar ili dodati susjedne države za više rezultata.",
-    "nearMe": "U blizini mene"
+    "nearMe": "U blizini mene",
+    "anyCountry": "Bilo koja zemlja"
   },
   "BoatCard": {
     "askingPrice": "Tražena cijena",
@@ -273,6 +274,8 @@
     "priceMin": "Cijena od",
     "priceMax": "Cijena do",
     "markTaken": "Označi kao zauzeto",
-    "status_rented": "Iznajmljeno"
+    "status_rented": "Iznajmljeno",
+    "country": "Zemlja",
+    "anyCountry": "Bilo koja zemlja"
   }
 }

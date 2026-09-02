@@ -168,7 +168,8 @@
     "resultsCount": "{count, plural, =0 {İlan yok} other {# ilan}}",
     "noResults": "Bu filtrelere uyan ilan henüz yok.",
     "expandRegionHint": "Daha fazla sonuç görmek için bir filtreyi kaldırmayı veya komşu ülkeler eklemeyi deneyin.",
-    "nearMe": "Yakınımda"
+    "nearMe": "Yakınımda",
+    "anyCountry": "Herhangi bir ülke"
   },
   "BoatCard": {
     "askingPrice": "İstenen fiyat",
@@ -273,6 +274,8 @@
     "priceMin": "Fiyat (min)",
     "priceMax": "Fiyat (maks)",
     "markTaken": "Dolu olarak işaretle",
-    "status_rented": "Kiralandı"
+    "status_rented": "Kiralandı",
+    "country": "Ülke",
+    "anyCountry": "Herhangi bir ülke"
   }
 }

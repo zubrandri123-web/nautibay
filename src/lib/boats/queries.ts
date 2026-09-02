@@ -41,9 +41,7 @@ export async function searchBoatListings(
   if (filters.yearMax != null) query = query.lte("year_built", filters.yearMax);
   if (filters.lengthMin != null) query = query.gte("length_m", filters.lengthMin);
   if (filters.lengthMax != null) query = query.lte("length_m", filters.lengthMax);
-  if (filters.country && filters.country.length > 0) {
-    query = query.in("country", filters.country);
-  }
+  if (filters.country) query = query.eq("country", filters.country);
   if (filters.hullMaterial) query = query.eq("hull_material", filters.hullMaterial);
   if (filters.fuelType) query = query.eq("fuel_type", filters.fuelType);
   if (filters.condition) query = query.eq("condition", filters.condition);

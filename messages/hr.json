@@ -75,6 +75,7 @@
     "diesel": "Dizel",
     "gasoline": "Benzin",
     "electric": "Električni",
+    "hybrid": "Hibrid",
     "none": "Bez motora (samo jedra)"
   },
   "Condition": {

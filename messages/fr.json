@@ -75,6 +75,7 @@
     "diesel": "Diesel",
     "gasoline": "Essence",
     "electric": "Électrique",
+    "hybrid": "Hybride",
     "none": "Sans moteur (voile uniquement)"
   },
   "Condition": {

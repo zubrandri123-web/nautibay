@@ -75,6 +75,7 @@
     "diesel": "Diesel",
     "gasoline": "Benzin",
     "electric": "Elektrisch",
+    "hybrid": "Hybrid",
     "none": "Ohne Motor (nur Segel)"
   },
   "Condition": {

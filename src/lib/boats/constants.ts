@@ -17,7 +17,13 @@ export const HULL_MATERIALS = [
   "carbon_composite",
 ] as const;
 
-export const FUEL_TYPES = ["diesel", "gasoline", "electric", "none"] as const;
+export const FUEL_TYPES = [
+  "diesel",
+  "gasoline",
+  "electric",
+  "hybrid",
+  "none",
+] as const;
 
 export const CONDITIONS = ["new", "used"] as const;
 

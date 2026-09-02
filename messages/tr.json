@@ -75,6 +75,7 @@
     "diesel": "Dizel",
     "gasoline": "Benzin",
     "electric": "Elektrikli",
+    "hybrid": "Hibrit",
     "none": "Motorsuz (sadece yelken)"
   },
   "Condition": {

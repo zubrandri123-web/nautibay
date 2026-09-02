@@ -75,6 +75,7 @@
     "diesel": "Diesel",
     "gasoline": "Gasoline",
     "electric": "Electric",
+    "hybrid": "Hybrid",
     "none": "No engine (sail only)"
   },
   "Condition": {

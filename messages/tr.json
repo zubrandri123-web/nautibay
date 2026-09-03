@@ -34,7 +34,7 @@
     "findBoat": "Tekne bul",
     "sellBoat": "Tekne sat",
     "berths": "Bağlama yerleri ve depolama",
-    "charterBoat": "Tekne kiralama ve kiralık yat",
+    "charterBoat": "Kiralama, charter ve mavi tur",
     "fishing": "Kaptanlı deniz balıkçılığı",
     "findCrew": "Kaptan/mürettebat bul",
     "services": "Hizmetler ve mağazalar",
@@ -324,7 +324,7 @@
     "submit": "İlanı yayımla"
   },
   "Charter": {
-    "title": "Tekne kiralama ve kiralık yat",
+    "title": "Kiralama, charter ve mavi tur",
     "subtitle": "Kaptansız, kaptanlı, mürettebatlı ya da bir koy turunda kabin — ve günübirlik turlar.",
     "myTitle": "Kiralama ilanlarım",
     "newTitle": "Kiralık tekne ilanı ver",

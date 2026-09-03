@@ -34,7 +34,7 @@
     "findBoat": "Buscar un barco",
     "sellBoat": "Vender un barco",
     "berths": "Amarres y almacenaje",
-    "charterBoat": "Alquiler y chárter de barcos",
+    "charterBoat": "Alquiler, chárter y cruceros",
     "fishing": "Pesca en el mar con patrón",
     "findCrew": "Buscar patrón/tripulación",
     "services": "Servicios y tiendas",
@@ -324,7 +324,7 @@
     "submit": "Publicar anuncio"
   },
   "Charter": {
-    "title": "Alquiler y chárter de barcos",
+    "title": "Alquiler, chárter y cruceros",
     "subtitle": "Sin patrón, con patrón, con tripulación o un camarote en un crucero, y salidas de un día.",
     "myTitle": "Mis anuncios de chárter",
     "newTitle": "Publicar un barco en alquiler",

@@ -34,7 +34,7 @@
     "findBoat": "Find a boat",
     "sellBoat": "Sell a boat",
     "berths": "Berths & storage",
-    "charterBoat": "Rent & charter a boat",
+    "charterBoat": "Rent, charter & cruises",
     "fishing": "Sea fishing with a skipper",
     "findCrew": "Find crew / skipper",
     "services": "Services & shops",
@@ -324,7 +324,7 @@
     "submit": "Publish listing"
   },
   "Charter": {
-    "title": "Rent & charter a boat",
+    "title": "Rent, charter & cruises",
     "subtitle": "Bareboat, with a skipper, with crew, or a cabin on a cruise — and day trips.",
     "myTitle": "My charter listings",
     "newTitle": "List a boat for charter",

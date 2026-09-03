@@ -34,7 +34,7 @@
     "findBoat": "Boot finden",
     "sellBoat": "Boot verkaufen",
     "berths": "Liegeplätze & Lagerung",
-    "charterBoat": "Boot mieten & chartern",
+    "charterBoat": "Mieten, Chartern & Kreuzfahrten",
     "fishing": "Hochseeangeln mit Skipper",
     "findCrew": "Skipper/Crew finden",
     "services": "Dienstleistungen & Shops",
@@ -324,7 +324,7 @@
     "submit": "Anzeige veröffentlichen"
   },
   "Charter": {
-    "title": "Boot mieten & chartern",
+    "title": "Mieten, Chartern & Kreuzfahrten",
     "subtitle": "Ohne Skipper, mit Skipper, mit Crew oder eine Kabine auf einer Kreuzfahrt – und Tagesausflüge.",
     "myTitle": "Meine Charter-Anzeigen",
     "newTitle": "Boot zum Chartern anbieten",

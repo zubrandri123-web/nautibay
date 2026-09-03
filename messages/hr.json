@@ -34,7 +34,7 @@
     "findBoat": "Pronađi brod",
     "sellBoat": "Prodaj brod",
     "berths": "Vezovi i skladištenje",
-    "charterBoat": "Najam i charter plovila",
+    "charterBoat": "Najam, charter i krstarenja",
     "fishing": "Ribolov na moru sa skiperom",
     "findCrew": "Pronađi skipera/posadu",
     "services": "Usluge i trgovine",
@@ -324,7 +324,7 @@
     "submit": "Objavi oglas"
   },
   "Charter": {
-    "title": "Najam i charter plovila",
+    "title": "Najam, charter i krstarenja",
     "subtitle": "Bez skipera, sa skiperom, s posadom ili kabina na krstarenju — i jednodnevni izleti.",
     "myTitle": "Moji charter oglasi",
     "newTitle": "Objavi plovilo za najam",

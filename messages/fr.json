@@ -34,7 +34,7 @@
     "findBoat": "Trouver un bateau",
     "sellBoat": "Vendre un bateau",
     "berths": "Places de port et stockage",
-    "charterBoat": "Location & charter de bateaux",
+    "charterBoat": "Location, charter & croisières",
     "fishing": "Pêche en mer avec skipper",
     "findCrew": "Trouver un skipper/équipage",
     "services": "Services et boutiques",
@@ -324,7 +324,7 @@
     "submit": "Publier l'annonce"
   },
   "Charter": {
-    "title": "Location & charter de bateaux",
+    "title": "Location, charter & croisières",
     "subtitle": "Sans skipper, avec skipper, avec équipage ou une cabine sur une croisière — et sorties à la journée.",
     "myTitle": "Mes annonces de charter",
     "newTitle": "Proposer un bateau à la location",

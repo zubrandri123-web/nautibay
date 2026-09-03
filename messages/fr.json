@@ -443,7 +443,7 @@
     "sectionRole": "Poste",
     "sectionAbout": "À propos de vous",
     "sectionSkills": "Compétences et expérience",
-    "sectionLocation": "Où vous pouvez travailler",
+    "sectionLocation": "Base et zones de navigation",
     "sectionRate": "Tarif",
     "sectionAboutText": "À propos de moi",
     "sectionPhoto": "Photo",
@@ -461,12 +461,14 @@
     "vesselExperience": "Bateaux que vous pouvez mener",
     "vesselExperienceHint": "ex. voiliers jusqu'à 50 pieds, catamarans, yachts à moteur.",
     "homeBase": "Port d'attache",
-    "homeBaseHint": "Marina ou ville où vous êtes basé.",
-    "willingToTravel": "Prêt à voyager / déménager pour le travail",
+    "homeBaseHint": "Marina, ville ou pays où vous êtes actuellement.",
     "price": "Tarif",
     "priceHint": "Laissez vide pour convenir de la rémunération directement avec l'employeur.",
     "ratePeriod": "Tarif par",
-    "submit": "Publier le profil"
+    "submit": "Publier le profil",
+    "waters": "Mers et zones",
+    "watersHint": "Où vous avez navigué et quelles zones du monde vous pouvez couvrir — ex. « Méditerranée, 3 transats, Caraïbes ; disponible dans le monde entier ».",
+    "availableWorldwide": "Disponible dans le monde entier — prêt à prendre l'avion pour un poste"
   },
   "Crew": {
     "title": "Équipage et skippers",
@@ -481,14 +483,17 @@
     "anyRole": "Tous les postes",
     "availability": "Disponibilité",
     "anyAvailability": "Toutes disponibilités",
-    "country": "Pays",
-    "anyCountry": "Tous les pays",
     "rateOnRequest": "Tarif sur demande",
     "yearsShort": "{count, plural, one {# an d'expérience} other {# ans d'expérience}}",
     "contactPerson": "Contacter cette personne",
     "archive": "Dépublier",
     "reactivate": "Republier",
     "statusActive": "Publié",
-    "statusArchived": "Masqué"
+    "statusArchived": "Masqué",
+    "worldwideOnly": "Monde entier uniquement",
+    "worldwideBadge": "Disponible dans le monde entier",
+    "expMin": "Années min.",
+    "searchCv": "Rechercher des profils",
+    "searchCvHint": "nom, licence, zone de navigation…"
   }
 }

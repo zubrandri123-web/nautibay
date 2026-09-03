@@ -443,7 +443,7 @@
     "sectionRole": "Ruolo",
     "sectionAbout": "Chi sei",
     "sectionSkills": "Competenze ed esperienza",
-    "sectionLocation": "Dove puoi lavorare",
+    "sectionLocation": "Base e acque",
     "sectionRate": "Compenso",
     "sectionAboutText": "Chi sono",
     "sectionPhoto": "Foto",
@@ -461,12 +461,14 @@
     "vesselExperience": "Imbarcazioni che sai condurre",
     "vesselExperienceHint": "es. barche a vela fino a 50 piedi, catamarani, yacht a motore.",
     "homeBase": "Base",
-    "homeBaseHint": "Marina o città in cui risiedi.",
-    "willingToTravel": "Disponibile a viaggiare / trasferirsi per lavoro",
+    "homeBaseHint": "Marina, città o paese in cui ti trovi ora.",
     "price": "Compenso",
     "priceHint": "Lascia vuoto per concordare il compenso direttamente con il datore di lavoro.",
     "ratePeriod": "Compenso per",
-    "submit": "Pubblica il profilo"
+    "submit": "Pubblica il profilo",
+    "waters": "Mari e acque",
+    "watersHint": "Dove hai navigato e quali zone del mondo puoi coprire — es. «Mediterraneo, 3 traversate atlantiche, Caraibi; disponibile in tutto il mondo».",
+    "availableWorldwide": "Disponibile in tutto il mondo — pronto a volare ovunque per un lavoro"
   },
   "Crew": {
     "title": "Equipaggio e skipper",
@@ -481,14 +483,17 @@
     "anyRole": "Qualsiasi ruolo",
     "availability": "Disponibilità",
     "anyAvailability": "Qualsiasi disponibilità",
-    "country": "Paese",
-    "anyCountry": "Qualsiasi paese",
     "rateOnRequest": "Compenso su richiesta",
     "yearsShort": "{count, plural, one {# anno di esp.} other {# anni di esp.}}",
     "contactPerson": "Contatta questa persona",
     "archive": "Rimuovi dalla vetrina",
     "reactivate": "Ripubblica",
     "statusActive": "Pubblicato",
-    "statusArchived": "Nascosto"
+    "statusArchived": "Nascosto",
+    "worldwideOnly": "Solo disponibili ovunque",
+    "worldwideBadge": "Disponibile ovunque",
+    "expMin": "Anni min.",
+    "searchCv": "Cerca profili",
+    "searchCvHint": "nome, licenza, area di navigazione…"
   }
 }

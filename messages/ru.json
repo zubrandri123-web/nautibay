@@ -443,7 +443,7 @@
     "sectionRole": "Должность",
     "sectionAbout": "О себе",
     "sectionSkills": "Навыки и опыт",
-    "sectionLocation": "Где готовы работать",
+    "sectionLocation": "База и акватории",
     "sectionRate": "Ставка",
     "sectionAboutText": "О себе",
     "sectionPhoto": "Фото",
@@ -461,12 +461,14 @@
     "vesselExperience": "С какими судами работаете",
     "vesselExperienceHint": "напр. парусные яхты до 50 футов, катамараны, моторные яхты.",
     "homeBase": "Базовый порт",
-    "homeBaseHint": "Марина или город, где вы находитесь.",
-    "willingToTravel": "Готов(а) к переезду / командировкам ради работы",
+    "homeBaseHint": "Марина, город или страна, где вы сейчас.",
     "price": "Ставка",
     "priceHint": "Оставьте пустым, чтобы договориться об оплате напрямую с работодателем.",
     "ratePeriod": "Ставка за",
-    "submit": "Опубликовать анкету"
+    "submit": "Опубликовать анкету",
+    "waters": "Моря и акватории",
+    "watersHint": "Где ходили и какие районы мира можете закрыть — напр. «Средиземка, атлантические переходы ×3, Карибы; готов по всему миру».",
+    "availableWorldwide": "Доступен по всему миру — готов вылететь ради работы"
   },
   "Crew": {
     "title": "Капитаны и экипаж",
@@ -481,14 +483,17 @@
     "anyRole": "Любая должность",
     "availability": "Занятость",
     "anyAvailability": "Любая",
-    "country": "Страна",
-    "anyCountry": "Любая страна",
     "rateOnRequest": "Ставка по запросу",
     "yearsShort": "{count, plural, one {# год опыта} few {# года опыта} many {# лет опыта} other {# лет опыта}}",
     "contactPerson": "Связаться с человеком",
     "archive": "Снять с публикации",
     "reactivate": "Опубликовать снова",
     "statusActive": "Опубликовано",
-    "statusArchived": "Снято"
+    "statusArchived": "Снято",
+    "worldwideOnly": "Только «по всему миру»",
+    "worldwideBadge": "По всему миру",
+    "expMin": "Опыт от, лет",
+    "searchCv": "Поиск по анкетам",
+    "searchCvHint": "имя, лицензия, район плавания…"
   }
 }

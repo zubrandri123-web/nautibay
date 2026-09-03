@@ -15,10 +15,8 @@ export function crewToRow(data: CrewListingInput) {
     vessel_experience: data.vesselExperience || null,
 
     home_base: data.homeBase || null,
-    country: data.country || null,
-    region: data.region || null,
-    city: data.city || null,
-    willing_to_travel: data.willingToTravel ?? false,
+    waters: data.waters || null,
+    available_worldwide: data.availableWorldwide ?? false,
 
     price: data.price ?? null,
     currency: data.currency,

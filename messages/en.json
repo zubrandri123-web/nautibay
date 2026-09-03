@@ -443,7 +443,7 @@
     "sectionRole": "Role",
     "sectionAbout": "About you",
     "sectionSkills": "Skills & experience",
-    "sectionLocation": "Where you can work",
+    "sectionLocation": "Base & waters",
     "sectionRate": "Rate",
     "sectionAboutText": "About me",
     "sectionPhoto": "Photo",
@@ -461,12 +461,14 @@
     "vesselExperience": "Vessels you can handle",
     "vesselExperienceHint": "e.g. sailing yachts up to 50 ft, catamarans, motor yachts.",
     "homeBase": "Home base",
-    "homeBaseHint": "Marina or city you're based in.",
-    "willingToTravel": "Willing to travel / relocate for work",
+    "homeBaseHint": "Marina, city or country you're at now.",
     "price": "Rate",
     "priceHint": "Leave blank to agree pay directly with the employer.",
     "ratePeriod": "Rate is per",
-    "submit": "Publish profile"
+    "submit": "Publish profile",
+    "waters": "Seas & waters",
+    "watersHint": "Where you have sailed and which areas of the world you can work — e.g. \"Med, Atlantic crossings x3, Caribbean; available worldwide\".",
+    "availableWorldwide": "Available worldwide — ready to fly anywhere for a job"
   },
   "Crew": {
     "title": "Crew & skippers",
@@ -481,14 +483,17 @@
     "anyRole": "Any role",
     "availability": "Availability",
     "anyAvailability": "Any availability",
-    "country": "Country",
-    "anyCountry": "Any country",
     "rateOnRequest": "Rate on request",
     "yearsShort": "{count, plural, one {# yr experience} other {# yrs experience}}",
     "contactPerson": "Contact this person",
     "archive": "Unpublish",
     "reactivate": "Publish again",
     "statusActive": "Published",
-    "statusArchived": "Hidden"
+    "statusArchived": "Hidden",
+    "worldwideOnly": "Worldwide only",
+    "worldwideBadge": "Available worldwide",
+    "expMin": "Min. years",
+    "searchCv": "Search profiles",
+    "searchCvHint": "name, licence, sea area…"
   }
 }

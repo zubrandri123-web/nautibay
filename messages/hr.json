@@ -443,7 +443,7 @@
     "sectionRole": "Pozicija",
     "sectionAbout": "O vama",
     "sectionSkills": "Vještine i iskustvo",
-    "sectionLocation": "Gdje možete raditi",
+    "sectionLocation": "Baza i akvatoriji",
     "sectionRate": "Cijena",
     "sectionAboutText": "O meni",
     "sectionPhoto": "Fotografija",
@@ -461,12 +461,14 @@
     "vesselExperience": "Plovila kojima možete upravljati",
     "vesselExperienceHint": "npr. jedrilice do 50 stopa, katamarani, motorne jahte.",
     "homeBase": "Matična baza",
-    "homeBaseHint": "Marina ili grad u kojem ste smješteni.",
-    "willingToTravel": "Spreman/na na putovanje / preseljenje radi posla",
+    "homeBaseHint": "Marina, grad ili država gdje ste sada.",
     "price": "Cijena",
     "priceHint": "Ostavite prazno da plaću dogovorite izravno s poslodavcem.",
     "ratePeriod": "Cijena po",
-    "submit": "Objavi profil"
+    "submit": "Objavi profil",
+    "waters": "Mora i akvatoriji",
+    "watersHint": "Gdje ste plovili i koja područja svijeta možete pokriti — npr. „Mediteran, 3 atlantska prijelaza, Karibi; dostupan svugdje“.",
+    "availableWorldwide": "Dostupan svugdje u svijetu — spreman odletjeti bilo kamo za posao"
   },
   "Crew": {
     "title": "Posada i skiperi",
@@ -481,14 +483,17 @@
     "anyRole": "Bilo koja pozicija",
     "availability": "Dostupnost",
     "anyAvailability": "Bilo koja dostupnost",
-    "country": "Država",
-    "anyCountry": "Bilo koja država",
     "rateOnRequest": "Cijena na upit",
     "yearsShort": "{count, plural, one {# g. iskustva} few {# g. iskustva} other {# g. iskustva}}",
     "contactPerson": "Kontaktiraj ovu osobu",
     "archive": "Ukloni objavu",
     "reactivate": "Ponovno objavi",
     "statusActive": "Objavljeno",
-    "statusArchived": "Skriveno"
+    "statusArchived": "Skriveno",
+    "worldwideOnly": "Samo „svugdje“",
+    "worldwideBadge": "Dostupan svugdje",
+    "expMin": "Min. godina",
+    "searchCv": "Pretraži profile",
+    "searchCvHint": "ime, dozvola, područje plovidbe…"
   }
 }

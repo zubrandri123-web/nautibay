@@ -443,7 +443,7 @@
     "sectionRole": "Puesto",
     "sectionAbout": "Sobre ti",
     "sectionSkills": "Aptitudes y experiencia",
-    "sectionLocation": "Dónde puedes trabajar",
+    "sectionLocation": "Base y aguas",
     "sectionRate": "Tarifa",
     "sectionAboutText": "Sobre mí",
     "sectionPhoto": "Foto",
@@ -461,12 +461,14 @@
     "vesselExperience": "Embarcaciones que puedes manejar",
     "vesselExperienceHint": "p. ej. veleros hasta 50 pies, catamaranes, yates a motor.",
     "homeBase": "Base",
-    "homeBaseHint": "Puerto o ciudad donde resides.",
-    "willingToTravel": "Dispuesto a viajar / mudarse por trabajo",
+    "homeBaseHint": "Marina, ciudad o país donde estás ahora.",
     "price": "Tarifa",
     "priceHint": "Déjalo en blanco para acordar el pago directamente con el empleador.",
     "ratePeriod": "Tarifa por",
-    "submit": "Publicar perfil"
+    "submit": "Publicar perfil",
+    "waters": "Mares y aguas",
+    "watersHint": "Dónde has navegado y qué zonas del mundo puedes cubrir: p. ej. «Mediterráneo, 3 travesías atlánticas, Caribe; disponible en todo el mundo».",
+    "availableWorldwide": "Disponible en todo el mundo: listo para volar a cualquier sitio por trabajo"
   },
   "Crew": {
     "title": "Tripulación y patrones",
@@ -481,14 +483,17 @@
     "anyRole": "Cualquier puesto",
     "availability": "Disponibilidad",
     "anyAvailability": "Cualquier disponibilidad",
-    "country": "País",
-    "anyCountry": "Cualquier país",
     "rateOnRequest": "Tarifa a consultar",
     "yearsShort": "{count, plural, one {# año de exp.} other {# años de exp.}}",
     "contactPerson": "Contactar a esta persona",
     "archive": "Despublicar",
     "reactivate": "Volver a publicar",
     "statusActive": "Publicado",
-    "statusArchived": "Oculto"
+    "statusArchived": "Oculto",
+    "worldwideOnly": "Solo disponibles en todo el mundo",
+    "worldwideBadge": "Disponible en todo el mundo",
+    "expMin": "Años mín.",
+    "searchCv": "Buscar perfiles",
+    "searchCvHint": "nombre, licencia, zona de navegación…"
   }
 }

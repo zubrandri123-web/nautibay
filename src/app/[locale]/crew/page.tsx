@@ -1,6 +1,5 @@
-import { getLocale, getTranslations } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import { COUNTRIES, countryName } from "@/lib/boats/constants";
 import { CREW_AVAILABILITY, CREW_ROLES } from "@/lib/crew/constants";
 import { crewFiltersSchema, type CrewFilters } from "@/lib/crew/schema";
 import { searchCrew, type CrewSummary } from "@/lib/crew/queries";
@@ -20,7 +19,6 @@ const cover = (
 
 export default async function CrewPage({ searchParams }: Props) {
   const sp = await searchParams;
-  const locale = await getLocale();
   const t = await getTranslations("Crew");
   const tRole = await getTranslations("CrewRole");
   const tAvail = await getTranslations("CrewAvailability");
@@ -32,13 +30,11 @@ export default async function CrewPage({ searchParams }: Props) {
   const parsed = crewFiltersSchema.safeParse({
     role: one(sp.role),
     availability: one(sp.availability),
-    country: one(sp.country),
+    worldwide: one(sp.worldwide),
+    expMin: one(sp.expMin),
+    q: one(sp.q),
   });
   const filters: CrewFilters = parsed.success ? parsed.data : {};
-
-  const countryOptions = [...COUNTRIES]
-    .map((code) => ({ code, name: countryName(code, locale) }))
-    .sort((a, b) => a.name.localeCompare(b.name, locale));
 
   let listings: CrewSummary[] = [];
   try {
@@ -61,6 +57,16 @@ export default async function CrewPage({ searchParams }: Props) {
       <p className="mt-1 text-sm text-slate-500">{t("subtitle")}</p>
 
       <form className="mt-6 grid grid-cols-2 gap-3 rounded-lg border border-slate-200 p-4 sm:grid-cols-3">
+        <label className="col-span-2 text-xs font-medium text-slate-600 sm:col-span-3">
+          {t("searchCv")}
+          <input
+            type="search"
+            name="q"
+            defaultValue={filters.q ?? ""}
+            placeholder={t("searchCvHint")}
+            className={inputCls}
+          />
+        </label>
         <label className="text-xs font-medium text-slate-600">
           {t("role")}
           <select name="role" defaultValue={filters.role ?? ""} className={inputCls}>
@@ -84,15 +90,24 @@ export default async function CrewPage({ searchParams }: Props) {
           </select>
         </label>
         <label className="text-xs font-medium text-slate-600">
-          {t("country")}
-          <select name="country" defaultValue={filters.country ?? ""} className={inputCls}>
-            <option value="">{t("anyCountry")}</option>
-            {countryOptions.map(({ code, name }) => (
-              <option key={code} value={code}>
-                {name}
-              </option>
-            ))}
-          </select>
+          {t("expMin")}
+          <input
+            type="number"
+            name="expMin"
+            min={0}
+            inputMode="numeric"
+            defaultValue={filters.expMin ?? ""}
+            className={inputCls}
+          />
+        </label>
+        <label className="col-span-2 flex items-center gap-2 text-xs font-medium text-slate-600 sm:col-span-3">
+          <input
+            type="checkbox"
+            name="worldwide"
+            value="true"
+            defaultChecked={Boolean(filters.worldwide)}
+          />
+          <span>{t("worldwideOnly")}</span>
         </label>
 
         <div className="col-span-2 sm:col-span-3">
@@ -108,13 +123,6 @@ export default async function CrewPage({ searchParams }: Props) {
         <ul className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {listings.map((l) => {
             const img = cover(l.crew_listing_photos);
-            const place = [
-              l.home_base,
-              l.city,
-              l.country ? countryName(l.country, locale) : null,
-            ]
-              .filter(Boolean)
-              .join(", ");
             const title =
               [l.role ? tRole(l.role as never) : null, l.display_name]
                 .filter(Boolean)
@@ -157,9 +165,11 @@ export default async function CrewPage({ searchParams }: Props) {
                         .filter(Boolean)
                         .join(" · ")}
                     </p>
-                    {place ? (
-                      <p className="mt-1 truncate text-sm text-slate-500">{place}</p>
-                    ) : null}
+                    <p className="mt-1 truncate text-sm text-slate-500">
+                      {l.available_worldwide
+                        ? `🌍 ${t("worldwideBadge")}`
+                        : l.home_base || ""}
+                    </p>
                     <p className="mt-2 text-lg font-semibold text-slate-900">
                       {priceLine}
                     </p>

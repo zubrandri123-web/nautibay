@@ -17,7 +17,7 @@ import {
   CREW_RATE_PERIODS,
   CREW_ROLES,
 } from "@/lib/crew/constants";
-import { COUNTRIES, countryName, CURRENCIES } from "@/lib/boats/constants";
+import { CURRENCIES } from "@/lib/boats/constants";
 import { compressImage } from "@/lib/boats/compress-image";
 
 type Photo = { path: string; previewUrl: string; uploading: boolean; error?: string };
@@ -71,10 +71,6 @@ export function CrewForm({
       ...initial,
     },
   });
-
-  const countryOptions = [...COUNTRIES]
-    .map((code) => ({ code, name: countryName(code, locale) }))
-    .sort((a, b) => a.name.localeCompare(b.name, locale));
 
   async function handleFiles(files: FileList | null) {
     if (!files || files.length === 0) return;
@@ -213,26 +209,12 @@ export function CrewForm({
         <Field label={t("homeBase")} hint={t("homeBaseHint")} optional>
           <input {...register("homeBase")} className={input} />
         </Field>
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
-          <Field label={tForm("country")} optional error={errors.country?.message}>
-            <select {...register("country")} className={input}>
-              <option value="">—</option>
-              {countryOptions.map(({ code, name }) => (
-                <option key={code} value={code}>
-                  {name}
-                </option>
-              ))}
-            </select>
-          </Field>
-          <Field label={tForm("region")} optional>
-            <input {...register("region")} className={input} />
-          </Field>
-          <Field label={tForm("city")} optional>
-            <input {...register("city")} className={input} />
-          </Field>
-        </div>
+        <Field label={t("waters")} hint={t("watersHint")} optional>
+          <textarea rows={3} {...register("waters")} className={input} />
+        </Field>
         <label className={check}>
-          <input type="checkbox" {...register("willingToTravel")} /> {t("willingToTravel")}
+          <input type="checkbox" {...register("availableWorldwide")} />{" "}
+          {t("availableWorldwide")}
         </label>
       </section>
 

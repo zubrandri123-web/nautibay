@@ -1,8 +1,7 @@
-import { getLocale, getTranslations } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { CrewRowActions } from "@/components/crew-row-actions";
-import { countryName } from "@/lib/boats/constants";
 import { getMyCrew } from "@/lib/crew/queries";
 
 type Props = { params: Promise<{ locale: string }> };
@@ -18,7 +17,6 @@ const cover = (
 
 export default async function MyCrewPage({ params }: Props) {
   await params;
-  const locale = await getLocale();
   const t = await getTranslations("Crew");
   const tMine = await getTranslations("MyListings");
   const tRole = await getTranslations("CrewRole");
@@ -50,10 +48,8 @@ export default async function MyCrewPage({ params }: Props) {
     currency: string;
     rate_period: string | null;
     status: string;
-    country: string | null;
-    region: string | null;
-    city: string | null;
     home_base: string | null;
+    available_worldwide: boolean;
     crew_listing_photos: { storage_path: string; sort_order: number }[] | null;
   }>;
 
@@ -84,13 +80,11 @@ export default async function MyCrewPage({ params }: Props) {
           {listings.map((l) => {
             const img = cover(l.crew_listing_photos);
             const place = [
+              l.available_worldwide ? `🌍 ${t("worldwideBadge")}` : null,
               l.home_base,
-              l.city,
-              l.region,
-              l.country ? countryName(l.country, locale) : null,
             ]
               .filter(Boolean)
-              .join(", ");
+              .join(" · ");
             const title =
               [l.role ? tRole(l.role as never) : null, l.display_name]
                 .filter(Boolean)

@@ -3,7 +3,7 @@ import type { CrewFilters } from "./schema";
 
 const SUMMARY =
   "id, role, availability, display_name, headline, years_experience," +
-  " languages, home_base, country, region, city, willing_to_travel," +
+  " languages, home_base, available_worldwide," +
   " price, currency, rate_period, status," +
   " crew_listing_photos(storage_path, sort_order)";
 
@@ -16,10 +16,7 @@ export type CrewSummary = {
   years_experience: number | null;
   languages: string | null;
   home_base: string | null;
-  country: string | null;
-  region: string | null;
-  city: string | null;
-  willing_to_travel: boolean;
+  available_worldwide: boolean;
   price: number | null;
   currency: string;
   rate_period: string | null;
@@ -37,7 +34,25 @@ export async function searchCrew(filters: CrewFilters): Promise<CrewSummary[]> {
 
   if (filters.role) query = query.eq("role", filters.role);
   if (filters.availability) query = query.eq("availability", filters.availability);
-  if (filters.country) query = query.eq("country", filters.country);
+  if (filters.worldwide) query = query.eq("available_worldwide", true);
+  if (filters.expMin != null) {
+    query = query.gte("years_experience", filters.expMin);
+  }
+  if (filters.q) {
+    const safe = filters.q.replace(/[,()%*\\]/g, " ").trim();
+    if (safe) {
+      const p = `%${safe}%`;
+      query = query.or(
+        [
+          `headline.ilike.${p}`,
+          `about.ilike.${p}`,
+          `licenses.ilike.${p}`,
+          `waters.ilike.${p}`,
+          `vessel_experience.ilike.${p}`,
+        ].join(","),
+      );
+    }
+  }
 
   const { data, error } = await query.limit(60);
   if (error) throw error;

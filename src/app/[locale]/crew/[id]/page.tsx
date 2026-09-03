@@ -3,7 +3,6 @@ import { notFound } from "next/navigation";
 import { Link } from "@/i18n/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { PhotoGallery } from "@/components/photo-gallery";
-import { countryName } from "@/lib/boats/constants";
 import { getCrewListing } from "@/lib/crew/queries";
 
 type Props = { params: Promise<{ locale: string; id: string }> };
@@ -13,7 +12,7 @@ const photoUrl = (p: string) =>
   `${SUPABASE_URL}/storage/v1/object/public/boat-photos/${p}`;
 
 export default async function CrewDetailPage({ params }: Props) {
-  const { locale, id } = await params;
+  const { id } = await params;
   const t = await getTranslations("Crew");
   const tRole = await getTranslations("CrewRole");
   const tAvail = await getTranslations("CrewAvailability");
@@ -41,13 +40,11 @@ export default async function CrewDetailPage({ params }: Props) {
     t("title");
 
   const place = [
+    l.available_worldwide ? `🌍 ${t("worldwideBadge")}` : null,
     l.home_base,
-    l.city,
-    l.region,
-    l.country ? countryName(l.country, locale) : null,
   ]
     .filter(Boolean)
-    .join(", ");
+    .join(" · ");
 
   const priceLine =
     l.price != null
@@ -138,11 +135,9 @@ export default async function CrewDetailPage({ params }: Props) {
           <Detail label={tForm("yearsExperience")} value={l.years_experience} />
         ) : null}
         {l.languages ? <Detail label={tForm("languages")} value={l.languages} /> : null}
-        {l.willing_to_travel ? (
-          <Detail label={tForm("willingToTravel")} value="✓" />
-        ) : null}
       </dl>
 
+      {l.waters ? <Block title={tForm("waters")} text={l.waters} /> : null}
       {l.licenses ? (
         <Block title={tForm("licenses")} text={l.licenses} />
       ) : null}

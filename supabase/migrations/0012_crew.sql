@@ -1,8 +1,14 @@
 -- Section 5: crew & skippers looking for work. A person posts their profile
--- (role, experience, licences, where they can work) and boat owners / charter
--- companies contact them directly. Photos reuse the "boat-photos" bucket.
+-- (role, experience, licences, which waters they can work) and boat owners /
+-- charter companies contact them directly. Crew are mobile — location is a
+-- free-text base plus a "waters" note and a worldwide flag, not a fixed
+-- country. Photos reuse the "boat-photos" bucket.
 
-create table if not exists public.crew_listings (
+-- Safe to re-run: the table is new and carries no data yet.
+drop table if exists public.crew_listing_photos;
+drop table if exists public.crew_listings;
+
+create table public.crew_listings (
   id uuid primary key default gen_random_uuid(),
   seller_id uuid not null references public.profiles (id) on delete cascade,
   status text not null default 'active'
@@ -23,11 +29,9 @@ create table if not exists public.crew_listings (
   licenses text,
   vessel_experience text,
 
-  home_base text,
-  country text,
-  region text,
-  city text,
-  willing_to_travel boolean not null default false,
+  home_base text,          -- free text: marina / city / country they're at now
+  waters text,             -- free text: seas sailed + areas they can work
+  available_worldwide boolean not null default false,
 
   price numeric check (price is null or price > 0),
   currency text not null default 'EUR',
@@ -54,7 +58,7 @@ create table if not exists public.crew_listings (
 create index if not exists crew_listings_status_idx on public.crew_listings (status);
 create index if not exists crew_listings_role_idx on public.crew_listings (role);
 create index if not exists crew_listings_availability_idx on public.crew_listings (availability);
-create index if not exists crew_listings_country_idx on public.crew_listings (country);
+create index if not exists crew_listings_worldwide_idx on public.crew_listings (available_worldwide);
 
 alter table public.crew_listings enable row level security;
 
@@ -78,7 +82,7 @@ create policy "Sellers can delete their own crew profile"
   on public.crew_listings for delete
   using (seller_id = auth.uid());
 
-create table if not exists public.crew_listing_photos (
+create table public.crew_listing_photos (
   id uuid primary key default gen_random_uuid(),
   listing_id uuid not null references public.crew_listings (id) on delete cascade,
   storage_path text not null,

@@ -1,6 +1,6 @@
 import { z } from "zod";
 import { optionalEnum, optionalNumber } from "@/lib/zod-helpers";
-import { COUNTRIES, CURRENCIES } from "@/lib/boats/constants";
+import { CURRENCIES } from "@/lib/boats/constants";
 import { CREW_AVAILABILITY, CREW_RATE_PERIODS, CREW_ROLES } from "./constants";
 
 export const crewListingSchema = z
@@ -17,10 +17,8 @@ export const crewListingSchema = z
     vesselExperience: z.string().trim().max(1000).optional().or(z.literal("")),
 
     homeBase: z.string().trim().max(160).optional().or(z.literal("")),
-    country: optionalEnum(COUNTRIES),
-    region: z.string().trim().max(120).optional().or(z.literal("")),
-    city: z.string().trim().max(120).optional().or(z.literal("")),
-    willingToTravel: z.coerce.boolean().optional(),
+    waters: z.string().trim().max(1000).optional().or(z.literal("")),
+    availableWorldwide: z.coerce.boolean().optional(),
 
     // Rate is optional and stands alone — people arrange pay directly.
     price: optionalNumber(z.coerce.number().positive()),
@@ -51,7 +49,9 @@ export type CrewListingInput = z.output<typeof crewListingSchema>;
 export const crewFiltersSchema = z.object({
   role: optionalEnum(CREW_ROLES),
   availability: optionalEnum(CREW_AVAILABILITY),
-  country: optionalEnum(COUNTRIES),
+  worldwide: z.coerce.boolean().optional(),
+  expMin: z.coerce.number().int().min(0).max(80).optional(),
+  q: z.string().trim().max(80).optional(),
 });
 
 export type CrewFilters = z.infer<typeof crewFiltersSchema>;

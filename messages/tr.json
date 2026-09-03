@@ -443,7 +443,7 @@
     "sectionRole": "Görev",
     "sectionAbout": "Hakkınızda",
     "sectionSkills": "Beceriler ve deneyim",
-    "sectionLocation": "Nerede çalışabilirsiniz",
+    "sectionLocation": "Üs ve sular",
     "sectionRate": "Ücret",
     "sectionAboutText": "Hakkımda",
     "sectionPhoto": "Fotoğraf",
@@ -461,12 +461,14 @@
     "vesselExperience": "Kullanabildiğiniz tekneler",
     "vesselExperienceHint": "ör. 50 fite kadar yelkenli, katamaran, motoryat.",
     "homeBase": "Ana üs",
-    "homeBaseHint": "Bulunduğunuz marina veya şehir.",
-    "willingToTravel": "İş için seyahat / taşınmaya açık",
+    "homeBaseHint": "Şu an bulunduğunuz marina, şehir veya ülke.",
     "price": "Ücret",
     "priceHint": "Ödemeyi işverenle doğrudan görüşmek için boş bırakın.",
     "ratePeriod": "Ücret birimi",
-    "submit": "Profili yayımla"
+    "submit": "Profili yayımla",
+    "waters": "Denizler ve sular",
+    "watersHint": "Nerelerde seyrettiniz ve dünyanın hangi bölgelerinde çalışabilirsiniz — ör. \"Akdeniz, 3 Atlantik geçişi, Karayipler; dünya çapında müsait\".",
+    "availableWorldwide": "Dünya çapında müsait — iş için her yere uçmaya hazır"
   },
   "Crew": {
     "title": "Mürettebat ve kaptanlar",
@@ -481,14 +483,17 @@
     "anyRole": "Her görev",
     "availability": "Uygunluk",
     "anyAvailability": "Her uygunluk",
-    "country": "Ülke",
-    "anyCountry": "Her ülke",
     "rateOnRequest": "Ücret istek üzerine",
     "yearsShort": "{count, plural, one {# yıl deneyim} other {# yıl deneyim}}",
     "contactPerson": "Bu kişiyle iletişime geç",
     "archive": "Yayından kaldır",
     "reactivate": "Yeniden yayımla",
     "statusActive": "Yayında",
-    "statusArchived": "Gizli"
+    "statusArchived": "Gizli",
+    "worldwideOnly": "Yalnızca dünya çapında",
+    "worldwideBadge": "Dünya çapında müsait",
+    "expMin": "Min. yıl",
+    "searchCv": "Profillerde ara",
+    "searchCvHint": "ad, lisans, seyir bölgesi…"
   }
 }

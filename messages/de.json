@@ -443,7 +443,7 @@
     "sectionRole": "Position",
     "sectionAbout": "Über dich",
     "sectionSkills": "Fähigkeiten & Erfahrung",
-    "sectionLocation": "Wo du arbeiten kannst",
+    "sectionLocation": "Basis & Reviere",
     "sectionRate": "Gage",
     "sectionAboutText": "Über mich",
     "sectionPhoto": "Foto",
@@ -461,12 +461,14 @@
     "vesselExperience": "Schiffe, die du führen kannst",
     "vesselExperienceHint": "z. B. Segelyachten bis 50 ft, Katamarane, Motoryachten.",
     "homeBase": "Heimatbasis",
-    "homeBaseHint": "Marina oder Stadt, in der du stationiert bist.",
-    "willingToTravel": "Reise- / umzugsbereit für die Arbeit",
+    "homeBaseHint": "Marina, Stadt oder Land, wo du gerade bist.",
     "price": "Gage",
     "priceHint": "Leer lassen, um die Bezahlung direkt mit dem Arbeitgeber zu vereinbaren.",
     "ratePeriod": "Gage pro",
-    "submit": "Profil veröffentlichen"
+    "submit": "Profil veröffentlichen",
+    "waters": "Meere & Reviere",
+    "watersHint": "Wo du gesegelt bist und welche Regionen der Welt du abdecken kannst – z. B. „Mittelmeer, 3x Atlantiküberquerung, Karibik; weltweit verfügbar“.",
+    "availableWorldwide": "Weltweit verfügbar – bereit, für einen Job überallhin zu fliegen"
   },
   "Crew": {
     "title": "Crew & Skipper",
@@ -481,14 +483,17 @@
     "anyRole": "Beliebige Position",
     "availability": "Verfügbarkeit",
     "anyAvailability": "Beliebige Verfügbarkeit",
-    "country": "Land",
-    "anyCountry": "Beliebiges Land",
     "rateOnRequest": "Gage auf Anfrage",
     "yearsShort": "{count, plural, one {# Jahr Erfahrung} other {# Jahre Erfahrung}}",
     "contactPerson": "Diese Person kontaktieren",
     "archive": "Offline nehmen",
     "reactivate": "Wieder veröffentlichen",
     "statusActive": "Veröffentlicht",
-    "statusArchived": "Ausgeblendet"
+    "statusArchived": "Ausgeblendet",
+    "worldwideOnly": "Nur weltweit",
+    "worldwideBadge": "Weltweit verfügbar",
+    "expMin": "Min. Jahre",
+    "searchCv": "Profile durchsuchen",
+    "searchCvHint": "Name, Lizenz, Seegebiet…"
   }
 }

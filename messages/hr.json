@@ -551,5 +551,18 @@
     "resubmit": "Ponovno pošalji na provjeru",
     "statusActive": "Objavljeno",
     "statusArchived": "Skriveno"
+  },
+  "Admin": {
+    "title": "Usluge — na provjeri",
+    "subtitle": "Provjerite je li povezana stranica stvarna nautička tvrtka pa odobrite ili odbijte.",
+    "empty": "Ništa na čekanju — sve riješeno.",
+    "approve": "Odobri",
+    "reject": "Odbij",
+    "confirmReject": "Odbiti ovaj oglas?",
+    "website": "Web stranica",
+    "noWebsite": "Web stranica nije navedena",
+    "submittedBy": "Objavio/la {name} · {date}",
+    "notAuthorized": "Ova stranica je samo za moderatore.",
+    "signInRequired": "Prijavite se za nastavak."
   }
 }

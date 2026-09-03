@@ -551,5 +551,18 @@
     "resubmit": "Invia di nuovo per la revisione",
     "statusActive": "Pubblicato",
     "statusArchived": "Nascosto"
+  },
+  "Admin": {
+    "title": "Servizi — in attesa di revisione",
+    "subtitle": "Verifica che il sito collegato sia un'attività nautica reale, poi approva o rifiuta.",
+    "empty": "Niente in attesa — tutto sistemato.",
+    "approve": "Approva",
+    "reject": "Rifiuta",
+    "confirmReject": "Rifiutare questo annuncio?",
+    "website": "Sito web",
+    "noWebsite": "Nessun sito web indicato",
+    "submittedBy": "Di {name} · {date}",
+    "notAuthorized": "Questa pagina è solo per i moderatori del sito.",
+    "signInRequired": "Accedi per continuare."
   }
 }

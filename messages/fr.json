@@ -551,5 +551,18 @@
     "resubmit": "Renvoyer pour vérification",
     "statusActive": "Publié",
     "statusArchived": "Masqué"
+  },
+  "Admin": {
+    "title": "Services — en attente de vérification",
+    "subtitle": "Vérifiez que le site lié est une véritable entreprise nautique, puis approuvez ou rejetez.",
+    "empty": "Rien en attente — tout est traité.",
+    "approve": "Approuver",
+    "reject": "Rejeter",
+    "confirmReject": "Rejeter cette annonce ?",
+    "website": "Site web",
+    "noWebsite": "Aucun site web indiqué",
+    "submittedBy": "Par {name} · {date}",
+    "notAuthorized": "Cette page est réservée aux modérateurs du site.",
+    "signInRequired": "Connectez-vous pour continuer."
   }
 }

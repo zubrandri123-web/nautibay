@@ -551,5 +551,18 @@
     "resubmit": "Tekrar incelemeye gönder",
     "statusActive": "Yayında",
     "statusArchived": "Gizli"
+  },
+  "Admin": {
+    "title": "Hizmetler — inceleme bekliyor",
+    "subtitle": "Bağlantıdaki sitenin gerçek bir denizcilik işletmesi olduğunu kontrol edin, sonra onaylayın veya reddedin.",
+    "empty": "Bekleyen bir şey yok — hepsi tamam.",
+    "approve": "Onayla",
+    "reject": "Reddet",
+    "confirmReject": "Bu ilan reddedilsin mi?",
+    "website": "Web sitesi",
+    "noWebsite": "Web sitesi verilmemiş",
+    "submittedBy": "Ekleyen: {name} · {date}",
+    "notAuthorized": "Bu sayfa yalnızca site moderatörleri içindir.",
+    "signInRequired": "Devam etmek için giriş yapın."
   }
 }

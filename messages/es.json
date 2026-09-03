@@ -551,5 +551,18 @@
     "resubmit": "Enviar a revisión de nuevo",
     "statusActive": "Publicado",
     "statusArchived": "Oculto"
+  },
+  "Admin": {
+    "title": "Servicios — pendientes de revisión",
+    "subtitle": "Comprueba que el sitio enlazado es un negocio náutico real y aprueba o rechaza.",
+    "empty": "Nada pendiente: todo al día.",
+    "approve": "Aprobar",
+    "reject": "Rechazar",
+    "confirmReject": "¿Rechazar este anuncio?",
+    "website": "Sitio web",
+    "noWebsite": "Sin sitio web",
+    "submittedBy": "Por {name} · {date}",
+    "notAuthorized": "Esta página es solo para moderadores del sitio.",
+    "signInRequired": "Inicia sesión para continuar."
   }
 }

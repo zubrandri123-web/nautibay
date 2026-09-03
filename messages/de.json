@@ -551,5 +551,18 @@
     "resubmit": "Erneut zur Prüfung senden",
     "statusActive": "Veröffentlicht",
     "statusArchived": "Ausgeblendet"
+  },
+  "Admin": {
+    "title": "Dienstleistungen — zur Prüfung",
+    "subtitle": "Prüfe, ob der verlinkte Auftritt ein echtes maritimes Unternehmen ist, dann freigeben oder ablehnen.",
+    "empty": "Nichts offen — alles erledigt.",
+    "approve": "Freigeben",
+    "reject": "Ablehnen",
+    "confirmReject": "Diese Anzeige ablehnen?",
+    "website": "Website",
+    "noWebsite": "Keine Website angegeben",
+    "submittedBy": "Von {name} · {date}",
+    "notAuthorized": "Diese Seite ist nur für Moderatoren.",
+    "signInRequired": "Melde dich an, um fortzufahren."
   }
 }

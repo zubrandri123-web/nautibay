@@ -551,5 +551,18 @@
     "resubmit": "Send for review again",
     "statusActive": "Published",
     "statusArchived": "Hidden"
+  },
+  "Admin": {
+    "title": "Services — pending review",
+    "subtitle": "Check the linked site is a genuine marine business, then approve or reject.",
+    "empty": "Nothing waiting — all caught up.",
+    "approve": "Approve",
+    "reject": "Reject",
+    "confirmReject": "Reject this listing?",
+    "website": "Website",
+    "noWebsite": "No website given",
+    "submittedBy": "By {name} · {date}",
+    "notAuthorized": "This page is for site moderators only.",
+    "signInRequired": "Sign in to continue."
   }
 }

@@ -84,6 +84,24 @@ export async function getMyServices() {
   return data ?? [];
 }
 
+// Every listing awaiting review — for the moderation page. Only returns other
+// people's rows when the caller is an admin (enforced by RLS).
+export async function getPendingServices() {
+  const supabase = await createClient();
+  const { data, error } = await supabase
+    .from("service_listings")
+    .select(
+      "id, name, category, description, website, address, country, region, city," +
+        " contact_phone, contact_email, contact_note, created_at," +
+        " service_listing_photos(storage_path, sort_order), profiles(full_name)",
+    )
+    .eq("status", "pending_review")
+    .order("created_at", { ascending: false })
+    .limit(200);
+  if (error) return [];
+  return data ?? [];
+}
+
 export async function getOwnService(id: string) {
   const supabase = await createClient();
   const {

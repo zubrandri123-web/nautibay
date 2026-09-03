@@ -13,6 +13,7 @@ export const PRICING = {
   captain: { cents: 300, days: 90 }, // €3 for 90 days — legacy alias for crew
   charter: { cents: 500, days: 60 }, // €5 for 60 days
   fishing: { cents: 300, days: 90 }, // €3 for 90 days — symbolic
+  service: { cents: 500, days: 90 }, // €5 for 90 days — business directory
 } as const;
 
 export type PricedSection = keyof typeof PRICING;

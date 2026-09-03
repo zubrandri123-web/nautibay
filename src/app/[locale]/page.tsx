@@ -72,15 +72,6 @@ export default async function HomePage() {
   const t = await getTranslations("Home");
   const tCommon = await getTranslations("Common");
 
-  const soon = (label: string) => (
-    <div className="cursor-not-allowed rounded-lg border border-dashed border-slate-400 bg-navy-dark/60 px-4 py-3 text-sm font-medium text-slate-400">
-      {label}
-      <div className="mt-0.5 text-[10px] uppercase tracking-wide">
-        {t("comingSoon")}
-      </div>
-    </div>
-  );
-
   return (
     <div
       className="flex min-h-[calc(100vh-56px)] items-center justify-center bg-cover bg-center bg-fixed px-4 py-10"
@@ -115,7 +106,9 @@ export default async function HomePage() {
           <Link href="/crew" className="btn-3d btn-3d-blue px-4 py-3 text-sm">
             {t("findCrew")}
           </Link>
-          {soon(t("services"))}
+          <Link href="/services" className="btn-3d btn-3d-blue px-4 py-3 text-sm">
+            {t("services")}
+          </Link>
         </div>
       </div>
     </div>

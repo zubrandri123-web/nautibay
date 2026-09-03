@@ -48,5 +48,7 @@ export async function updateServiceAction(
     if (photosError) return { error: photosError.message };
   }
 
-  redirect(`/${locale}/services/${id}`);
+  // Editing can leave the listing in 'pending_review'; the public detail page
+  // only serves active ones, so return to "My services".
+  redirect(`/${locale}/services/mine`);
 }

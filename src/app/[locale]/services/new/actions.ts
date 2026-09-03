@@ -46,5 +46,7 @@ export async function createServiceAction(locale: string, input: unknown) {
     if (photosError) return { error: photosError.message };
   }
 
-  redirect(`/${locale}/services/${listing.id}`);
+  // A fresh listing is 'pending_review' — the public detail page would 404,
+  // so land on "My services" where it shows with an "in review" badge.
+  redirect(`/${locale}/services/mine`);
 }

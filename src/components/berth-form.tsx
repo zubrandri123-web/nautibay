@@ -334,7 +334,10 @@ export function BerthForm({
 
       <section className="space-y-4">
         <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-500">
-          {t("sectionPhotos")}
+          {t("sectionPhotos")}{" "}
+          <span className="lowercase text-slate-400">
+            ({tCommon("optional")})
+          </span>
         </h2>
         <input
           type="file"
@@ -342,9 +345,6 @@ export function BerthForm({
           multiple
           onChange={(e) => handleFiles(e.target.files)}
         />
-        {errors.photoPaths ? (
-          <p className="text-xs text-red-600">{errors.photoPaths.message}</p>
-        ) : null}
         {photos.length > 0 ? (
           <div className="grid grid-cols-3 gap-3 sm:grid-cols-4">
             {photos.map((photo, i) => (

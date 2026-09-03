@@ -37,7 +37,7 @@ export const berthListingSchema = z
     contactEmail: z.string().trim().email().optional().or(z.literal("")),
     contactNote: z.string().trim().max(500).optional().or(z.literal("")),
 
-    photoPaths: z.array(z.string()).min(1, "At least one photo is required"),
+    photoPaths: z.array(z.string()).optional().default([]),
   })
   .refine(
     (d) => Boolean(d.contactPhone?.trim() || d.contactEmail?.trim()),

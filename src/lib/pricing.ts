@@ -4,7 +4,11 @@
 export const PRICING = {
   boat: { cents: 500, days: 60 }, // €5 for 60 days
   berth: { cents: 500, days: 60 }, // €5 for 60 days
-  captain: { cents: 300, days: 90 }, // €3 for 90 days — symbolic
+  // Crew profiles: symbolic fee from launch (not free-until-threshold like the
+  // rest). Keeps the CV catalogue from filling with abandoned profiles; the
+  // real draw is the repeat traffic it brings to the paid sections.
+  crew: { cents: 300, days: 90 }, // €3 for 90 days
+  captain: { cents: 300, days: 90 }, // €3 for 90 days — legacy alias for crew
   charter: { cents: 500, days: 60 }, // €5 for 60 days
   fishing: { cents: 300, days: 90 }, // €3 for 90 days — symbolic
 } as const;

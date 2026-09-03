@@ -112,7 +112,9 @@ export default async function HomePage() {
           <Link href="/fishing" className="btn-3d btn-3d-blue px-4 py-3 text-sm">
             {t("fishing")}
           </Link>
-          {soon(t("findCrew"))}
+          <Link href="/crew" className="btn-3d btn-3d-blue px-4 py-3 text-sm">
+            {t("findCrew")}
+          </Link>
           {soon(t("services"))}
         </div>
       </div>

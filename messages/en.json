@@ -322,7 +322,8 @@
     "marina": "Home marina / port",
     "photosHint": "At least 1 photo of the boat is required.",
     "submit": "Publish listing",
-    "ratePeriodNeeded": "Pick an hour / day / week when you set a price."
+    "ratePeriodNeeded": "Pick an hour / day / week when you set a price.",
+    "ratePeriodHint": "Optional. For cruises or complex rates, describe the price in the text instead."
   },
   "Charter": {
     "title": "Rent, charter & cruises",

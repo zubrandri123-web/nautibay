@@ -322,7 +322,8 @@
     "marina": "Marina / porto base",
     "photosHint": "È richiesta almeno 1 foto della barca.",
     "submit": "Pubblica annuncio",
-    "ratePeriodNeeded": "Scegli ora / giorno / settimana se indichi un prezzo."
+    "ratePeriodNeeded": "Scegli ora / giorno / settimana se indichi un prezzo.",
+    "ratePeriodHint": "Facoltativo. Per crociere o tariffe complesse, descrivi il prezzo nel testo."
   },
   "Charter": {
     "title": "Noleggio, charter e crociere",

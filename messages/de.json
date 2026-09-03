@@ -322,7 +322,8 @@
     "marina": "Heimatmarina / Hafen",
     "photosHint": "Mindestens 1 Foto des Bootes ist erforderlich.",
     "submit": "Anzeige veröffentlichen",
-    "ratePeriodNeeded": "Wähle Stunde / Tag / Woche, wenn du einen Preis angibst."
+    "ratePeriodNeeded": "Wähle Stunde / Tag / Woche, wenn du einen Preis angibst.",
+    "ratePeriodHint": "Optional. Bei Kreuzfahrten oder komplexen Tarifen den Preis lieber im Text beschreiben."
   },
   "Charter": {
     "title": "Mieten, Chartern & Kreuzfahrten",

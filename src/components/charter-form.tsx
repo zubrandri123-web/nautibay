@@ -56,10 +56,6 @@ export function CharterForm({
   );
   const [serverError, setServerError] = useState<string | null>(null);
   const [submitting, setSubmitting] = useState(false);
-  // Once a price is entered, "price is per" stops being optional.
-  const [priceEntered, setPriceEntered] = useState(
-    initial?.price != null && String(initial.price).trim() !== "",
-  );
 
   const {
     register,
@@ -72,7 +68,6 @@ export function CharterForm({
       currency: "EUR",
       dimUnit: "m",
       charterType: "skippered",
-      ratePeriod: "day",
       photoPaths: initial?.photoPaths ?? [],
       contactEmail: sellerEmail,
       ...initial,
@@ -181,10 +176,7 @@ export function CharterForm({
                 type="number"
                 step="any"
                 inputMode="decimal"
-                {...register("price", {
-                  onChange: (e) =>
-                    setPriceEntered(e.target.value.trim() !== ""),
-                })}
+                {...register("price")}
                 className={input}
               />
               <select
@@ -202,9 +194,9 @@ export function CharterForm({
           </Field>
           <Field
             label={t("ratePeriod")}
-            optional={!priceEntered}
-            required={priceEntered}
-            error={errors.ratePeriod ? t("ratePeriodNeeded") : undefined}
+            hint={t("ratePeriodHint")}
+            optional
+            error={errors.ratePeriod?.message}
           >
             <select {...register("ratePeriod")} className={input}>
               <option value="">—</option>
@@ -440,14 +432,12 @@ function Field({
   hint,
   error,
   optional,
-  required,
   children,
 }: {
   label: string;
   hint?: string;
   error?: string;
   optional?: boolean;
-  required?: boolean;
   children: React.ReactNode;
 }) {
   const tCommon = useTranslations("Common");
@@ -457,9 +447,6 @@ function Field({
         {label}{" "}
         {optional ? (
           <span className="text-slate-400">({tCommon("optional")})</span>
-        ) : null}
-        {required ? (
-          <span className="text-red-600">({tCommon("required")})</span>
         ) : null}
       </span>
       {hint ? <span className="block text-xs text-slate-400">{hint}</span> : null}

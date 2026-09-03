@@ -322,7 +322,8 @@
     "marina": "Bağlı olduğu marina / liman",
     "photosHint": "Teknenin en az 1 fotoğrafı gereklidir.",
     "submit": "İlanı yayımla",
-    "ratePeriodNeeded": "Fiyat giriyorsanız saat / gün / hafta seçin."
+    "ratePeriodNeeded": "Fiyat giriyorsanız saat / gün / hafta seçin.",
+    "ratePeriodHint": "İsteğe bağlı. Tur veya karmaşık fiyatlar için fiyatı açıklamada belirtin."
   },
   "Charter": {
     "title": "Kiralama, charter ve mavi tur",

@@ -322,7 +322,8 @@
     "marina": "Port d'attache",
     "photosHint": "Au moins 1 photo du bateau est requise.",
     "submit": "Publier l'annonce",
-    "ratePeriodNeeded": "Choisissez heure / jour / semaine si vous indiquez un prix."
+    "ratePeriodNeeded": "Choisissez heure / jour / semaine si vous indiquez un prix.",
+    "ratePeriodHint": "Facultatif. Pour les croisières ou tarifs complexes, décrivez le prix dans le texte."
   },
   "Charter": {
     "title": "Location, charter & croisières",

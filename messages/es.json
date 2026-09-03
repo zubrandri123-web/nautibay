@@ -322,7 +322,8 @@
     "marina": "Puerto base",
     "photosHint": "Se requiere al menos 1 foto del barco.",
     "submit": "Publicar anuncio",
-    "ratePeriodNeeded": "Elige hora / día / semana si indicas un precio."
+    "ratePeriodNeeded": "Elige hora / día / semana si indicas un precio.",
+    "ratePeriodHint": "Opcional. Para cruceros o tarifas complejas, describe el precio en el texto."
   },
   "Charter": {
     "title": "Alquiler, chárter y cruceros",

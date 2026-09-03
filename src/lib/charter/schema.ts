@@ -49,11 +49,7 @@ export const charterListingSchema = z
   .refine(
     (d) => Boolean(d.contactPhone?.trim() || d.contactEmail?.trim()),
     { path: ["contactPhone"], message: "Add at least a phone number or an email" },
-  )
-  .refine((d) => d.price == null || Boolean(d.ratePeriod), {
-    path: ["ratePeriod"],
-    message: "Choose what the price is per",
-  });
+  );
 
 export type CharterListingFormValues = z.input<typeof charterListingSchema>;
 export type CharterListingInput = z.output<typeof charterListingSchema>;

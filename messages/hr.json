@@ -322,7 +322,8 @@
     "marina": "Matična marina / luka",
     "photosHint": "Potrebna je barem 1 fotografija plovila.",
     "submit": "Objavi oglas",
-    "ratePeriodNeeded": "Odaberite sat / dan / tjedan ako navodite cijenu."
+    "ratePeriodNeeded": "Odaberite sat / dan / tjedan ako navodite cijenu.",
+    "ratePeriodHint": "Nije obavezno. Za krstarenja ili složene cijene opišite cijenu u tekstu."
   },
   "Charter": {
     "title": "Najam, charter i krstarenja",

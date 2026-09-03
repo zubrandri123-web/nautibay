@@ -321,7 +321,8 @@
     "seasonHint": "Slobodan tekst, npr. „svibanj–listopad“, „samo vikendom“. Točne termine gost dogovara s vama.",
     "marina": "Matična marina / luka",
     "photosHint": "Potrebna je barem 1 fotografija plovila.",
-    "submit": "Objavi oglas"
+    "submit": "Objavi oglas",
+    "ratePeriodNeeded": "Odaberite sat / dan / tjedan ako navodite cijenu."
   },
   "Charter": {
     "title": "Najam, charter i krstarenja",

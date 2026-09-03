@@ -321,7 +321,8 @@
     "seasonHint": "Texto libre, p. ej. «mayo–octubre», «solo fines de semana». Las fechas exactas se acuerdan contigo.",
     "marina": "Puerto base",
     "photosHint": "Se requiere al menos 1 foto del barco.",
-    "submit": "Publicar anuncio"
+    "submit": "Publicar anuncio",
+    "ratePeriodNeeded": "Elige hora / día / semana si indicas un precio."
   },
   "Charter": {
     "title": "Alquiler, chárter y cruceros",

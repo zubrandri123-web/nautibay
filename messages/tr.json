@@ -321,7 +321,8 @@
     "seasonHint": "Serbest metin, ör. \"Mayıs–Ekim\", \"yalnızca hafta sonları\". Kesin tarihleri misafir sizinle netleştirir.",
     "marina": "Bağlı olduğu marina / liman",
     "photosHint": "Teknenin en az 1 fotoğrafı gereklidir.",
-    "submit": "İlanı yayımla"
+    "submit": "İlanı yayımla",
+    "ratePeriodNeeded": "Fiyat giriyorsanız saat / gün / hafta seçin."
   },
   "Charter": {
     "title": "Kiralama, charter ve mavi tur",

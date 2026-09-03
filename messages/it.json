@@ -321,7 +321,8 @@
     "seasonHint": "Testo libero, es. «maggio–ottobre», «solo weekend». Le date esatte si concordano con te.",
     "marina": "Marina / porto base",
     "photosHint": "È richiesta almeno 1 foto della barca.",
-    "submit": "Pubblica annuncio"
+    "submit": "Pubblica annuncio",
+    "ratePeriodNeeded": "Scegli ora / giorno / settimana se indichi un prezzo."
   },
   "Charter": {
     "title": "Noleggio, charter e crociere",

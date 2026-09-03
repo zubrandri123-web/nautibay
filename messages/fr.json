@@ -321,7 +321,8 @@
     "seasonHint": "Texte libre, ex. « mai–octobre », « week-ends uniquement ». Les dates exactes se conviennent avec vous.",
     "marina": "Port d'attache",
     "photosHint": "Au moins 1 photo du bateau est requise.",
-    "submit": "Publier l'annonce"
+    "submit": "Publier l'annonce",
+    "ratePeriodNeeded": "Choisissez heure / jour / semaine si vous indiquez un prix."
   },
   "Charter": {
     "title": "Location, charter & croisières",

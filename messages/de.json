@@ -321,7 +321,8 @@
     "seasonHint": "Freitext, z. B. „Mai–Oktober“, „nur am Wochenende“. Genaue Termine klären Gäste mit Ihnen.",
     "marina": "Heimatmarina / Hafen",
     "photosHint": "Mindestens 1 Foto des Bootes ist erforderlich.",
-    "submit": "Anzeige veröffentlichen"
+    "submit": "Anzeige veröffentlichen",
+    "ratePeriodNeeded": "Wähle Stunde / Tag / Woche, wenn du einen Preis angibst."
   },
   "Charter": {
     "title": "Mieten, Chartern & Kreuzfahrten",

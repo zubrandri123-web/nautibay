@@ -68,6 +68,7 @@ export function CharterForm({
       currency: "EUR",
       dimUnit: "m",
       charterType: "skippered",
+      ratePeriod: "day",
       photoPaths: initial?.photoPaths ?? [],
       contactEmail: sellerEmail,
       ...initial,
@@ -192,7 +193,11 @@ export function CharterForm({
               </select>
             </div>
           </Field>
-          <Field label={t("ratePeriod")} optional error={errors.ratePeriod?.message}>
+          <Field
+            label={t("ratePeriod")}
+            optional
+            error={errors.ratePeriod ? t("ratePeriodNeeded") : undefined}
+          >
             <select {...register("ratePeriod")} className={input}>
               <option value="">—</option>
               {RATE_PERIODS.map((v) => (

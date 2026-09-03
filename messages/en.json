@@ -321,7 +321,8 @@
     "seasonHint": "Free text, e.g. \"May–October\", \"weekends only\". Guests agree exact dates with you.",
     "marina": "Home marina / port",
     "photosHint": "At least 1 photo of the boat is required.",
-    "submit": "Publish listing"
+    "submit": "Publish listing",
+    "ratePeriodNeeded": "Pick an hour / day / week when you set a price."
   },
   "Charter": {
     "title": "Rent, charter & cruises",

@@ -21,7 +21,8 @@ export function charterToRow(data: CharterListingInput) {
 
     price: data.price ?? null,
     currency: data.currency,
-    rate_period: data.ratePeriod ?? null,
+    // A period only means something next to a price.
+    rate_period: data.price != null ? (data.ratePeriod ?? null) : null,
     min_days: data.minDays ?? null,
 
     license_required: data.licenseRequired ?? false,

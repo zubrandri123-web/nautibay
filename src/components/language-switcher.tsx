@@ -15,6 +15,8 @@ const LOCALE_LABELS: Record<string, string> = {
   el: "Ελληνικά",
   hr: "Hrvatski",
   tr: "Türkçe",
+  sv: "Svenska",
+  no: "Norsk",
 };
 
 export function LanguageSwitcher() {

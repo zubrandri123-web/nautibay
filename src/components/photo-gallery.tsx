@@ -83,7 +83,8 @@ export function PhotoGallery({ photos, alt, labels }: Props) {
             type="button"
             onClick={close}
             aria-label={labels.close}
-            className="absolute right-3 top-3 flex h-10 w-10 items-center justify-center text-3xl leading-none text-white/90 hover:text-white"
+            style={{ top: "max(0.75rem, env(safe-area-inset-top))" }}
+            className="absolute right-3 z-10 flex h-11 w-11 items-center justify-center rounded-full bg-black/60 text-3xl leading-none text-white shadow-lg hover:bg-black/80"
           >
             ×
           </button>

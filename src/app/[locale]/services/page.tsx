@@ -2,7 +2,8 @@ import { getLocale, getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { Pagination } from "@/components/pagination";
 import { parsePage, totalPages } from "@/lib/pagination";
-import { COUNTRIES, countryName } from "@/lib/boats/constants";
+import { countryName } from "@/lib/boats/constants";
+import { CountryCombobox } from "@/components/country-combobox";
 import { SERVICE_CATEGORIES } from "@/lib/services/constants";
 import { serviceFiltersSchema, type ServiceFilters } from "@/lib/services/schema";
 import { searchServices, type ServiceSummary } from "@/lib/services/queries";
@@ -35,10 +36,6 @@ export default async function ServicesPage({ searchParams }: Props) {
     q: one(sp.q),
   });
   const filters: ServiceFilters = parsed.success ? parsed.data : {};
-
-  const countryOptions = [...COUNTRIES]
-    .map((code) => ({ code, name: countryName(code, locale) }))
-    .sort((a, b) => a.name.localeCompare(b.name, locale));
 
   const page = parsePage(sp.page);
   let listings: ServiceSummary[] = [];
@@ -87,14 +84,13 @@ export default async function ServicesPage({ searchParams }: Props) {
         </label>
         <label className="col-span-1 text-xs font-medium text-slate-600 sm:col-span-2">
           {t("country")}
-          <select name="country" defaultValue={filters.country ?? ""} className={inputCls}>
-            <option value="">{t("anyCountry")}</option>
-            {countryOptions.map(({ code, name }) => (
-              <option key={code} value={code}>
-                {name}
-              </option>
-            ))}
-          </select>
+          <CountryCombobox
+            name="country"
+            locale={locale}
+            defaultValue={filters.country ?? ""}
+            placeholder={t("anyCountry")}
+            className={inputCls}
+          />
         </label>
 
         <div className="col-span-2 sm:col-span-3">

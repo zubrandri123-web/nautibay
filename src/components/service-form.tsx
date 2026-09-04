@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useForm } from "react-hook-form";
+import { Controller, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useTranslations } from "next-intl";
 import { createClient } from "@/lib/supabase/client";
@@ -13,8 +13,8 @@ import {
   type ServiceListingInput,
 } from "@/lib/services/schema";
 import { SERVICE_CATEGORIES } from "@/lib/services/constants";
-import { COUNTRIES, countryName } from "@/lib/boats/constants";
 import { compressImage } from "@/lib/boats/compress-image";
+import { CountryCombobox } from "@/components/country-combobox";
 
 type Photo = { path: string; previewUrl: string; uploading: boolean; error?: string };
 type EditInitial = Partial<ServiceListingFormValues> & { photoPaths?: string[] };
@@ -55,6 +55,7 @@ export function ServiceForm({
     register,
     handleSubmit,
     setValue,
+    control,
     formState: { errors },
   } = useForm<ServiceListingFormValues, unknown, ServiceListingInput>({
     resolver: zodResolver(serviceListingSchema),
@@ -66,10 +67,6 @@ export function ServiceForm({
       ...initial,
     },
   });
-
-  const countryOptions = [...COUNTRIES]
-    .map((code) => ({ code, name: countryName(code, locale) }))
-    .sort((a, b) => a.name.localeCompare(b.name, locale));
 
   async function handleFiles(files: FileList | null) {
     if (!files || files.length === 0) return;
@@ -177,14 +174,18 @@ export function ServiceForm({
         </Field>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           <Field label={tForm("country")} error={errors.country?.message}>
-            <select {...register("country")} className={input}>
-              <option value="">—</option>
-              {countryOptions.map(({ code, name }) => (
-                <option key={code} value={code}>
-                  {name}
-                </option>
-              ))}
-            </select>
+            <Controller
+              control={control}
+              name="country"
+              render={({ field }) => (
+                <CountryCombobox
+                  locale={locale}
+                  value={field.value}
+                  onChange={field.onChange}
+                  className={input}
+                />
+              )}
+            />
           </Field>
           <Field label={tForm("region")} optional>
             <input {...register("region")} className={input} />

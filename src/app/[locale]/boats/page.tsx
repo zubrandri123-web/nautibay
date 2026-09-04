@@ -6,11 +6,10 @@ import { parsePage, totalPages } from "@/lib/pagination";
 import {
   BOAT_TYPES,
   CONDITIONS,
-  COUNTRIES,
-  countryName,
   FUEL_TYPES,
   HULL_MATERIALS,
 } from "@/lib/boats/constants";
+import { CountryCombobox } from "@/components/country-combobox";
 import {
   searchBoatListings,
   searchNearbyListings,
@@ -89,10 +88,6 @@ export default async function BoatsSearchPage({ searchParams }: Props) {
     listings = [];
     total = 0;
   }
-
-  const countryOptions = [...COUNTRIES]
-    .map((code) => ({ code, name: countryName(code, locale) }))
-    .sort((a, b) => a.name.localeCompare(b.name, locale));
 
   const hasActiveFilters =
     Boolean(filters.type) ||
@@ -250,18 +245,13 @@ export default async function BoatsSearchPage({ searchParams }: Props) {
 
         <label className="block text-xs font-medium text-slate-600">
           {t("country")}
-          <select
+          <CountryCombobox
             name="country"
+            locale={locale}
             defaultValue={filters.country ?? ""}
+            placeholder={t("anyCountry")}
             className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-sm"
-          >
-            <option value="">{t("anyCountry")}</option>
-            {countryOptions.map(({ code, name }) => (
-              <option key={code} value={code}>
-                {name}
-              </option>
-            ))}
-          </select>
+          />
         </label>
 
         <div className="col-span-2 flex items-end gap-2 sm:col-span-4">

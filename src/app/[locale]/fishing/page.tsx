@@ -2,7 +2,8 @@ import { getLocale, getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { Pagination } from "@/components/pagination";
 import { parsePage, totalPages } from "@/lib/pagination";
-import { COUNTRIES, countryName, formatLength } from "@/lib/boats/constants";
+import { countryName, formatLength } from "@/lib/boats/constants";
+import { CountryCombobox } from "@/components/country-combobox";
 import { CHARTER_BOAT_TYPES } from "@/lib/charter/constants";
 import { TRIP_DURATIONS, TRIP_TYPES } from "@/lib/fishing/constants";
 import { fishingFiltersSchema, type FishingFilters } from "@/lib/fishing/schema";
@@ -42,10 +43,6 @@ export default async function FishingPage({ searchParams }: Props) {
     priceMax: sp.priceMax,
   });
   const filters: FishingFilters = parsed.success ? parsed.data : {};
-
-  const countryOptions = [...COUNTRIES]
-    .map((code) => ({ code, name: countryName(code, locale) }))
-    .sort((a, b) => a.name.localeCompare(b.name, locale));
 
   const page = parsePage(sp.page);
   let listings: FishingSummary[] = [];
@@ -116,14 +113,13 @@ export default async function FishingPage({ searchParams }: Props) {
 
         <label className="col-span-2 text-xs font-medium text-slate-600 sm:col-span-4">
           {t("country")}
-          <select name="country" defaultValue={filters.country ?? ""} className={inputCls}>
-            <option value="">{t("anyCountry")}</option>
-            {countryOptions.map(({ code, name }) => (
-              <option key={code} value={code}>
-                {name}
-              </option>
-            ))}
-          </select>
+          <CountryCombobox
+            name="country"
+            locale={locale}
+            defaultValue={filters.country ?? ""}
+            placeholder={t("anyCountry")}
+            className={inputCls}
+          />
         </label>
 
         <div className="col-span-2 sm:col-span-4">

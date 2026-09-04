@@ -2,7 +2,8 @@ import { getLocale, getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { Pagination } from "@/components/pagination";
 import { parsePage, totalPages } from "@/lib/pagination";
-import { COUNTRIES, countryName, formatLength } from "@/lib/boats/constants";
+import { countryName, formatLength } from "@/lib/boats/constants";
+import { CountryCombobox } from "@/components/country-combobox";
 import { DEALS, PLACE_TYPES } from "@/lib/berths/constants";
 import { berthFiltersSchema, type BerthFilters } from "@/lib/berths/schema";
 import { searchBerths, type BerthSummary } from "@/lib/berths/queries";
@@ -39,10 +40,6 @@ export default async function BerthsPage({ searchParams }: Props) {
     priceMax: sp.priceMax,
   });
   const filters: BerthFilters = parsed.success ? parsed.data : {};
-
-  const countryOptions = [...COUNTRIES]
-    .map((code) => ({ code, name: countryName(code, locale) }))
-    .sort((a, b) => a.name.localeCompare(b.name, locale));
 
   const page = parsePage(sp.page);
   let listings: BerthSummary[] = [];
@@ -101,18 +98,13 @@ export default async function BerthsPage({ searchParams }: Props) {
 
         <label className="col-span-2 text-xs font-medium text-slate-600 sm:col-span-4">
           {t("country")}
-          <select
+          <CountryCombobox
             name="country"
+            locale={locale}
             defaultValue={filters.country ?? ""}
+            placeholder={t("anyCountry")}
             className={inputCls}
-          >
-            <option value="">{t("anyCountry")}</option>
-            {countryOptions.map(({ code, name }) => (
-              <option key={code} value={code}>
-                {name}
-              </option>
-            ))}
-          </select>
+          />
         </label>
 
         <div className="col-span-2 sm:col-span-4">

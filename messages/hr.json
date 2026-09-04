@@ -18,7 +18,9 @@
     "close": "Zatvori",
     "previous": "Prethodno",
     "next": "Sljedeće",
-    "continueSearch": "Nastavi pretragu"
+    "continueSearch": "Nastavi pretragu",
+    "bump": "Podigni na vrh",
+    "bumpCooldown": "Možete ponovno podići za {hours} h"
   },
   "Nav": {
     "signIn": "Prijava",

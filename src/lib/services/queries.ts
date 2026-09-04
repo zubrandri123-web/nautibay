@@ -1,4 +1,5 @@
 import { createClient } from "@/lib/supabase/server";
+import { pageRange } from "@/lib/pagination";
 import type { ServiceFilters } from "./schema";
 
 const SUMMARY =
@@ -22,15 +23,16 @@ export type ServiceSummary = {
 
 export async function searchServices(
   filters: ServiceFilters,
-): Promise<ServiceSummary[]> {
+  page = 1,
+): Promise<{ listings: ServiceSummary[]; total: number }> {
   const supabase = await createClient();
   let query = supabase
     .from("service_listings")
-    .select(SUMMARY)
+    .select(SUMMARY, { count: "exact" })
     .eq("status", "active")
     // Owner house-ads (pinned) float to the top.
     .order("pinned", { ascending: false })
-    .order("created_at", { ascending: false });
+    .order("bumped_at", { ascending: false });
 
   if (filters.category) query = query.eq("category", filters.category);
   if (filters.country) query = query.eq("country", filters.country);
@@ -49,9 +51,13 @@ export async function searchServices(
     }
   }
 
-  const { data, error } = await query.limit(80);
+  const { from, to } = pageRange(page);
+  const { data, error, count } = await query.range(from, to);
   if (error) throw error;
-  return (data ?? []) as unknown as ServiceSummary[];
+  return {
+    listings: (data ?? []) as unknown as ServiceSummary[],
+    total: count ?? 0,
+  };
 }
 
 export async function getServiceListing(id: string) {

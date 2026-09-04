@@ -18,7 +18,9 @@
     "close": "Schließen",
     "previous": "Zurück",
     "next": "Weiter",
-    "continueSearch": "Suche fortsetzen"
+    "continueSearch": "Suche fortsetzen",
+    "bump": "Nach oben pushen",
+    "bumpCooldown": "Erneut pushen in {hours} Std."
   },
   "Nav": {
     "signIn": "Anmelden",

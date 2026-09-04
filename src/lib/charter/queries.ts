@@ -1,4 +1,5 @@
 import { createClient } from "@/lib/supabase/server";
+import { pageRange } from "@/lib/pagination";
 import type { CharterFilters } from "./schema";
 
 const SUMMARY =
@@ -26,13 +27,14 @@ export type CharterSummary = {
 
 export async function searchCharters(
   filters: CharterFilters,
-): Promise<CharterSummary[]> {
+  page = 1,
+): Promise<{ listings: CharterSummary[]; total: number }> {
   const supabase = await createClient();
   let query = supabase
     .from("charter_listings")
-    .select(SUMMARY)
+    .select(SUMMARY, { count: "exact" })
     .eq("status", "active")
-    .order("created_at", { ascending: false });
+    .order("bumped_at", { ascending: false });
 
   if (filters.charterType) query = query.eq("charter_type", filters.charterType);
   if (filters.boatType) query = query.eq("boat_type", filters.boatType);
@@ -40,9 +42,13 @@ export async function searchCharters(
   if (filters.priceMax != null) query = query.lte("price", filters.priceMax);
   if (filters.country) query = query.eq("country", filters.country);
 
-  const { data, error } = await query.limit(60);
+  const { from, to } = pageRange(page);
+  const { data, error, count } = await query.range(from, to);
   if (error) throw error;
-  return (data ?? []) as unknown as CharterSummary[];
+  return {
+    listings: (data ?? []) as unknown as CharterSummary[],
+    total: count ?? 0,
+  };
 }
 
 export async function getCharterListing(id: string) {

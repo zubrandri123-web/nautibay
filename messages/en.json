@@ -18,7 +18,9 @@
     "close": "Close",
     "previous": "Previous",
     "next": "Next",
-    "continueSearch": "Continue search"
+    "continueSearch": "Continue search",
+    "bump": "Bump to top",
+    "bumpCooldown": "You can bump again in {hours}h"
   },
   "Nav": {
     "signIn": "Sign in",

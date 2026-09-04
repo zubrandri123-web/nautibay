@@ -1,4 +1,5 @@
 import { createClient } from "@/lib/supabase/server";
+import { pageRange } from "@/lib/pagination";
 import type { BerthFilters } from "./schema";
 
 const SUMMARY =
@@ -22,13 +23,16 @@ export type BerthSummary = {
   berth_listing_photos: { storage_path: string; sort_order: number }[] | null;
 };
 
-export async function searchBerths(filters: BerthFilters): Promise<BerthSummary[]> {
+export async function searchBerths(
+  filters: BerthFilters,
+  page = 1,
+): Promise<{ listings: BerthSummary[]; total: number }> {
   const supabase = await createClient();
   let query = supabase
     .from("berth_listings")
-    .select(SUMMARY)
+    .select(SUMMARY, { count: "exact" })
     .eq("status", "active")
-    .order("created_at", { ascending: false });
+    .order("bumped_at", { ascending: false });
 
   if (filters.placeType) query = query.eq("place_type", filters.placeType);
   if (filters.deal) query = query.eq("deal", filters.deal);
@@ -36,9 +40,13 @@ export async function searchBerths(filters: BerthFilters): Promise<BerthSummary[
   if (filters.priceMax != null) query = query.lte("price", filters.priceMax);
   if (filters.country) query = query.eq("country", filters.country);
 
-  const { data, error } = await query.limit(60);
+  const { from, to } = pageRange(page);
+  const { data, error, count } = await query.range(from, to);
   if (error) throw error;
-  return (data ?? []) as unknown as BerthSummary[];
+  return {
+    listings: (data ?? []) as unknown as BerthSummary[],
+    total: count ?? 0,
+  };
 }
 
 export async function getBerthListing(id: string) {

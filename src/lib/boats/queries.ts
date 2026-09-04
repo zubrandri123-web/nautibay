@@ -1,4 +1,5 @@
 import { createClient } from "@/lib/supabase/server";
+import { pageRange } from "@/lib/pagination";
 import type { SearchFilters } from "./schema";
 
 const LISTING_SUMMARY_COLUMNS =
@@ -25,14 +26,15 @@ export type BoatListingSummary = {
 
 export async function searchBoatListings(
   filters: SearchFilters,
-): Promise<BoatListingSummary[]> {
+  page = 1,
+): Promise<{ listings: BoatListingSummary[]; total: number }> {
   const supabase = await createClient();
 
   let query = supabase
     .from("boat_listings")
-    .select(LISTING_SUMMARY_COLUMNS)
+    .select(LISTING_SUMMARY_COLUMNS, { count: "exact" })
     .eq("status", "active")
-    .order("created_at", { ascending: false });
+    .order("bumped_at", { ascending: false });
 
   if (filters.type) query = query.eq("boat_type", filters.type);
   if (filters.priceMin != null) query = query.gte("price", filters.priceMin);
@@ -52,9 +54,13 @@ export async function searchBoatListings(
     if (safeQ) query = query.or(`brand.ilike.%${safeQ}%,model.ilike.%${safeQ}%`);
   }
 
-  const { data, error } = await query.limit(60);
+  const { from, to } = pageRange(page);
+  const { data, error, count } = await query.range(from, to);
   if (error) throw error;
-  return (data ?? []) as unknown as BoatListingSummary[];
+  return {
+    listings: (data ?? []) as unknown as BoatListingSummary[],
+    total: count ?? 0,
+  };
 }
 
 export async function searchNearbyListings(

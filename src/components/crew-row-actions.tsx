@@ -2,8 +2,10 @@
 
 import { useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import {
+  bumpCrewAction,
   deleteCrewAction,
   setCrewStatusAction,
 } from "@/app/[locale]/crew/mine/actions";
@@ -26,15 +28,18 @@ export function CrewRowActions({
   labels: Labels;
 }) {
   const router = useRouter();
+  const tCommon = useTranslations("Common");
   const [pending, startTransition] = useTransition();
   const [err, setErr] = useState<string | null>(null);
 
-  const run = (fn: () => Promise<{ error?: string }>) =>
+  const run = (fn: () => Promise<{ error?: string; hoursLeft?: number }>) =>
     startTransition(async () => {
       setErr(null);
       const res = await fn();
       if (res?.error) setErr(res.error);
-      else router.refresh();
+      else if (res?.hoursLeft) {
+        setErr(tCommon("bumpCooldown", { hours: res.hoursLeft }));
+      } else router.refresh();
     });
 
   const btn =
@@ -45,6 +50,14 @@ export function CrewRowActions({
       <Link href={`/crew/${id}/edit`} className={btn}>
         {labels.edit}
       </Link>
+      <button
+        type="button"
+        disabled={pending}
+        onClick={() => run(() => bumpCrewAction(id))}
+        className={btn}
+      >
+        {tCommon("bump")}
+      </button>
       {status === "active" ? (
         <button
           type="button"

@@ -18,7 +18,9 @@
     "close": "Закрыть",
     "previous": "Назад",
     "next": "Вперёд",
-    "continueSearch": "Продолжить поиск"
+    "continueSearch": "Продолжить поиск",
+    "bump": "Поднять в топ",
+    "bumpCooldown": "Можно поднять через {hours} ч."
   },
   "Nav": {
     "signIn": "Войти",

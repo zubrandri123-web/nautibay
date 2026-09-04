@@ -18,7 +18,9 @@
     "close": "Fermer",
     "previous": "Précédent",
     "next": "Suivant",
-    "continueSearch": "Continuer la recherche"
+    "continueSearch": "Continuer la recherche",
+    "bump": "Remonter en tête",
+    "bumpCooldown": "Vous pourrez remonter à nouveau dans {hours} h"
   },
   "Nav": {
     "signIn": "Connexion",

@@ -1,6 +1,8 @@
 import { getLocale, getTranslations } from "next-intl/server";
 import { BoatCard } from "@/components/boat-card";
 import { NearMeButton } from "@/components/near-me-button";
+import { Pagination } from "@/components/pagination";
+import { parsePage, totalPages } from "@/lib/pagination";
 import {
   BOAT_TYPES,
   CONDITIONS,
@@ -12,6 +14,7 @@ import {
 import {
   searchBoatListings,
   searchNearbyListings,
+  type BoatListingSummary,
 } from "@/lib/boats/queries";
 import type { SearchFilters } from "@/lib/boats/schema";
 
@@ -69,10 +72,23 @@ export default async function BoatsSearchPage({ searchParams }: Props) {
   const lng = toNumber(sp.lng);
   const radiusKm = toNumber(sp.radiusKm) ?? 50;
   const isNearMe = lat !== undefined && lng !== undefined;
+  const page = parsePage(sp.page);
 
-  const listings = isNearMe
-    ? await searchNearbyListings(lat, lng, radiusKm)
-    : await searchBoatListings(filters);
+  let listings: BoatListingSummary[] = [];
+  let total = 0;
+  try {
+    if (isNearMe) {
+      listings = await searchNearbyListings(lat, lng, radiusKm);
+      total = listings.length;
+    } else {
+      const result = await searchBoatListings(filters, page);
+      listings = result.listings;
+      total = result.total;
+    }
+  } catch {
+    listings = [];
+    total = 0;
+  }
 
   const countryOptions = [...COUNTRIES]
     .map((code) => ({ code, name: countryName(code, locale) }))
@@ -260,14 +276,14 @@ export default async function BoatsSearchPage({ searchParams }: Props) {
       </form>
 
       <p className="mt-6 text-sm text-slate-600">
-        {t("resultsCount", { count: listings.length })}
+        {t("resultsCount", { count: total })}
       </p>
 
       {listings.length === 0 ? (
         <p className="mt-2 text-slate-600">{t("noResults")}</p>
       ) : null}
 
-      {!isNearMe && hasActiveFilters && listings.length < 5 ? (
+      {!isNearMe && hasActiveFilters && total < 5 ? (
         <p className="mt-2 rounded-md bg-amber-50 px-3 py-2 text-sm text-amber-800">
           {t("expandRegionHint")}
         </p>
@@ -278,6 +294,10 @@ export default async function BoatsSearchPage({ searchParams }: Props) {
           <BoatCard key={listing.id} listing={listing} />
         ))}
       </div>
+
+      {!isNearMe ? (
+        <Pagination page={page} totalPages={totalPages(total)} searchParams={sp} />
+      ) : null}
     </div>
   );
 }

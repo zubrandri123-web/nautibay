@@ -18,7 +18,9 @@
     "close": "Kapat",
     "previous": "Önceki",
     "next": "Sonraki",
-    "continueSearch": "Aramaya devam et"
+    "continueSearch": "Aramaya devam et",
+    "bump": "Öne çıkar",
+    "bumpCooldown": "{hours} saat sonra tekrar öne çıkarabilirsiniz"
   },
   "Nav": {
     "signIn": "Giriş yap",

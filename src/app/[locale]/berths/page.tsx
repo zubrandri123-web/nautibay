@@ -1,5 +1,7 @@
 import { getLocale, getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
+import { Pagination } from "@/components/pagination";
+import { parsePage, totalPages } from "@/lib/pagination";
 import { COUNTRIES, countryName, formatLength } from "@/lib/boats/constants";
 import { DEALS, PLACE_TYPES } from "@/lib/berths/constants";
 import { berthFiltersSchema, type BerthFilters } from "@/lib/berths/schema";
@@ -42,9 +44,13 @@ export default async function BerthsPage({ searchParams }: Props) {
     .map((code) => ({ code, name: countryName(code, locale) }))
     .sort((a, b) => a.name.localeCompare(b.name, locale));
 
+  const page = parsePage(sp.page);
   let listings: BerthSummary[] = [];
+  let total = 0;
   try {
-    listings = await searchBerths(filters);
+    const result = await searchBerths(filters, page);
+    listings = result.listings;
+    total = result.total;
   } catch {
     listings = [];
   }
@@ -173,6 +179,8 @@ export default async function BerthsPage({ searchParams }: Props) {
           })}
         </ul>
       )}
+
+      <Pagination page={page} totalPages={totalPages(total)} searchParams={sp} />
     </div>
   );
 }

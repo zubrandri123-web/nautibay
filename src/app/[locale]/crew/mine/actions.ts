@@ -2,6 +2,7 @@
 
 import { revalidatePath } from "next/cache";
 import { createClient } from "@/lib/supabase/server";
+import { bumpRow } from "@/lib/bump";
 
 const STATUSES = ["active", "archived"] as const;
 type Status = (typeof STATUSES)[number];
@@ -22,6 +23,20 @@ export async function setCrewStatusAction(id: string, status: Status) {
   if (error) return { error: error.message };
   revalidatePath("/[locale]/crew/mine", "page");
   return {};
+}
+
+export async function bumpCrewAction(id: string) {
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) return { error: "Not authenticated" };
+
+  const result = await bumpRow(supabase, "crew_listings", id, user.id);
+  if (!result.error && !result.hoursLeft) {
+    revalidatePath("/[locale]/crew/mine", "page");
+  }
+  return result;
 }
 
 export async function deleteCrewAction(id: string) {

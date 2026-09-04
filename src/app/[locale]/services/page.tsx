@@ -1,5 +1,7 @@
 import { getLocale, getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
+import { Pagination } from "@/components/pagination";
+import { parsePage, totalPages } from "@/lib/pagination";
 import { COUNTRIES, countryName } from "@/lib/boats/constants";
 import { SERVICE_CATEGORIES } from "@/lib/services/constants";
 import { serviceFiltersSchema, type ServiceFilters } from "@/lib/services/schema";
@@ -38,9 +40,13 @@ export default async function ServicesPage({ searchParams }: Props) {
     .map((code) => ({ code, name: countryName(code, locale) }))
     .sort((a, b) => a.name.localeCompare(b.name, locale));
 
+  const page = parsePage(sp.page);
   let listings: ServiceSummary[] = [];
+  let total = 0;
   try {
-    listings = await searchServices(filters);
+    const result = await searchServices(filters, page);
+    listings = result.listings;
+    total = result.total;
   } catch {
     listings = [];
   }
@@ -153,6 +159,8 @@ export default async function ServicesPage({ searchParams }: Props) {
           })}
         </ul>
       )}
+
+      <Pagination page={page} totalPages={totalPages(total)} searchParams={sp} />
     </div>
   );
 }

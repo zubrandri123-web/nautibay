@@ -1,4 +1,5 @@
 import { createClient } from "@/lib/supabase/server";
+import { pageRange } from "@/lib/pagination";
 import type { CrewFilters } from "./schema";
 
 const SUMMARY =
@@ -24,13 +25,16 @@ export type CrewSummary = {
   crew_listing_photos: { storage_path: string; sort_order: number }[] | null;
 };
 
-export async function searchCrew(filters: CrewFilters): Promise<CrewSummary[]> {
+export async function searchCrew(
+  filters: CrewFilters,
+  page = 1,
+): Promise<{ listings: CrewSummary[]; total: number }> {
   const supabase = await createClient();
   let query = supabase
     .from("crew_listings")
-    .select(SUMMARY)
+    .select(SUMMARY, { count: "exact" })
     .eq("status", "active")
-    .order("created_at", { ascending: false });
+    .order("bumped_at", { ascending: false });
 
   if (filters.role) query = query.eq("role", filters.role);
   if (filters.availability) query = query.eq("availability", filters.availability);
@@ -54,9 +58,13 @@ export async function searchCrew(filters: CrewFilters): Promise<CrewSummary[]> {
     }
   }
 
-  const { data, error } = await query.limit(60);
+  const { from, to } = pageRange(page);
+  const { data, error, count } = await query.range(from, to);
   if (error) throw error;
-  return (data ?? []) as unknown as CrewSummary[];
+  return {
+    listings: (data ?? []) as unknown as CrewSummary[],
+    total: count ?? 0,
+  };
 }
 
 export async function getCrewListing(id: string) {

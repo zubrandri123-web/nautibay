@@ -1,5 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
+import { Pagination } from "@/components/pagination";
+import { parsePage, totalPages } from "@/lib/pagination";
 import { CREW_AVAILABILITY, CREW_ROLES } from "@/lib/crew/constants";
 import { crewFiltersSchema, type CrewFilters } from "@/lib/crew/schema";
 import { searchCrew, type CrewSummary } from "@/lib/crew/queries";
@@ -36,9 +38,13 @@ export default async function CrewPage({ searchParams }: Props) {
   });
   const filters: CrewFilters = parsed.success ? parsed.data : {};
 
+  const page = parsePage(sp.page);
   let listings: CrewSummary[] = [];
+  let total = 0;
   try {
-    listings = await searchCrew(filters);
+    const result = await searchCrew(filters, page);
+    listings = result.listings;
+    total = result.total;
   } catch {
     listings = [];
   }
@@ -180,6 +186,8 @@ export default async function CrewPage({ searchParams }: Props) {
           })}
         </ul>
       )}
+
+      <Pagination page={page} totalPages={totalPages(total)} searchParams={sp} />
     </div>
   );
 }

@@ -146,7 +146,9 @@
     "dimUnits": "Μονάδες",
     "unitMeters": "μέτρα",
     "unitFeet": "πόδια",
-    "saveChanges": "Αποθήκευση αλλαγών"
+    "saveChanges": "Αποθήκευση αλλαγών",
+    "fuelTankL": "Δεξαμενή καυσίμου (λίτρα)",
+    "waterTankL": "Δεξαμενή νερού (λίτρα)"
   },
   "Search": {
     "title": "Βρες σκάφος",
@@ -201,7 +203,9 @@
     "contactSeller": "Επικοινωνία με τον πωλητή",
     "signInToContact": "Συνδεθείτε για να δείτε τα στοιχεία επικοινωνίας και να επικοινωνήσετε με τον πωλητή.",
     "whatsapp": "WhatsApp",
-    "telegram": "Telegram"
+    "telegram": "Telegram",
+    "fuelTank": "Δεξαμενή καυσίμου",
+    "waterTank": "Δεξαμενή νερού"
   },
   "MyListings": {
     "title": "Οι αγγελίες μου",

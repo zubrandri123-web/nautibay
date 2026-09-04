@@ -146,7 +146,9 @@
     "dimUnits": "Jedinice",
     "unitMeters": "metri",
     "unitFeet": "stope",
-    "saveChanges": "Spremi promjene"
+    "saveChanges": "Spremi promjene",
+    "fuelTankL": "Spremnik goriva (l)",
+    "waterTankL": "Spremnik vode (l)"
   },
   "Search": {
     "title": "Pronađi brod",
@@ -201,7 +203,9 @@
     "contactSeller": "Kontaktirajte prodavatelja",
     "signInToContact": "Prijavite se da vidite kontakt podatke i javite se prodavatelju.",
     "whatsapp": "WhatsApp",
-    "telegram": "Telegram"
+    "telegram": "Telegram",
+    "fuelTank": "Spremnik goriva",
+    "waterTank": "Spremnik vode"
   },
   "MyListings": {
     "title": "Moji oglasi",

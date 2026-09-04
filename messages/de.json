@@ -146,7 +146,9 @@
     "dimUnits": "Einheiten",
     "unitMeters": "Meter",
     "unitFeet": "Fuß",
-    "saveChanges": "Änderungen speichern"
+    "saveChanges": "Änderungen speichern",
+    "fuelTankL": "Kraftstofftank (l)",
+    "waterTankL": "Wassertank (l)"
   },
   "Search": {
     "title": "Boot finden",
@@ -201,7 +203,9 @@
     "contactSeller": "Verkäufer kontaktieren",
     "signInToContact": "Melden Sie sich an, um die Kontaktdaten zu sehen und den Verkäufer zu kontaktieren.",
     "whatsapp": "WhatsApp",
-    "telegram": "Telegram"
+    "telegram": "Telegram",
+    "fuelTank": "Kraftstofftank",
+    "waterTank": "Wassertank"
   },
   "MyListings": {
     "title": "Meine Inserate",

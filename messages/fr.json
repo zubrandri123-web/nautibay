@@ -146,7 +146,9 @@
     "dimUnits": "Unités",
     "unitMeters": "mètres",
     "unitFeet": "pieds",
-    "saveChanges": "Enregistrer"
+    "saveChanges": "Enregistrer",
+    "fuelTankL": "Réservoir de carburant (l)",
+    "waterTankL": "Réservoir d'eau (l)"
   },
   "Search": {
     "title": "Trouver un bateau",
@@ -201,7 +203,9 @@
     "contactSeller": "Contacter le vendeur",
     "signInToContact": "Connectez-vous pour voir les coordonnées et contacter le vendeur.",
     "whatsapp": "WhatsApp",
-    "telegram": "Telegram"
+    "telegram": "Telegram",
+    "fuelTank": "Réservoir de carburant",
+    "waterTank": "Réservoir d'eau"
   },
   "MyListings": {
     "title": "Mes annonces",

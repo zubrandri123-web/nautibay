@@ -374,6 +374,32 @@ export function BoatForm({
               className="w-full rounded-md border border-slate-300 px-3 py-2"
             />
           </Field>
+          <Field
+            label={t("fuelTankL")}
+            optional
+            error={errors.fuelTankL?.message}
+          >
+            <input
+              type="number"
+              step="any"
+              inputMode="decimal"
+              {...register("fuelTankL")}
+              className="w-full rounded-md border border-slate-300 px-3 py-2"
+            />
+          </Field>
+          <Field
+            label={t("waterTankL")}
+            optional
+            error={errors.waterTankL?.message}
+          >
+            <input
+              type="number"
+              step="any"
+              inputMode="decimal"
+              {...register("waterTankL")}
+              className="w-full rounded-md border border-slate-300 px-3 py-2"
+            />
+          </Field>
         </div>
       </section>
 

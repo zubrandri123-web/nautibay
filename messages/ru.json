@@ -146,7 +146,9 @@
     "dimUnits": "Единицы",
     "unitMeters": "метры",
     "unitFeet": "футы",
-    "saveChanges": "Сохранить изменения"
+    "saveChanges": "Сохранить изменения",
+    "fuelTankL": "Бак топлива (л)",
+    "waterTankL": "Бак воды (л)"
   },
   "Search": {
     "title": "Найти лодку",
@@ -201,7 +203,9 @@
     "contactSeller": "Связаться с продавцом",
     "signInToContact": "Войдите, чтобы увидеть контакты и связаться с продавцом.",
     "whatsapp": "WhatsApp",
-    "telegram": "Telegram"
+    "telegram": "Telegram",
+    "fuelTank": "Бак топлива",
+    "waterTank": "Бак воды"
   },
   "MyListings": {
     "title": "Мои объявления",

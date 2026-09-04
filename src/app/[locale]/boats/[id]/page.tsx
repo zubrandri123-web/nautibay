@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { Link } from "@/i18n/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { PhotoGallery } from "@/components/photo-gallery";
+import { SpecDetail } from "@/components/spec-detail";
 import { countryName, formatLength } from "@/lib/boats/constants";
 import { getBoatListing } from "@/lib/boats/queries";
 
@@ -139,35 +140,66 @@ export default async function BoatDetailPage({ params }: Props) {
 
       <dl className="mt-8 grid grid-cols-2 gap-x-6 gap-y-4 sm:grid-cols-3">
         {listing.condition ? (
-          <Detail label={t("condition")} value={tCondition(listing.condition)} />
+          <SpecDetail
+            icon="condition"
+            label={t("condition")}
+            value={tCondition(listing.condition)}
+          />
         ) : null}
-        <Detail label={t("year")} value={listing.year_built} />
+        <SpecDetail icon="calendar" label={t("year")} value={listing.year_built} />
         {listing.refit_year ? (
-          <Detail label={t("refitYear")} value={listing.refit_year} />
+          <SpecDetail icon="wrench" label={t("refitYear")} value={listing.refit_year} />
         ) : null}
-        <Detail label={t("length")} value={fmtLen(listing.length_m)} />
+        <SpecDetail icon="length" label={t("length")} value={fmtLen(listing.length_m)} />
         {listing.beam_m ? (
-          <Detail label={t("beam")} value={fmtLen(listing.beam_m)} />
+          <SpecDetail icon="beam" label={t("beam")} value={fmtLen(listing.beam_m)} />
         ) : null}
         {listing.draft_m ? (
-          <Detail label={t("draft")} value={fmtLen(listing.draft_m)} />
+          <SpecDetail icon="draft" label={t("draft")} value={fmtLen(listing.draft_m)} />
         ) : null}
         {listing.hull_material ? (
-          <Detail label={t("hull")} value={tHull(listing.hull_material)} />
+          <SpecDetail icon="hull" label={t("hull")} value={tHull(listing.hull_material)} />
         ) : null}
         {listing.fuel_type ? (
-          <Detail label={t("fuel")} value={tFuel(listing.fuel_type)} />
+          <SpecDetail icon="fuelType" label={t("fuel")} value={tFuel(listing.fuel_type)} />
         ) : null}
         {listing.engine_power_hp ? (
-          <Detail label={t("engine")} value={`${listing.engine_power_hp} hp`} />
+          <SpecDetail
+            icon="enginePower"
+            label={t("engine")}
+            value={`${listing.engine_power_hp} hp`}
+          />
         ) : null}
-        {listing.cabins ? <Detail label={t("cabins")} value={listing.cabins} /> : null}
-        {listing.berths ? <Detail label={t("berths")} value={listing.berths} /> : null}
+        {listing.fuel_tank_l ? (
+          <SpecDetail
+            icon="fuelTank"
+            label={t("fuelTank")}
+            value={`${Number(listing.fuel_tank_l).toLocaleString()} l`}
+          />
+        ) : null}
+        {listing.water_tank_l ? (
+          <SpecDetail
+            icon="waterTank"
+            label={t("waterTank")}
+            value={`${Number(listing.water_tank_l).toLocaleString()} l`}
+          />
+        ) : null}
+        {listing.cabins ? (
+          <SpecDetail icon="cabins" label={t("cabins")} value={listing.cabins} />
+        ) : null}
+        {listing.berths ? (
+          <SpecDetail icon="berths" label={t("berths")} value={listing.berths} />
+        ) : null}
         {listing.sail_area_m2 ? (
-          <Detail label={t("sailArea")} value={`${listing.sail_area_m2} m²`} />
+          <SpecDetail
+            icon="sailArea"
+            label={t("sailArea")}
+            value={`${listing.sail_area_m2} m²`}
+          />
         ) : null}
         {listing.flag_country ? (
-          <Detail
+          <SpecDetail
+            icon="flag"
             label={t("flag")}
             value={countryName(listing.flag_country, locale)}
           />
@@ -191,17 +223,6 @@ export default async function BoatDetailPage({ params }: Props) {
           </p>
         </div>
       ) : null}
-    </div>
-  );
-}
-
-function Detail({ label, value }: { label: string; value: string | number }) {
-  return (
-    <div>
-      <dt className="text-xs uppercase tracking-wide text-slate-400">
-        {label}
-      </dt>
-      <dd className="text-sm text-slate-900">{value}</dd>
     </div>
   );
 }

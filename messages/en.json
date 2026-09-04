@@ -146,7 +146,9 @@
     "dimUnits": "Units",
     "unitMeters": "metres",
     "unitFeet": "feet",
-    "saveChanges": "Save changes"
+    "saveChanges": "Save changes",
+    "fuelTankL": "Fuel tank (l)",
+    "waterTankL": "Water tank (l)"
   },
   "Search": {
     "title": "Find a boat",
@@ -201,7 +203,9 @@
     "contactSeller": "Contact the seller",
     "signInToContact": "Sign in to see the contact details and reach the seller.",
     "whatsapp": "WhatsApp",
-    "telegram": "Telegram"
+    "telegram": "Telegram",
+    "fuelTank": "Fuel tank",
+    "waterTank": "Water tank"
   },
   "MyListings": {
     "title": "My listings",

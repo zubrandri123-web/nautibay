@@ -146,7 +146,9 @@
     "dimUnits": "Unidades",
     "unitMeters": "metros",
     "unitFeet": "pies",
-    "saveChanges": "Guardar cambios"
+    "saveChanges": "Guardar cambios",
+    "fuelTankL": "Depósito de combustible (l)",
+    "waterTankL": "Depósito de agua (l)"
   },
   "Search": {
     "title": "Buscar un barco",
@@ -201,7 +203,9 @@
     "contactSeller": "Contactar con el vendedor",
     "signInToContact": "Inicia sesión para ver los datos de contacto y comunicarte con el vendedor.",
     "whatsapp": "WhatsApp",
-    "telegram": "Telegram"
+    "telegram": "Telegram",
+    "fuelTank": "Depósito de combustible",
+    "waterTank": "Depósito de agua"
   },
   "MyListings": {
     "title": "Mis anuncios",

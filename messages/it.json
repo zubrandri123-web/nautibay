@@ -146,7 +146,9 @@
     "dimUnits": "Unità",
     "unitMeters": "metri",
     "unitFeet": "piedi",
-    "saveChanges": "Salva modifiche"
+    "saveChanges": "Salva modifiche",
+    "fuelTankL": "Serbatoio carburante (l)",
+    "waterTankL": "Serbatoio acqua (l)"
   },
   "Search": {
     "title": "Trova una barca",
@@ -201,7 +203,9 @@
     "contactSeller": "Contatta il venditore",
     "signInToContact": "Accedi per vedere i contatti e metterti in contatto con il venditore.",
     "whatsapp": "WhatsApp",
-    "telegram": "Telegram"
+    "telegram": "Telegram",
+    "fuelTank": "Serbatoio carburante",
+    "waterTank": "Serbatoio acqua"
   },
   "MyListings": {
     "title": "I miei annunci",

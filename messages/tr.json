@@ -146,7 +146,9 @@
     "dimUnits": "Birimler",
     "unitMeters": "metre",
     "unitFeet": "fit",
-    "saveChanges": "Değişiklikleri kaydet"
+    "saveChanges": "Değişiklikleri kaydet",
+    "fuelTankL": "Yakıt deposu (l)",
+    "waterTankL": "Su deposu (l)"
   },
   "Search": {
     "title": "Tekne bul",
@@ -201,7 +203,9 @@
     "contactSeller": "Satıcıyla iletişime geç",
     "signInToContact": "İletişim bilgilerini görmek ve satıcıya ulaşmak için giriş yapın.",
     "whatsapp": "WhatsApp",
-    "telegram": "Telegram"
+    "telegram": "Telegram",
+    "fuelTank": "Yakıt deposu",
+    "waterTank": "Su deposu"
   },
   "MyListings": {
     "title": "İlanlarım",

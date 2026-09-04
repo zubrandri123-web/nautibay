@@ -17,6 +17,7 @@ export function listingToRow(data: BoatListingInput) {
     model: data.model || null,
     beam_m: data.beamM ?? null,
     draft_m: data.draftM ?? null,
+    headroom_m: data.headroomM ?? null,
     fuel_type: data.fuelType ?? null,
     engine_power_hp: data.enginePowerHp ?? null,
     fuel_tank_l: data.fuelTankL ?? null,

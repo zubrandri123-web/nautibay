@@ -148,7 +148,9 @@
     "unitFeet": "piedi",
     "saveChanges": "Salva modifiche",
     "fuelTankL": "Serbatoio carburante (l)",
-    "waterTankL": "Serbatoio acqua (l)"
+    "waterTankL": "Serbatoio acqua (l)",
+    "headroomM": "Altezza interna",
+    "headroomHint": "Altezza libera sottocoperta."
   },
   "Search": {
     "title": "Trova una barca",
@@ -205,7 +207,8 @@
     "whatsapp": "WhatsApp",
     "telegram": "Telegram",
     "fuelTank": "Serbatoio carburante",
-    "waterTank": "Serbatoio acqua"
+    "waterTank": "Serbatoio acqua",
+    "headroom": "Altezza interna"
   },
   "MyListings": {
     "title": "I miei annunci",

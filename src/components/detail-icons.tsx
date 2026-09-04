@@ -18,6 +18,7 @@ export type DetailIconName =
   | "length"
   | "beam"
   | "draft"
+  | "headroom"
   | "hull"
   | "fuelType"
   | "enginePower"
@@ -71,6 +72,13 @@ const ICONS: Record<DetailIconName, React.ReactNode> = {
       <path d="M10 3v10.5" />
       <path d="M6.8 10.8 10 14l3.2-3.2" />
       <path d="M3 16.5h14" />
+    </Svg>
+  ),
+  headroom: (
+    <Svg>
+      <path d="M4 4h12M4 16h12" />
+      <path d="M10 6.2v7.6" />
+      <path d="M7.8 8.4 10 6.2l2.2 2.2M7.8 11.6 10 13.8l2.2-2.2" />
     </Svg>
   ),
   hull: (

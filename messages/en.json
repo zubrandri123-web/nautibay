@@ -148,7 +148,9 @@
     "unitFeet": "feet",
     "saveChanges": "Save changes",
     "fuelTankL": "Fuel tank (l)",
-    "waterTankL": "Water tank (l)"
+    "waterTankL": "Water tank (l)",
+    "headroomM": "Headroom",
+    "headroomHint": "Standing height below deck."
   },
   "Search": {
     "title": "Find a boat",
@@ -205,7 +207,8 @@
     "whatsapp": "WhatsApp",
     "telegram": "Telegram",
     "fuelTank": "Fuel tank",
-    "waterTank": "Water tank"
+    "waterTank": "Water tank",
+    "headroom": "Headroom"
   },
   "MyListings": {
     "title": "My listings",

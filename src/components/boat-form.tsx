@@ -135,6 +135,7 @@ export function BoatForm({
       lengthM: toM(values.lengthM) as number,
       beamM: toM(values.beamM),
       draftM: toM(values.draftM),
+      headroomM: toM(values.headroomM),
     };
     const result = listingId
       ? await updateListingAction(listingId, locale, payload)
@@ -324,6 +325,20 @@ export function BoatForm({
               step="any"
               inputMode="decimal"
               {...register("draftM")}
+              className="w-full rounded-md border border-slate-300 px-3 py-2"
+            />
+          </Field>
+          <Field
+            label={t("headroomM")}
+            hint={t("headroomHint")}
+            optional
+            error={errors.headroomM?.message}
+          >
+            <input
+              type="number"
+              step="any"
+              inputMode="decimal"
+              {...register("headroomM")}
               className="w-full rounded-md border border-slate-300 px-3 py-2"
             />
           </Field>

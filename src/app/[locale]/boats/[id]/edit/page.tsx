@@ -60,6 +60,7 @@ export default async function EditListingPage({ params }: Props) {
     model: str(l.model),
     beamM: str(l.beam_m),
     draftM: str(l.draft_m),
+    headroomM: str(l.headroom_m),
     fuelType: str(l.fuel_type),
     enginePowerHp: str(l.engine_power_hp),
     fuelTankL: str(l.fuel_tank_l),

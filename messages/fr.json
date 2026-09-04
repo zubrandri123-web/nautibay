@@ -148,7 +148,9 @@
     "unitFeet": "pieds",
     "saveChanges": "Enregistrer",
     "fuelTankL": "Réservoir de carburant (l)",
-    "waterTankL": "Réservoir d'eau (l)"
+    "waterTankL": "Réservoir d'eau (l)",
+    "headroomM": "Hauteur sous barrots",
+    "headroomHint": "Hauteur libre sous le pont."
   },
   "Search": {
     "title": "Trouver un bateau",
@@ -205,7 +207,8 @@
     "whatsapp": "WhatsApp",
     "telegram": "Telegram",
     "fuelTank": "Réservoir de carburant",
-    "waterTank": "Réservoir d'eau"
+    "waterTank": "Réservoir d'eau",
+    "headroom": "Hauteur sous barrots"
   },
   "MyListings": {
     "title": "Mes annonces",

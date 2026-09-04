@@ -148,7 +148,9 @@
     "unitFeet": "stope",
     "saveChanges": "Spremi promjene",
     "fuelTankL": "Spremnik goriva (l)",
-    "waterTankL": "Spremnik vode (l)"
+    "waterTankL": "Spremnik vode (l)",
+    "headroomM": "Visina unutra",
+    "headroomHint": "Visina stajanja ispod palube."
   },
   "Search": {
     "title": "Pronađi brod",
@@ -205,7 +207,8 @@
     "whatsapp": "WhatsApp",
     "telegram": "Telegram",
     "fuelTank": "Spremnik goriva",
-    "waterTank": "Spremnik vode"
+    "waterTank": "Spremnik vode",
+    "headroom": "Visina unutra"
   },
   "MyListings": {
     "title": "Moji oglasi",

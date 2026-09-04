@@ -148,7 +148,9 @@
     "unitFeet": "πόδια",
     "saveChanges": "Αποθήκευση αλλαγών",
     "fuelTankL": "Δεξαμενή καυσίμου (λίτρα)",
-    "waterTankL": "Δεξαμενή νερού (λίτρα)"
+    "waterTankL": "Δεξαμενή νερού (λίτρα)",
+    "headroomM": "Ύψος εσωτερικού",
+    "headroomHint": "Ελεύθερο ύψος κάτω από το κατάστρωμα."
   },
   "Search": {
     "title": "Βρες σκάφος",
@@ -205,7 +207,8 @@
     "whatsapp": "WhatsApp",
     "telegram": "Telegram",
     "fuelTank": "Δεξαμενή καυσίμου",
-    "waterTank": "Δεξαμενή νερού"
+    "waterTank": "Δεξαμενή νερού",
+    "headroom": "Ύψος εσωτερικού"
   },
   "MyListings": {
     "title": "Οι αγγελίες μου",

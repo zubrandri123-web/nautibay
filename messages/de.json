@@ -148,7 +148,9 @@
     "unitFeet": "Fuß",
     "saveChanges": "Änderungen speichern",
     "fuelTankL": "Kraftstofftank (l)",
-    "waterTankL": "Wassertank (l)"
+    "waterTankL": "Wassertank (l)",
+    "headroomM": "Stehhöhe",
+    "headroomHint": "Höhe unter Deck zum Stehen."
   },
   "Search": {
     "title": "Boot finden",
@@ -205,7 +207,8 @@
     "whatsapp": "WhatsApp",
     "telegram": "Telegram",
     "fuelTank": "Kraftstofftank",
-    "waterTank": "Wassertank"
+    "waterTank": "Wassertank",
+    "headroom": "Stehhöhe"
   },
   "MyListings": {
     "title": "Meine Inserate",

@@ -148,7 +148,9 @@
     "unitFeet": "fit",
     "saveChanges": "Değişiklikleri kaydet",
     "fuelTankL": "Yakıt deposu (l)",
-    "waterTankL": "Su deposu (l)"
+    "waterTankL": "Su deposu (l)",
+    "headroomM": "İç yükseklik",
+    "headroomHint": "Güverte altındaki ayakta durma yüksekliği."
   },
   "Search": {
     "title": "Tekne bul",
@@ -205,7 +207,8 @@
     "whatsapp": "WhatsApp",
     "telegram": "Telegram",
     "fuelTank": "Yakıt deposu",
-    "waterTank": "Su deposu"
+    "waterTank": "Su deposu",
+    "headroom": "İç yükseklik"
   },
   "MyListings": {
     "title": "İlanlarım",

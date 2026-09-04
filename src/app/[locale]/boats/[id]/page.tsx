@@ -157,6 +157,13 @@ export default async function BoatDetailPage({ params }: Props) {
         {listing.draft_m ? (
           <SpecDetail icon="draft" label={t("draft")} value={fmtLen(listing.draft_m)} />
         ) : null}
+        {listing.headroom_m ? (
+          <SpecDetail
+            icon="headroom"
+            label={t("headroom")}
+            value={fmtLen(listing.headroom_m)}
+          />
+        ) : null}
         {listing.hull_material ? (
           <SpecDetail icon="hull" label={t("hull")} value={tHull(listing.hull_material)} />
         ) : null}

@@ -37,6 +37,7 @@ export const boatListingSchema = z.object({
   model: z.string().trim().max(120).optional().or(z.literal("")),
   beamM: optionalNumber(z.coerce.number().positive()),
   draftM: optionalNumber(z.coerce.number().positive()),
+  headroomM: optionalNumber(z.coerce.number().positive()),
   fuelType: optionalEnum(FUEL_TYPES),
   enginePowerHp: optionalNumber(z.coerce.number().positive()),
   fuelTankL: optionalNumber(z.coerce.number().positive()),

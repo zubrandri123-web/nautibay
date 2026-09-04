@@ -148,7 +148,9 @@
     "unitFeet": "pies",
     "saveChanges": "Guardar cambios",
     "fuelTankL": "Depósito de combustible (l)",
-    "waterTankL": "Depósito de agua (l)"
+    "waterTankL": "Depósito de agua (l)",
+    "headroomM": "Altura interior",
+    "headroomHint": "Altura libre bajo cubierta."
   },
   "Search": {
     "title": "Buscar un barco",
@@ -205,7 +207,8 @@
     "whatsapp": "WhatsApp",
     "telegram": "Telegram",
     "fuelTank": "Depósito de combustible",
-    "waterTank": "Depósito de agua"
+    "waterTank": "Depósito de agua",
+    "headroom": "Altura interior"
   },
   "MyListings": {
     "title": "Mis anuncios",

@@ -148,7 +148,9 @@
     "unitFeet": "футы",
     "saveChanges": "Сохранить изменения",
     "fuelTankL": "Бак топлива (л)",
-    "waterTankL": "Бак воды (л)"
+    "waterTankL": "Бак воды (л)",
+    "headroomM": "Высота внутри",
+    "headroomHint": "Высота от пола до потолка внутри лодки."
   },
   "Search": {
     "title": "Найти лодку",
@@ -205,7 +207,8 @@
     "whatsapp": "WhatsApp",
     "telegram": "Telegram",
     "fuelTank": "Бак топлива",
-    "waterTank": "Бак воды"
+    "waterTank": "Бак воды",
+    "headroom": "Высота внутри"
   },
   "MyListings": {
     "title": "Мои объявления",

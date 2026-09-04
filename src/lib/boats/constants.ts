@@ -53,6 +53,10 @@ export const KEEL_TYPES = [
 
 export const ENGINE_MOUNT_TYPES = ["inboard", "outboard", "sterndrive"] as const;
 
+// Galley (kitchen) stove — shared by boats, charter and fishing, same as the
+// toilet field: nothing required, shown with an icon only when filled in.
+export const STOVE_TYPES = ["none", "gas", "electric", "induction", "alcohol"] as const;
+
 // Listing prices are shown as entered — no conversion. Kept short on purpose.
 export const CURRENCIES = ["EUR", "USD", "GBP", "CHF"] as const;
 
@@ -134,3 +138,4 @@ export type ToiletType = (typeof TOILET_TYPES)[number];
 export type SteeringType = (typeof STEERING_TYPES)[number];
 export type KeelType = (typeof KEEL_TYPES)[number];
 export type EngineMountType = (typeof ENGINE_MOUNT_TYPES)[number];
+export type StoveType = (typeof STOVE_TYPES)[number];

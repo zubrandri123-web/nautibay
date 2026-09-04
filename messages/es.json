@@ -155,7 +155,9 @@
     "shower": "Ducha",
     "steeringType": "Dirección",
     "keelType": "Tipo de quilla",
-    "engineMount": "Tipo de montaje del motor"
+    "engineMount": "Tipo de montaje del motor",
+    "stoveType": "Cocina (galera)",
+    "grill": "Barbacoa"
   },
   "Search": {
     "title": "Buscar un barco",
@@ -218,7 +220,9 @@
     "shower": "Ducha",
     "steeringType": "Dirección",
     "keelType": "Tipo de quilla",
-    "engineMount": "Tipo de montaje del motor"
+    "engineMount": "Tipo de montaje del motor",
+    "stoveType": "Cocina (galera)",
+    "grill": "Barbacoa"
   },
   "MyListings": {
     "title": "Mis anuncios",
@@ -344,7 +348,9 @@
     "ratePeriodNeeded": "Elige hora / día / semana si indicas un precio.",
     "ratePeriodHint": "Opcional. Para cruceros o tarifas complejas, describe el precio en el texto.",
     "toiletType": "Inodoro (aseo)",
-    "shower": "Ducha"
+    "shower": "Ducha",
+    "stoveType": "Cocina (galera)",
+    "grill": "Barbacoa"
   },
   "Charter": {
     "title": "Alquiler, chárter y cruceros",
@@ -416,7 +422,9 @@
     "photosHint": "Se requiere al menos 1 foto del barco.",
     "submit": "Publicar anuncio",
     "toiletType": "Inodoro (aseo)",
-    "shower": "Ducha"
+    "shower": "Ducha",
+    "stoveType": "Cocina (galera)",
+    "grill": "Barbacoa"
   },
   "Fishing": {
     "title": "Pesca en el mar con patrón",
@@ -610,5 +618,12 @@
     "inboard": "Intraborda (fijo)",
     "outboard": "Fueraborda",
     "sterndrive": "Z-drive (intra-fueraborda)"
+  },
+  "StoveType": {
+    "none": "Sin cocina",
+    "gas": "Gas",
+    "electric": "Eléctrica",
+    "induction": "Inducción",
+    "alcohol": "De alcohol"
   }
 }

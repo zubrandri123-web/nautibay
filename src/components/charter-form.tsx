@@ -17,7 +17,13 @@ import {
   CHARTER_TYPES,
   RATE_PERIODS,
 } from "@/lib/charter/constants";
-import { COUNTRIES, countryName, CURRENCIES, TOILET_TYPES } from "@/lib/boats/constants";
+import {
+  COUNTRIES,
+  countryName,
+  CURRENCIES,
+  STOVE_TYPES,
+  TOILET_TYPES,
+} from "@/lib/boats/constants";
 import { compressImage } from "@/lib/boats/compress-image";
 
 type Photo = { path: string; previewUrl: string; uploading: boolean; error?: string };
@@ -47,6 +53,7 @@ export function CharterForm({
   const tCommon = useTranslations("Common");
   const tForm = useTranslations("BoatForm");
   const tToilet = useTranslations("ToiletType");
+  const tStove = useTranslations("StoveType");
 
   const [photos, setPhotos] = useState<Photo[]>(
     (initial?.photoPaths ?? []).map((path) => ({
@@ -320,6 +327,19 @@ export function CharterForm({
             {TOILET_TYPES.map((v) => (
               <option key={v} value={v}>
                 {tToilet(v)}
+              </option>
+            ))}
+          </select>
+        </Field>
+        <label className={check}>
+          <input type="checkbox" {...register("grill")} /> {t("grill")}
+        </label>
+        <Field label={t("stoveType")} optional error={errors.stoveType?.message}>
+          <select {...register("stoveType")} className={input}>
+            <option value="">—</option>
+            {STOVE_TYPES.map((v) => (
+              <option key={v} value={v}>
+                {tStove(v)}
               </option>
             ))}
           </select>

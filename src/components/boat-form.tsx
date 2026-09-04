@@ -23,6 +23,7 @@ import {
   HULL_MATERIALS,
   KEEL_TYPES,
   STEERING_TYPES,
+  STOVE_TYPES,
   TOILET_TYPES,
 } from "@/lib/boats/constants";
 import { compressImage } from "@/lib/boats/compress-image";
@@ -58,6 +59,7 @@ export function BoatForm({
   const tKeel = useTranslations("KeelType");
   const tEngineMount = useTranslations("EngineMountType");
   const tToilet = useTranslations("ToiletType");
+  const tStove = useTranslations("StoveType");
 
   const [photos, setPhotos] = useState<Photo[]>(
     (initial?.photoPaths ?? []).map((path) => ({
@@ -519,6 +521,26 @@ export function BoatForm({
           <label className="flex items-center gap-2 self-end pb-2 text-sm text-slate-700">
             <input type="checkbox" {...register("shower")} />
             {t("shower")}
+          </label>
+        </div>
+
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+          <Field label={t("stoveType")} optional error={errors.stoveType?.message}>
+            <select
+              {...register("stoveType")}
+              className="w-full rounded-md border border-slate-300 px-3 py-2"
+            >
+              <option value="">—</option>
+              {STOVE_TYPES.map((v) => (
+                <option key={v} value={v}>
+                  {tStove(v)}
+                </option>
+              ))}
+            </select>
+          </Field>
+          <label className="flex items-center gap-2 self-end pb-2 text-sm text-slate-700">
+            <input type="checkbox" {...register("grill")} />
+            {t("grill")}
           </label>
         </div>
 

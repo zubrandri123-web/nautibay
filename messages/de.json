@@ -155,7 +155,9 @@
     "shower": "Dusche",
     "steeringType": "Steuerung",
     "keelType": "Kieltyp",
-    "engineMount": "Motoreinbau"
+    "engineMount": "Motoreinbau",
+    "stoveType": "Herd (Kombüse)",
+    "grill": "Grill"
   },
   "Search": {
     "title": "Boot finden",
@@ -218,7 +220,9 @@
     "shower": "Dusche",
     "steeringType": "Steuerung",
     "keelType": "Kieltyp",
-    "engineMount": "Motoreinbau"
+    "engineMount": "Motoreinbau",
+    "stoveType": "Herd (Kombüse)",
+    "grill": "Grill"
   },
   "MyListings": {
     "title": "Meine Inserate",
@@ -344,7 +348,9 @@
     "ratePeriodNeeded": "Wähle Stunde / Tag / Woche, wenn du einen Preis angibst.",
     "ratePeriodHint": "Optional. Bei Kreuzfahrten oder komplexen Tarifen den Preis lieber im Text beschreiben.",
     "toiletType": "Toilette (Bordklo)",
-    "shower": "Dusche"
+    "shower": "Dusche",
+    "stoveType": "Herd (Kombüse)",
+    "grill": "Grill"
   },
   "Charter": {
     "title": "Mieten, Chartern & Kreuzfahrten",
@@ -416,7 +422,9 @@
     "photosHint": "Mindestens 1 Foto des Bootes ist erforderlich.",
     "submit": "Anzeige veröffentlichen",
     "toiletType": "Toilette (Bordklo)",
-    "shower": "Dusche"
+    "shower": "Dusche",
+    "stoveType": "Herd (Kombüse)",
+    "grill": "Grill"
   },
   "Fishing": {
     "title": "Hochseeangeln mit Skipper",
@@ -610,5 +618,12 @@
     "inboard": "Innenborder (fest eingebaut)",
     "outboard": "Außenborder",
     "sterndrive": "Z-Antrieb (Sterndrive)"
+  },
+  "StoveType": {
+    "none": "Kein Herd",
+    "gas": "Gas",
+    "electric": "Elektrisch",
+    "induction": "Induktion",
+    "alcohol": "Spirituskocher"
   }
 }

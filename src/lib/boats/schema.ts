@@ -9,6 +9,7 @@ import {
   HULL_MATERIALS,
   KEEL_TYPES,
   STEERING_TYPES,
+  STOVE_TYPES,
   TOILET_TYPES,
 } from "./constants";
 
@@ -51,6 +52,8 @@ export const boatListingSchema = z.object({
   berths: optionalNumber(z.coerce.number().int().min(0)),
   toiletType: optionalEnum(TOILET_TYPES),
   shower: z.coerce.boolean().optional(),
+  stoveType: optionalEnum(STOVE_TYPES),
+  grill: z.coerce.boolean().optional(),
   steeringType: optionalEnum(STEERING_TYPES),
   keelType: optionalEnum(KEEL_TYPES),
   engineMount: optionalEnum(ENGINE_MOUNT_TYPES),

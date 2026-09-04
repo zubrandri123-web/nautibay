@@ -46,7 +46,9 @@ export type DetailIconName =
   | "tackle"
   | "bait"
   | "food"
-  | "catch";
+  | "catch"
+  | "galley"
+  | "grill";
 
 function Svg({ children }: { children: React.ReactNode }) {
   return (
@@ -275,6 +277,21 @@ const ICONS: Record<DetailIconName, React.ReactNode> = {
       <path d="M3 10c3-4 9-5 13-1-1 2-1 2 0 4-4 4-10 3-13-1 0-1 0-1 0-2Z" />
       <path d="M14.5 7.5l2.5-2M14.5 11.5l2.5 2" />
       <circle cx="6" cy="9.3" r="0.6" fill="currentColor" stroke="none" />
+    </Svg>
+  ),
+  galley: (
+    <Svg>
+      <rect x="4" y="8" width="12" height="8" rx="1.2" />
+      <circle cx="7.5" cy="8" r="1.3" />
+      <circle cx="12.5" cy="8" r="1.3" />
+      <path d="M4 12.5h12" />
+    </Svg>
+  ),
+  grill: (
+    <Svg>
+      <circle cx="10" cy="11" r="6" />
+      <path d="M5 8.5h10M5 11h10M5 13.5h10" />
+      <path d="M7.5 6v10M10 6v10M12.5 6v10" />
     </Svg>
   ),
 };

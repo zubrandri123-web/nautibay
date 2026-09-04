@@ -155,7 +155,9 @@
     "shower": "Doccia",
     "steeringType": "Timoneria",
     "keelType": "Tipo di deriva",
-    "engineMount": "Tipo di installazione motore"
+    "engineMount": "Tipo di installazione motore",
+    "stoveType": "Fornello (cambusa)",
+    "grill": "Barbecue"
   },
   "Search": {
     "title": "Trova una barca",
@@ -218,7 +220,9 @@
     "shower": "Doccia",
     "steeringType": "Timoneria",
     "keelType": "Tipo di deriva",
-    "engineMount": "Tipo di installazione motore"
+    "engineMount": "Tipo di installazione motore",
+    "stoveType": "Fornello (cambusa)",
+    "grill": "Barbecue"
   },
   "MyListings": {
     "title": "I miei annunci",
@@ -344,7 +348,9 @@
     "ratePeriodNeeded": "Scegli ora / giorno / settimana se indichi un prezzo.",
     "ratePeriodHint": "Facoltativo. Per crociere o tariffe complesse, descrivi il prezzo nel testo.",
     "toiletType": "WC di bordo",
-    "shower": "Doccia"
+    "shower": "Doccia",
+    "stoveType": "Fornello (cambusa)",
+    "grill": "Barbecue"
   },
   "Charter": {
     "title": "Noleggio, charter e crociere",
@@ -416,7 +422,9 @@
     "photosHint": "È richiesta almeno 1 foto della barca.",
     "submit": "Pubblica annuncio",
     "toiletType": "WC di bordo",
-    "shower": "Doccia"
+    "shower": "Doccia",
+    "stoveType": "Fornello (cambusa)",
+    "grill": "Barbecue"
   },
   "Fishing": {
     "title": "Pesca in mare con skipper",
@@ -610,5 +618,12 @@
     "inboard": "Entrobordo (fisso)",
     "outboard": "Fuoribordo",
     "sterndrive": "Entrofuoribordo (Z-drive)"
+  },
+  "StoveType": {
+    "none": "Nessun fornello",
+    "gas": "A gas",
+    "electric": "Elettrico",
+    "induction": "A induzione",
+    "alcohol": "Ad alcol"
   }
 }

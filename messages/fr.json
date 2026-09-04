@@ -155,7 +155,9 @@
     "shower": "Douche",
     "steeringType": "Direction",
     "keelType": "Type de quille",
-    "engineMount": "Montage du moteur"
+    "engineMount": "Montage du moteur",
+    "stoveType": "Cuisinière (cambuse)",
+    "grill": "Barbecue"
   },
   "Search": {
     "title": "Trouver un bateau",
@@ -218,7 +220,9 @@
     "shower": "Douche",
     "steeringType": "Direction",
     "keelType": "Type de quille",
-    "engineMount": "Montage du moteur"
+    "engineMount": "Montage du moteur",
+    "stoveType": "Cuisinière (cambuse)",
+    "grill": "Barbecue"
   },
   "MyListings": {
     "title": "Mes annonces",
@@ -344,7 +348,9 @@
     "ratePeriodNeeded": "Choisissez heure / jour / semaine si vous indiquez un prix.",
     "ratePeriodHint": "Facultatif. Pour les croisières ou tarifs complexes, décrivez le prix dans le texte.",
     "toiletType": "Toilettes (WC marin)",
-    "shower": "Douche"
+    "shower": "Douche",
+    "stoveType": "Cuisinière (cambuse)",
+    "grill": "Barbecue"
   },
   "Charter": {
     "title": "Location, charter & croisières",
@@ -416,7 +422,9 @@
     "photosHint": "Au moins 1 photo du bateau est requise.",
     "submit": "Publier l'annonce",
     "toiletType": "Toilettes (WC marin)",
-    "shower": "Douche"
+    "shower": "Douche",
+    "stoveType": "Cuisinière (cambuse)",
+    "grill": "Barbecue"
   },
   "Fishing": {
     "title": "Pêche en mer avec skipper",
@@ -610,5 +618,12 @@
     "inboard": "In-bord (fixe)",
     "outboard": "Hors-bord",
     "sterndrive": "Z-drive (in-bord/hors-bord)"
+  },
+  "StoveType": {
+    "none": "Pas de cuisinière",
+    "gas": "Gaz",
+    "electric": "Électrique",
+    "induction": "Induction",
+    "alcohol": "À alcool"
   }
 }

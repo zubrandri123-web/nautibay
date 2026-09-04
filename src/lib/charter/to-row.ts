@@ -32,6 +32,8 @@ export function charterToRow(data: CharterListingInput) {
     bedding_included: data.beddingIncluded ?? false,
     toilet_type: data.toiletType ?? null,
     shower: data.shower ?? false,
+    stove_type: data.stoveType ?? null,
+    grill: data.grill ?? false,
 
     season: data.season || null,
     description: data.description || null,

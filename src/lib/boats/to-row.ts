@@ -27,6 +27,8 @@ export function listingToRow(data: BoatListingInput) {
     berths: data.berths ?? null,
     toilet_type: data.toiletType ?? null,
     shower: data.shower ?? false,
+    stove_type: data.stoveType ?? null,
+    grill: data.grill ?? false,
     steering_type: data.steeringType ?? null,
     keel_type: data.keelType ?? null,
     engine_mount: data.engineMount ?? null,

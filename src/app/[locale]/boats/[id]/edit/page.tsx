@@ -70,6 +70,8 @@ export default async function EditListingPage({ params }: Props) {
     berths: str(l.berths),
     toiletType: str(l.toilet_type),
     shower: Boolean(l.shower),
+    stoveType: str(l.stove_type),
+    grill: Boolean(l.grill),
     steeringType: str(l.steering_type),
     keelType: str(l.keel_type),
     engineMount: str(l.engine_mount),

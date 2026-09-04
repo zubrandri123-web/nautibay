@@ -25,6 +25,7 @@ export default async function FishingDetailPage({ params }: Props) {
   const tCommon = await getTranslations("Common");
   const tAuth = await getTranslations("Auth");
   const tToilet = await getTranslations("ToiletType");
+  const tStove = await getTranslations("StoveType");
 
   const l = await getFishingListing(id);
   if (!l) notFound();
@@ -176,6 +177,12 @@ export default async function FishingDetailPage({ params }: Props) {
         ) : null}
         {l.shower ? (
           <SpecDetail icon="shower" label={tForm("shower")} value="✓" />
+        ) : null}
+        {l.stove_type && l.stove_type !== "none" ? (
+          <SpecDetail icon="galley" label={tForm("stoveType")} value={tStove(l.stove_type)} />
+        ) : null}
+        {l.grill ? (
+          <SpecDetail icon="grill" label={tForm("grill")} value="✓" />
         ) : null}
       </dl>
 

@@ -155,7 +155,9 @@
     "shower": "Tuš",
     "steeringType": "Upravljanje",
     "keelType": "Vrsta kobilice",
-    "engineMount": "Vrsta ugradnje motora"
+    "engineMount": "Vrsta ugradnje motora",
+    "stoveType": "Štednjak (kuhinja)",
+    "grill": "Roštilj"
   },
   "Search": {
     "title": "Pronađi brod",
@@ -218,7 +220,9 @@
     "shower": "Tuš",
     "steeringType": "Upravljanje",
     "keelType": "Vrsta kobilice",
-    "engineMount": "Vrsta ugradnje motora"
+    "engineMount": "Vrsta ugradnje motora",
+    "stoveType": "Štednjak (kuhinja)",
+    "grill": "Roštilj"
   },
   "MyListings": {
     "title": "Moji oglasi",
@@ -344,7 +348,9 @@
     "ratePeriodNeeded": "Odaberite sat / dan / tjedan ako navodite cijenu.",
     "ratePeriodHint": "Nije obavezno. Za krstarenja ili složene cijene opišite cijenu u tekstu.",
     "toiletType": "WC (sanitarni čvor)",
-    "shower": "Tuš"
+    "shower": "Tuš",
+    "stoveType": "Štednjak (kuhinja)",
+    "grill": "Roštilj"
   },
   "Charter": {
     "title": "Najam, charter i krstarenja",
@@ -416,7 +422,9 @@
     "photosHint": "Potrebna je barem 1 fotografija plovila.",
     "submit": "Objavi oglas",
     "toiletType": "WC (sanitarni čvor)",
-    "shower": "Tuš"
+    "shower": "Tuš",
+    "stoveType": "Štednjak (kuhinja)",
+    "grill": "Roštilj"
   },
   "Fishing": {
     "title": "Morski ribolov sa skiperom",
@@ -610,5 +618,12 @@
     "inboard": "Ugradbeni (fiksni)",
     "outboard": "Izvanbrodski (montažni)",
     "sterndrive": "Z-pogon (sterndrive)"
+  },
+  "StoveType": {
+    "none": "Bez štednjaka",
+    "gas": "Plinski",
+    "electric": "Električni",
+    "induction": "Indukcijski",
+    "alcohol": "Na alkohol (špirit)"
   }
 }

@@ -32,6 +32,7 @@ export default async function BoatDetailPage({ params }: Props) {
   const tKeel = await getTranslations("KeelType");
   const tEngineMount = await getTranslations("EngineMountType");
   const tToilet = await getTranslations("ToiletType");
+  const tStove = await getTranslations("StoveType");
   const fmtLen = (m: number) =>
     formatLength(m, tCommon("unitM"), tCommon("unitFt"));
 
@@ -227,6 +228,16 @@ export default async function BoatDetailPage({ params }: Props) {
         ) : null}
         {listing.shower ? (
           <SpecDetail icon="shower" label={t("shower")} value="✓" />
+        ) : null}
+        {listing.stove_type && listing.stove_type !== "none" ? (
+          <SpecDetail
+            icon="galley"
+            label={t("stoveType")}
+            value={tStove(listing.stove_type)}
+          />
+        ) : null}
+        {listing.grill ? (
+          <SpecDetail icon="grill" label={t("grill")} value="✓" />
         ) : null}
         {listing.sail_area_m2 ? (
           <SpecDetail

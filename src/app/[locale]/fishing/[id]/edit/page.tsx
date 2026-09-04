@@ -66,6 +66,8 @@ export default async function EditFishingPage({ params }: Props) {
     hasLicense: Boolean(l.has_license),
     toiletType: s(l.toilet_type),
     shower: Boolean(l.shower),
+    stoveType: s(l.stove_type),
+    grill: Boolean(l.grill),
     season: s(l.season),
     rules: s(l.rules),
     description: s(l.description),

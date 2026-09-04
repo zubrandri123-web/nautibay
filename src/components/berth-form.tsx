@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useTranslations } from "next-intl";
@@ -76,6 +76,14 @@ export function BerthForm({
   });
 
   const deal = watch("deal");
+  const placeType = watch("placeType");
+  // Draft (how deep a hull sits) only means something for a berth actually
+  // in the water — a dry-storage spot or a locker has no water under it.
+  const showDraft = placeType !== "dry_storage" && placeType !== "locker";
+
+  useEffect(() => {
+    if (!showDraft) setValue("draftM", "");
+  }, [showDraft, setValue]);
 
   const countryOptions = [...COUNTRIES]
     .map((code) => ({ code, name: countryName(code, locale) }))
@@ -281,9 +289,11 @@ export function BerthForm({
           <Field label={t("beamM")} optional error={errors.beamM?.message}>
             <input type="number" step="any" inputMode="decimal" {...register("beamM")} className={input} />
           </Field>
-          <Field label={t("draftM")} optional error={errors.draftM?.message}>
-            <input type="number" step="any" inputMode="decimal" {...register("draftM")} className={input} />
-          </Field>
+          {showDraft ? (
+            <Field label={t("draftM")} optional error={errors.draftM?.message}>
+              <input type="number" step="any" inputMode="decimal" {...register("draftM")} className={input} />
+            </Field>
+          ) : null}
         </div>
       </section>
 

@@ -20,6 +20,10 @@ const LOCALE_LABELS: Record<string, string> = {
   uk: "Українська",
   pl: "Polski",
   pt: "Português",
+  nl: "Nederlands",
+  da: "Dansk",
+  ro: "Română",
+  bg: "Български",
 };
 
 export function LanguageSwitcher() {

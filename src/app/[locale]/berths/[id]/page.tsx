@@ -5,6 +5,7 @@ import { createClient } from "@/lib/supabase/server";
 import { PhotoGallery } from "@/components/photo-gallery";
 import { SpecDetail } from "@/components/spec-detail";
 import { BackToSearch } from "@/components/back-to-search";
+import { MapPinIcon } from "@/components/map-pin-icon";
 import { countryName, formatLength } from "@/lib/boats/constants";
 import { getBerthListing } from "@/lib/berths/queries";
 
@@ -77,7 +78,7 @@ export default async function BerthDetailPage({ params }: Props) {
           rel="noopener noreferrer"
           className="inline-flex items-center gap-1 text-sm font-medium text-sky-700 underline"
         >
-          <span aria-hidden="true">📍</span> {tDet("viewOnMap")}
+          <MapPinIcon /> {tDet("viewOnMap")}
         </a>
       ) : null}
       <p className="mt-2 text-3xl font-semibold text-slate-900">

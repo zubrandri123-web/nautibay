@@ -5,6 +5,7 @@ import { createClient } from "@/lib/supabase/server";
 import { PhotoGallery } from "@/components/photo-gallery";
 import { BackToSearch } from "@/components/back-to-search";
 import { SpecDetail } from "@/components/spec-detail";
+import { MapPinIcon } from "@/components/map-pin-icon";
 import { countryName } from "@/lib/boats/constants";
 import { getServiceListing } from "@/lib/services/queries";
 
@@ -81,7 +82,7 @@ export default async function ServiceDetailPage({ params }: Props) {
           rel="noopener noreferrer"
           className="inline-flex items-center gap-1 text-sm font-medium text-sky-700 underline"
         >
-          <span aria-hidden="true">📍</span> {tDet("viewOnMap")}
+          <MapPinIcon /> {tDet("viewOnMap")}
         </a>
       ) : null}
       {l.travels_to_client ? (

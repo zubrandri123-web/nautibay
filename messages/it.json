@@ -571,7 +571,8 @@
     "rulesText": "Solo attività nautiche. Niente gioco d'azzardo, contenuti per adulti, schemi cripto o cose non legate alla nautica. Gli annunci che violano queste regole vengono rimossi senza preavviso.",
     "agreeRules": "Confermo che è un'attività nautica reale e che il link porta al suo sito reale.",
     "reviewNote": "I nuovi annunci vengono controllati dal nostro team prima della pubblicazione — di solito entro un giorno.",
-    "submit": "Invia per la revisione"
+    "submit": "Invia per la revisione",
+    "travelsToClient": "Disponibile a recarsi dal cliente (servizio mobile a domicilio)"
   },
   "Services": {
     "title": "Servizi e negozi",

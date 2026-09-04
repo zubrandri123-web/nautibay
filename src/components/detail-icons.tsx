@@ -50,7 +50,8 @@ export type DetailIconName =
   | "galley"
   | "grill"
   | "battery"
-  | "shorePower";
+  | "shorePower"
+  | "mobile";
 
 function Svg({ children }: { children: React.ReactNode }) {
   return (
@@ -308,6 +309,13 @@ const ICONS: Record<DetailIconName, React.ReactNode> = {
       <path d="M7.3 3v4.2M11.3 3v4.2" />
       <path d="M5.6 7.2h7.2v2.8a3.6 3.6 0 0 1-7.2 0V7.2Z" />
       <path d="M9.2 13.6V17" />
+    </Svg>
+  ),
+  mobile: (
+    <Svg>
+      <path d="M10 3c-3 0-5 2.2-5 5 0 4 5 9 5 9s5-5 5-9c0-2.8-2-5-5-5Z" />
+      <circle cx="10" cy="8" r="1.8" />
+      <path d="M3 16h1.5M15.5 16H17" />
     </Svg>
   ),
 };

@@ -571,7 +571,8 @@
     "rulesText": "Yalnızca denizcilik işletmeleri. Kumar, yetişkin içerik, kripto şemaları veya denizcilikle ilgisi olmayan hiçbir şey kabul edilmez. Kuralları ihlal eden ilanlar uyarısız kaldırılır.",
     "agreeRules": "Bunun gerçek bir denizcilik işletmesi olduğunu ve bağlantının gerçek sitesine gittiğini onaylıyorum.",
     "reviewNote": "Yeni ilanlar yayınlanmadan önce ekibimiz tarafından kontrol edilir — genellikle bir gün içinde.",
-    "submit": "İncelemeye gönder"
+    "submit": "İncelemeye gönder",
+    "travelsToClient": "Müşteriye gitmeye hazır (yerinde/mobil hizmet)"
   },
   "Services": {
     "title": "Hizmetler ve mağazalar",

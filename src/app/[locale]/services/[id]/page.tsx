@@ -4,6 +4,7 @@ import { Link } from "@/i18n/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { PhotoGallery } from "@/components/photo-gallery";
 import { BackToSearch } from "@/components/back-to-search";
+import { SpecDetail } from "@/components/spec-detail";
 import { countryName } from "@/lib/boats/constants";
 import { getServiceListing } from "@/lib/services/queries";
 
@@ -72,6 +73,11 @@ export default async function ServiceDetailPage({ params }: Props) {
         <p className="text-slate-600">{tCat(l.category)}</p>
       ) : null}
       {place ? <p className="text-slate-500">{place}</p> : null}
+      {l.travels_to_client ? (
+        <div className="mt-2">
+          <SpecDetail icon="mobile" label={tForm("travelsToClient")} value="✓" />
+        </div>
+      ) : null}
       {websiteHref ? (
         <p className="mt-1">
           <a

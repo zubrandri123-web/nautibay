@@ -12,9 +12,10 @@ export function serviceToRow(data: ServiceListingInput) {
     website: data.website || null,
 
     address: data.address || null,
-    country: data.country || null,
+    country: data.country,
     region: data.region || null,
-    city: data.city || null,
+    city: data.city,
+    travels_to_client: data.travelsToClient ?? false,
 
     promote_social: data.promoteSocial ?? false,
 

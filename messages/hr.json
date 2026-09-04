@@ -571,7 +571,8 @@
     "rulesText": "Samo nautičke tvrtke. Bez kockanja, sadržaja za odrasle, kripto shema i svega što nije vezano uz nautiku. Oglasi koji krše pravila uklanjaju se bez najave.",
     "agreeRules": "Potvrđujem da je ovo stvarna nautička tvrtka i da poveznica vodi na njezinu pravu stranicu.",
     "reviewNote": "Nove oglase provjerava naš tim prije objave — obično u roku od jednog dana.",
-    "submit": "Pošalji na provjeru"
+    "submit": "Pošalji na provjeru",
+    "travelsToClient": "Spremni doći klijentu (mobilna usluga na terenu)"
   },
   "Services": {
     "title": "Usluge i trgovine",

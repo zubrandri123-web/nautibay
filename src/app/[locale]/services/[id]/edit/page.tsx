@@ -52,6 +52,7 @@ export default async function EditServicePage({ params }: Props) {
     country: s(l.country),
     region: s(l.region),
     city: s(l.city),
+    travelsToClient: Boolean(l.travels_to_client),
     promoteSocial: Boolean(l.promote_social),
     contactPhone: s(l.contact_phone),
     contactPhoneWhatsapp: Boolean(l.contact_phone_whatsapp),

@@ -571,7 +571,8 @@
     "rulesText": "Entreprises nautiques uniquement. Pas de jeux d'argent, de contenu pour adultes, de systèmes crypto ni rien d'étranger à la navigation. Les annonces non conformes sont retirées sans préavis.",
     "agreeRules": "Je confirme qu'il s'agit d'une véritable entreprise nautique et que le lien mène à son site réel.",
     "reviewNote": "Les nouvelles annonces sont vérifiées par notre équipe avant publication — généralement sous un jour.",
-    "submit": "Envoyer pour vérification"
+    "submit": "Envoyer pour vérification",
+    "travelsToClient": "Prêt à se déplacer chez le client (service mobile à domicile)"
   },
   "Services": {
     "title": "Services et boutiques",

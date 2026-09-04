@@ -18,9 +18,12 @@ export const serviceListingSchema = z
       .or(z.literal("")),
 
     address: z.string().trim().max(200).optional().or(z.literal("")),
-    country: optionalEnum(COUNTRIES),
+    // Required — a base location is mandatory even for a mobile business;
+    // travelsToClient below is how they say they also come to the customer.
+    country: z.enum(COUNTRIES),
     region: z.string().trim().max(120).optional().or(z.literal("")),
-    city: z.string().trim().max(120).optional().or(z.literal("")),
+    city: z.string().trim().min(1).max(120),
+    travelsToClient: z.coerce.boolean().optional(),
 
     promoteSocial: z.coerce.boolean().optional(),
 

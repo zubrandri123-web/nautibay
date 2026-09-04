@@ -35,9 +35,12 @@ export const boatListingSchema = z.object({
   // converts to metres before saving, so the DB is always metric.
   dimUnit: z.enum(["m", "ft"]).default("m"),
   condition: optionalEnum(CONDITIONS),
-  country: optionalEnum(COUNTRIES),
+  // Required — a listing with no findable location is a bad experience for
+  // the seller (nobody sees it) as much as the buyer, so we don't let it be
+  // skipped by mistake. The full country list means there's always a match.
+  country: z.enum(COUNTRIES),
   region: z.string().trim().max(120).optional().or(z.literal("")),
-  city: z.string().trim().max(120).optional().or(z.literal("")),
+  city: z.string().trim().min(1).max(120),
 
   // Important but optional.
   brand: z.string().trim().max(120).optional().or(z.literal("")),

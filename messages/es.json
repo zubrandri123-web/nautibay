@@ -571,7 +571,8 @@
     "rulesText": "Solo negocios náuticos. Sin juego, contenido para adultos, esquemas cripto ni nada ajeno a la náutica. Los anuncios que lo incumplan se eliminan sin aviso.",
     "agreeRules": "Confirmo que es un negocio náutico real y que el enlace lleva a su sitio real.",
     "reviewNote": "Los anuncios nuevos los revisa nuestro equipo antes de publicarse, normalmente en un día.",
-    "submit": "Enviar a revisión"
+    "submit": "Enviar a revisión",
+    "travelsToClient": "Dispuesto a desplazarse al cliente (servicio móvil a domicilio)"
   },
   "Services": {
     "title": "Servicios y tiendas",

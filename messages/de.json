@@ -571,7 +571,8 @@
     "rulesText": "Nur maritime Unternehmen. Kein Glücksspiel, keine Inhalte für Erwachsene, keine Krypto-Systeme und nichts, was nichts mit Booten zu tun hat. Verstöße werden ohne Vorankündigung entfernt.",
     "agreeRules": "Ich bestätige, dass dies ein echtes maritimes Unternehmen ist und der Link zu seiner echten Website führt.",
     "reviewNote": "Neue Anzeigen werden vor der Veröffentlichung von unserem Team geprüft – meist innerhalb eines Tages.",
-    "submit": "Zur Prüfung einreichen"
+    "submit": "Zur Prüfung einreichen",
+    "travelsToClient": "Bereit, zum Kunden zu kommen (mobiler Service vor Ort)"
   },
   "Services": {
     "title": "Dienstleistungen & Shops",

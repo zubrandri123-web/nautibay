@@ -571,7 +571,8 @@
     "rulesText": "Marine businesses only. No gambling, adult content, crypto schemes or anything unrelated to boating. Listings that break this are removed without notice.",
     "agreeRules": "I confirm this is a genuine marine business and the link leads to its real site.",
     "reviewNote": "New listings are checked by our team before they go live — usually within a day.",
-    "submit": "Submit for review"
+    "submit": "Submit for review",
+    "travelsToClient": "Willing to travel to the client (mobile / on-site service)"
   },
   "Services": {
     "title": "Services & shops",

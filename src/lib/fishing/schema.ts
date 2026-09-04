@@ -22,9 +22,10 @@ export const fishingListingSchema = z
     maxAnglers: optionalNumber(z.coerce.number().int().positive()),
 
     marina: z.string().trim().max(160).optional().or(z.literal("")),
-    country: optionalEnum(COUNTRIES),
+    // Required — a place nobody can find isn't worth listing.
+    country: z.enum(COUNTRIES),
     region: z.string().trim().max(120).optional().or(z.literal("")),
-    city: z.string().trim().max(120).optional().or(z.literal("")),
+    city: z.string().trim().min(1).max(120),
 
     // Price is optional and stands alone — no period is forced.
     price: optionalNumber(z.coerce.number().positive()),

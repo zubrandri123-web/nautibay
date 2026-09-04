@@ -276,7 +276,7 @@ export function FishingForm({
           <input {...register("marina")} className={input} />
         </Field>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
-          <Field label={tForm("country")} optional error={errors.country?.message}>
+          <Field label={tForm("country")} error={errors.country?.message}>
             <select {...register("country")} className={input}>
               <option value="">—</option>
               {countryOptions.map(({ code, name }) => (
@@ -289,7 +289,7 @@ export function FishingForm({
           <Field label={tForm("region")} optional>
             <input {...register("region")} className={input} />
           </Field>
-          <Field label={tForm("city")} optional>
+          <Field label={tForm("city")} error={errors.city?.message}>
             <input {...register("city")} className={input} />
           </Field>
         </div>

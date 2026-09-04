@@ -11,9 +11,10 @@ export const charterListingSchema = z
     yearBuilt: optionalNumber(z.coerce.number().int().min(1900).max(2100)),
 
     marina: z.string().trim().max(160).optional().or(z.literal("")),
-    country: optionalEnum(COUNTRIES),
+    // Required — a place nobody can find isn't worth listing.
+    country: z.enum(COUNTRIES),
     region: z.string().trim().max(120).optional().or(z.literal("")),
-    city: z.string().trim().max(120).optional().or(z.literal("")),
+    city: z.string().trim().min(1).max(120),
 
     lengthM: optionalNumber(z.coerce.number().positive()),
     dimUnit: z.enum(["m", "ft"]).default("m"),

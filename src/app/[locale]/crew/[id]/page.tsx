@@ -77,9 +77,9 @@ export default async function CrewDetailPage({ params }: Props) {
       {place ? <p className="text-slate-500">{place}</p> : null}
       <p className="mt-2 text-2xl font-semibold text-slate-900">{priceLine}</p>
 
-      <div className="mt-6 rounded-lg border-2 border-sky-500 bg-sky-50 p-4">
-        <h2 className="text-sm font-semibold uppercase tracking-wide text-sky-800">
-          {t("contactPerson")}
+      <div className="mt-6 rounded-lg border-2 border-sky-500 bg-sky-100 p-4">
+        <h2 className="flex items-center gap-1.5 text-sm font-semibold uppercase tracking-wide text-sky-800">
+          <span aria-hidden="true">👉</span> {t("contactPerson")}
         </h2>
         {user ? (
           <div className="mt-2 space-y-1 text-sm text-slate-800">

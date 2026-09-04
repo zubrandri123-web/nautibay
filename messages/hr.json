@@ -157,7 +157,9 @@
     "keelType": "Vrsta kobilice",
     "engineMount": "Vrsta ugradnje motora",
     "stoveType": "Štednjak (kuhinja)",
-    "grill": "Roštilj"
+    "grill": "Roštilj",
+    "batteryVoltage": "Napon baterije",
+    "shorePower": "Priključak na kopnenu struju"
   },
   "Search": {
     "title": "Pronađi brod",
@@ -222,7 +224,9 @@
     "keelType": "Vrsta kobilice",
     "engineMount": "Vrsta ugradnje motora",
     "stoveType": "Štednjak (kuhinja)",
-    "grill": "Roštilj"
+    "grill": "Roštilj",
+    "batteryVoltage": "Napon baterije",
+    "shorePower": "Priključak na kopnenu struju"
   },
   "MyListings": {
     "title": "Moji oglasi",
@@ -350,7 +354,9 @@
     "toiletType": "WC (sanitarni čvor)",
     "shower": "Tuš",
     "stoveType": "Štednjak (kuhinja)",
-    "grill": "Roštilj"
+    "grill": "Roštilj",
+    "toiletCount": "Broj WC-a",
+    "showerCount": "Broj tuševa"
   },
   "Charter": {
     "title": "Najam, charter i krstarenja",
@@ -625,5 +631,16 @@
     "electric": "Električni",
     "induction": "Indukcijski",
     "alcohol": "Na alkohol (špirit)"
+  },
+  "BatteryVoltage": {
+    "12v": "12V",
+    "24v": "24V",
+    "48v": "48V",
+    "other": "Ostalo"
+  },
+  "ShorePowerType": {
+    "eu_230v": "230V / 50Hz (Europa)",
+    "us_120v": "120V / 60Hz (SAD)",
+    "both": "Oboje / dvostruki napon"
   }
 }

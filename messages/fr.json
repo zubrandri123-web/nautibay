@@ -157,7 +157,9 @@
     "keelType": "Type de quille",
     "engineMount": "Montage du moteur",
     "stoveType": "Cuisinière (cambuse)",
-    "grill": "Barbecue"
+    "grill": "Barbecue",
+    "batteryVoltage": "Tension des batteries",
+    "shorePower": "Alimentation à quai"
   },
   "Search": {
     "title": "Trouver un bateau",
@@ -222,7 +224,9 @@
     "keelType": "Type de quille",
     "engineMount": "Montage du moteur",
     "stoveType": "Cuisinière (cambuse)",
-    "grill": "Barbecue"
+    "grill": "Barbecue",
+    "batteryVoltage": "Tension des batteries",
+    "shorePower": "Alimentation à quai"
   },
   "MyListings": {
     "title": "Mes annonces",
@@ -350,7 +354,9 @@
     "toiletType": "Toilettes (WC marin)",
     "shower": "Douche",
     "stoveType": "Cuisinière (cambuse)",
-    "grill": "Barbecue"
+    "grill": "Barbecue",
+    "toiletCount": "Nombre de toilettes",
+    "showerCount": "Nombre de douches"
   },
   "Charter": {
     "title": "Location, charter & croisières",
@@ -625,5 +631,16 @@
     "electric": "Électrique",
     "induction": "Induction",
     "alcohol": "À alcool"
+  },
+  "BatteryVoltage": {
+    "12v": "12V",
+    "24v": "24V",
+    "48v": "48V",
+    "other": "Autre"
+  },
+  "ShorePowerType": {
+    "eu_230v": "230V / 50Hz (Europe)",
+    "us_120v": "120V / 60Hz (États-Unis)",
+    "both": "Les deux / double tension"
   }
 }

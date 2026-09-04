@@ -176,8 +176,15 @@ export default async function CharterDetailPage({ params }: Props) {
         {l.toilet_type && l.toilet_type !== "none" ? (
           <SpecDetail icon="toilet" label={tForm("toiletType")} value={tToilet(l.toilet_type)} />
         ) : null}
-        {l.shower ? (
-          <SpecDetail icon="shower" label={tForm("shower")} value="✓" />
+        {l.toilet_count ? (
+          <SpecDetail icon="toilet" label={tForm("toiletCount")} value={l.toilet_count} />
+        ) : null}
+        {l.shower || l.shower_count ? (
+          <SpecDetail
+            icon="shower"
+            label={tForm("shower")}
+            value={l.shower_count ? l.shower_count : "✓"}
+          />
         ) : null}
         {l.stove_type && l.stove_type !== "none" ? (
           <SpecDetail icon="galley" label={tForm("stoveType")} value={tStove(l.stove_type)} />

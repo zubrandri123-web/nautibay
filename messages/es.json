@@ -157,7 +157,9 @@
     "keelType": "Tipo de quilla",
     "engineMount": "Tipo de montaje del motor",
     "stoveType": "Cocina (galera)",
-    "grill": "Barbacoa"
+    "grill": "Barbacoa",
+    "batteryVoltage": "Voltaje de batería",
+    "shorePower": "Toma de puerto (tierra)"
   },
   "Search": {
     "title": "Buscar un barco",
@@ -222,7 +224,9 @@
     "keelType": "Tipo de quilla",
     "engineMount": "Tipo de montaje del motor",
     "stoveType": "Cocina (galera)",
-    "grill": "Barbacoa"
+    "grill": "Barbacoa",
+    "batteryVoltage": "Voltaje de batería",
+    "shorePower": "Toma de puerto (tierra)"
   },
   "MyListings": {
     "title": "Mis anuncios",
@@ -350,7 +354,9 @@
     "toiletType": "Inodoro (aseo)",
     "shower": "Ducha",
     "stoveType": "Cocina (galera)",
-    "grill": "Barbacoa"
+    "grill": "Barbacoa",
+    "toiletCount": "Número de baños",
+    "showerCount": "Número de duchas"
   },
   "Charter": {
     "title": "Alquiler, chárter y cruceros",
@@ -625,5 +631,16 @@
     "electric": "Eléctrica",
     "induction": "Inducción",
     "alcohol": "De alcohol"
+  },
+  "BatteryVoltage": {
+    "12v": "12V",
+    "24v": "24V",
+    "48v": "48V",
+    "other": "Otro"
+  },
+  "ShorePowerType": {
+    "eu_230v": "230V / 50Hz (Europa)",
+    "us_120v": "120V / 60Hz (EE. UU.)",
+    "both": "Ambos / doble voltaje"
   }
 }

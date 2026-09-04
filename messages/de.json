@@ -157,7 +157,9 @@
     "keelType": "Kieltyp",
     "engineMount": "Motoreinbau",
     "stoveType": "Herd (Kombüse)",
-    "grill": "Grill"
+    "grill": "Grill",
+    "batteryVoltage": "Batteriespannung",
+    "shorePower": "Landstrom"
   },
   "Search": {
     "title": "Boot finden",
@@ -222,7 +224,9 @@
     "keelType": "Kieltyp",
     "engineMount": "Motoreinbau",
     "stoveType": "Herd (Kombüse)",
-    "grill": "Grill"
+    "grill": "Grill",
+    "batteryVoltage": "Batteriespannung",
+    "shorePower": "Landstrom"
   },
   "MyListings": {
     "title": "Meine Inserate",
@@ -350,7 +354,9 @@
     "toiletType": "Toilette (Bordklo)",
     "shower": "Dusche",
     "stoveType": "Herd (Kombüse)",
-    "grill": "Grill"
+    "grill": "Grill",
+    "toiletCount": "Anzahl der Toiletten",
+    "showerCount": "Anzahl der Duschen"
   },
   "Charter": {
     "title": "Mieten, Chartern & Kreuzfahrten",
@@ -625,5 +631,16 @@
     "electric": "Elektrisch",
     "induction": "Induktion",
     "alcohol": "Spirituskocher"
+  },
+  "BatteryVoltage": {
+    "12v": "12V",
+    "24v": "24V",
+    "48v": "48V",
+    "other": "Sonstiges"
+  },
+  "ShorePowerType": {
+    "eu_230v": "230V / 50Hz (Europa)",
+    "us_120v": "120V / 60Hz (USA)",
+    "both": "Beides / Doppelspannung"
   }
 }

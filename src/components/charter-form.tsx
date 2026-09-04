@@ -318,19 +318,39 @@ export function CharterForm({
         <label className={check}>
           <input type="checkbox" {...register("licenseRequired")} /> {t("licenseRequired")}
         </label>
-        <label className={check}>
-          <input type="checkbox" {...register("shower")} /> {t("shower")}
-        </label>
-        <Field label={t("toiletType")} optional error={errors.toiletType?.message}>
-          <select {...register("toiletType")} className={input}>
-            <option value="">—</option>
-            {TOILET_TYPES.map((v) => (
-              <option key={v} value={v}>
-                {tToilet(v)}
-              </option>
-            ))}
-          </select>
-        </Field>
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <Field label={t("toiletType")} optional error={errors.toiletType?.message}>
+            <select {...register("toiletType")} className={input}>
+              <option value="">—</option>
+              {TOILET_TYPES.map((v) => (
+                <option key={v} value={v}>
+                  {tToilet(v)}
+                </option>
+              ))}
+            </select>
+          </Field>
+          <Field label={t("toiletCount")} optional error={errors.toiletCount?.message}>
+            <input
+              type="number"
+              inputMode="numeric"
+              {...register("toiletCount")}
+              className={input}
+            />
+          </Field>
+        </div>
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <label className={check}>
+            <input type="checkbox" {...register("shower")} /> {t("shower")}
+          </label>
+          <Field label={t("showerCount")} optional error={errors.showerCount?.message}>
+            <input
+              type="number"
+              inputMode="numeric"
+              {...register("showerCount")}
+              className={input}
+            />
+          </Field>
+        </div>
         <label className={check}>
           <input type="checkbox" {...register("grill")} /> {t("grill")}
         </label>

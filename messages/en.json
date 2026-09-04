@@ -157,7 +157,9 @@
     "keelType": "Keel type",
     "engineMount": "Engine mount",
     "stoveType": "Galley stove",
-    "grill": "Grill / BBQ"
+    "grill": "Grill / BBQ",
+    "batteryVoltage": "Battery voltage",
+    "shorePower": "Shore power"
   },
   "Search": {
     "title": "Find a boat",
@@ -222,7 +224,9 @@
     "keelType": "Keel type",
     "engineMount": "Engine mount",
     "stoveType": "Galley stove",
-    "grill": "Grill / BBQ"
+    "grill": "Grill / BBQ",
+    "batteryVoltage": "Battery voltage",
+    "shorePower": "Shore power"
   },
   "MyListings": {
     "title": "My listings",
@@ -350,7 +354,9 @@
     "toiletType": "Toilet (head)",
     "shower": "Shower",
     "stoveType": "Galley stove",
-    "grill": "Grill / BBQ"
+    "grill": "Grill / BBQ",
+    "toiletCount": "Number of toilets",
+    "showerCount": "Number of showers"
   },
   "Charter": {
     "title": "Rent, charter & cruises",
@@ -625,5 +631,16 @@
     "electric": "Electric",
     "induction": "Induction",
     "alcohol": "Alcohol (spirit) stove"
+  },
+  "BatteryVoltage": {
+    "12v": "12V",
+    "24v": "24V",
+    "48v": "48V",
+    "other": "Other"
+  },
+  "ShorePowerType": {
+    "eu_230v": "230V / 50Hz (Europe)",
+    "us_120v": "120V / 60Hz (US)",
+    "both": "Both / dual voltage"
   }
 }

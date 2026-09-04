@@ -31,7 +31,9 @@ export function charterToRow(data: CharterListingInput) {
     cleaning_included: data.cleaningIncluded ?? false,
     bedding_included: data.beddingIncluded ?? false,
     toilet_type: data.toiletType ?? null,
+    toilet_count: data.toiletCount ?? null,
     shower: data.shower ?? false,
+    shower_count: data.showerCount ?? null,
     stove_type: data.stoveType ?? null,
     grill: data.grill ?? false,
 

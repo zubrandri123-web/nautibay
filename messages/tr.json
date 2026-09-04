@@ -157,7 +157,9 @@
     "keelType": "Omurga türü",
     "engineMount": "Motor montaj türü",
     "stoveType": "Ocak (kombuz)",
-    "grill": "Izgara"
+    "grill": "Izgara",
+    "batteryVoltage": "Akü voltajı",
+    "shorePower": "Kara elektriği (marina bağlantısı)"
   },
   "Search": {
     "title": "Tekne bul",
@@ -222,7 +224,9 @@
     "keelType": "Omurga türü",
     "engineMount": "Motor montaj türü",
     "stoveType": "Ocak (kombuz)",
-    "grill": "Izgara"
+    "grill": "Izgara",
+    "batteryVoltage": "Akü voltajı",
+    "shorePower": "Kara elektriği (marina bağlantısı)"
   },
   "MyListings": {
     "title": "İlanlarım",
@@ -350,7 +354,9 @@
     "toiletType": "Tuvalet (WC)",
     "shower": "Duş",
     "stoveType": "Ocak (kombuz)",
-    "grill": "Izgara"
+    "grill": "Izgara",
+    "toiletCount": "Tuvalet sayısı",
+    "showerCount": "Duş sayısı"
   },
   "Charter": {
     "title": "Kiralama, charter ve mavi tur",
@@ -625,5 +631,16 @@
     "electric": "Elektrikli",
     "induction": "İndüksiyon",
     "alcohol": "İspirto ocağı"
+  },
+  "BatteryVoltage": {
+    "12v": "12V",
+    "24v": "24V",
+    "48v": "48V",
+    "other": "Diğer"
+  },
+  "ShorePowerType": {
+    "eu_230v": "230V / 50Hz (Avrupa)",
+    "us_120v": "120V / 60Hz (ABD)",
+    "both": "İkisi de / çift voltaj"
   }
 }

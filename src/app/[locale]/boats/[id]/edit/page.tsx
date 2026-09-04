@@ -72,6 +72,8 @@ export default async function EditListingPage({ params }: Props) {
     shower: Boolean(l.shower),
     stoveType: str(l.stove_type),
     grill: Boolean(l.grill),
+    batteryVoltage: str(l.battery_voltage),
+    shorePower: str(l.shore_power),
     steeringType: str(l.steering_type),
     keelType: str(l.keel_type),
     engineMount: str(l.engine_mount),

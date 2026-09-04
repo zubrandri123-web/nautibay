@@ -33,7 +33,9 @@ export const charterListingSchema = z
     cleaningIncluded: z.coerce.boolean().optional(),
     beddingIncluded: z.coerce.boolean().optional(),
     toiletType: optionalEnum(TOILET_TYPES),
+    toiletCount: optionalNumber(z.coerce.number().int().positive()),
     shower: z.coerce.boolean().optional(),
+    showerCount: optionalNumber(z.coerce.number().int().positive()),
     stoveType: optionalEnum(STOVE_TYPES),
     grill: z.coerce.boolean().optional(),
 

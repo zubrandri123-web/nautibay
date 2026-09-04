@@ -1,5 +1,6 @@
 import { z } from "zod";
 import {
+  BATTERY_VOLTAGES,
   BOAT_TYPES,
   CONDITIONS,
   COUNTRIES,
@@ -8,6 +9,7 @@ import {
   FUEL_TYPES,
   HULL_MATERIALS,
   KEEL_TYPES,
+  SHORE_POWER_TYPES,
   STEERING_TYPES,
   STOVE_TYPES,
   TOILET_TYPES,
@@ -54,6 +56,8 @@ export const boatListingSchema = z.object({
   shower: z.coerce.boolean().optional(),
   stoveType: optionalEnum(STOVE_TYPES),
   grill: z.coerce.boolean().optional(),
+  batteryVoltage: optionalEnum(BATTERY_VOLTAGES),
+  shorePower: optionalEnum(SHORE_POWER_TYPES),
   steeringType: optionalEnum(STEERING_TYPES),
   keelType: optionalEnum(KEEL_TYPES),
   engineMount: optionalEnum(ENGINE_MOUNT_TYPES),

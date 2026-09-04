@@ -13,6 +13,7 @@ import {
   type BoatListingInput,
 } from "@/lib/boats/schema";
 import {
+  BATTERY_VOLTAGES,
   BOAT_TYPES,
   CONDITIONS,
   COUNTRIES,
@@ -22,6 +23,7 @@ import {
   FUEL_TYPES,
   HULL_MATERIALS,
   KEEL_TYPES,
+  SHORE_POWER_TYPES,
   STEERING_TYPES,
   STOVE_TYPES,
   TOILET_TYPES,
@@ -60,6 +62,8 @@ export function BoatForm({
   const tEngineMount = useTranslations("EngineMountType");
   const tToilet = useTranslations("ToiletType");
   const tStove = useTranslations("StoveType");
+  const tBattery = useTranslations("BatteryVoltage");
+  const tShorePower = useTranslations("ShorePowerType");
 
   const [photos, setPhotos] = useState<Photo[]>(
     (initial?.photoPaths ?? []).map((path) => ({
@@ -542,6 +546,39 @@ export function BoatForm({
             <input type="checkbox" {...register("grill")} />
             {t("grill")}
           </label>
+        </div>
+
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+          <Field
+            label={t("batteryVoltage")}
+            optional
+            error={errors.batteryVoltage?.message}
+          >
+            <select
+              {...register("batteryVoltage")}
+              className="w-full rounded-md border border-slate-300 px-3 py-2"
+            >
+              <option value="">—</option>
+              {BATTERY_VOLTAGES.map((v) => (
+                <option key={v} value={v}>
+                  {tBattery(v)}
+                </option>
+              ))}
+            </select>
+          </Field>
+          <Field label={t("shorePower")} optional error={errors.shorePower?.message}>
+            <select
+              {...register("shorePower")}
+              className="w-full rounded-md border border-slate-300 px-3 py-2"
+            >
+              <option value="">—</option>
+              {SHORE_POWER_TYPES.map((v) => (
+                <option key={v} value={v}>
+                  {tShorePower(v)}
+                </option>
+              ))}
+            </select>
+          </Field>
         </div>
 
         <Field label={t("description")} hint={t("descriptionHint")} optional>

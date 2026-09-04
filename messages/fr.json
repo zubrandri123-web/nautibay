@@ -150,7 +150,12 @@
     "fuelTankL": "Réservoir de carburant (l)",
     "waterTankL": "Réservoir d'eau (l)",
     "headroomM": "Hauteur sous barrots",
-    "headroomHint": "Hauteur libre sous le pont."
+    "headroomHint": "Hauteur libre sous le pont.",
+    "toiletType": "Toilettes (WC marin)",
+    "shower": "Douche",
+    "steeringType": "Direction",
+    "keelType": "Type de quille",
+    "engineMount": "Montage du moteur"
   },
   "Search": {
     "title": "Trouver un bateau",
@@ -208,7 +213,12 @@
     "telegram": "Telegram",
     "fuelTank": "Réservoir de carburant",
     "waterTank": "Réservoir d'eau",
-    "headroom": "Hauteur sous barrots"
+    "headroom": "Hauteur sous barrots",
+    "toiletType": "Toilettes (WC marin)",
+    "shower": "Douche",
+    "steeringType": "Direction",
+    "keelType": "Type de quille",
+    "engineMount": "Montage du moteur"
   },
   "MyListings": {
     "title": "Mes annonces",
@@ -332,7 +342,9 @@
     "photosHint": "Au moins 1 photo du bateau est requise.",
     "submit": "Publier l'annonce",
     "ratePeriodNeeded": "Choisissez heure / jour / semaine si vous indiquez un prix.",
-    "ratePeriodHint": "Facultatif. Pour les croisières ou tarifs complexes, décrivez le prix dans le texte."
+    "ratePeriodHint": "Facultatif. Pour les croisières ou tarifs complexes, décrivez le prix dans le texte.",
+    "toiletType": "Toilettes (WC marin)",
+    "shower": "Douche"
   },
   "Charter": {
     "title": "Location, charter & croisières",
@@ -402,7 +414,9 @@
     "season": "Saison / dates disponibles",
     "seasonHint": "Texte libre, ex. « avril–novembre ». Les dates exactes se conviennent avec vous.",
     "photosHint": "Au moins 1 photo du bateau est requise.",
-    "submit": "Publier l'annonce"
+    "submit": "Publier l'annonce",
+    "toiletType": "Toilettes (WC marin)",
+    "shower": "Douche"
   },
   "Fishing": {
     "title": "Pêche en mer avec skipper",
@@ -571,5 +585,30 @@
     "submittedBy": "Par {name} · {date}",
     "notAuthorized": "Cette page est réservée aux modérateurs du site.",
     "signInRequired": "Connectez-vous pour continuer."
+  },
+  "ToiletType": {
+    "none": "Pas de toilettes",
+    "portable": "Portables (cassette)",
+    "manual_overboard": "Manuelles, rejet à la mer",
+    "holding_tank": "Électriques/à vide avec cuve de rétention",
+    "composting": "Toilettes à compost"
+  },
+  "SteeringType": {
+    "tiller": "Barre franche",
+    "wheel": "Barre à roue"
+  },
+  "KeelType": {
+    "fin": "Quille en aileron",
+    "full": "Quille longue",
+    "bulb": "Quille à bulbe",
+    "wing": "Quille à ailettes",
+    "bilge": "Quilles jumelles (bi-quille)",
+    "centerboard": "Dérive pivotante",
+    "lifting": "Quille relevable"
+  },
+  "EngineMountType": {
+    "inboard": "In-bord (fixe)",
+    "outboard": "Hors-bord",
+    "sterndrive": "Z-drive (in-bord/hors-bord)"
   }
 }

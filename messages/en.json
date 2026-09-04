@@ -150,7 +150,12 @@
     "fuelTankL": "Fuel tank (l)",
     "waterTankL": "Water tank (l)",
     "headroomM": "Headroom",
-    "headroomHint": "Standing height below deck."
+    "headroomHint": "Standing height below deck.",
+    "toiletType": "Toilet (head)",
+    "shower": "Shower",
+    "steeringType": "Steering",
+    "keelType": "Keel type",
+    "engineMount": "Engine mount"
   },
   "Search": {
     "title": "Find a boat",
@@ -208,7 +213,12 @@
     "telegram": "Telegram",
     "fuelTank": "Fuel tank",
     "waterTank": "Water tank",
-    "headroom": "Headroom"
+    "headroom": "Headroom",
+    "toiletType": "Toilet (head)",
+    "shower": "Shower",
+    "steeringType": "Steering",
+    "keelType": "Keel type",
+    "engineMount": "Engine mount"
   },
   "MyListings": {
     "title": "My listings",
@@ -332,7 +342,9 @@
     "photosHint": "At least 1 photo of the boat is required.",
     "submit": "Publish listing",
     "ratePeriodNeeded": "Pick an hour / day / week when you set a price.",
-    "ratePeriodHint": "Optional. For cruises or complex rates, describe the price in the text instead."
+    "ratePeriodHint": "Optional. For cruises or complex rates, describe the price in the text instead.",
+    "toiletType": "Toilet (head)",
+    "shower": "Shower"
   },
   "Charter": {
     "title": "Rent, charter & cruises",
@@ -402,7 +414,9 @@
     "season": "Season / available dates",
     "seasonHint": "Free text, e.g. \"April–November\". Guests agree exact dates with you.",
     "photosHint": "At least 1 photo of the boat is required.",
-    "submit": "Publish listing"
+    "submit": "Publish listing",
+    "toiletType": "Toilet (head)",
+    "shower": "Shower"
   },
   "Fishing": {
     "title": "Sea fishing with a skipper",
@@ -571,5 +585,30 @@
     "submittedBy": "By {name} · {date}",
     "notAuthorized": "This page is for site moderators only.",
     "signInRequired": "Sign in to continue."
+  },
+  "ToiletType": {
+    "none": "No toilet",
+    "portable": "Portable / cassette toilet",
+    "manual_overboard": "Manual, discharges overboard",
+    "holding_tank": "Electric/vacuum with holding tank",
+    "composting": "Composting toilet"
+  },
+  "SteeringType": {
+    "tiller": "Tiller",
+    "wheel": "Wheel"
+  },
+  "KeelType": {
+    "fin": "Fin keel",
+    "full": "Full keel",
+    "bulb": "Bulb keel",
+    "wing": "Wing keel",
+    "bilge": "Bilge / twin keel",
+    "centerboard": "Centerboard (swing keel)",
+    "lifting": "Lifting keel"
+  },
+  "EngineMountType": {
+    "inboard": "Inboard (stationary)",
+    "outboard": "Outboard",
+    "sterndrive": "Sterndrive (inboard/outboard)"
   }
 }

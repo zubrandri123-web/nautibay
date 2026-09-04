@@ -27,6 +27,8 @@ export function fishingToRow(data: FishingListingInput) {
     food_included: data.foodIncluded ?? false,
     keep_catch: data.keepCatch ?? false,
     has_license: data.hasLicense ?? false,
+    toilet_type: data.toiletType ?? null,
+    shower: data.shower ?? false,
 
     season: data.season || null,
     rules: data.rules || null,

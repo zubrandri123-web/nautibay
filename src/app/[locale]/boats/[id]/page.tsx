@@ -28,6 +28,10 @@ export default async function BoatDetailPage({ params }: Props) {
   const tCondition = await getTranslations("Condition");
   const tAuth = await getTranslations("Auth");
   const tCommon = await getTranslations("Common");
+  const tSteering = await getTranslations("SteeringType");
+  const tKeel = await getTranslations("KeelType");
+  const tEngineMount = await getTranslations("EngineMountType");
+  const tToilet = await getTranslations("ToiletType");
   const fmtLen = (m: number) =>
     formatLength(m, tCommon("unitM"), tCommon("unitFt"));
 
@@ -177,6 +181,23 @@ export default async function BoatDetailPage({ params }: Props) {
             value={`${listing.engine_power_hp} hp`}
           />
         ) : null}
+        {listing.engine_mount ? (
+          <SpecDetail
+            icon="engineMount"
+            label={t("engineMount")}
+            value={tEngineMount(listing.engine_mount)}
+          />
+        ) : null}
+        {listing.steering_type ? (
+          <SpecDetail
+            icon="skipper"
+            label={t("steeringType")}
+            value={tSteering(listing.steering_type)}
+          />
+        ) : null}
+        {listing.keel_type ? (
+          <SpecDetail icon="keel" label={t("keelType")} value={tKeel(listing.keel_type)} />
+        ) : null}
         {listing.fuel_tank_l ? (
           <SpecDetail
             icon="fuelTank"
@@ -196,6 +217,16 @@ export default async function BoatDetailPage({ params }: Props) {
         ) : null}
         {listing.berths ? (
           <SpecDetail icon="berths" label={t("berths")} value={listing.berths} />
+        ) : null}
+        {listing.toilet_type && listing.toilet_type !== "none" ? (
+          <SpecDetail
+            icon="toilet"
+            label={t("toiletType")}
+            value={tToilet(listing.toilet_type)}
+          />
+        ) : null}
+        {listing.shower ? (
+          <SpecDetail icon="shower" label={t("shower")} value="✓" />
         ) : null}
         {listing.sail_area_m2 ? (
           <SpecDetail

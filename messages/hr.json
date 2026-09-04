@@ -150,7 +150,12 @@
     "fuelTankL": "Spremnik goriva (l)",
     "waterTankL": "Spremnik vode (l)",
     "headroomM": "Visina unutra",
-    "headroomHint": "Visina stajanja ispod palube."
+    "headroomHint": "Visina stajanja ispod palube.",
+    "toiletType": "WC (sanitarni čvor)",
+    "shower": "Tuš",
+    "steeringType": "Upravljanje",
+    "keelType": "Vrsta kobilice",
+    "engineMount": "Vrsta ugradnje motora"
   },
   "Search": {
     "title": "Pronađi brod",
@@ -208,7 +213,12 @@
     "telegram": "Telegram",
     "fuelTank": "Spremnik goriva",
     "waterTank": "Spremnik vode",
-    "headroom": "Visina unutra"
+    "headroom": "Visina unutra",
+    "toiletType": "WC (sanitarni čvor)",
+    "shower": "Tuš",
+    "steeringType": "Upravljanje",
+    "keelType": "Vrsta kobilice",
+    "engineMount": "Vrsta ugradnje motora"
   },
   "MyListings": {
     "title": "Moji oglasi",
@@ -332,7 +342,9 @@
     "photosHint": "Potrebna je barem 1 fotografija plovila.",
     "submit": "Objavi oglas",
     "ratePeriodNeeded": "Odaberite sat / dan / tjedan ako navodite cijenu.",
-    "ratePeriodHint": "Nije obavezno. Za krstarenja ili složene cijene opišite cijenu u tekstu."
+    "ratePeriodHint": "Nije obavezno. Za krstarenja ili složene cijene opišite cijenu u tekstu.",
+    "toiletType": "WC (sanitarni čvor)",
+    "shower": "Tuš"
   },
   "Charter": {
     "title": "Najam, charter i krstarenja",
@@ -402,7 +414,9 @@
     "season": "Sezona / slobodni termini",
     "seasonHint": "Slobodan tekst, npr. „travanj–studeni“. Točne termine gost dogovara s vama.",
     "photosHint": "Potrebna je barem 1 fotografija plovila.",
-    "submit": "Objavi oglas"
+    "submit": "Objavi oglas",
+    "toiletType": "WC (sanitarni čvor)",
+    "shower": "Tuš"
   },
   "Fishing": {
     "title": "Morski ribolov sa skiperom",
@@ -571,5 +585,30 @@
     "submittedBy": "Objavio/la {name} · {date}",
     "notAuthorized": "Ova stranica je samo za moderatore.",
     "signInRequired": "Prijavite se za nastavak."
+  },
+  "ToiletType": {
+    "none": "Bez WC-a",
+    "portable": "Prijenosni (kaseta)",
+    "manual_overboard": "Ručni, izlijevanje u more",
+    "holding_tank": "Električni/vakuumski sa spremnikom",
+    "composting": "Kompostni WC"
+  },
+  "SteeringType": {
+    "tiller": "Kormilo (ručica)",
+    "wheel": "Kolo kormila"
+  },
+  "KeelType": {
+    "fin": "Peraja kobilica",
+    "full": "Puna kobilica",
+    "bulb": "Kobilica s bulbom",
+    "wing": "Krilna kobilica",
+    "bilge": "Dvostruka (bočna) kobilica",
+    "centerboard": "Uvlačiva kobilica (švert)",
+    "lifting": "Podizna kobilica"
+  },
+  "EngineMountType": {
+    "inboard": "Ugradbeni (fiksni)",
+    "outboard": "Izvanbrodski (montažni)",
+    "sterndrive": "Z-pogon (sterndrive)"
   }
 }

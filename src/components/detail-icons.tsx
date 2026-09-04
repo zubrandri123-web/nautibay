@@ -38,7 +38,15 @@ export type DetailIconName =
   | "skipper"
   | "cleaning"
   | "bedding"
-  | "guests";
+  | "guests"
+  | "toilet"
+  | "shower"
+  | "engineMount"
+  | "keel"
+  | "tackle"
+  | "bait"
+  | "food"
+  | "catch";
 
 function Svg({ children }: { children: React.ReactNode }) {
   return (
@@ -216,6 +224,57 @@ const ICONS: Record<DetailIconName, React.ReactNode> = {
       <circle cx="15.4" cy="7.8" r="1.6" />
       <path d="M6.1 16.2c.3-2.6 1.8-4.2 3.9-4.2s3.6 1.6 3.9 4.2" />
       <path d="M1.9 15.2c.2-1.7 1.1-2.8 2.7-2.8M18.1 15.2c-.2-1.7-1.1-2.8-2.7-2.8" />
+    </Svg>
+  ),
+  toilet: (
+    <Svg>
+      <rect x="6" y="3" width="6" height="2.6" rx="0.6" />
+      <path d="M6.3 5.8h5.4c1.4 0 2.4 1.2 2.2 2.6l-.5 4.2c-.2 1.6-1.6 2.9-3.2 2.9H7.8c-1.6 0-3-1.3-3.2-2.9l-.5-4.2c-.2-1.4.8-2.6 2.2-2.6Z" />
+    </Svg>
+  ),
+  shower: (
+    <Svg>
+      <path d="M5.5 6.8a4.8 4.8 0 0 1 8-3.6" />
+      <circle cx="13.5" cy="6.8" r="1.4" />
+      <path d="M4 10.5h11" />
+      <path d="M6.5 13v1.3M9.5 13v1.3M12.5 13v1.3M8 16v1M11 16v1" />
+    </Svg>
+  ),
+  engineMount: (
+    <Svg>
+      <rect x="5" y="7" width="10" height="7" rx="1" />
+      <path d="M7 7V5h6v2M9 14v2M11 14v2" />
+    </Svg>
+  ),
+  keel: (
+    <Svg>
+      <path d="M4 6h12" />
+      <path d="M8 6c0 4 .8 8 2 10 1.2-2 2-6 2-10" />
+    </Svg>
+  ),
+  tackle: (
+    <Svg>
+      <path d="M4 16 15 4" />
+      <circle cx="6" cy="14" r="1" />
+      <path d="M15 4c1.4 1.8 1 6.5-2.3 9.6" />
+    </Svg>
+  ),
+  bait: (
+    <Svg>
+      <path d="M4 13c2-5 3-9 6-9s1 7 4 7 1-6 4-3" />
+    </Svg>
+  ),
+  food: (
+    <Svg>
+      <path d="M4 10h12a6 6 0 0 1-12 0Z" />
+      <path d="M8 10V7M12 10V7" />
+    </Svg>
+  ),
+  catch: (
+    <Svg>
+      <path d="M3 10c3-4 9-5 13-1-1 2-1 2 0 4-4 4-10 3-13-1 0-1 0-1 0-2Z" />
+      <path d="M14.5 7.5l2.5-2M14.5 11.5l2.5 2" />
+      <circle cx="6" cy="9.3" r="0.6" fill="currentColor" stroke="none" />
     </Svg>
   ),
 };

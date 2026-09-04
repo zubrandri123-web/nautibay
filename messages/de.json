@@ -150,7 +150,12 @@
     "fuelTankL": "Kraftstofftank (l)",
     "waterTankL": "Wassertank (l)",
     "headroomM": "Stehhöhe",
-    "headroomHint": "Höhe unter Deck zum Stehen."
+    "headroomHint": "Höhe unter Deck zum Stehen.",
+    "toiletType": "Toilette (Bordklo)",
+    "shower": "Dusche",
+    "steeringType": "Steuerung",
+    "keelType": "Kieltyp",
+    "engineMount": "Motoreinbau"
   },
   "Search": {
     "title": "Boot finden",
@@ -208,7 +213,12 @@
     "telegram": "Telegram",
     "fuelTank": "Kraftstofftank",
     "waterTank": "Wassertank",
-    "headroom": "Stehhöhe"
+    "headroom": "Stehhöhe",
+    "toiletType": "Toilette (Bordklo)",
+    "shower": "Dusche",
+    "steeringType": "Steuerung",
+    "keelType": "Kieltyp",
+    "engineMount": "Motoreinbau"
   },
   "MyListings": {
     "title": "Meine Inserate",
@@ -332,7 +342,9 @@
     "photosHint": "Mindestens 1 Foto des Bootes ist erforderlich.",
     "submit": "Anzeige veröffentlichen",
     "ratePeriodNeeded": "Wähle Stunde / Tag / Woche, wenn du einen Preis angibst.",
-    "ratePeriodHint": "Optional. Bei Kreuzfahrten oder komplexen Tarifen den Preis lieber im Text beschreiben."
+    "ratePeriodHint": "Optional. Bei Kreuzfahrten oder komplexen Tarifen den Preis lieber im Text beschreiben.",
+    "toiletType": "Toilette (Bordklo)",
+    "shower": "Dusche"
   },
   "Charter": {
     "title": "Mieten, Chartern & Kreuzfahrten",
@@ -402,7 +414,9 @@
     "season": "Saison / freie Termine",
     "seasonHint": "Freitext, z. B. „April–November“. Genaue Termine klären Gäste mit dir.",
     "photosHint": "Mindestens 1 Foto des Bootes ist erforderlich.",
-    "submit": "Anzeige veröffentlichen"
+    "submit": "Anzeige veröffentlichen",
+    "toiletType": "Toilette (Bordklo)",
+    "shower": "Dusche"
   },
   "Fishing": {
     "title": "Hochseeangeln mit Skipper",
@@ -571,5 +585,30 @@
     "submittedBy": "Von {name} · {date}",
     "notAuthorized": "Diese Seite ist nur für Moderatoren.",
     "signInRequired": "Melde dich an, um fortzufahren."
+  },
+  "ToiletType": {
+    "none": "Kein WC",
+    "portable": "Tragbar (Kassette)",
+    "manual_overboard": "Handpumpe, Ablass über Bord",
+    "holding_tank": "Elektrisch/Vakuum mit Fäkalientank",
+    "composting": "Komposttoilette"
+  },
+  "SteeringType": {
+    "tiller": "Pinne",
+    "wheel": "Steuerrad"
+  },
+  "KeelType": {
+    "fin": "Flossenkiel",
+    "full": "Langkiel",
+    "bulb": "Bulbkiel",
+    "wing": "Flügelkiel",
+    "bilge": "Doppelkiel (Bilgenkiel)",
+    "centerboard": "Schwert (Klappkiel)",
+    "lifting": "Hubkiel"
+  },
+  "EngineMountType": {
+    "inboard": "Innenborder (fest eingebaut)",
+    "outboard": "Außenborder",
+    "sterndrive": "Z-Antrieb (Sterndrive)"
   }
 }

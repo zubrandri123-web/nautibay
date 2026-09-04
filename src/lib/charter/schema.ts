@@ -1,6 +1,6 @@
 import { z } from "zod";
 import { optionalEnum, optionalNumber } from "@/lib/zod-helpers";
-import { COUNTRIES, CURRENCIES } from "@/lib/boats/constants";
+import { COUNTRIES, CURRENCIES, TOILET_TYPES } from "@/lib/boats/constants";
 import { CHARTER_BOAT_TYPES, CHARTER_TYPES, RATE_PERIODS } from "./constants";
 
 export const charterListingSchema = z
@@ -32,6 +32,8 @@ export const charterListingSchema = z
     fuelIncluded: z.coerce.boolean().optional(),
     cleaningIncluded: z.coerce.boolean().optional(),
     beddingIncluded: z.coerce.boolean().optional(),
+    toiletType: optionalEnum(TOILET_TYPES),
+    shower: z.coerce.boolean().optional(),
 
     season: z.string().trim().max(200).optional().or(z.literal("")),
     description: z.string().trim().max(4000).optional().or(z.literal("")),

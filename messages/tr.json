@@ -150,7 +150,12 @@
     "fuelTankL": "Yakıt deposu (l)",
     "waterTankL": "Su deposu (l)",
     "headroomM": "İç yükseklik",
-    "headroomHint": "Güverte altındaki ayakta durma yüksekliği."
+    "headroomHint": "Güverte altındaki ayakta durma yüksekliği.",
+    "toiletType": "Tuvalet (WC)",
+    "shower": "Duş",
+    "steeringType": "Dümen sistemi",
+    "keelType": "Omurga türü",
+    "engineMount": "Motor montaj türü"
   },
   "Search": {
     "title": "Tekne bul",
@@ -208,7 +213,12 @@
     "telegram": "Telegram",
     "fuelTank": "Yakıt deposu",
     "waterTank": "Su deposu",
-    "headroom": "İç yükseklik"
+    "headroom": "İç yükseklik",
+    "toiletType": "Tuvalet (WC)",
+    "shower": "Duş",
+    "steeringType": "Dümen sistemi",
+    "keelType": "Omurga türü",
+    "engineMount": "Motor montaj türü"
   },
   "MyListings": {
     "title": "İlanlarım",
@@ -332,7 +342,9 @@
     "photosHint": "Teknenin en az 1 fotoğrafı gereklidir.",
     "submit": "İlanı yayımla",
     "ratePeriodNeeded": "Fiyat giriyorsanız saat / gün / hafta seçin.",
-    "ratePeriodHint": "İsteğe bağlı. Tur veya karmaşık fiyatlar için fiyatı açıklamada belirtin."
+    "ratePeriodHint": "İsteğe bağlı. Tur veya karmaşık fiyatlar için fiyatı açıklamada belirtin.",
+    "toiletType": "Tuvalet (WC)",
+    "shower": "Duş"
   },
   "Charter": {
     "title": "Kiralama, charter ve mavi tur",
@@ -402,7 +414,9 @@
     "season": "Sezon / uygun tarihler",
     "seasonHint": "Serbest metin, ör. \"Nisan–Kasım\". Kesin tarihleri misafir sizinle netleştirir.",
     "photosHint": "Teknenin en az 1 fotoğrafı gereklidir.",
-    "submit": "İlanı yayımla"
+    "submit": "İlanı yayımla",
+    "toiletType": "Tuvalet (WC)",
+    "shower": "Duş"
   },
   "Fishing": {
     "title": "Kaptanlı deniz balıkçılığı",
@@ -571,5 +585,30 @@
     "submittedBy": "Ekleyen: {name} · {date}",
     "notAuthorized": "Bu sayfa yalnızca site moderatörleri içindir.",
     "signInRequired": "Devam etmek için giriş yapın."
+  },
+  "ToiletType": {
+    "none": "Tuvalet yok",
+    "portable": "Taşınabilir (kaset)",
+    "manual_overboard": "Manuel, denize deşarj",
+    "holding_tank": "Elektrikli/vakumlu, toplama tanklı",
+    "composting": "Kompost tuvalet"
+  },
+  "SteeringType": {
+    "tiller": "Yeke dümen",
+    "wheel": "Dümen dolabı"
+  },
+  "KeelType": {
+    "fin": "Salma omurga (fin)",
+    "full": "Tam omurga",
+    "bulb": "Bulb omurga",
+    "wing": "Kanatlı omurga",
+    "bilge": "Çift omurga (bilge)",
+    "centerboard": "Sallanan omurga (merkez tahtası)",
+    "lifting": "Kaldırılabilir omurga"
+  },
+  "EngineMountType": {
+    "inboard": "İçten takma (sabit)",
+    "outboard": "Takma motor",
+    "sterndrive": "Z-tahrik (sterndrive)"
   }
 }

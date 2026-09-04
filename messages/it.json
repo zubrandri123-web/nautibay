@@ -150,7 +150,12 @@
     "fuelTankL": "Serbatoio carburante (l)",
     "waterTankL": "Serbatoio acqua (l)",
     "headroomM": "Altezza interna",
-    "headroomHint": "Altezza libera sottocoperta."
+    "headroomHint": "Altezza libera sottocoperta.",
+    "toiletType": "WC di bordo",
+    "shower": "Doccia",
+    "steeringType": "Timoneria",
+    "keelType": "Tipo di deriva",
+    "engineMount": "Tipo di installazione motore"
   },
   "Search": {
     "title": "Trova una barca",
@@ -208,7 +213,12 @@
     "telegram": "Telegram",
     "fuelTank": "Serbatoio carburante",
     "waterTank": "Serbatoio acqua",
-    "headroom": "Altezza interna"
+    "headroom": "Altezza interna",
+    "toiletType": "WC di bordo",
+    "shower": "Doccia",
+    "steeringType": "Timoneria",
+    "keelType": "Tipo di deriva",
+    "engineMount": "Tipo di installazione motore"
   },
   "MyListings": {
     "title": "I miei annunci",
@@ -332,7 +342,9 @@
     "photosHint": "È richiesta almeno 1 foto della barca.",
     "submit": "Pubblica annuncio",
     "ratePeriodNeeded": "Scegli ora / giorno / settimana se indichi un prezzo.",
-    "ratePeriodHint": "Facoltativo. Per crociere o tariffe complesse, descrivi il prezzo nel testo."
+    "ratePeriodHint": "Facoltativo. Per crociere o tariffe complesse, descrivi il prezzo nel testo.",
+    "toiletType": "WC di bordo",
+    "shower": "Doccia"
   },
   "Charter": {
     "title": "Noleggio, charter e crociere",
@@ -402,7 +414,9 @@
     "season": "Stagione / date disponibili",
     "seasonHint": "Testo libero, es. «aprile–novembre». Le date esatte si concordano con te.",
     "photosHint": "È richiesta almeno 1 foto della barca.",
-    "submit": "Pubblica annuncio"
+    "submit": "Pubblica annuncio",
+    "toiletType": "WC di bordo",
+    "shower": "Doccia"
   },
   "Fishing": {
     "title": "Pesca in mare con skipper",
@@ -571,5 +585,30 @@
     "submittedBy": "Di {name} · {date}",
     "notAuthorized": "Questa pagina è solo per i moderatori del sito.",
     "signInRequired": "Accedi per continuare."
+  },
+  "ToiletType": {
+    "none": "Nessun WC",
+    "portable": "Portatile (a cassetta)",
+    "manual_overboard": "Manuale, scarico in mare",
+    "holding_tank": "Elettrico/sottovuoto con serbatoio",
+    "composting": "WC a compostaggio"
+  },
+  "SteeringType": {
+    "tiller": "Barra",
+    "wheel": "Ruota del timone"
+  },
+  "KeelType": {
+    "fin": "Deriva a pinna",
+    "full": "Deriva lunga (chiglia intera)",
+    "bulb": "Deriva a bulbo",
+    "wing": "Deriva alare",
+    "bilge": "Doppia deriva (bilancella)",
+    "centerboard": "Deriva mobile (a scomparsa)",
+    "lifting": "Deriva sollevabile"
+  },
+  "EngineMountType": {
+    "inboard": "Entrobordo (fisso)",
+    "outboard": "Fuoribordo",
+    "sterndrive": "Entrofuoribordo (Z-drive)"
   }
 }

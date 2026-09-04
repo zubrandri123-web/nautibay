@@ -25,6 +25,11 @@ export function listingToRow(data: BoatListingInput) {
     hull_material: data.hullMaterial ?? null,
     cabins: data.cabins ?? null,
     berths: data.berths ?? null,
+    toilet_type: data.toiletType ?? null,
+    shower: data.shower ?? false,
+    steering_type: data.steeringType ?? null,
+    keel_type: data.keelType ?? null,
+    engine_mount: data.engineMount ?? null,
     refit_year: data.refitYear ?? null,
     sail_area_m2:
       data.boatType === "sailboat" ? (data.sailAreaM2 ?? null) : null,

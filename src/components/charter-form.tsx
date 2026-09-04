@@ -17,7 +17,7 @@ import {
   CHARTER_TYPES,
   RATE_PERIODS,
 } from "@/lib/charter/constants";
-import { COUNTRIES, countryName, CURRENCIES } from "@/lib/boats/constants";
+import { COUNTRIES, countryName, CURRENCIES, TOILET_TYPES } from "@/lib/boats/constants";
 import { compressImage } from "@/lib/boats/compress-image";
 
 type Photo = { path: string; previewUrl: string; uploading: boolean; error?: string };
@@ -46,6 +46,7 @@ export function CharterForm({
   const tBoat = useTranslations("BoatType");
   const tCommon = useTranslations("Common");
   const tForm = useTranslations("BoatForm");
+  const tToilet = useTranslations("ToiletType");
 
   const [photos, setPhotos] = useState<Photo[]>(
     (initial?.photoPaths ?? []).map((path) => ({
@@ -310,6 +311,19 @@ export function CharterForm({
         <label className={check}>
           <input type="checkbox" {...register("licenseRequired")} /> {t("licenseRequired")}
         </label>
+        <label className={check}>
+          <input type="checkbox" {...register("shower")} /> {t("shower")}
+        </label>
+        <Field label={t("toiletType")} optional error={errors.toiletType?.message}>
+          <select {...register("toiletType")} className={input}>
+            <option value="">—</option>
+            {TOILET_TYPES.map((v) => (
+              <option key={v} value={v}>
+                {tToilet(v)}
+              </option>
+            ))}
+          </select>
+        </Field>
       </section>
 
       <section className="space-y-4">

@@ -4,8 +4,12 @@ import {
   CONDITIONS,
   COUNTRIES,
   CURRENCIES,
+  ENGINE_MOUNT_TYPES,
   FUEL_TYPES,
   HULL_MATERIALS,
+  KEEL_TYPES,
+  STEERING_TYPES,
+  TOILET_TYPES,
 } from "./constants";
 
 import { optionalEnum, optionalNumber } from "@/lib/zod-helpers";
@@ -45,6 +49,11 @@ export const boatListingSchema = z.object({
   hullMaterial: optionalEnum(HULL_MATERIALS),
   cabins: optionalNumber(z.coerce.number().int().min(0)),
   berths: optionalNumber(z.coerce.number().int().min(0)),
+  toiletType: optionalEnum(TOILET_TYPES),
+  shower: z.coerce.boolean().optional(),
+  steeringType: optionalEnum(STEERING_TYPES),
+  keelType: optionalEnum(KEEL_TYPES),
+  engineMount: optionalEnum(ENGINE_MOUNT_TYPES),
 
   // Secondary — detail page only.
   refitYear: optionalNumber(z.coerce.number().int().min(1900)),

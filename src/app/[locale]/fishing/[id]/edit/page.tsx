@@ -64,6 +64,8 @@ export default async function EditFishingPage({ params }: Props) {
     foodIncluded: Boolean(l.food_included),
     keepCatch: Boolean(l.keep_catch),
     hasLicense: Boolean(l.has_license),
+    toiletType: s(l.toilet_type),
+    shower: Boolean(l.shower),
     season: s(l.season),
     rules: s(l.rules),
     description: s(l.description),

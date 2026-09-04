@@ -27,6 +27,32 @@ export const FUEL_TYPES = [
 
 export const CONDITIONS = ["new", "used"] as const;
 
+// Marine toilet ("head") — shared by boats, charter and fishing, since
+// buyers/guests in all three care whether there's a heads and how it works.
+export const TOILET_TYPES = [
+  "none",
+  "portable",
+  "manual_overboard",
+  "holding_tank",
+  "composting",
+] as const;
+
+// Boats-for-sale extra detail fields — all optional, quick-pick info a
+// buyer might filter or search by later.
+export const STEERING_TYPES = ["tiller", "wheel"] as const;
+
+export const KEEL_TYPES = [
+  "fin",
+  "full",
+  "bulb",
+  "wing",
+  "bilge",
+  "centerboard",
+  "lifting",
+] as const;
+
+export const ENGINE_MOUNT_TYPES = ["inboard", "outboard", "sterndrive"] as const;
+
 // Listing prices are shown as entered — no conversion. Kept short on purpose.
 export const CURRENCIES = ["EUR", "USD", "GBP", "CHF"] as const;
 
@@ -104,3 +130,7 @@ export type HullMaterial = (typeof HULL_MATERIALS)[number];
 export type FuelType = (typeof FUEL_TYPES)[number];
 export type Condition = (typeof CONDITIONS)[number];
 export type CountryCode = (typeof COUNTRIES)[number];
+export type ToiletType = (typeof TOILET_TYPES)[number];
+export type SteeringType = (typeof STEERING_TYPES)[number];
+export type KeelType = (typeof KEEL_TYPES)[number];
+export type EngineMountType = (typeof ENGINE_MOUNT_TYPES)[number];

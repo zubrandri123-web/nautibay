@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { Link } from "@/i18n/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { PhotoGallery } from "@/components/photo-gallery";
+import { SpecDetail } from "@/components/spec-detail";
 import { countryName, formatLength } from "@/lib/boats/constants";
 import { getFishingListing } from "@/lib/fishing/queries";
 
@@ -23,6 +24,7 @@ export default async function FishingDetailPage({ params }: Props) {
   const tDet = await getTranslations("BoatDetail");
   const tCommon = await getTranslations("Common");
   const tAuth = await getTranslations("Auth");
+  const tToilet = await getTranslations("ToiletType");
 
   const l = await getFishingListing(id);
   if (!l) notFound();
@@ -60,14 +62,6 @@ export default async function FishingDetailPage({ params }: Props) {
     user && l.contact_phone
       ? String(l.contact_phone).replace(/[^\d]/g, "")
       : "";
-
-  const included = [
-    l.tackle_included && tForm("tackleIncluded"),
-    l.bait_included && tForm("baitIncluded"),
-    l.license_included && tForm("licenseIncluded"),
-    l.food_included && tForm("foodIncluded"),
-    l.keep_catch && tForm("keepCatch"),
-  ].filter(Boolean) as string[];
 
   return (
     <div className="mx-auto max-w-4xl px-4 py-10">
@@ -140,20 +134,49 @@ export default async function FishingDetailPage({ params }: Props) {
       </div>
 
       <dl className="mt-8 grid grid-cols-2 gap-x-6 gap-y-4 sm:grid-cols-3">
-        {l.duration ? <Detail label={tForm("duration")} value={tDur(l.duration)} /> : null}
-        {l.boat_type ? <Detail label={tForm("boatType")} value={tBoat(l.boat_type)} /> : null}
+        {l.duration ? (
+          <SpecDetail icon="duration" label={tForm("duration")} value={tDur(l.duration)} />
+        ) : null}
+        {l.boat_type ? (
+          <SpecDetail label={tForm("boatType")} value={tBoat(l.boat_type)} />
+        ) : null}
         {l.boat_length_m ? (
-          <Detail
+          <SpecDetail
+            icon="length"
             label={tForm("lengthM")}
             value={formatLength(l.boat_length_m, tCommon("unitM"), tCommon("unitFt"))}
           />
         ) : null}
-        {l.max_anglers ? <Detail label={tForm("maxAnglers")} value={l.max_anglers} /> : null}
-        {l.season ? <Detail label={tForm("season")} value={l.season} /> : null}
-        {included.length ? (
-          <Detail label={tForm("sectionIncluded")} value={included.join(", ")} />
+        {l.max_anglers ? (
+          <SpecDetail icon="guests" label={tForm("maxAnglers")} value={l.max_anglers} />
         ) : null}
-        {l.has_license ? <Detail label={tForm("hasLicense")} value="✓" /> : null}
+        {l.season ? (
+          <SpecDetail icon="season" label={tForm("season")} value={l.season} />
+        ) : null}
+        {l.tackle_included ? (
+          <SpecDetail icon="tackle" label={tForm("tackleIncluded")} value="✓" />
+        ) : null}
+        {l.bait_included ? (
+          <SpecDetail icon="bait" label={tForm("baitIncluded")} value="✓" />
+        ) : null}
+        {l.license_included ? (
+          <SpecDetail icon="license" label={tForm("licenseIncluded")} value="✓" />
+        ) : null}
+        {l.food_included ? (
+          <SpecDetail icon="food" label={tForm("foodIncluded")} value="✓" />
+        ) : null}
+        {l.keep_catch ? (
+          <SpecDetail icon="catch" label={tForm("keepCatch")} value="✓" />
+        ) : null}
+        {l.has_license ? (
+          <SpecDetail icon="license" label={tForm("hasLicense")} value="✓" />
+        ) : null}
+        {l.toilet_type && l.toilet_type !== "none" ? (
+          <SpecDetail icon="toilet" label={tForm("toiletType")} value={tToilet(l.toilet_type)} />
+        ) : null}
+        {l.shower ? (
+          <SpecDetail icon="shower" label={tForm("shower")} value="✓" />
+        ) : null}
       </dl>
 
       {l.rules ? (
@@ -181,15 +204,6 @@ export default async function FishingDetailPage({ params }: Props) {
           ← {t("title")}
         </Link>
       </p>
-    </div>
-  );
-}
-
-function Detail({ label, value }: { label: string; value: string | number }) {
-  return (
-    <div>
-      <dt className="text-xs uppercase tracking-wide text-slate-400">{label}</dt>
-      <dd className="text-sm text-slate-900">{value}</dd>
     </div>
   );
 }

@@ -18,8 +18,12 @@ import {
   COUNTRIES,
   countryName,
   CURRENCIES,
+  ENGINE_MOUNT_TYPES,
   FUEL_TYPES,
   HULL_MATERIALS,
+  KEEL_TYPES,
+  STEERING_TYPES,
+  TOILET_TYPES,
 } from "@/lib/boats/constants";
 import { compressImage } from "@/lib/boats/compress-image";
 
@@ -50,6 +54,10 @@ export function BoatForm({
   const tFuel = useTranslations("FuelType");
   const tCondition = useTranslations("Condition");
   const tCommon = useTranslations("Common");
+  const tSteering = useTranslations("SteeringType");
+  const tKeel = useTranslations("KeelType");
+  const tEngineMount = useTranslations("EngineMountType");
+  const tToilet = useTranslations("ToiletType");
 
   const [photos, setPhotos] = useState<Photo[]>(
     (initial?.photoPaths ?? []).map((path) => ({
@@ -451,6 +459,69 @@ export function BoatForm({
             />
           </Field>
         </div>
+
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+          <Field label={t("steeringType")} optional error={errors.steeringType?.message}>
+            <select
+              {...register("steeringType")}
+              className="w-full rounded-md border border-slate-300 px-3 py-2"
+            >
+              <option value="">—</option>
+              {STEERING_TYPES.map((v) => (
+                <option key={v} value={v}>
+                  {tSteering(v)}
+                </option>
+              ))}
+            </select>
+          </Field>
+          <Field label={t("keelType")} optional error={errors.keelType?.message}>
+            <select
+              {...register("keelType")}
+              className="w-full rounded-md border border-slate-300 px-3 py-2"
+            >
+              <option value="">—</option>
+              {KEEL_TYPES.map((v) => (
+                <option key={v} value={v}>
+                  {tKeel(v)}
+                </option>
+              ))}
+            </select>
+          </Field>
+          <Field label={t("engineMount")} optional error={errors.engineMount?.message}>
+            <select
+              {...register("engineMount")}
+              className="w-full rounded-md border border-slate-300 px-3 py-2"
+            >
+              <option value="">—</option>
+              {ENGINE_MOUNT_TYPES.map((v) => (
+                <option key={v} value={v}>
+                  {tEngineMount(v)}
+                </option>
+              ))}
+            </select>
+          </Field>
+        </div>
+
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+          <Field label={t("toiletType")} optional error={errors.toiletType?.message}>
+            <select
+              {...register("toiletType")}
+              className="w-full rounded-md border border-slate-300 px-3 py-2"
+            >
+              <option value="">—</option>
+              {TOILET_TYPES.map((v) => (
+                <option key={v} value={v}>
+                  {tToilet(v)}
+                </option>
+              ))}
+            </select>
+          </Field>
+          <label className="flex items-center gap-2 self-end pb-2 text-sm text-slate-700">
+            <input type="checkbox" {...register("shower")} />
+            {t("shower")}
+          </label>
+        </div>
+
         <Field label={t("description")} hint={t("descriptionHint")} optional>
           <textarea
             {...register("description")}

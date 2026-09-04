@@ -150,7 +150,12 @@
     "fuelTankL": "Depósito de combustible (l)",
     "waterTankL": "Depósito de agua (l)",
     "headroomM": "Altura interior",
-    "headroomHint": "Altura libre bajo cubierta."
+    "headroomHint": "Altura libre bajo cubierta.",
+    "toiletType": "Inodoro (aseo)",
+    "shower": "Ducha",
+    "steeringType": "Dirección",
+    "keelType": "Tipo de quilla",
+    "engineMount": "Tipo de montaje del motor"
   },
   "Search": {
     "title": "Buscar un barco",
@@ -208,7 +213,12 @@
     "telegram": "Telegram",
     "fuelTank": "Depósito de combustible",
     "waterTank": "Depósito de agua",
-    "headroom": "Altura interior"
+    "headroom": "Altura interior",
+    "toiletType": "Inodoro (aseo)",
+    "shower": "Ducha",
+    "steeringType": "Dirección",
+    "keelType": "Tipo de quilla",
+    "engineMount": "Tipo de montaje del motor"
   },
   "MyListings": {
     "title": "Mis anuncios",
@@ -332,7 +342,9 @@
     "photosHint": "Se requiere al menos 1 foto del barco.",
     "submit": "Publicar anuncio",
     "ratePeriodNeeded": "Elige hora / día / semana si indicas un precio.",
-    "ratePeriodHint": "Opcional. Para cruceros o tarifas complejas, describe el precio en el texto."
+    "ratePeriodHint": "Opcional. Para cruceros o tarifas complejas, describe el precio en el texto.",
+    "toiletType": "Inodoro (aseo)",
+    "shower": "Ducha"
   },
   "Charter": {
     "title": "Alquiler, chárter y cruceros",
@@ -402,7 +414,9 @@
     "season": "Temporada / fechas disponibles",
     "seasonHint": "Texto libre, p. ej. «abril–noviembre». Las fechas exactas se acuerdan contigo.",
     "photosHint": "Se requiere al menos 1 foto del barco.",
-    "submit": "Publicar anuncio"
+    "submit": "Publicar anuncio",
+    "toiletType": "Inodoro (aseo)",
+    "shower": "Ducha"
   },
   "Fishing": {
     "title": "Pesca en el mar con patrón",
@@ -571,5 +585,30 @@
     "submittedBy": "Por {name} · {date}",
     "notAuthorized": "Esta página es solo para moderadores del sitio.",
     "signInRequired": "Inicia sesión para continuar."
+  },
+  "ToiletType": {
+    "none": "Sin inodoro",
+    "portable": "Portátil (casete)",
+    "manual_overboard": "Manual, descarga al mar",
+    "holding_tank": "Eléctrico/al vacío con depósito",
+    "composting": "Inodoro de compostaje"
+  },
+  "SteeringType": {
+    "tiller": "Caña",
+    "wheel": "Rueda"
+  },
+  "KeelType": {
+    "fin": "Quilla de aleta",
+    "full": "Quilla corrida",
+    "bulb": "Quilla de bulbo",
+    "wing": "Quilla de ala",
+    "bilge": "Quilla doble (de pantoque)",
+    "centerboard": "Orza abatible",
+    "lifting": "Quilla elevable"
+  },
+  "EngineMountType": {
+    "inboard": "Intraborda (fijo)",
+    "outboard": "Fueraborda",
+    "sterndrive": "Z-drive (intra-fueraborda)"
   }
 }

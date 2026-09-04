@@ -20,6 +20,7 @@ export default async function CharterDetailPage({ params }: Props) {
   const tRate = await getTranslations("RatePeriod");
   const tBoat = await getTranslations("BoatType");
   const tForm = await getTranslations("CharterForm");
+  const tToilet = await getTranslations("ToiletType");
   const tDet = await getTranslations("BoatDetail");
   const tCommon = await getTranslations("Common");
   const tAuth = await getTranslations("Auth");
@@ -170,6 +171,12 @@ export default async function CharterDetailPage({ params }: Props) {
         ) : null}
         {l.license_required ? (
           <SpecDetail icon="license" label={tForm("licenseRequired")} value="✓" />
+        ) : null}
+        {l.toilet_type && l.toilet_type !== "none" ? (
+          <SpecDetail icon="toilet" label={tForm("toiletType")} value={tToilet(l.toilet_type)} />
+        ) : null}
+        {l.shower ? (
+          <SpecDetail icon="shower" label={tForm("shower")} value="✓" />
         ) : null}
       </dl>
 

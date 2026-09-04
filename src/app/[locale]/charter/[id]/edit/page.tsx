@@ -66,6 +66,8 @@ export default async function EditCharterPage({ params }: Props) {
     fuelIncluded: Boolean(l.fuel_included),
     cleaningIncluded: Boolean(l.cleaning_included),
     beddingIncluded: Boolean(l.bedding_included),
+    toiletType: s(l.toilet_type),
+    shower: Boolean(l.shower),
     season: s(l.season),
     description: s(l.description),
     promoteSocial: Boolean(l.promote_social),

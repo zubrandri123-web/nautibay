@@ -163,7 +163,9 @@
     "grill": "Roštilj",
     "batteryVoltage": "Napon baterije",
     "shorePower": "Priključak na kopnenu struju",
-    "postalCode": "Poštanski broj"
+    "postalCode": "Poštanski broj",
+    "mapUrl": "Poveznica lokacije",
+    "mapUrlHint": "Zalijepite poveznicu Google Maps (ili Apple Maps) kako bi kupci mogli izravno otvoriti lokaciju."
   },
   "Search": {
     "title": "Pronađi brod",
@@ -230,7 +232,8 @@
     "stoveType": "Štednjak (kuhinja)",
     "grill": "Roštilj",
     "batteryVoltage": "Napon baterije",
-    "shorePower": "Priključak na kopnenu struju"
+    "shorePower": "Priključak na kopnenu struju",
+    "viewOnMap": "Prikaži na karti"
   },
   "MyListings": {
     "title": "Moji oglasi",

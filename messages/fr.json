@@ -163,7 +163,9 @@
     "grill": "Barbecue",
     "batteryVoltage": "Tension des batteries",
     "shorePower": "Alimentation à quai",
-    "postalCode": "Code postal"
+    "postalCode": "Code postal",
+    "mapUrl": "Lien de localisation",
+    "mapUrlHint": "Collez un lien Google Maps (ou Apple Maps) pour que les acheteurs accèdent directement à l'emplacement."
   },
   "Search": {
     "title": "Trouver un bateau",
@@ -230,7 +232,8 @@
     "stoveType": "Cuisinière (cambuse)",
     "grill": "Barbecue",
     "batteryVoltage": "Tension des batteries",
-    "shorePower": "Alimentation à quai"
+    "shorePower": "Alimentation à quai",
+    "viewOnMap": "Voir sur la carte"
   },
   "MyListings": {
     "title": "Mes annonces",

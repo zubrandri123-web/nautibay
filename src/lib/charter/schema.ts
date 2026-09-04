@@ -18,6 +18,9 @@ export const charterListingSchema = z
     // Required alongside city — city names collide across the world, the
     // postal code is what actually pins the place down for a searching buyer.
     postalCode: z.string().trim().min(1).max(20),
+    // Optional — a pasted Google/Apple Maps link a buyer can tap straight
+    // to the pin, so they don't have to guess from the address alone.
+    mapUrl: z.string().trim().url().max(500).optional().or(z.literal("")),
 
     lengthM: optionalNumber(z.coerce.number().positive()),
     dimUnit: z.enum(["m", "ft"]).default("m"),

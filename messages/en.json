@@ -163,7 +163,9 @@
     "grill": "Grill / BBQ",
     "batteryVoltage": "Battery voltage",
     "shorePower": "Shore power",
-    "postalCode": "Postal code"
+    "postalCode": "Postal code",
+    "mapUrl": "Location link",
+    "mapUrlHint": "Paste a Google Maps (or Apple Maps) link so buyers can jump straight to the pin."
   },
   "Search": {
     "title": "Find a boat",
@@ -230,7 +232,8 @@
     "stoveType": "Galley stove",
     "grill": "Grill / BBQ",
     "batteryVoltage": "Battery voltage",
-    "shorePower": "Shore power"
+    "shorePower": "Shore power",
+    "viewOnMap": "View on map"
   },
   "MyListings": {
     "title": "My listings",

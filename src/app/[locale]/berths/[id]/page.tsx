@@ -70,6 +70,16 @@ export default async function BerthDetailPage({ params }: Props) {
         {tPlace(l.place_type)} · {tDeal(l.deal)}
       </h1>
       <p className="text-slate-500">{place}</p>
+      {l.map_url ? (
+        <a
+          href={l.map_url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-sm text-sky-700 underline"
+        >
+          {tDet("viewOnMap")}
+        </a>
+      ) : null}
       <p className="mt-2 text-3xl font-semibold text-slate-900">
         {l.currency} {Number(l.price).toLocaleString()}
         {l.deal === "rent" && l.rent_period

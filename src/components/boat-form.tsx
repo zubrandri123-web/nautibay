@@ -297,6 +297,20 @@ export function BoatForm({
             />
           </Field>
         </div>
+        <Field
+          label={t("mapUrl")}
+          hint={t("mapUrlHint")}
+          optional
+          error={errors.mapUrl?.message}
+        >
+          <input
+            type="url"
+            inputMode="url"
+            placeholder="https://maps.google.com/..."
+            {...register("mapUrl")}
+            className="w-full rounded-md border border-slate-300 px-3 py-2"
+          />
+        </Field>
       </section>
 
       <section className="space-y-4">

@@ -53,6 +53,7 @@ export default async function EditServicePage({ params }: Props) {
     region: s(l.region),
     city: s(l.city),
     postalCode: s(l.postal_code),
+    mapUrl: s(l.map_url),
     travelsToClient: Boolean(l.travels_to_client),
     promoteSocial: Boolean(l.promote_social),
     contactPhone: s(l.contact_phone),

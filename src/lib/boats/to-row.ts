@@ -14,6 +14,7 @@ export function listingToRow(data: BoatListingInput) {
     region: data.region || null,
     city: data.city || null,
     postal_code: data.postalCode || null,
+    map_url: data.mapUrl || null,
     brand: data.brand || null,
     model: data.model || null,
     beam_m: data.beamM ?? null,

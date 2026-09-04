@@ -163,7 +163,9 @@
     "grill": "Barbecue",
     "batteryVoltage": "Tensione batteria",
     "shorePower": "Allaccio a terra (banchina)",
-    "postalCode": "Codice postale"
+    "postalCode": "Codice postale",
+    "mapUrl": "Link alla posizione",
+    "mapUrlHint": "Incolla un link di Google Maps (o Apple Maps) così gli acquirenti arrivano subito al punto."
   },
   "Search": {
     "title": "Trova una barca",
@@ -230,7 +232,8 @@
     "stoveType": "Fornello (cambusa)",
     "grill": "Barbecue",
     "batteryVoltage": "Tensione batteria",
-    "shorePower": "Allaccio a terra (banchina)"
+    "shorePower": "Allaccio a terra (banchina)",
+    "viewOnMap": "Vedi sulla mappa"
   },
   "MyListings": {
     "title": "I miei annunci",

@@ -81,6 +81,16 @@ export default async function BoatDetailPage({ params }: Props) {
 
       <h1 className="mt-6 text-2xl font-semibold text-slate-900">{title}</h1>
       <p className="text-slate-500">{location}</p>
+      {listing.map_url ? (
+        <a
+          href={listing.map_url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-sm text-sky-700 underline"
+        >
+          {t("viewOnMap")}
+        </a>
+      ) : null}
       <p className="mt-2 text-3xl font-semibold text-slate-900">
         {listing.currency} {Number(listing.price).toLocaleString()}
       </p>

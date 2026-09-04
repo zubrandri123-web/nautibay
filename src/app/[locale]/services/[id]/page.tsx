@@ -74,6 +74,16 @@ export default async function ServiceDetailPage({ params }: Props) {
         <p className="text-slate-600">{tCat(l.category)}</p>
       ) : null}
       {place ? <p className="text-slate-500">{place}</p> : null}
+      {l.map_url ? (
+        <a
+          href={l.map_url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-sm text-sky-700 underline"
+        >
+          {tDet("viewOnMap")}
+        </a>
+      ) : null}
       {l.travels_to_client ? (
         <div className="mt-2">
           <SpecDetail icon="mobile" label={tForm("travelsToClient")} value="✓" />

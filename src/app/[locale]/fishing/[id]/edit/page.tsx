@@ -56,6 +56,7 @@ export default async function EditFishingPage({ params }: Props) {
     region: s(l.region),
     city: s(l.city),
     postalCode: s(l.postal_code),
+    mapUrl: s(l.map_url),
     price: s(l.price),
     currency: s(l.currency) || "EUR",
     ratePeriod: s(l.rate_period),

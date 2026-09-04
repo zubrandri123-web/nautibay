@@ -17,6 +17,7 @@ export function fishingToRow(data: FishingListingInput) {
     region: data.region || null,
     city: data.city || null,
     postal_code: data.postalCode || null,
+    map_url: data.mapUrl || null,
 
     price: data.price ?? null,
     currency: data.currency,

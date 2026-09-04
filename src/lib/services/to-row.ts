@@ -16,6 +16,7 @@ export function serviceToRow(data: ServiceListingInput) {
     region: data.region || null,
     city: data.city,
     postal_code: data.postalCode,
+    map_url: data.mapUrl || null,
     travels_to_client: data.travelsToClient ?? false,
 
     promote_social: data.promoteSocial ?? false,

@@ -163,7 +163,9 @@
     "grill": "Grill",
     "batteryVoltage": "Batteriespannung",
     "shorePower": "Landstrom",
-    "postalCode": "Postleitzahl"
+    "postalCode": "Postleitzahl",
+    "mapUrl": "Standort-Link",
+    "mapUrlHint": "Fügen Sie einen Google-Maps- (oder Apple-Maps-) Link ein, damit Käufer direkt zum Standort springen können."
   },
   "Search": {
     "title": "Boot finden",
@@ -230,7 +232,8 @@
     "stoveType": "Herd (Kombüse)",
     "grill": "Grill",
     "batteryVoltage": "Batteriespannung",
-    "shorePower": "Landstrom"
+    "shorePower": "Landstrom",
+    "viewOnMap": "Auf der Karte ansehen"
   },
   "MyListings": {
     "title": "Meine Inserate",

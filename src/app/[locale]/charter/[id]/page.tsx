@@ -82,6 +82,16 @@ export default async function CharterDetailPage({ params }: Props) {
         {boatLabel ? ` · ${boatLabel}` : ""}
       </h1>
       {place ? <p className="text-slate-500">{place}</p> : null}
+      {l.map_url ? (
+        <a
+          href={l.map_url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-sm text-sky-700 underline"
+        >
+          {tDet("viewOnMap")}
+        </a>
+      ) : null}
       <p className="mt-2 text-3xl font-semibold text-slate-900">{priceLine}</p>
 
       <div className="mt-6 rounded-lg border-2 border-sky-500 bg-sky-50 p-4">

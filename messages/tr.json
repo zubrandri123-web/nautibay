@@ -163,7 +163,9 @@
     "grill": "Izgara",
     "batteryVoltage": "Akü voltajı",
     "shorePower": "Kara elektriği (marina bağlantısı)",
-    "postalCode": "Posta kodu"
+    "postalCode": "Posta kodu",
+    "mapUrl": "Konum bağlantısı",
+    "mapUrlHint": "Alıcıların doğrudan konuma gidebilmesi için bir Google Haritalar (veya Apple Maps) bağlantısı yapıştırın."
   },
   "Search": {
     "title": "Tekne bul",
@@ -230,7 +232,8 @@
     "stoveType": "Ocak (kombuz)",
     "grill": "Izgara",
     "batteryVoltage": "Akü voltajı",
-    "shorePower": "Kara elektriği (marina bağlantısı)"
+    "shorePower": "Kara elektriği (marina bağlantısı)",
+    "viewOnMap": "Haritada göster"
   },
   "MyListings": {
     "title": "İlanlarım",

@@ -14,6 +14,7 @@ export function charterToRow(data: CharterListingInput) {
     region: data.region || null,
     city: data.city || null,
     postal_code: data.postalCode || null,
+    map_url: data.mapUrl || null,
 
     length_m: data.lengthM ?? null,
     cabins: data.cabins ?? null,

@@ -263,6 +263,20 @@ export function BerthForm({
             <input {...register("postalCode")} className={input} />
           </Field>
         </div>
+        <Field
+          label={tForm("mapUrl")}
+          hint={tForm("mapUrlHint")}
+          optional
+          error={errors.mapUrl?.message}
+        >
+          <input
+            type="url"
+            inputMode="url"
+            placeholder="https://maps.google.com/..."
+            {...register("mapUrl")}
+            className={input}
+          />
+        </Field>
       </section>
 
       <section className="space-y-4">

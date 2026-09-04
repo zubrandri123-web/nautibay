@@ -67,6 +67,7 @@ export type FishingListingInput = z.output<typeof fishingListingSchema>;
 export const fishingFiltersSchema = z.object({
   tripType: optionalEnum(TRIP_TYPES),
   duration: optionalEnum(TRIP_DURATIONS),
+  boatType: optionalEnum(CHARTER_BOAT_TYPES),
   country: optionalEnum(COUNTRIES),
   priceMin: z.coerce.number().nonnegative().optional(),
   priceMax: z.coerce.number().nonnegative().optional(),

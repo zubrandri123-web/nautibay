@@ -454,7 +454,9 @@
     "archive": "Снять с публикации",
     "reactivate": "Опубликовать снова",
     "statusActive": "Опубликовано",
-    "statusArchived": "Снято"
+    "statusArchived": "Снято",
+    "boatType": "Тип лодки",
+    "anyBoat": "Любая лодка"
   },
   "CrewRole": {
     "skipper": "Капитан / шкипер",

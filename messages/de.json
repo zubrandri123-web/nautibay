@@ -454,7 +454,9 @@
     "archive": "Offline nehmen",
     "reactivate": "Wieder veröffentlichen",
     "statusActive": "Veröffentlicht",
-    "statusArchived": "Ausgeblendet"
+    "statusArchived": "Ausgeblendet",
+    "boatType": "Bootstyp",
+    "anyBoat": "Beliebiges Boot"
   },
   "CrewRole": {
     "skipper": "Skipper / Kapitän",

@@ -1,6 +1,7 @@
 import { getLocale, getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { COUNTRIES, countryName, formatLength } from "@/lib/boats/constants";
+import { CHARTER_BOAT_TYPES } from "@/lib/charter/constants";
 import { TRIP_DURATIONS, TRIP_TYPES } from "@/lib/fishing/constants";
 import { fishingFiltersSchema, type FishingFilters } from "@/lib/fishing/schema";
 import { searchFishing, type FishingSummary } from "@/lib/fishing/queries";
@@ -25,6 +26,7 @@ export default async function FishingPage({ searchParams }: Props) {
   const tTrip = await getTranslations("TripType");
   const tDur = await getTranslations("TripDuration");
   const tRate = await getTranslations("RatePeriod");
+  const tBoat = await getTranslations("BoatType");
   const tCommon = await getTranslations("Common");
 
   const one = (v: string | string[] | undefined) =>
@@ -32,6 +34,7 @@ export default async function FishingPage({ searchParams }: Props) {
   const parsed = fishingFiltersSchema.safeParse({
     tripType: one(sp.tripType),
     duration: one(sp.duration),
+    boatType: one(sp.boatType),
     country: one(sp.country),
     priceMin: sp.priceMin,
     priceMax: sp.priceMax,
@@ -81,6 +84,17 @@ export default async function FishingPage({ searchParams }: Props) {
             {TRIP_DURATIONS.map((v) => (
               <option key={v} value={v}>
                 {tDur(v)}
+              </option>
+            ))}
+          </select>
+        </label>
+        <label className="text-xs font-medium text-slate-600">
+          {t("boatType")}
+          <select name="boatType" defaultValue={filters.boatType ?? ""} className={inputCls}>
+            <option value="">{t("anyBoat")}</option>
+            {CHARTER_BOAT_TYPES.map((v) => (
+              <option key={v} value={v}>
+                {tBoat(v)}
               </option>
             ))}
           </select>

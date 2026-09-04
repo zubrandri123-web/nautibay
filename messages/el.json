@@ -454,7 +454,9 @@
     "archive": "Απόσυρση",
     "reactivate": "Εκ νέου δημοσίευση",
     "statusActive": "Δημοσιευμένο",
-    "statusArchived": "Κρυφό"
+    "statusArchived": "Κρυφό",
+    "boatType": "Τύπος σκάφους",
+    "anyBoat": "Οποιοδήποτε σκάφος"
   },
   "CrewRole": {
     "skipper": "Κυβερνήτης / καπετάνιος",

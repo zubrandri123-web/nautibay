@@ -454,7 +454,9 @@
     "archive": "Ukloni objavu",
     "reactivate": "Ponovno objavi",
     "statusActive": "Objavljeno",
-    "statusArchived": "Skriveno"
+    "statusArchived": "Skriveno",
+    "boatType": "Vrsta plovila",
+    "anyBoat": "Bilo koje plovilo"
   },
   "CrewRole": {
     "skipper": "Skiper / kapetan",

@@ -454,7 +454,9 @@
     "archive": "Rimuovi dalla vetrina",
     "reactivate": "Ripubblica",
     "statusActive": "Pubblicato",
-    "statusArchived": "Nascosto"
+    "statusArchived": "Nascosto",
+    "boatType": "Tipo di barca",
+    "anyBoat": "Qualsiasi barca"
   },
   "CrewRole": {
     "skipper": "Skipper / comandante",

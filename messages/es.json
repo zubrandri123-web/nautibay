@@ -454,7 +454,9 @@
     "archive": "Despublicar",
     "reactivate": "Volver a publicar",
     "statusActive": "Publicado",
-    "statusArchived": "Oculto"
+    "statusArchived": "Oculto",
+    "boatType": "Tipo de barco",
+    "anyBoat": "Cualquier barco"
   },
   "CrewRole": {
     "skipper": "Patrón / capitán",

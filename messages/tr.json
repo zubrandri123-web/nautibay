@@ -454,7 +454,9 @@
     "archive": "Yayından kaldır",
     "reactivate": "Yeniden yayımla",
     "statusActive": "Yayında",
-    "statusArchived": "Gizli"
+    "statusArchived": "Gizli",
+    "boatType": "Tekne türü",
+    "anyBoat": "Her tekne"
   },
   "CrewRole": {
     "skipper": "Kaptan / skiper",

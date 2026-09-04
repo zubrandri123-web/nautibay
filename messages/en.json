@@ -454,7 +454,9 @@
     "archive": "Unpublish",
     "reactivate": "Publish again",
     "statusActive": "Published",
-    "statusArchived": "Hidden"
+    "statusArchived": "Hidden",
+    "boatType": "Boat type",
+    "anyBoat": "Any boat"
   },
   "CrewRole": {
     "skipper": "Skipper / captain",

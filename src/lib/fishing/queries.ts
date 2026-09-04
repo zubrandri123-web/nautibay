@@ -37,6 +37,7 @@ export async function searchFishing(
 
   if (filters.tripType) query = query.eq("trip_type", filters.tripType);
   if (filters.duration) query = query.eq("duration", filters.duration);
+  if (filters.boatType) query = query.eq("boat_type", filters.boatType);
   if (filters.priceMin != null) query = query.gte("price", filters.priceMin);
   if (filters.priceMax != null) query = query.lte("price", filters.priceMax);
   if (filters.country) query = query.eq("country", filters.country);

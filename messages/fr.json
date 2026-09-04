@@ -454,7 +454,9 @@
     "archive": "Dépublier",
     "reactivate": "Republier",
     "statusActive": "Publié",
-    "statusArchived": "Masqué"
+    "statusArchived": "Masqué",
+    "boatType": "Type de bateau",
+    "anyBoat": "Tous les bateaux"
   },
   "CrewRole": {
     "skipper": "Skipper / capitaine",

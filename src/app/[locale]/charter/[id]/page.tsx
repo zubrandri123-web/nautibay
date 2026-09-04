@@ -4,6 +4,7 @@ import { Link } from "@/i18n/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { PhotoGallery } from "@/components/photo-gallery";
 import { SpecDetail } from "@/components/spec-detail";
+import { BackToSearch } from "@/components/back-to-search";
 import { countryName, formatLength } from "@/lib/boats/constants";
 import { getCharterListing } from "@/lib/charter/queries";
 
@@ -205,11 +206,7 @@ export default async function CharterDetailPage({ params }: Props) {
         </div>
       ) : null}
 
-      <p className="mt-8 text-sm">
-        <Link href="/charter" className="text-slate-500 hover:underline">
-          ← {t("title")}
-        </Link>
-      </p>
+      <BackToSearch href="/charter" label={tCommon("continueSearch")} />
     </div>
   );
 }

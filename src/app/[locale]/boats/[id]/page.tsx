@@ -4,6 +4,7 @@ import { Link } from "@/i18n/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { PhotoGallery } from "@/components/photo-gallery";
 import { SpecDetail } from "@/components/spec-detail";
+import { BackToSearch } from "@/components/back-to-search";
 import { countryName, formatLength } from "@/lib/boats/constants";
 import { getBoatListing } from "@/lib/boats/queries";
 
@@ -288,6 +289,8 @@ export default async function BoatDetailPage({ params }: Props) {
           </p>
         </div>
       ) : null}
+
+      <BackToSearch href="/boats" label={tCommon("continueSearch")} />
     </div>
   );
 }

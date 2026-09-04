@@ -4,6 +4,7 @@ import { Link } from "@/i18n/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { PhotoGallery } from "@/components/photo-gallery";
 import { SpecDetail } from "@/components/spec-detail";
+import { BackToSearch } from "@/components/back-to-search";
 import { countryName, formatLength } from "@/lib/boats/constants";
 import { getBerthListing } from "@/lib/berths/queries";
 
@@ -15,7 +16,6 @@ const photoUrl = (p: string) =>
 
 export default async function BerthDetailPage({ params }: Props) {
   const { locale, id } = await params;
-  const t = await getTranslations("Berths");
   const tPlace = await getTranslations("PlaceType");
   const tDeal = await getTranslations("Deal");
   const tPeriod = await getTranslations("RentPeriod");
@@ -165,11 +165,7 @@ export default async function BerthDetailPage({ params }: Props) {
         </div>
       ) : null}
 
-      <p className="mt-8 text-sm">
-        <Link href="/berths" className="text-slate-500 hover:underline">
-          ← {t("title")}
-        </Link>
-      </p>
+      <BackToSearch href="/berths" label={tCommon("continueSearch")} />
     </div>
   );
 }

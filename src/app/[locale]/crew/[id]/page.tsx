@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { Link } from "@/i18n/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { PhotoGallery } from "@/components/photo-gallery";
+import { BackToSearch } from "@/components/back-to-search";
 import { getCrewListing } from "@/lib/crew/queries";
 
 type Props = { params: Promise<{ locale: string; id: string }> };
@@ -146,11 +147,7 @@ export default async function CrewDetailPage({ params }: Props) {
       ) : null}
       {l.about ? <Block title={tForm("sectionAboutText")} text={l.about} /> : null}
 
-      <p className="mt-8 text-sm">
-        <Link href="/crew" className="text-slate-500 hover:underline">
-          ← {t("title")}
-        </Link>
-      </p>
+      <BackToSearch href="/crew" label={tCommon("continueSearch")} />
     </div>
   );
 }

@@ -17,7 +17,8 @@
     "unitFt": "фт",
     "close": "Закрыть",
     "previous": "Назад",
-    "next": "Вперёд"
+    "next": "Вперёд",
+    "continueSearch": "Продолжить поиск"
   },
   "Nav": {
     "signIn": "Войти",

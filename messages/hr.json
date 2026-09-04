@@ -17,7 +17,8 @@
     "unitFt": "ft",
     "close": "Zatvori",
     "previous": "Prethodno",
-    "next": "Sljedeće"
+    "next": "Sljedeće",
+    "continueSearch": "Nastavi pretragu"
   },
   "Nav": {
     "signIn": "Prijava",

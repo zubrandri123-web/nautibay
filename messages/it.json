@@ -17,7 +17,8 @@
     "unitFt": "ft",
     "close": "Chiudi",
     "previous": "Precedente",
-    "next": "Successivo"
+    "next": "Successivo",
+    "continueSearch": "Continua la ricerca"
   },
   "Nav": {
     "signIn": "Accedi",

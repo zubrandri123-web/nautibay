@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { Link } from "@/i18n/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { PhotoGallery } from "@/components/photo-gallery";
+import { BackToSearch } from "@/components/back-to-search";
 import { countryName } from "@/lib/boats/constants";
 import { getServiceListing } from "@/lib/services/queries";
 
@@ -14,7 +15,6 @@ const photoUrl = (p: string) =>
 
 export default async function ServiceDetailPage({ params }: Props) {
   const { locale, id } = await params;
-  const t = await getTranslations("Services");
   const tCat = await getTranslations("ServiceCategory");
   const tForm = await getTranslations("ServiceForm");
   const tDet = await getTranslations("BoatDetail");
@@ -147,11 +147,7 @@ export default async function ServiceDetailPage({ params }: Props) {
         </div>
       ) : null}
 
-      <p className="mt-8 text-sm">
-        <Link href="/services" className="text-slate-500 hover:underline">
-          ← {t("title")}
-        </Link>
-      </p>
+      <BackToSearch href="/services" label={tCommon("continueSearch")} />
     </div>
   );
 }

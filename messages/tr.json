@@ -17,7 +17,8 @@
     "unitFt": "ft",
     "close": "Kapat",
     "previous": "Önceki",
-    "next": "Sonraki"
+    "next": "Sonraki",
+    "continueSearch": "Aramaya devam et"
   },
   "Nav": {
     "signIn": "Giriş yap",

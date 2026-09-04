@@ -23,6 +23,9 @@ export const serviceListingSchema = z
     country: z.enum(COUNTRIES),
     region: z.string().trim().max(120).optional().or(z.literal("")),
     city: z.string().trim().min(1).max(120),
+    // Required alongside city — city names collide across the world, the
+    // postal code is what actually pins the place down for a searching buyer.
+    postalCode: z.string().trim().min(1).max(20),
     travelsToClient: z.coerce.boolean().optional(),
 
     promoteSocial: z.coerce.boolean().optional(),

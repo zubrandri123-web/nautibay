@@ -52,6 +52,7 @@ export default async function EditCharterPage({ params }: Props) {
     country: s(l.country),
     region: s(l.region),
     city: s(l.city),
+    postalCode: s(l.postal_code),
     lengthM: s(l.length_m),
     dimUnit: "m",
     cabins: s(l.cabins),

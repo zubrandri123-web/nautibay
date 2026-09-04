@@ -162,7 +162,8 @@
     "stoveType": "Cuisinière (cambuse)",
     "grill": "Barbecue",
     "batteryVoltage": "Tension des batteries",
-    "shorePower": "Alimentation à quai"
+    "shorePower": "Alimentation à quai",
+    "postalCode": "Code postal"
   },
   "Search": {
     "title": "Trouver un bateau",

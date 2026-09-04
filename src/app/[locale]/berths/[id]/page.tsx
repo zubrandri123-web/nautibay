@@ -39,6 +39,7 @@ export default async function BerthDetailPage({ params }: Props) {
   const place = [
     l.marina,
     l.city,
+    l.postal_code,
     l.region,
     l.country ? countryName(l.country, locale) : null,
   ]

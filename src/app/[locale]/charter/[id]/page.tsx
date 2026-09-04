@@ -42,6 +42,7 @@ export default async function CharterDetailPage({ params }: Props) {
   const place = [
     l.marina,
     l.city,
+    l.postal_code,
     l.region,
     l.country ? countryName(l.country, locale) : null,
   ]

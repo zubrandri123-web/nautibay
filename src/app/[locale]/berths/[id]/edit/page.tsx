@@ -48,6 +48,7 @@ export default async function EditBerthPage({ params }: Props) {
     country: s(l.country),
     region: s(l.region),
     city: s(l.city),
+    postalCode: s(l.postal_code),
     lengthM: s(l.length_m),
     beamM: s(l.beam_m),
     draftM: s(l.draft_m),

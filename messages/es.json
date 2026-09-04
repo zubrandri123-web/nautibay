@@ -162,7 +162,8 @@
     "stoveType": "Cocina (galera)",
     "grill": "Barbacoa",
     "batteryVoltage": "Voltaje de batería",
-    "shorePower": "Toma de puerto (tierra)"
+    "shorePower": "Toma de puerto (tierra)",
+    "postalCode": "Código postal"
   },
   "Search": {
     "title": "Buscar un barco",

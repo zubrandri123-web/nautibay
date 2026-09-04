@@ -37,6 +37,7 @@ export default async function ServiceDetailPage({ params }: Props) {
   const place = [
     l.address,
     l.city,
+    l.postal_code,
     l.region,
     l.country ? countryName(l.country, locale) : null,
   ]

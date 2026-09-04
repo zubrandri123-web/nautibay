@@ -56,6 +56,7 @@ export default async function EditListingPage({ params }: Props) {
     country: str(l.country),
     region: str(l.region),
     city: str(l.city),
+    postalCode: str(l.postal_code),
     brand: str(l.brand),
     model: str(l.model),
     beamM: str(l.beam_m),

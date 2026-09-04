@@ -175,7 +175,7 @@ export function ServiceForm({
         <Field label={t("address")} hint={t("addressHint")} optional>
           <input {...register("address")} className={input} />
         </Field>
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           <Field label={tForm("country")} error={errors.country?.message}>
             <select {...register("country")} className={input}>
               <option value="">—</option>
@@ -191,6 +191,9 @@ export function ServiceForm({
           </Field>
           <Field label={tForm("city")} error={errors.city?.message}>
             <input {...register("city")} className={input} />
+          </Field>
+          <Field label={tForm("postalCode")} error={errors.postalCode?.message}>
+            <input {...register("postalCode")} className={input} />
           </Field>
         </div>
         <label className={check}>

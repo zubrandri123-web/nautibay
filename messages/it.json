@@ -162,7 +162,8 @@
     "stoveType": "Fornello (cambusa)",
     "grill": "Barbecue",
     "batteryVoltage": "Tensione batteria",
-    "shorePower": "Allaccio a terra (banchina)"
+    "shorePower": "Allaccio a terra (banchina)",
+    "postalCode": "Codice postale"
   },
   "Search": {
     "title": "Trova una barca",

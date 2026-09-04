@@ -162,7 +162,8 @@
     "stoveType": "Ocak (kombuz)",
     "grill": "Izgara",
     "batteryVoltage": "Akü voltajı",
-    "shorePower": "Kara elektriği (marina bağlantısı)"
+    "shorePower": "Kara elektriği (marina bağlantısı)",
+    "postalCode": "Posta kodu"
   },
   "Search": {
     "title": "Tekne bul",

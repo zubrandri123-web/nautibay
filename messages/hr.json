@@ -162,7 +162,8 @@
     "stoveType": "Štednjak (kuhinja)",
     "grill": "Roštilj",
     "batteryVoltage": "Napon baterije",
-    "shorePower": "Priključak na kopnenu struju"
+    "shorePower": "Priključak na kopnenu struju",
+    "postalCode": "Poštanski broj"
   },
   "Search": {
     "title": "Pronađi brod",

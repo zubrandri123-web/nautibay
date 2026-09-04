@@ -10,6 +10,7 @@ export function berthToRow(data: BerthListingInput) {
     country: data.country || null,
     region: data.region || null,
     city: data.city || null,
+    postal_code: data.postalCode || null,
     length_m: data.lengthM ?? null,
     beam_m: data.beamM ?? null,
     draft_m: data.draftM ?? null,

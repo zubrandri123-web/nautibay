@@ -264,7 +264,7 @@ export function BoatForm({
           />
         </Field>
 
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           <Field label={t("country")} error={errors.country?.message}>
             <select
               {...register("country")}
@@ -287,6 +287,12 @@ export function BoatForm({
           <Field label={t("city")} error={errors.city?.message}>
             <input
               {...register("city")}
+              className="w-full rounded-md border border-slate-300 px-3 py-2"
+            />
+          </Field>
+          <Field label={t("postalCode")} error={errors.postalCode?.message}>
+            <input
+              {...register("postalCode")}
               className="w-full rounded-md border border-slate-300 px-3 py-2"
             />
           </Field>

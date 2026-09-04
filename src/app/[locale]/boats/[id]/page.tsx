@@ -60,6 +60,7 @@ export default async function BoatDetailPage({ params }: Props) {
     tType(listing.boat_type);
   const location = [
     listing.city,
+    listing.postal_code,
     listing.region,
     listing.country ? countryName(listing.country, locale) : null,
   ]

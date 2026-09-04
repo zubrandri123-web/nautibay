@@ -162,7 +162,8 @@
     "stoveType": "Herd (Kombüse)",
     "grill": "Grill",
     "batteryVoltage": "Batteriespannung",
-    "shorePower": "Landstrom"
+    "shorePower": "Landstrom",
+    "postalCode": "Postleitzahl"
   },
   "Search": {
     "title": "Boot finden",

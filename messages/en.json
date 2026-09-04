@@ -162,7 +162,8 @@
     "stoveType": "Galley stove",
     "grill": "Grill / BBQ",
     "batteryVoltage": "Battery voltage",
-    "shorePower": "Shore power"
+    "shorePower": "Shore power",
+    "postalCode": "Postal code"
   },
   "Search": {
     "title": "Find a boat",

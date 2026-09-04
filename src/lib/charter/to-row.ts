@@ -13,6 +13,7 @@ export function charterToRow(data: CharterListingInput) {
     country: data.country || null,
     region: data.region || null,
     city: data.city || null,
+    postal_code: data.postalCode || null,
 
     length_m: data.lengthM ?? null,
     cabins: data.cabins ?? null,

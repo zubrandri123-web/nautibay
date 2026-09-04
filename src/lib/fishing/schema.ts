@@ -26,6 +26,9 @@ export const fishingListingSchema = z
     country: z.enum(COUNTRIES),
     region: z.string().trim().max(120).optional().or(z.literal("")),
     city: z.string().trim().min(1).max(120),
+    // Required alongside city — city names collide across the world, the
+    // postal code is what actually pins the place down for a searching buyer.
+    postalCode: z.string().trim().min(1).max(20),
 
     // Price is optional and stands alone — no period is forced.
     price: optionalNumber(z.coerce.number().positive()),

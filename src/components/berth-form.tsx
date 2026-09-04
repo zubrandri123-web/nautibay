@@ -80,10 +80,22 @@ export function BerthForm({
   // Draft (how deep a hull sits) only means something for a berth actually
   // in the water — a dry-storage spot or a locker has no water under it.
   const showDraft = placeType !== "dry_storage" && placeType !== "locker";
+  // A locker/box has no water hookup and nobody lives aboard it — but it
+  // can still have electricity and be under security, so those stay.
+  const showWater = placeType !== "locker";
+  const showLiveaboard = placeType !== "locker";
 
   useEffect(() => {
     if (!showDraft) setValue("draftM", "");
   }, [showDraft, setValue]);
+
+  useEffect(() => {
+    if (!showWater) setValue("water", false);
+  }, [showWater, setValue]);
+
+  useEffect(() => {
+    if (!showLiveaboard) setValue("liveaboard", false);
+  }, [showLiveaboard, setValue]);
 
   const countryOptions = [...COUNTRIES]
     .map((code) => ({ code, name: countryName(code, locale) }))
@@ -315,18 +327,22 @@ export function BerthForm({
         <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-500">
           {t("sectionAmenities")}
         </h2>
-        <label className={check}>
-          <input type="checkbox" {...register("water")} /> {t("water")}
-        </label>
+        {showWater ? (
+          <label className={check}>
+            <input type="checkbox" {...register("water")} /> {t("water")}
+          </label>
+        ) : null}
         <label className={check}>
           <input type="checkbox" {...register("electricity")} /> {t("electricity")}
         </label>
         <label className={check}>
           <input type="checkbox" {...register("security")} /> {t("security")}
         </label>
-        <label className={check}>
-          <input type="checkbox" {...register("liveaboard")} /> {t("liveaboard")}
-        </label>
+        {showLiveaboard ? (
+          <label className={check}>
+            <input type="checkbox" {...register("liveaboard")} /> {t("liveaboard")}
+          </label>
+        ) : null}
       </section>
 
       <section className="space-y-4">

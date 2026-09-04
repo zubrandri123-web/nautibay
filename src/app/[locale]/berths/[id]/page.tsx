@@ -148,10 +148,10 @@ export default async function BerthDetailPage({ params }: Props) {
         {l.beam_m ? (
           <SpecDetail icon="beam" label={tForm("beamM")} value={fmt(l.beam_m)} />
         ) : null}
-        {l.draft_m ? (
+        {l.draft_m && l.place_type !== "dry_storage" && l.place_type !== "locker" ? (
           <SpecDetail icon="draft" label={tForm("draftM")} value={fmt(l.draft_m)} />
         ) : null}
-        {l.water ? (
+        {l.water && l.place_type !== "locker" ? (
           <SpecDetail icon="water" label={tForm("water")} value="✓" />
         ) : null}
         {l.electricity ? (
@@ -160,7 +160,7 @@ export default async function BerthDetailPage({ params }: Props) {
         {l.security ? (
           <SpecDetail icon="security" label={tForm("security")} value="✓" />
         ) : null}
-        {l.liveaboard ? (
+        {l.liveaboard && l.place_type !== "locker" ? (
           <SpecDetail icon="liveaboard" label={tForm("liveaboard")} value="✓" />
         ) : null}
       </dl>

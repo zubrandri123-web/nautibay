@@ -27,7 +27,11 @@ export type DetailIconName =
   | "cabins"
   | "berths"
   | "sailArea"
-  | "flag";
+  | "flag"
+  | "water"
+  | "electricity"
+  | "security"
+  | "liveaboard";
 
 function Svg({ children }: { children: React.ReactNode }) {
   return (
@@ -137,6 +141,29 @@ const ICONS: Record<DetailIconName, React.ReactNode> = {
     <Svg>
       <path d="M5.5 3v14" />
       <path d="M5.5 4h8l-2 3 2 3h-8" />
+    </Svg>
+  ),
+  water: (
+    <Svg>
+      <path d="M10 3.3s4.2 5 4.2 8.4a4.2 4.2 0 1 1-8.4 0C5.8 8.3 10 3.3 10 3.3Z" />
+    </Svg>
+  ),
+  electricity: (
+    <Svg>
+      <path d="M11 2.8 5.3 11h3.9l-1 6.2L14 9h-3.9l.9-6.2Z" />
+    </Svg>
+  ),
+  security: (
+    <Svg>
+      <path d="M10 3.2 15.5 5v5c0 3.8-2.4 6.4-5.5 7.8C7 16.4 4.5 13.8 4.5 10V5L10 3.2Z" />
+      <path d="M7.5 10l1.8 1.8 3.2-3.6" />
+    </Svg>
+  ),
+  liveaboard: (
+    <Svg>
+      <path d="M4 9.5 10 4l6 5.5" />
+      <path d="M5.5 8.8V16h9V8.8" />
+      <path d="M8 16v-3.5h4V16" />
     </Svg>
   ),
 };

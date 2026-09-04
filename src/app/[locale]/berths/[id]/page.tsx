@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { Link } from "@/i18n/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { PhotoGallery } from "@/components/photo-gallery";
+import { SpecDetail } from "@/components/spec-detail";
 import { countryName, formatLength } from "@/lib/boats/constants";
 import { getBerthListing } from "@/lib/berths/queries";
 
@@ -51,13 +52,6 @@ export default async function BerthDetailPage({ params }: Props) {
     user && l.contact_phone
       ? String(l.contact_phone).replace(/[^\d]/g, "")
       : "";
-
-  const amenities = [
-    l.water && tForm("water"),
-    l.electricity && tForm("electricity"),
-    l.security && tForm("security"),
-    l.liveaboard && tForm("liveaboard"),
-  ].filter(Boolean) as string[];
 
   return (
     <div className="mx-auto max-w-4xl px-4 py-10">
@@ -137,11 +131,26 @@ export default async function BerthDetailPage({ params }: Props) {
       </div>
 
       <dl className="mt-8 grid grid-cols-2 gap-x-6 gap-y-4 sm:grid-cols-3">
-        {l.length_m ? <Detail label={tForm("lengthM")} value={fmt(l.length_m)} /> : null}
-        {l.beam_m ? <Detail label={tForm("beamM")} value={fmt(l.beam_m)} /> : null}
-        {l.draft_m ? <Detail label={tForm("draftM")} value={fmt(l.draft_m)} /> : null}
-        {amenities.length ? (
-          <Detail label={tForm("sectionAmenities")} value={amenities.join(", ")} />
+        {l.length_m ? (
+          <SpecDetail icon="length" label={tForm("lengthM")} value={fmt(l.length_m)} />
+        ) : null}
+        {l.beam_m ? (
+          <SpecDetail icon="beam" label={tForm("beamM")} value={fmt(l.beam_m)} />
+        ) : null}
+        {l.draft_m ? (
+          <SpecDetail icon="draft" label={tForm("draftM")} value={fmt(l.draft_m)} />
+        ) : null}
+        {l.water ? (
+          <SpecDetail icon="water" label={tForm("water")} value="✓" />
+        ) : null}
+        {l.electricity ? (
+          <SpecDetail icon="electricity" label={tForm("electricity")} value="✓" />
+        ) : null}
+        {l.security ? (
+          <SpecDetail icon="security" label={tForm("security")} value="✓" />
+        ) : null}
+        {l.liveaboard ? (
+          <SpecDetail icon="liveaboard" label={tForm("liveaboard")} value="✓" />
         ) : null}
       </dl>
 
@@ -161,15 +170,6 @@ export default async function BerthDetailPage({ params }: Props) {
           ← {t("title")}
         </Link>
       </p>
-    </div>
-  );
-}
-
-function Detail({ label, value }: { label: string; value: string | number }) {
-  return (
-    <div>
-      <dt className="text-xs uppercase tracking-wide text-slate-400">{label}</dt>
-      <dd className="text-sm text-slate-900">{value}</dd>
     </div>
   );
 }

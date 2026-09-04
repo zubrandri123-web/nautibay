@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { Link } from "@/i18n/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { PhotoGallery } from "@/components/photo-gallery";
+import { SpecDetail } from "@/components/spec-detail";
 import { countryName, formatLength } from "@/lib/boats/constants";
 import { getCharterListing } from "@/lib/charter/queries";
 
@@ -57,13 +58,6 @@ export default async function CharterDetailPage({ params }: Props) {
     user && l.contact_phone
       ? String(l.contact_phone).replace(/[^\d]/g, "")
       : "";
-
-  const included = [
-    l.skipper_included && tForm("skipperIncluded"),
-    l.fuel_included && tForm("fuelIncluded"),
-    l.cleaning_included && tForm("cleaningIncluded"),
-    l.bedding_included && tForm("beddingIncluded"),
-  ].filter(Boolean) as string[];
 
   const boatLabel = l.boat_name || (l.boat_type ? tBoat(l.boat_type) : null);
 
@@ -141,20 +135,41 @@ export default async function CharterDetailPage({ params }: Props) {
       </div>
 
       <dl className="mt-8 grid grid-cols-2 gap-x-6 gap-y-4 sm:grid-cols-3">
-        {l.length_m ? <Detail label={tForm("lengthM")} value={fmt(l.length_m)} /> : null}
-        {l.year_built ? <Detail label={tForm("yearBuilt")} value={l.year_built} /> : null}
-        {l.cabins != null ? <Detail label={tForm("cabins")} value={l.cabins} /> : null}
-        {l.berths_count != null ? (
-          <Detail label={tForm("berthsCount")} value={l.berths_count} />
+        {l.length_m ? (
+          <SpecDetail icon="length" label={tForm("lengthM")} value={fmt(l.length_m)} />
         ) : null}
-        {l.max_people ? <Detail label={tForm("maxPeople")} value={l.max_people} /> : null}
-        {l.min_days ? <Detail label={tForm("minDays")} value={l.min_days} /> : null}
-        {l.season ? <Detail label={tForm("season")} value={l.season} /> : null}
-        {included.length ? (
-          <Detail label={tForm("sectionIncluded")} value={included.join(", ")} />
+        {l.year_built ? (
+          <SpecDetail icon="calendar" label={tForm("yearBuilt")} value={l.year_built} />
+        ) : null}
+        {l.cabins != null ? (
+          <SpecDetail icon="cabins" label={tForm("cabins")} value={l.cabins} />
+        ) : null}
+        {l.berths_count != null ? (
+          <SpecDetail icon="berths" label={tForm("berthsCount")} value={l.berths_count} />
+        ) : null}
+        {l.max_people ? (
+          <SpecDetail icon="guests" label={tForm("maxPeople")} value={l.max_people} />
+        ) : null}
+        {l.min_days ? (
+          <SpecDetail icon="duration" label={tForm("minDays")} value={l.min_days} />
+        ) : null}
+        {l.season ? (
+          <SpecDetail icon="season" label={tForm("season")} value={l.season} />
+        ) : null}
+        {l.skipper_included ? (
+          <SpecDetail icon="skipper" label={tForm("skipperIncluded")} value="✓" />
+        ) : null}
+        {l.fuel_included ? (
+          <SpecDetail icon="fuelType" label={tForm("fuelIncluded")} value="✓" />
+        ) : null}
+        {l.cleaning_included ? (
+          <SpecDetail icon="cleaning" label={tForm("cleaningIncluded")} value="✓" />
+        ) : null}
+        {l.bedding_included ? (
+          <SpecDetail icon="bedding" label={tForm("beddingIncluded")} value="✓" />
         ) : null}
         {l.license_required ? (
-          <Detail label={tForm("licenseRequired")} value="✓" />
+          <SpecDetail icon="license" label={tForm("licenseRequired")} value="✓" />
         ) : null}
       </dl>
 
@@ -174,15 +189,6 @@ export default async function CharterDetailPage({ params }: Props) {
           ← {t("title")}
         </Link>
       </p>
-    </div>
-  );
-}
-
-function Detail({ label, value }: { label: string; value: string | number }) {
-  return (
-    <div>
-      <dt className="text-xs uppercase tracking-wide text-slate-400">{label}</dt>
-      <dd className="text-sm text-slate-900">{value}</dd>
     </div>
   );
 }

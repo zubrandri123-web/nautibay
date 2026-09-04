@@ -31,7 +31,14 @@ export type DetailIconName =
   | "water"
   | "electricity"
   | "security"
-  | "liveaboard";
+  | "liveaboard"
+  | "duration"
+  | "season"
+  | "license"
+  | "skipper"
+  | "cleaning"
+  | "bedding"
+  | "guests";
 
 function Svg({ children }: { children: React.ReactNode }) {
   return (
@@ -164,6 +171,51 @@ const ICONS: Record<DetailIconName, React.ReactNode> = {
       <path d="M4 9.5 10 4l6 5.5" />
       <path d="M5.5 8.8V16h9V8.8" />
       <path d="M8 16v-3.5h4V16" />
+    </Svg>
+  ),
+  duration: (
+    <Svg>
+      <circle cx="10" cy="10" r="7" />
+      <path d="M10 6.2V10l3 1.8" />
+    </Svg>
+  ),
+  season: (
+    <Svg>
+      <circle cx="10" cy="10" r="3.3" />
+      <path d="M10 3.5v2M10 14.5v2M3.5 10h2M14.5 10h2M5.6 5.6l1.4 1.4M13 13l1.4 1.4M5.6 14.4l1.4-1.4M13 7l1.4-1.4" />
+    </Svg>
+  ),
+  license: (
+    <Svg>
+      <rect x="3" y="5" width="14" height="10" rx="1.5" />
+      <path d="M6 10.3l1.8 1.8L11.5 8.5" />
+    </Svg>
+  ),
+  skipper: (
+    <Svg>
+      <circle cx="10" cy="10" r="6.2" />
+      <circle cx="10" cy="10" r="1.5" />
+      <path d="M10 3.8v4.7M10 11.5v4.7M4.4 6.9l4 2.4M11.6 10.7l4 2.4M4.4 13.1l4-2.4M11.6 9.3l4-2.4" />
+    </Svg>
+  ),
+  cleaning: (
+    <Svg>
+      <path d="M6 3.3l.9 2.2 2.2.9-2.2.9L6 9.5l-.9-2.2-2.2-.9 2.2-.9L6 3.3Z" />
+      <path d="M14.3 9.2l.6 1.7 1.7.6-1.7.6-.6 1.7-.6-1.7-1.7-.6 1.7-.6.6-1.7Z" />
+    </Svg>
+  ),
+  bedding: (
+    <Svg>
+      <path d="M4 8.7c0-2 1.6-3.2 3.7-3.2h4.6c2.1 0 3.7 1.2 3.7 3.2v3.1c0 2-1.6 3.2-3.7 3.2H7.7C5.6 15 4 13.8 4 11.8V8.7Z" />
+    </Svg>
+  ),
+  guests: (
+    <Svg>
+      <circle cx="10" cy="6.2" r="2.1" />
+      <circle cx="4.6" cy="7.8" r="1.6" />
+      <circle cx="15.4" cy="7.8" r="1.6" />
+      <path d="M6.1 16.2c.3-2.6 1.8-4.2 3.9-4.2s3.6 1.6 3.9 4.2" />
+      <path d="M1.9 15.2c.2-1.7 1.1-2.8 2.7-2.8M18.1 15.2c-.2-1.7-1.1-2.8-2.7-2.8" />
     </Svg>
   ),
 };
